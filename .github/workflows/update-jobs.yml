@@ -1,0 +1,47 @@
+name: Update job shortlist
+
+on:
+  schedule:
+    - cron: "41 4 * * *"       # daily 04:41 UTC (~06:41 Helsinki in winter)
+  workflow_dispatch:           # "Run workflow" button in the Actions tab
+  push:
+    branches: [main]
+    paths: ["config/**", "jobfinder/**"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-jobs
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Collect and rank positions
+        env:
+          JOBFINDER_CV_TEXT: ${{ secrets.JOBFINDER_CV_TEXT }}
+        run: python -m jobfinder
+
+      - name: Publish updated site
+        run: |
+          git config user.name "jobfinder-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs data
+          if git diff --cached --quiet; then
+            echo "No changes"
+          else
+            git commit -m "Update job shortlist $(date -u +%F)"
+            git push
+          fi
