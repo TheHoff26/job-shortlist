@@ -37,36 +37,53 @@
 # ---------------------------------------------------------------------------
 
 companies:
-  - name: Stripe
-    ats: greenhouse
-    id: stripe
+  # --- SAP SuccessFactors career sites ---
+  
+  - name: Fortum
+    ats: successfactors
+    url: https://jobs.fortum.com/Fortum
 
-  - name: Figma
-    ats: greenhouse
-    id: figma
+  - name: Neste
+    ats: successfactors
+    url: https://jobs.neste.com
 
-  - name: Spotify
-    ats: lever
-    id: spotify
+  - name: Wärtsilä
+    ats: successfactors
+    url: https://careers.wartsila.com
 
-  - name: Linear
-    ats: ashby
-    id: linear
-
-  - name: Bosch
-    ats: smartrecruiters
-    id: BoschGroup
-
-  - name: SumUp
-    ats: personio
-    id: sumup
-    language: en
-
-  # LinkedIn-only example (careers site not supported):
-  # - name: Supercell
-  #   ats: linkedin
+  - name: Metso
+    ats: successfactors
+    url: https://careers.metso.com
 
   # Workday example (experimental - Workday has no official public API):
   # - name: NVIDIA
   #   ats: workday
   #   url: https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite
+  
+  - name: Metsä Group
+    ats: workday
+    url: https://metsagroup.wd103.myworkdayjobs.com/en-US/MetsaGroup_Careers
+
+  - name: Stora Enso
+    ats: workday
+    url: https://storaenso.wd502.myworkdayjobs.com/Stora_Enso_site_opportunities
+
+  - name: Valmet
+    ats: workday
+    url: https://valmet.wd103.myworkdayjobs.com/en-US/External
+
+  # --- No supported feed: LinkedIn link only ---
+  # - name: Supercell
+  #   ats: linkedin
+  
+  - name: KONE
+    ats: linkedin
+
+  - name: St1
+    ats: linkedin
+
+  - name: Copenhagen Infrastructure Partners
+    ats: linkedin
+ 
+
+  
