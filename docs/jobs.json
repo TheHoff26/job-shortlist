@@ -1,36 +1,36 @@
 {
  "meta": {
-  "generated": "2026-10-26T09:27+00:00",
-  "total_matches": 0,
+  "generated": "2026-10-26T09:30+00:00",
+  "total_matches": 1,
   "new_matches": 0,
   "companies": [
    {
     "company": "Fortum",
     "ats": "successfactors",
-    "ok": false,
+    "ok": true,
     "count": 0,
-    "error": "unknown ats 'successfactors'"
+    "error": "no matching open positions (or wrong id)"
    },
    {
     "company": "Neste",
     "ats": "successfactors",
-    "ok": false,
-    "count": 0,
-    "error": "unknown ats 'successfactors'"
+    "ok": true,
+    "count": 1,
+    "error": ""
    },
    {
     "company": "Wärtsilä",
     "ats": "successfactors",
-    "ok": false,
-    "count": 0,
-    "error": "unknown ats 'successfactors'"
+    "ok": true,
+    "count": 1,
+    "error": ""
    },
    {
     "company": "Metso",
     "ats": "successfactors",
-    "ok": false,
+    "ok": true,
     "count": 0,
-    "error": "unknown ats 'successfactors'"
+    "error": "no matching open positions (or wrong id)"
    },
    {
     "company": "Metsä Group",
@@ -142,5 +142,57 @@
    "min_score": 35
   }
  },
- "jobs": []
+ "jobs": [
+  {
+   "company": "Neste",
+   "ats": "successfactors",
+   "job_id": "1439428900",
+   "title": "Program Manager",
+   "url": "https://jobs.neste.com/job/Espoo-Program-Manager/1439428900/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS",
+   "location": "Espoo, FI",
+   "department": "",
+   "posted": "2026-10-13",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "summary": "Are you looking for a career in an inspiring, global environment where your expertise makes a difference? At Neste, you will be working for the world’s leading producer of renewable diesel and sustainable aviation fuel.",
+   "responsibilities": [
+    "Program Execution & Leadership: Lead overall program execution, incl. schedule, budget and resource management, and ensuring seamless…",
+    "Technology development roadmap:Together with the Head of Technology, drive and coordinate the planning of the overall technology…",
+    "Project planning: Build and maintain detailed project plans across development phases. Lead the stage-gate review process, ensuring gate…",
+    "Partner and vendor management: Oversee procurement and manage external vendors. Maintain effective collaboration with strategic development…"
+   ],
+   "criteria": [
+    "Extensive experience in R&D and engineering within process industries.",
+    "A proven track record of successfully leading projects or large workstreams in complex technology development programs.",
+    "Demonstrated ability to manage external development partners, technology licensors, research institutes, and key vendors.",
+    "Ability to understand the strategic big picture and interdependencies across workstreams and activities, paired with a highly structured day-to-day execution…",
+    "Strong interpersonal skills to partner effectively with technical leaders and align cross-functional teams without direct authority.",
+    "Fluency in English (written and spoken); strong communication skills for presenting complex topics to cross-functional teams and management."
+   ],
+   "nice_to_have": [],
+   "seniority": "",
+   "years_experience": "",
+   "languages": [
+    "English"
+   ],
+   "education": "",
+   "skills_matched": [
+    "leadership",
+    "International",
+    "English"
+   ],
+   "score": 72,
+   "reasons": [
+    "Title matches “Program manager”",
+    "Seniority: not stated",
+    "CV skills 3/12: leadership, International, English",
+    "Keywords: renewables, strategy",
+    "Location: Espoo, FI"
+   ],
+   "first_seen": "2026-10-26",
+   "is_new": false,
+   "key": "successfactors:Neste:1439428900"
+  }
+ ]
 }
