@@ -10,12 +10,15 @@ keyless feeds that power the companies' own careers pages:
   personio         GET  https://{id}.jobs.personio.de/xml?language=en  (.com as fallback)
   recruitee        GET  https://{id}.recruitee.com/api/offers/
   workday          POST https://{host}/wday/cxs/{tenant}/{site}/jobs  (+ detail; unofficial)
+  successfactors   GET  https://{career-site}/services/rss/job/?locale=en_US&keywords=(...)
+                   (RSS feed of SAP SuccessFactors career sites; job page as fallback)
 """
 
 from __future__ import annotations
 
 import html
 import logging
+import re
 import time
 import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
@@ -46,9 +49,15 @@ def make_session() -> requests.Session:
 
 
 def _date(value) -> str:
-    """Normalise timestamps (ISO strings or epoch ms) to YYYY-MM-DD."""
+    """Normalise timestamps (ISO strings, RFC 822 or epoch ms) to YYYY-MM-DD."""
     if value in (None, ""):
         return ""
+    if isinstance(value, str) and "," in value[:5]:  # RFC 822: "Mon, 20 Oct 2026 ..."
+        from email.utils import parsedate_to_datetime
+        try:
+            return parsedate_to_datetime(value).date().isoformat()
+        except (TypeError, ValueError):
+            pass
     try:
         if isinstance(value, (int, float)):
             return datetime.fromtimestamp(value / 1000, tz=timezone.utc).date().isoformat()
@@ -337,21 +346,26 @@ def fetch_workday(session, company: dict, keep: TitleFilter) -> list[Job]:
     api = f"https://{host}/wday/cxs/{tenant}/{site}"
     headers = {"Accept": "application/json", "Content-Type": "application/json",
                "Accept-Language": "en-US"}
-    listing, offset, total = [], 0, None
-    while total is None or offset < total:
-        r = session.post(f"{api}/jobs", json={"appliedFacets": {}, "limit": 20,
-                                              "offset": offset, "searchText": ""},
-                         headers=headers, timeout=TIMEOUT)
-        r.raise_for_status()
-        page = r.json()
-        if total is None:
-            total = min(page.get("total", 0), 2000)
-        posts = page.get("jobPostings", [])
-        if not posts:
-            break
-        listing.extend(posts)
-        offset += 20
-        time.sleep(0.3)
+    listing, seen = [], set()
+    for term in (company.get("_terms") or [""]):     # search per title, then merge
+        offset, total = 0, None
+        while total is None or offset < total:
+            r = session.post(f"{api}/jobs", json={"appliedFacets": {}, "limit": 20,
+                                                  "offset": offset, "searchText": term},
+                             headers=headers, timeout=TIMEOUT)
+            r.raise_for_status()
+            page = r.json()
+            if total is None:
+                total = min(page.get("total", 0), 2000)
+            posts = page.get("jobPostings", [])
+            if not posts:
+                break
+            for p in posts:
+                if p.get("externalPath") and p["externalPath"] not in seen:
+                    seen.add(p["externalPath"])
+                    listing.append(p)
+            offset += 20
+            time.sleep(0.3)
     jobs = []
     for p in listing:
         title = p.get("title", "")
@@ -378,6 +392,76 @@ def fetch_workday(session, company: dict, keep: TitleFilter) -> list[Job]:
     return jobs
 
 
+# --------------------------------------------------------------------------- #
+# SAP SuccessFactors career sites (e.g. jobs.neste.com, careers.metso.com)
+# --------------------------------------------------------------------------- #
+_SF_TITLE_LOC = re.compile(r"^(.*?)\s*\(([^()]*)\)\s*$")
+
+
+def _sf_page_description(session, url: str) -> str:
+    """Fetch the job page and pull the description block (fallback)."""
+    from bs4 import BeautifulSoup
+    r = session.get(url, timeout=TIMEOUT, headers={"Accept": "text/html"})
+    r.raise_for_status()
+    soup = BeautifulSoup(r.text, "html.parser")
+    block = (soup.select_one(".jobdescription") or soup.select_one("[itemprop=description]")
+             or soup.select_one(".job-description") or soup.select_one(".jobDisplay"))
+    return block.decode_contents() if block else ""
+
+
+def fetch_successfactors(session, company: dict, keep: TitleFilter) -> list[Job]:
+    base = company["url"].rstrip("/")
+    u = urlparse(base)
+    bases = [base] + ([f"{u.scheme}://{u.netloc}"] if u.path.strip("/") else [])
+    locale = company.get("locale", "en_US")
+    terms = company.get("_terms") or [""]
+    items: dict[str, dict] = {}
+    feed_ok, last_exc = False, None
+    for b in bases:
+        for term in terms:
+            try:
+                r = session.get(f"{b}/services/rss/job/", timeout=TIMEOUT,
+                                params={"locale": locale, "keywords": f"({term})" if term else ""},
+                                headers={"Accept": "application/rss+xml, application/xml, text/xml"})
+                r.raise_for_status()
+                root = ET.fromstring(r.content)
+            except Exception as exc:
+                last_exc = exc
+                break
+            feed_ok = True
+            for it in root.iter("item"):
+                link = (it.findtext("link") or "").strip()
+                if link and link not in items:
+                    items[link] = {k: (it.findtext(k) or "") for k in ("title", "description", "pubDate")}
+            time.sleep(0.3)
+        if feed_ok:
+            break
+    if not feed_ok:
+        raise RuntimeError(f"SuccessFactors RSS feed not reachable: {last_exc}")
+
+    jobs = []
+    for link, it in items.items():
+        raw_title = html.unescape(it["title"]).strip()
+        m = _SF_TITLE_LOC.match(raw_title)
+        title, location = (m.group(1), m.group(2)) if m else (raw_title, "")
+        if not keep(title):
+            continue
+        desc = html.unescape(it["description"])
+        if len(re.sub(r"<[^>]+>", "", desc)) < 400:
+            try:
+                desc = _sf_page_description(session, link) or desc
+                time.sleep(0.3)
+            except Exception as exc:
+                log.debug("SuccessFactors page fetch failed for %s: %s", link, exc)
+        job_id = re.findall(r"/(\d{5,})/?", link)
+        jobs.append(Job(
+            company=company["name"], ats="successfactors",
+            job_id=job_id[-1] if job_id else link, title=title, url=link,
+            location=location, description_html=desc, posted=_date(it["pubDate"]),
+        ))
+    return jobs
+
+
 FETCHERS: dict[str, Callable] = {
     "greenhouse": fetch_greenhouse,
     "lever": fetch_lever,
@@ -386,12 +470,15 @@ FETCHERS: dict[str, Callable] = {
     "personio": fetch_personio,
     "recruitee": fetch_recruitee,
     "workday": fetch_workday,
+    "successfactors": fetch_successfactors,
 }
 
 
 def fetch_all(companies: Iterable[dict], keep: TitleFilter,
-              session: requests.Session | None = None) -> tuple[list[Job], list[dict]]:
-    """Fetch every enabled company. Returns (jobs, status rows for the report)."""
+              session: requests.Session | None = None,
+              search_terms: list[str] | None = None) -> tuple[list[Job], list[dict]]:
+    """Fetch every enabled company. Returns (jobs, status rows for the report).
+    `search_terms` (your titles) narrow server-side searches where supported."""
     session = session or make_session()
     all_jobs, status = [], []
     for c in companies:
@@ -399,6 +486,7 @@ def fetch_all(companies: Iterable[dict], keep: TitleFilter,
             continue
         ats = (c.get("ats") or "linkedin").lower()
         fetcher = FETCHERS.get(ats)
+        c = {**c, "_terms": search_terms or []}
         row = {"company": c.get("name", "?"), "ats": ats, "ok": False, "count": 0, "error": ""}
         if ats in ("linkedin", "none"):
             row.update(ok=True, error="link only")

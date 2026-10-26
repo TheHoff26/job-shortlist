@@ -47,7 +47,8 @@ def run(config_dir: Path, out_dir: Path, state_path: Path, session=None) -> dict
     companies = _load_yaml(config_dir / "companies.yaml").get("companies", [])
     profile = load_profile(_load_yaml(config_dir / "profile.yaml"), ROOT)
 
-    raw, status = fetch_all(companies, title_filter(profile), session=session)
+    terms = profile["titles"] if profile["require_title_match"] else []
+    raw, status = fetch_all(companies, title_filter(profile), session=session, search_terms=terms)
     log.info("Fetched %d title-matching postings from %d companies", len(raw), len(status))
 
     kept = []
