@@ -7,11 +7,12 @@
 # A job title must contain at least one of these (set require_title_match: false
 # to also allow jobs that only mention them in the description).
 titles:
-  - product manager
-  - product owner
-  - data analyst
+  - Strategy Director
+  - Vice President
+  - Head of
+  - Business Developer
   - business analyst
-  - program manager
+  - Program manager
 
 require_title_match: true
 
@@ -25,16 +26,20 @@ exclude_titles:
 # Extra keywords that add a small bonus when found in the description.
 keywords:
   - B2B
-  - fintech
-  - SaaS
+  - renewables
+  - energy
+  - commodities
+  - strategy
+  - cross-business
 
 # 2) SENIORITY ---------------------------------------------------------------
 # Levels you want: intern, junior, mid, senior, lead, executive
 # Seniority is read from the title (e.g. "Senior", "Lead", "Head of") and
 # required years of experience.
 seniority:
-  - mid
+  - lead
   - senior
+  - executive
 
 # 3) LOCATION (optional) -----------------------------------------------------
 # Leave the list empty to accept any location.
@@ -43,23 +48,24 @@ locations:
   - Finland
   - Espoo
   - Stockholm
-  - Berlin
+  - Germany
+  - Copenhagen
 remote_ok: true          # remote jobs pass the location filter
 
 # 4) MATCH TO YOUR CV ----------------------------------------------------------
 # Skills / tools / domains from your CV. The share of these found in a posting
 # drives the CV-match part of the score.
 cv_skills:
-  - SQL
-  - Python
-  - Tableau
-  - Power BI
+  - energy
+  - leadership
+  - power
+  - elelctricity
   - stakeholder management
-  - agile
-  - Scrum
-  - Jira
-  - A/B testing
-  - roadmap
+  - partnership
+  - Power to X
+  - International
+  - Trading and Risk Management
+  - Market intelligence
   - English
   - German
 
