@@ -1,0 +1,72 @@
+# ---------------------------------------------------------------------------
+# Companies to watch. Add, remove or comment out entries freely.
+#
+# Each entry needs:
+#   name:  display name
+#   ats:   greenhouse | lever | ashby | smartrecruiters | personio | recruitee | workday
+#   id:    the company's identifier on that system (see "How to find the id")
+#
+# How to find the id - open the company's careers page, click a job and look
+# at the URL:
+#   greenhouse       boards.greenhouse.io/<id>  or  job-boards.greenhouse.io/<id>
+#   lever            jobs.lever.co/<id>  (EU boards: jobs.eu.lever.co/<id>)
+#   ashby            jobs.ashbyhq.com/<id>
+#   smartrecruiters  jobs.smartrecruiters.com/<id>   (case-sensitive)
+#   personio         <id>.jobs.personio.de  or  <id>.jobs.personio.com
+#   recruitee        <id>.recruitee.com
+#   workday          use `url:` instead of `id:` - the career site URL, e.g.
+#                    https://<tenant>.wd3.myworkdayjobs.com/en-US/<SiteName>
+#   linkedin         no id needed: the company is NOT fetched, it only gets a
+#                    "Search on LinkedIn" link (for companies whose careers
+#                    site uses none of the systems above)
+#
+# Optional per company:
+#   enabled: false   skip without deleting
+#   language: en     (Personio only) feed language
+#   linkedin_id: 1234  LinkedIn company id - makes the LinkedIn link filter by
+#                    this exact company. Find it by searching jobs on LinkedIn,
+#                    choosing the company in the "Company" filter and copying
+#                    the number after f_C= from the address bar.
+#   linkedin: false  no LinkedIn link for this company
+#
+# Every enabled company gets a LinkedIn search link on the page (settings in
+# profile.yaml -> linkedin).
+#
+# The entries below are EXAMPLES so the first run produces output.
+# Replace them with the companies you care about.
+# ---------------------------------------------------------------------------
+
+companies:
+  - name: Stripe
+    ats: greenhouse
+    id: stripe
+
+  - name: Figma
+    ats: greenhouse
+    id: figma
+
+  - name: Spotify
+    ats: lever
+    id: spotify
+
+  - name: Linear
+    ats: ashby
+    id: linear
+
+  - name: Bosch
+    ats: smartrecruiters
+    id: BoschGroup
+
+  - name: SumUp
+    ats: personio
+    id: sumup
+    language: en
+
+  # LinkedIn-only example (careers site not supported):
+  # - name: Supercell
+  #   ats: linkedin
+
+  # Workday example (experimental - Workday has no official public API):
+  # - name: NVIDIA
+  #   ats: workday
+  #   url: https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite

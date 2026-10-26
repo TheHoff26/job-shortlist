@@ -1,0 +1,83 @@
+# ---------------------------------------------------------------------------
+# Your search profile. Decides which jobs are "relevant" and how they rank.
+# All matching is case-insensitive.
+# ---------------------------------------------------------------------------
+
+# 1) JOB TITLES / KEYWORDS -------------------------------------------------
+# A job title must contain at least one of these (set require_title_match: false
+# to also allow jobs that only mention them in the description).
+titles:
+  - product manager
+  - product owner
+  - data analyst
+  - business analyst
+  - program manager
+
+require_title_match: true
+
+# Titles containing any of these are always dropped.
+exclude_titles:
+  - intern
+  - werkstudent
+  - working student
+  - sales development
+
+# Extra keywords that add a small bonus when found in the description.
+keywords:
+  - B2B
+  - fintech
+  - SaaS
+
+# 2) SENIORITY ---------------------------------------------------------------
+# Levels you want: intern, junior, mid, senior, lead, executive
+# Seniority is read from the title (e.g. "Senior", "Lead", "Head of") and
+# required years of experience.
+seniority:
+  - mid
+  - senior
+
+# 3) LOCATION (optional) -----------------------------------------------------
+# Leave the list empty to accept any location.
+locations:
+  - Helsinki
+  - Finland
+  - Espoo
+  - Stockholm
+  - Berlin
+remote_ok: true          # remote jobs pass the location filter
+
+# 4) MATCH TO YOUR CV ----------------------------------------------------------
+# Skills / tools / domains from your CV. The share of these found in a posting
+# drives the CV-match part of the score.
+cv_skills:
+  - SQL
+  - Python
+  - Tableau
+  - Power BI
+  - stakeholder management
+  - agile
+  - Scrum
+  - Jira
+  - A/B testing
+  - roadmap
+  - English
+  - German
+
+# Optional: plain-text CV for an extra similarity signal.
+# Either point to a file (e.g. config/cv.txt) or - recommended if your
+# repository is public - store the text in the GitHub secret JOBFINDER_CV_TEXT.
+cv_file: ""
+
+# 5) LINKEDIN SEARCH LINKS ----------------------------------------------------
+# LinkedIn is not fetched automatically (no public API; scraping is against its
+# User Agreement). The page shows one pre-filled LinkedIn search link per
+# company instead.
+linkedin:
+  enabled: true
+  location: "Finland"        # empty = first entry of `locations` above
+  posted_within_days: 7      # 0 = any time
+
+# 6) OUTPUT -------------------------------------------------------------------
+min_score: 35            # jobs below this score are hidden (0-100)
+new_days: 3              # a job counts as "new" for this many days
+max_jobs_per_company: 0  # 0 = no limit
