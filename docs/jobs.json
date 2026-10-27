@@ -1,8 +1,8 @@
 {
  "meta": {
-  "generated": "2026-10-26T09:30+00:00",
-  "total_matches": 1,
-  "new_matches": 0,
+  "generated": "2026-10-27T05:12+00:00",
+  "total_matches": 3,
+  "new_matches": 3,
   "companies": [
    {
     "company": "Fortum",
@@ -29,8 +29,8 @@
     "company": "Metso",
     "ats": "successfactors",
     "ok": true,
-    "count": 0,
-    "error": "no matching open positions (or wrong id)"
+    "count": 2,
+    "error": ""
    },
    {
     "company": "Metsä Group",
@@ -144,6 +144,55 @@
  },
  "jobs": [
   {
+   "company": "Metso",
+   "ats": "successfactors",
+   "job_id": "1375813757",
+   "title": "Head of Everyday AI Adoption",
+   "url": "https://careers.metso.com/job/Espoo-Head-of-Everyday-AI-Adoption/1375813757/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS",
+   "location": "Espoo, FI",
+   "department": "",
+   "posted": "2026-10-26",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "summary": "Reporting to the VP, AI Transformation, you will build and lead a team that combines regional adoption support with the development, curation and continuous improvement of reusable AI capabilities and resources. Within the AI Transformation Office, you will be part of a multidisciplinary organization covering AI…",
+   "responsibilities": [
+    "Develop and continuously improve Metso’s approach to Everyday AI adoption, supporting Metso’s strategy by connecting business priorities…",
+    "Build a role-based adoption roadmap with business leaders, HR and IT, focusing on better ways of working, not just new tools.",
+    "Bring relevant AI advances into Metso by assessing, testing and introducing new ways of working that add value.",
+    "Build and lead a team that develops, curates and maintains reusable Everyday AI capabilities and resources."
+   ],
+   "criteria": [
+    "Join nearly 18,000 Metsonites worldwide, each bringing unique expertise and experience to positive change.",
+    "As our Head of Everyday AI Adoption, you will enable Metsonites to explore these possibilities and build the confidence, skills and experience to understand…",
+    "Champion Everyday AI through demonstrations, hands-on experimentation and relevant examples that build confidence and useful habits.",
+    "A confident, visible presence and the ability to communicate compellingly with diverse audiences.",
+    "Experience leading adoption or business change that resulted in lasting new ways of working, not only launches or training.",
+    "An understanding of how people learn and build new habits, and how to apply it in practice."
+   ],
+   "nice_to_have": [],
+   "seniority": "executive",
+   "years_experience": "",
+   "languages": [],
+   "education": "",
+   "skills_matched": [
+    "energy",
+    "leadership"
+   ],
+   "score": 80,
+   "reasons": [
+    "Title matches “Head of”",
+    "Seniority: executive ✓",
+    "CV skills 2/12: energy, leadership",
+    "CV text similarity 24%",
+    "Keywords: energy, strategy",
+    "Location: Espoo, FI"
+   ],
+   "first_seen": "2026-10-27",
+   "is_new": true,
+   "key": "successfactors:Metso:1375813757"
+  },
+  {
    "company": "Neste",
    "ats": "successfactors",
    "job_id": "1439428900",
@@ -182,17 +231,67 @@
     "International",
     "English"
    ],
-   "score": 72,
+   "score": 74,
    "reasons": [
     "Title matches “Program manager”",
     "Seniority: not stated",
     "CV skills 3/12: leadership, International, English",
+    "CV text similarity 22%",
     "Keywords: renewables, strategy",
     "Location: Espoo, FI"
    ],
    "first_seen": "2026-10-26",
-   "is_new": false,
+   "is_new": true,
    "key": "successfactors:Neste:1439428900"
+  },
+  {
+   "company": "Metso",
+   "ats": "successfactors",
+   "job_id": "1375813857",
+   "title": "Head of AI Platform & Governance",
+   "url": "https://careers.metso.com/job/Espoo-Head-of-AI-Platform-&-Governance/1375813857/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS",
+   "location": "Espoo, FI",
+   "department": "",
+   "posted": "2026-10-26",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "summary": "You will build and lead a small, experienced team supporting AI platform engineering, technology and future readiness, and Responsible AI governance. Together, you will establish reusable technical foundations and practical procedures that help teams across Metso create trustworthy AI products and solutions.",
+   "responsibilities": [
+    "Build and lead a small, experienced AI platform and governance team with clear priorities and shared ownership.",
+    "Act as Chief AI Architect, defining AI architecture and approved technical patterns for models, agents, data access and integrations.",
+    "Develop reusable AI platform capabilities based on real delivery needs, helping future initiatives move faster.",
+    "Establish lifecycle and monitoring controls for shared AI capabilities, covering access, evaluation, quality and cost."
+   ],
+   "criteria": [
+    "Join nearly 18,000 Metsonites worldwide, each bringing unique expertise and experience to positive change.",
+    "You will provide clear technical direction and dependable shared foundations while building on the expertise and responsibilities of partner teams.",
+    "Experience leading technical teams and delivering production AI platforms or shared technology services.",
+    "Strong AI architecture and systems-design judgment across models, agents, integrations, data and security.",
+    "A solid understanding of platform engineering, including reusable services, deployment automation and integration tooling.",
+    "Experience with lifecycle and production-readiness practices such as evaluation, observability, access control and cost monitoring."
+   ],
+   "nice_to_have": [],
+   "seniority": "executive",
+   "years_experience": "",
+   "languages": [],
+   "education": "",
+   "skills_matched": [
+    "energy",
+    "leadership"
+   ],
+   "score": 73,
+   "reasons": [
+    "Title matches “Head of”",
+    "Seniority: executive ✓",
+    "CV skills 2/12: energy, leadership",
+    "CV text similarity 15%",
+    "Keywords: energy",
+    "Location: Espoo, FI"
+   ],
+   "first_seen": "2026-10-27",
+   "is_new": true,
+   "key": "successfactors:Metso:1375813857"
   }
  ]
 }
