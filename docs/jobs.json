@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-10-30T11:51+00:00",
+  "generated": "2026-10-30T11:57+00:00",
   "total_matches": 8,
   "new_matches": 8,
   "companies": [
@@ -123,6 +123,26 @@
     "source": "",
     "careers_url": "https://www.uniper.energy/career",
     "note": "2026-10-30, no supported job system found"
+   },
+   {
+    "company": "Uniper",
+    "ats": "linkedin",
+    "ok": true,
+    "count": 0,
+    "error": "link only",
+    "source": "",
+    "careers_url": "https://www.uniper.energy/career",
+    "note": "2026-10-30, no supported job system found"
+   },
+   {
+    "company": "Orsted",
+    "ats": "linkedin",
+    "ok": true,
+    "count": 0,
+    "error": "link only",
+    "source": "",
+    "careers_url": "https://orsted.com/en/careers/vacancies-list",
+    "note": "2026-10-30, no supported job system found"
    }
   ],
   "repo": "TheHoff26/job-shortlist",
@@ -174,6 +194,14 @@
    {
     "company": "Uniper",
     "url": "https://www.linkedin.com/jobs/search/?keywords=%22Uniper%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800"
+   },
+   {
+    "company": "Uniper",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Uniper%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800"
+   },
+   {
+    "company": "Orsted",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Orsted%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800"
    }
   ],
   "profile": {
