@@ -42,7 +42,8 @@ def search_url(company: dict, profile: dict) -> str:
     li = profile.get("linkedin") or {}
     company_id = str(company.get("linkedin_id") or "").strip()
     params: dict[str, str] = {
-        "keywords": _keywords(profile.get("titles", []), None if company_id else company.get("name")),
+        "keywords": _keywords(li.get("titles") or profile.get("titles", []),
+                              None if company_id else company.get("name")),
     }
     location = li.get("location") or (profile.get("locations") or [""])[0]
     if location:

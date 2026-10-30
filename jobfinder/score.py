@@ -21,7 +21,7 @@ from .extract import LEVELS, plain_text
 from .models import Job
 
 DEFAULTS = {
-    "titles": [], "require_title_match": True, "exclude_titles": [], "keywords": [],
+    "titles": [], "require_title_match": True, "exclude_titles": [], "lower_priority_titles": [], "keywords": [],
     "seniority": [], "locations": [], "remote_ok": True, "cv_skills": [], "cv_file": "",
     "min_score": 35, "new_days": 3, "max_jobs_per_company": 0,
     "linkedin": {"enabled": True, "location": "", "posted_within_days": 7},
@@ -30,7 +30,7 @@ DEFAULTS = {
 
 def load_profile(data: dict | None, base_dir: Path) -> dict:
     prof = {**DEFAULTS, **(data or {})}
-    for k in ("titles", "exclude_titles", "keywords", "seniority", "locations", "cv_skills"):
+    for k in ("titles", "exclude_titles", "lower_priority_titles", "keywords", "seniority", "locations", "cv_skills"):
         prof[k] = [str(x).strip() for x in (prof.get(k) or []) if str(x).strip()]
     prof["seniority"] = [s.lower() for s in prof["seniority"]]
     prof["linkedin"] = {**DEFAULTS["linkedin"], **(prof.get("linkedin") or {})}
@@ -165,6 +165,12 @@ def score_job(job: Job, profile: dict) -> bool:
 
     if loc_reason:
         reasons.append(loc_reason)
-    job.score = int(round(pts * 100 / max_pts))
+    # Lower-priority roles: kept, but ranked down -------------------------------
+    low = next((t for t in profile["lower_priority_titles"] if contains(job.title, t)), None)
+    if low:
+        pts -= 25
+        reasons.append(f"Lower-priority role (“{low}”): −25")
+
+    job.score = max(0, int(round(pts * 100 / max_pts)))
     job.reasons = reasons
     return job.score >= int(profile["min_score"])
