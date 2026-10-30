@@ -84,6 +84,9 @@ companies:
 
   - name: Copenhagen Infrastructure Partners
     ats: linkedin
- 
 
-  
+  # --- added from the website ---
+  - name: "Orsted"
+    careers_url: "https://orsted.com/en/careers/vacancies-list"
+  - name: "Uniper"
+    careers_url: "https://www.uniper.energy/career"
