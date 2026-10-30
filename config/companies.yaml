@@ -92,3 +92,7 @@ companies:
   - name: "Uniper"
     careers_url: "https://www.uniper.energy/career"
     detect_failed: "2026-10-30, no supported job system found"
+  - name: "Uniper"
+    careers_url: "https://www.uniper.energy/career"
+  - name: "Orsted"
+    careers_url: "https://orsted.com/en/careers/vacancies-list"
