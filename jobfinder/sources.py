@@ -487,7 +487,10 @@ def fetch_all(companies: Iterable[dict], keep: TitleFilter,
         ats = (c.get("ats") or "linkedin").lower()
         fetcher = FETCHERS.get(ats)
         c = {**c, "_terms": search_terms or []}
-        row = {"company": c.get("name", "?"), "ats": ats, "ok": False, "count": 0, "error": ""}
+        row = {"company": c.get("name", "?"), "ats": ats, "ok": False, "count": 0, "error": "",
+               "source": str(c.get("url") or c.get("id") or ""),
+               "careers_url": c.get("careers_url", ""),
+               "note": str(c.get("detected") or c.get("detect_failed") or "")}
         if ats in ("linkedin", "none"):
             row.update(ok=True, error="link only")
             status.append(row)

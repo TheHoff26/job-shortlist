@@ -5,17 +5,19 @@ from __future__ import annotations
 import argparse
 import json
 import logging
+import os
 from collections import defaultdict
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 
 import yaml
 
+from .discover import resolve_companies
 from .extract import enrich
 from .linkedin import build_links
 from .render import write_outputs
 from .score import load_profile, score_job, title_filter
-from .sources import fetch_all
+from .sources import fetch_all, make_session
 
 log = logging.getLogger("jobfinder")
 ROOT = Path(__file__).resolve().parent.parent
@@ -44,7 +46,9 @@ def update_state(jobs, state_path: Path, new_days: int, today: date) -> None:
 
 
 def run(config_dir: Path, out_dir: Path, state_path: Path, session=None) -> dict:
-    companies = _load_yaml(config_dir / "companies.yaml").get("companies", [])
+    session = session or make_session()
+    # find job sources for newly added companies; results are written back to the file
+    companies = resolve_companies(config_dir / "companies.yaml", session)
     profile = load_profile(_load_yaml(config_dir / "profile.yaml"), ROOT)
 
     terms = profile["titles"] if profile["require_title_match"] else []
@@ -73,6 +77,7 @@ def run(config_dir: Path, out_dir: Path, state_path: Path, session=None) -> dict
         "total_matches": len(kept),
         "new_matches": sum(j.is_new for j in kept),
         "companies": status,
+        "repo": os.environ.get("GITHUB_REPOSITORY", ""),
         "linkedin": build_links(companies, profile),
         "profile": {k: profile[k] for k in ("titles", "seniority", "locations", "min_score")},
     }
