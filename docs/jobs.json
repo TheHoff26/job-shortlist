@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-10-30T06:45+00:00",
+  "generated": "2026-10-30T07:17+00:00",
   "total_matches": 8,
   "new_matches": 8,
   "companies": [
@@ -9,72 +9,103 @@
     "ats": "successfactors",
     "ok": true,
     "count": 0,
-    "error": "no matching open positions (or wrong id)"
+    "error": "no matching open positions (or wrong id)",
+    "source": "https://jobs.fortum.com/Fortum",
+    "careers_url": "",
+    "note": ""
    },
    {
     "company": "Neste",
     "ats": "successfactors",
     "ok": true,
     "count": 1,
-    "error": ""
+    "error": "",
+    "source": "https://jobs.neste.com",
+    "careers_url": "",
+    "note": ""
    },
    {
     "company": "Wärtsilä",
     "ats": "successfactors",
     "ok": true,
     "count": 9,
-    "error": ""
+    "error": "",
+    "source": "https://careers.wartsila.com",
+    "careers_url": "",
+    "note": ""
    },
    {
     "company": "Metso",
     "ats": "successfactors",
     "ok": true,
     "count": 6,
-    "error": ""
+    "error": "",
+    "source": "https://careers.metso.com",
+    "careers_url": "",
+    "note": ""
    },
    {
     "company": "Metsä Group",
     "ats": "workday",
     "ok": true,
     "count": 0,
-    "error": "no matching open positions (or wrong id)"
+    "error": "no matching open positions (or wrong id)",
+    "source": "https://metsagroup.wd103.myworkdayjobs.com/en-US/MetsaGroup_Careers",
+    "careers_url": "",
+    "note": ""
    },
    {
     "company": "Stora Enso",
     "ats": "workday",
     "ok": true,
     "count": 3,
-    "error": ""
+    "error": "",
+    "source": "https://storaenso.wd502.myworkdayjobs.com/Stora_Enso_site_opportunities",
+    "careers_url": "",
+    "note": ""
    },
    {
     "company": "Valmet",
     "ats": "workday",
     "ok": true,
     "count": 6,
-    "error": ""
+    "error": "",
+    "source": "https://valmet.wd103.myworkdayjobs.com/en-US/External",
+    "careers_url": "",
+    "note": ""
    },
    {
     "company": "KONE",
     "ats": "linkedin",
     "ok": true,
     "count": 0,
-    "error": "link only"
+    "error": "link only",
+    "source": "",
+    "careers_url": "",
+    "note": ""
    },
    {
     "company": "St1",
     "ats": "linkedin",
     "ok": true,
     "count": 0,
-    "error": "link only"
+    "error": "link only",
+    "source": "",
+    "careers_url": "",
+    "note": ""
    },
    {
     "company": "Copenhagen Infrastructure Partners",
     "ats": "linkedin",
     "ok": true,
     "count": 0,
-    "error": "link only"
+    "error": "link only",
+    "source": "",
+    "careers_url": "",
+    "note": ""
    }
   ],
+  "repo": "TheHoff26/job-shortlist",
   "linkedin": [
    {
     "company": "Fortum",
