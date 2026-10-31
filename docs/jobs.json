@@ -1,8 +1,8 @@
 {
  "meta": {
-  "generated": "2026-10-30T12:05+00:00",
+  "generated": "2026-10-31T05:21+00:00",
   "total_matches": 8,
-  "new_matches": 8,
+  "new_matches": 6,
   "companies": [
    {
     "company": "Fortum",
@@ -18,8 +18,8 @@
     "company": "Neste",
     "ats": "successfactors",
     "ok": true,
-    "count": 1,
-    "error": "",
+    "count": 0,
+    "error": "no matching open positions (or wrong id)",
     "source": "https://jobs.neste.com",
     "careers_url": "",
     "note": ""
@@ -28,7 +28,7 @@
     "company": "Wärtsilä",
     "ats": "successfactors",
     "ok": true,
-    "count": 9,
+    "count": 8,
     "error": "",
     "source": "https://careers.wartsila.com",
     "careers_url": "",
@@ -58,7 +58,7 @@
     "company": "Stora Enso",
     "ats": "workday",
     "ok": true,
-    "count": 3,
+    "count": 1,
     "error": "",
     "source": "https://storaenso.wd502.myworkdayjobs.com/Stora_Enso_site_opportunities",
     "careers_url": "",
@@ -68,7 +68,7 @@
     "company": "Valmet",
     "ats": "workday",
     "ok": true,
-    "count": 6,
+    "count": 7,
     "error": "",
     "source": "https://valmet.wd103.myworkdayjobs.com/en-US/External",
     "careers_url": "",
@@ -317,7 +317,7 @@
     "Location: Espoo, FI"
    ],
    "first_seen": "2026-10-27",
-   "is_new": true,
+   "is_new": false,
    "key": "successfactors:Metso:1375813757"
   },
   {
@@ -367,7 +367,7 @@
     "Location: Espoo, FI"
    ],
    "first_seen": "2026-10-27",
-   "is_new": true,
+   "is_new": false,
    "key": "successfactors:Metso:1375813857"
   },
   {
