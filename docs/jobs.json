@@ -1,8 +1,8 @@
 {
  "meta": {
-  "generated": "2026-10-31T10:14+00:00",
+  "generated": "2026-11-01T05:28+00:00",
   "total_matches": 8,
-  "new_matches": 6,
+  "new_matches": 5,
   "companies": [
    {
     "company": "Fortum",
@@ -58,8 +58,8 @@
     "company": "Stora Enso",
     "ats": "workday",
     "ok": true,
-    "count": 1,
-    "error": "",
+    "count": 0,
+    "error": "no matching open positions (or wrong id)",
     "source": "https://storaenso.wd502.myworkdayjobs.com/Stora_Enso_site_opportunities",
     "careers_url": "",
     "note": ""
@@ -637,7 +637,7 @@
     "Lower-priority role (“engineering”): −25"
    ],
    "first_seen": "2026-10-28",
-   "is_new": true,
+   "is_new": false,
    "key": "successfactors:Metso:1375814257"
   }
  ]
