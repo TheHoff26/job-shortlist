@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Company Register</title>
+<title>Job Shortlist</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -11,7 +11,8 @@
 :root{
   --bg:#F3F6F8; --surface:#FFFFFF; --ink:#16232E; --muted:#5A6A77; --line:#D3DCE2;
   --pine:#23604F; --pine-soft:#DCEBE5; --ochre:#9A6A12; --ochre-soft:#F3E7CC;
-  --slate:#6D7C88; --slate-soft:#E4E9ED; --berry:#A3214A; --berry-soft:#F6DDE5; --focus:#2C6FB0;
+  --slate:#6D7C88; --slate-soft:#E4E9ED; --berry:#A3214A; --berry-soft:#F6DDE5;
+  --focus:#2C6FB0;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#0F171D; --surface:#16212A; --ink:#E3EAEF; --muted:#94A3AF; --line:#2A3945;
@@ -23,629 +24,322 @@
   --slate:#9AA8B3; --slate-soft:#22303B; --berry:#F07A9C; --berry-soft:#3E1726; --focus:#7DB4EA;}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 "Schibsted Grotesk",system-ui,sans-serif}
-a{color:inherit;text-underline-offset:3px}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font:400 16px/1.55 "Schibsted Grotesk",system-ui,sans-serif;font-feature-settings:"tnum" 0}
+a{color:inherit}
 :focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-radius:4px}
-.wrap{max-width:1240px;margin:0 auto;padding:32px 16px 64px}
-header.top{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 32px;margin-bottom:24px}
+.wrap{max-width:1180px;margin:0 auto;padding:32px 16px 64px}
+header.top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 32px;margin-bottom:28px}
 h1{font-size:clamp(28px,4vw,40px);line-height:1.1;font-weight:800;letter-spacing:-.02em;margin:0}
-.lede{color:var(--muted);margin:6px 0 0;max-width:62ch}
-.tally{display:flex;gap:22px;align-items:flex-end}
+.lede{color:var(--muted);margin:6px 0 0;max-width:60ch}
+.tally{display:flex;gap:24px}
 .tally div{font-size:14px;color:var(--muted)}
 .tally b{display:block;font-size:28px;line-height:1;color:var(--ink);font-weight:700;font-variant-numeric:tabular-nums}
-.actions{display:flex;flex-wrap:wrap;gap:8px}
+.tally .new b{color:var(--berry)}
+.layout{display:grid;grid-template-columns:240px 1fr;gap:32px;align-items:start}
+@media (max-width:860px){.layout{grid-template-columns:1fr;gap:16px}}
+/* filters */
+.filters{position:sticky;top:16px;display:grid;gap:16px}
+@media (max-width:860px){.filters{position:static;grid-template-columns:1fr 1fr}.filters .full{grid-column:1/-1}}
+.filters label{display:grid;gap:4px;font-size:14px;font-weight:600}
+.filters input[type=search],.filters select{font:inherit;font-size:15px;font-weight:400;color:var(--ink);
+  background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 10px;width:100%}
+.filters input[type=range]{width:100%;accent-color:var(--pine)}
+.check{display:flex!important;grid-template-columns:none;align-items:center;gap:8px;font-weight:500!important}
+.check input{width:18px;height:18px;accent-color:var(--berry)}
+.small{font-size:13px;color:var(--muted)}
+.downloads{display:flex;gap:12px;font-size:14px}
+/* list */
+.list{display:grid;gap:0;border-top:2px solid var(--ink)}
+.job{display:grid;grid-template-columns:76px 1fr;gap:20px;padding:24px 0;border-bottom:1px solid var(--line)}
+@media (max-width:560px){.job{grid-template-columns:56px 1fr;gap:14px}}
+.gauge{position:relative;width:64px;height:64px}
+@media (max-width:560px){.gauge{width:52px;height:52px}}
+.gauge svg{width:100%;height:100%;transform:rotate(-90deg)}
+.gauge .trk{stroke:var(--line)}
+.gauge span{position:absolute;inset:0;display:grid;place-items:center;font-weight:800;font-size:22px;font-variant-numeric:tabular-nums}
+@media (max-width:560px){.gauge span{font-size:18px}}
+.hi{--c:var(--pine)} .md{--c:var(--ochre)} .lo{--c:var(--slate)}
+.gauge .val{stroke:var(--c)}
+.gauge span{color:var(--c)}
+.head{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}
+.head h2{margin:0;font-size:20px;line-height:1.25;font-weight:700;letter-spacing:-.01em}
+.head h2 a{text-decoration:none}
+.head h2 a:hover{text-decoration:underline;text-underline-offset:3px}
+.company{font-weight:600;color:var(--muted)}
+.newtag{font-size:12px;font-weight:700;color:var(--berry);background:var(--berry-soft);border-radius:999px;padding:2px 8px}
+.facts{display:flex;flex-wrap:wrap;gap:6px;margin:10px 0 0;padding:0;list-style:none}
+.facts li{font-size:13px;background:var(--slate-soft);border-radius:6px;padding:3px 8px}
+.facts li.lvl{background:var(--c-soft,var(--slate-soft))}
+.summary{margin:12px 0 0;max-width:72ch}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:14px}
+@media (max-width:700px){.cols{grid-template-columns:1fr}}
+.cols h3{font-size:14px;font-weight:700;margin:0 0 6px}
+.cols ul{margin:0;padding-left:18px;font-size:15px}
+.cols li{margin:2px 0}
+.cols li.plus{color:var(--muted)}
+.skills{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;align-items:center;font-size:13px}
+.skills b{font-weight:600;color:var(--muted);margin-right:2px}
+.skills span{background:var(--pine-soft);color:var(--pine);border-radius:999px;padding:2px 9px;font-weight:600}
+details.why{margin-top:12px;font-size:14px;color:var(--muted)}
+details.why summary{cursor:pointer;font-weight:600;width:max-content}
+details.why ul{margin:6px 0 0;padding-left:18px}
+.apply{display:inline-block;margin-top:14px;font-weight:700;color:var(--surface);background:var(--ink);
+  text-decoration:none;border-radius:8px;padding:8px 14px;font-size:15px}
+.apply:hover{background:var(--pine)}
+.empty{padding:48px 0;color:var(--muted)}
+.empty b{display:block;color:var(--ink);font-size:18px;margin-bottom:4px}
+footer{margin-top:40px;font-size:14px;color:var(--muted)}
+footer table{border-collapse:collapse;margin-top:8px;font-size:13px}
+footer td{padding:3px 14px 3px 0;border-bottom:1px solid var(--line)}
+footer .bad{color:var(--berry)}
+.li h2{font-size:15px;font-weight:700;margin:0}
+.li summary{cursor:pointer;font-size:15px;font-weight:700}
+.li ul{max-height:340px;overflow:auto;padding-right:6px}
+.li li span{font-size:12px;color:var(--muted);margin-left:6px}
+a.btn{text-decoration:none;display:inline-block}
+.rt{display:inline-grid;place-items:center;min-width:22px;height:22px;border-radius:6px;font-size:12px;font-weight:800;padding:0 5px}
+.rt-A{background:var(--pine-soft);color:var(--pine)} .rt-B{background:var(--ochre-soft);color:var(--ochre)} .rt-C{background:var(--slate-soft);color:var(--slate)}
+footer details summary{cursor:pointer}
+.li p{margin:2px 0 8px}
+.li ul{list-style:none;margin:0;padding:0;display:grid;gap:4px;font-size:15px}
+.li a{text-underline-offset:3px}
+.li a:hover{color:var(--pine)}
+.themebtn{font:inherit;font-size:14px;background:none;border:1px solid var(--line);color:var(--ink);border-radius:8px;padding:6px 10px;cursor:pointer}
+.headright{display:flex;flex-wrap:wrap;align-items:flex-end;gap:16px 28px}
 .btn{font:inherit;font-size:15px;font-weight:600;border-radius:8px;padding:8px 14px;cursor:pointer;border:1px solid var(--line);background:var(--surface);color:var(--ink)}
 .btn:hover{border-color:var(--ink)}
 .btn.primary{background:var(--ink);color:var(--surface);border-color:var(--ink)}
 .btn.primary:hover{background:var(--pine);border-color:var(--pine)}
-.btn.danger{color:var(--berry);border-color:var(--berry-soft)}
-.btn.danger:hover{border-color:var(--berry)}
-.btn.small{font-size:14px;padding:5px 10px}
 .btn:disabled{opacity:.45;cursor:not-allowed}
-.lock{display:inline-flex;align-items:center;gap:6px}
-.lock svg{width:15px;height:15px}
-.filters{display:grid;grid-template-columns:2fr repeat(4,1fr);gap:10px;margin-bottom:16px}
-@media (max-width:860px){.filters{grid-template-columns:1fr 1fr}.filters .q{grid-column:1/-1}}
-.filters label{display:grid;gap:4px;font-size:13px;font-weight:600;color:var(--muted)}
-input,select,textarea{font:inherit;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:8px 10px;width:100%}
-textarea{min-height:84px;resize:vertical}
-.banner{border:1px solid var(--line);background:var(--surface);border-radius:10px;padding:12px 14px;margin-bottom:16px;font-size:14px}
-.banner.err{border-color:var(--berry);color:var(--berry)}
-/* register table */
-.reg{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);border-radius:10px;overflow:hidden}
-.reg th{text-align:left;font-size:13px;font-weight:600;color:var(--muted);padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
-.reg td{padding:12px;border-bottom:1px solid var(--line);vertical-align:top;font-size:15px}
-.reg tr:last-child td{border-bottom:none}
-.reg tbody tr{cursor:pointer}
-.reg tbody tr:hover{background:var(--bg)}
-.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
-.co b{display:block;font-weight:700}
-.co span{display:block;font-size:13px;color:var(--muted)}
-.rating{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:8px;font-weight:800;font-size:15px}
-.r-A{background:var(--pine-soft);color:var(--pine)} .r-B{background:var(--ochre-soft);color:var(--ochre)} .r-C{background:var(--slate-soft);color:var(--slate)}
-.pill{display:inline-block;font-size:13px;border-radius:999px;padding:2px 9px;background:var(--slate-soft);white-space:nowrap}
-.st-applied{background:var(--pine-soft);color:var(--pine)} .st-paused{background:var(--berry-soft);color:var(--berry)}
-.src{font-size:13px;color:var(--muted)} .src.bad{color:var(--berry)} .src.warn{color:var(--ochre)}
-.empty{padding:40px 12px;text-align:center;color:var(--muted)}
-@media (max-width:900px){
-  .reg thead{display:none}
-  .reg,.reg tbody,.reg tr,.reg td{display:block;width:100%}
-  .reg tr{display:grid;grid-template-columns:42px 1fr auto;gap:2px 10px;padding:12px;border-bottom:1px solid var(--line)}
-  .reg td{border:none;padding:0}
-  .reg td.c-rating{grid-row:1/span 3}
-  .reg td.c-co{grid-column:2}
-  .reg td.c-status{grid-column:3;grid-row:1}
-  .reg td.c-seg,.reg td.c-fig,.reg td.c-jobs{grid-column:2/-1;font-size:13px;color:var(--muted)}
-  .reg td.hide-m{display:none}
-}
-.co .fig-m{display:none}
-@media (max-width:900px){.co .fig-m{display:block}}
-footer{margin-top:28px;font-size:14px;color:var(--muted);display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
-/* dialogs */
-dialog{width:min(860px,calc(100vw - 24px));max-height:calc(100vh - 24px);padding:0;border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink)}
-dialog.narrow{width:min(520px,calc(100vw - 24px))}
-dialog::backdrop{background:rgba(10,20,28,.5)}
-.dlg{display:grid;gap:22px;padding:24px}
-@media (max-width:560px){.dlg{padding:18px 16px}}
-.dlg h2{margin:0;font-size:24px;font-weight:800;letter-spacing:-.01em}
-.dlg h3{margin:0 0 10px;font-size:16px;font-weight:700}
-.dlg p.hint{margin:4px 0 0;font-size:14px;color:var(--muted);max-width:64ch}
-.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
-.grid label{display:grid;gap:4px;font-size:14px;font-weight:600;grid-column:span 3}
-.grid .s2{grid-column:span 2} .grid .s6{grid-column:1/-1} .grid .s4{grid-column:span 4} .grid .s1{grid-column:span 1}
-@media (max-width:640px){.grid label,.grid .s2,.grid .s4,.grid .s1{grid-column:1/-1}}
-fieldset{border:none;padding:0;margin:0}
-.checks{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:14px}
-.checks label{display:flex;align-items:center;gap:6px;font-weight:500}
-.checks input{width:16px;height:16px;accent-color:var(--pine)}
-.private{border:1px solid var(--line);border-radius:10px;padding:16px;display:grid;gap:12px}
-.private.locked{background:var(--bg)}
-.contact{display:grid;grid-template-columns:1.2fr 1fr 1.3fr 1fr auto;gap:8px;align-items:end}
-@media (max-width:700px){.contact{grid-template-columns:1fr 1fr}.contact .btn{grid-column:1/-1}}
-.contact label{display:grid;gap:4px;font-size:13px;font-weight:600}
-.view dl{display:grid;grid-template-columns:180px 1fr;gap:6px 16px;margin:0;font-size:15px}
-@media (max-width:560px){.view dl{grid-template-columns:1fr}.view dt{margin-top:6px}}
-.view dt{color:var(--muted);font-size:14px}
-.view dd{margin:0}
-.dlg-foot{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:16px}
-.dlg-foot .right{display:flex;gap:8px;margin-left:auto}
-.status{font-size:14px;min-height:1.4em}
-.status.err{color:var(--berry)} .status.ok{color:var(--pine)}
-.themebtn{background:none;border:none;color:var(--muted);font:inherit;font-size:14px;cursor:pointer;text-decoration:underline;text-underline-offset:3px;padding:0}
+.btn.link{border:none;background:none;padding:4px 6px;font-size:14px;color:var(--berry);text-decoration:underline;text-underline-offset:3px}
+@media (prefers-reduced-motion:no-preference){.gauge .val{transition:stroke-dashoffset .6s ease-out}}
 </style>
 </head>
 <body>
 <div class="wrap">
   <header class="top">
     <div>
-      <h1>Company register</h1>
-      <p class="lede">Target companies for the job search. Companies that are not paused are searched for open positions every day.</p>
+      <h1>Job shortlist</h1>
+      <p class="lede" id="lede">Open positions at the companies you follow, ranked against your profile.</p>
     </div>
-    <div class="tally" aria-live="polite">
-      <div><b id="t-all">0</b>companies</div>
-      <div><b id="t-a">0</b>rated A</div>
-      <div><b id="t-applied">0</b>applied</div>
+    <div class="headright">
+      <div class="tally" aria-live="polite">
+        <div><b id="t-shown">0</b>shown</div>
+        <div class="new"><b id="t-new">0</b>new</div>
+        <div><b id="t-co">0</b>companies</div>
+      </div>
+      <a class="btn" id="reg-link" href="https://thehoff26.github.io/company-scout/" target="_blank" rel="noopener">Company register</a>
     </div>
   </header>
 
-  <div class="actions" style="margin-bottom:16px">
-    <button class="btn primary" id="btn-add" type="button">Add company</button>
-    <button class="btn lock" id="btn-unlock" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg><span>Unlock contacts</span></button>
-    <button class="btn" id="btn-access" type="button">GitHub access</button>
+  <div class="layout">
+    <aside class="filters" aria-label="Filters">
+      <label class="full">Search
+        <input type="search" id="f-q" placeholder="Title, skill, location…">
+      </label>
+      <label>Company
+        <select id="f-co"><option value="">All companies</option></select>
+      </label>
+      <label>Seniority
+        <select id="f-lvl"><option value="">Any level</option></select>
+      </label>
+      <label>Segment
+        <select id="f-seg"><option value="">All segments</option></select>
+      </label>
+      <label>Company rating
+        <select id="f-rt"><option value="">Any rating</option><option value="A">A</option><option value="AB">A or B</option></select>
+      </label>
+      <label>Workplace
+        <select id="f-wp"><option value="">Any</option><option value="remote">Remote</option><option value="hybrid">Hybrid</option><option value="onsite">On-site</option></select>
+      </label>
+      <label>Sort by
+        <select id="f-sort"><option value="score">Best match</option><option value="new">Newest first</option><option value="company">Company</option></select>
+      </label>
+      <label class="full">Minimum match: <span id="f-min-v">0</span>
+        <input type="range" id="f-min" min="0" max="100" step="5" value="0">
+      </label>
+      <label class="check full"><input type="checkbox" id="f-new"> Only new positions</label>
+      <div class="full">
+        <p class="small" id="updated"></p>
+        <div class="downloads"><a href="jobs.csv" download>Download CSV</a><a href="jobs.json">JSON</a></div>
+      </div>
+      <details class="full li" id="li" hidden>
+        <summary><span id="li-h">Check on LinkedIn</span></summary>
+        <p class="small">These companies publish jobs on sites the tool can't read. Each link opens a LinkedIn search with your titles and location filled in.</p>
+        <ul id="li-list"></ul>
+      </details>
+      <div class="full"><button class="themebtn" id="theme" type="button">Switch theme</button></div>
+    </aside>
+
+    <main>
+      <div class="list" id="list"></div>
+      <footer id="footer"></footer>
+    </main>
   </div>
-
-  <div id="banner"></div>
-
-  <div class="filters" role="search">
-    <label class="q">Search<input type="search" id="f-q" placeholder="Company, segment, country, description…"></label>
-    <label>Segment<select id="f-seg"><option value="">All segments</option></select></label>
-    <label>Rating<select id="f-rating"><option value="">All</option><option>A</option><option>B</option><option>C</option></select></label>
-    <label>Status<select id="f-status"><option value="">All</option><option value="watching">Watching</option><option value="applied">Applied</option><option value="paused">Paused</option></select></label>
-    <label>Sort by<select id="f-sort"><option value="rating">Rating</option><option value="name">Name</option><option value="revenue">Revenue</option><option value="employees">Employees</option><option value="updated">Last updated</option></select></label>
-  </div>
-
-  <table class="reg" aria-label="Companies">
-    <thead><tr>
-      <th>Rating</th><th>Company</th><th>Segment</th><th>Country</th>
-      <th class="num">Revenue</th><th class="num">Op. profit</th><th class="num">Employees</th><th class="num">Market cap</th>
-      <th>Status</th><th>Job source</th>
-    </tr></thead>
-    <tbody id="rows"></tbody>
-  </table>
-
-  <footer>
-    <span id="updated"></span>
-    <span><a href="companies.json">companies.json</a> · <button class="themebtn" id="theme" type="button">Switch theme</button></span>
-  </footer>
 </div>
 
-<!-- View / edit company -->
-<dialog id="dlg-co" aria-labelledby="co-h">
-  <form class="dlg" id="co-form" novalidate>
-    <div>
-      <h2 id="co-h">Company</h2>
-      <p class="hint" id="co-sub"></p>
-    </div>
-
-    <section>
-      <h3>General</h3>
-      <div class="grid">
-        <label class="s4">Company name<input name="name" required></label>
-        <label class="s1">Rating<select name="rating"><option>A</option><option>B</option><option>C</option></select></label>
-        <label class="s1">Status<select name="status"><option value="watching">Watching</option><option value="applied">Applied</option><option value="paused">Paused</option></select></label>
-        <label>Main segment<select name="segment"></select></label>
-        <label>Segment detail<input name="segment_detail" placeholder="e.g. Power generation, trading & optimisation"></label>
-        <fieldset class="s6"><span style="font-size:14px;font-weight:600">Secondary segments</span><div class="checks" id="co-sec"></div></fieldset>
-        <label class="s2">Country<input name="country"></label>
-        <label class="s2">Headquarters<input name="hq"></label>
-        <label class="s2">Ownership<input name="ownership" placeholder="Listed, private, cooperative…"></label>
-        <label class="s6">Description<textarea name="description"></textarea></label>
-        <label class="s6">Why it fits<textarea name="fit"></textarea></label>
-      </div>
-    </section>
-
-    <section>
-      <h3>Key figures</h3>
-      <div class="grid">
-        <label class="s1">Year<input name="f_year" inputmode="numeric"></label>
-        <label class="s1">Currency<input name="f_currency" value="EUR"></label>
-        <label class="s2">Revenue (m)<input name="f_revenue_m" inputmode="decimal"></label>
-        <label class="s2">Employees<input name="f_employees" inputmode="numeric"></label>
-        <label class="s2">Operating profit (m)<input name="f_operating_profit_m" inputmode="decimal"></label>
-        <label class="s2">Profit measure<input name="f_operating_profit_label" placeholder="e.g. comparable EBIT"></label>
-        <label class="s2">Net profit (m)<input name="f_net_profit_m" inputmode="decimal"></label>
-        <label class="s2">Net debt (m)<input name="f_net_debt_m" inputmode="decimal" placeholder="negative = net cash"></label>
-        <label class="s2">Equity ratio (%)<input name="f_equity_ratio_pct" inputmode="decimal"></label>
-        <label class="s2">Total assets (m)<input name="f_total_assets_m" inputmode="decimal"></label>
-        <label class="s2">Market cap (bn)<input name="m_value_bn" inputmode="decimal"></label>
-        <label class="s2">Market cap currency<input name="m_currency" placeholder="EUR"></label>
-        <label class="s2">Market cap as of<input name="m_as_of" placeholder="2026-11"></label>
-      </div>
-    </section>
-
-    <section>
-      <h3>Jobs</h3>
-      <div class="grid">
-        <label class="s6">Careers page<input name="careers_url" type="url" placeholder="https://…"></label>
-        <label>Job system<select name="ats">
-          <option value="">Detect automatically</option>
-          <option value="successfactors">SAP SuccessFactors</option><option value="workday">Workday</option>
-          <option value="greenhouse">Greenhouse</option><option value="lever">Lever</option><option value="ashby">Ashby</option>
-          <option value="smartrecruiters">SmartRecruiters</option><option value="personio">Personio</option><option value="recruitee">Recruitee</option><option value="teamtailor">Teamtailor</option>
-          <option value="linkedin">LinkedIn link only</option>
-        </select></label>
-        <label>Job system address or account<input name="ats_target" placeholder="filled in automatically"></label>
-        <label class="s2">LinkedIn company id<input name="linkedin_id" inputmode="numeric" placeholder="optional"></label>
-        <p class="hint s6" id="co-jobs-note" style="grid-column:1/-1;margin:0"></p>
-      </div>
-    </section>
-
-    <section class="private" id="co-private">
-      <div>
-        <h3 style="margin:0">Contacts and comment</h3>
-        <p class="hint" id="co-private-hint">Encrypted with your passphrase before saving. Only you can read them.</p>
-      </div>
-      <div id="co-contacts" style="display:grid;gap:10px"></div>
-      <div><button class="btn small" type="button" id="co-add-contact">Add contact</button></div>
-      <label style="display:grid;gap:4px;font-size:14px;font-weight:600">Comment<textarea name="comment" placeholder="Anything you want to remember about this company"></textarea></label>
-    </section>
-
-    <section>
-      <h3>Sources</h3>
-      <label style="display:grid;gap:4px;font-size:14px;font-weight:600">Links used for the figures, one per line<textarea name="sources"></textarea></label>
-      <div id="co-source-links" style="font-size:14px;margin-top:6px;display:grid;gap:2px"></div>
-    </section>
-
-    <div class="dlg-foot">
-      <button class="btn danger" type="button" id="co-delete">Delete company</button>
-      <div class="status" id="co-status" role="status" aria-live="polite"></div>
-      <div class="right">
-        <button class="btn" type="button" id="co-cancel">Cancel</button>
-        <button class="btn primary" type="submit" id="co-save">Save</button>
-      </div>
-    </div>
-  </form>
-</dialog>
-
-<!-- Passphrase -->
-<dialog id="dlg-pass" class="narrow" aria-labelledby="pass-h">
-  <form class="dlg" id="pass-form" novalidate>
-    <div>
-      <h2 id="pass-h">Unlock contacts</h2>
-      <p class="hint" id="pass-hint"></p>
-    </div>
-    <label style="display:grid;gap:4px;font-size:14px;font-weight:600">Passphrase<input type="password" id="pass-1" autocomplete="current-password"></label>
-    <label id="pass-2-wrap" style="display:grid;gap:4px;font-size:14px;font-weight:600" hidden>Repeat passphrase<input type="password" id="pass-2" autocomplete="new-password"></label>
-    <div class="dlg-foot">
-      <div class="status" id="pass-status" role="status" aria-live="polite"></div>
-      <div class="right">
-        <button class="btn" type="button" id="pass-cancel">Cancel</button>
-        <button class="btn primary" type="submit" id="pass-ok">Unlock</button>
-      </div>
-    </div>
-  </form>
-</dialog>
-
-<!-- GitHub access -->
-<dialog id="dlg-access" class="narrow" aria-labelledby="acc-h">
-  <form class="dlg" id="acc-form" novalidate>
-    <div>
-      <h2 id="acc-h">GitHub access</h2>
-      <p class="hint">Saving changes needs an access token for this repository. It stays in this browser only.</p>
-    </div>
-    <label style="display:grid;gap:4px;font-size:14px;font-weight:600">Repository<input id="acc-repo" placeholder="TheHoff26/company-scout"></label>
-    <label style="display:grid;gap:4px;font-size:14px;font-weight:600">Access token<input id="acc-token" type="password" placeholder="github_pat_…" autocomplete="off"></label>
-    <ol class="hint" style="margin:0;padding-left:20px;font-size:14px;color:var(--muted)">
-      <li>GitHub → your picture → Settings → Developer settings → Personal access tokens → Fine-grained tokens → Generate new token.</li>
-      <li>Repository access: Only select repositories → company-scout.</li>
-      <li>Repository permissions → Contents: Read and write.</li>
-    </ol>
-    <div class="dlg-foot">
-      <div class="status" id="acc-status" role="status" aria-live="polite"></div>
-      <div class="right">
-        <button class="btn" type="button" id="acc-cancel">Cancel</button>
-        <button class="btn primary" type="submit">Save</button>
-      </div>
-    </div>
-  </form>
-</dialog>
-
 <script>
+const DATA = {"meta": {"generated": "2026-11-02T13:19+00:00", "total_matches": 23, "new_matches": 23, "companies": [{"company": "Fortum", "ats": "successfactors", "ok": true, "count": 1, "error": "", "source": "https://jobs.fortum.com", "careers_url": "https://www.fortum.com/careers", "note": "", "rating": "A", "segment": "utilities"}, {"company": "Neste", "ats": "successfactors", "ok": true, "count": 0, "error": "no matching open positions (or wrong id)", "source": "https://jobs.neste.com", "careers_url": "https://www.neste.com/careers", "note": "", "rating": "A", "segment": "energy_intensive"}, {"company": "St1", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://www.st1.com", "note": "2026-11-02, set manually", "rating": "A", "segment": "developers"}, {"company": "Copenhagen Infrastructure Partners", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://www.cip.com/careers", "note": "2026-11-02, set manually", "rating": "A", "segment": "pe"}, {"company": "Wärtsilä", "ats": "successfactors", "ok": true, "count": 1, "error": "", "source": "https://careers.wartsila.com", "careers_url": "https://www.wartsila.com/careers", "note": "", "rating": "B", "segment": "oem"}, {"company": "Stora Enso", "ats": "workday", "ok": true, "count": 0, "error": "no matching open positions (or wrong id)", "source": "https://storaenso.wd502.myworkdayjobs.com/Stora_Enso_site_opportunities", "careers_url": "https://www.storaenso.com/en/careers", "note": "", "rating": "B", "segment": "energy_intensive"}, {"company": "Metsä Group", "ats": "workday", "ok": true, "count": 0, "error": "no matching open positions (or wrong id)", "source": "https://metsagroup.wd103.myworkdayjobs.com/en-US/MetsaGroup_Careers", "careers_url": "https://metsagroup.com/careers/work-with-us/open-jobs", "note": "", "rating": "B", "segment": "energy_intensive"}, {"company": "Valmet", "ats": "workday", "ok": true, "count": 9, "error": "", "source": "https://valmet.wd103.myworkdayjobs.com/en-US/External", "careers_url": "https://valmet.com/careers", "note": "", "rating": "C", "segment": "oem"}, {"company": "Metso", "ats": "successfactors", "ok": true, "count": 0, "error": "no matching open positions (or wrong id)", "source": "https://careers.metso.com", "careers_url": "https://www.metso.com/careers", "note": "", "rating": "C", "segment": "oem"}, {"company": "KONE", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://www.kone.com/en/careers", "note": "2026-11-02, set manually", "rating": "C", "segment": "oem"}, {"company": "Danske Commodities", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://danskecommodities.com/life-at-dc", "note": "no supported job system found", "rating": "A", "segment": "trading"}, {"company": "Centrica Energy Trading", "ats": "workday", "ok": true, "count": 3, "error": "", "source": "https://centrica.wd3.myworkdayjobs.com/Centrica", "careers_url": "https://centricaenergy.com", "note": "", "rating": "A", "segment": "trading"}, {"company": "RWE Supply & Trading", "ats": "successfactors", "ok": true, "count": 1, "error": "", "source": "https://jobs.rwe.com", "careers_url": "https://jobs.rwe.com", "note": "", "rating": "A", "segment": "trading"}, {"company": "Energi Danmark", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://www.energidanmark.dk", "note": "no supported job system found", "rating": "B", "segment": "trading"}, {"company": "Uniper", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://www.uniper.energy", "note": "no supported job system found", "rating": "B", "segment": "trading"}, {"company": "Trianel", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://www.trianel.com", "note": "no supported job system found", "rating": "B", "segment": "trading"}, {"company": "Next Kraftwerke", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://www.next-kraftwerke.com", "note": "no supported job system found", "rating": "B", "segment": "trading"}, {"company": "Nord Pool", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://www.nordpoolgroup.com", "note": "no supported job system found", "rating": "C", "segment": "trading"}, {"company": "Vattenfall", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://careers.vattenfall.com", "note": "own career site, not supported", "rating": "A", "segment": "utilities"}, {"company": "Statkraft", "ats": "smartrecruiters", "ok": true, "count": 11, "error": "", "source": "Statkraft1", "careers_url": "https://careers.smartrecruiters.com/Statkraft1", "note": "", "rating": "A", "segment": "utilities"}, {"company": "Helen", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://www.helen.fi", "note": "no supported job system found", "rating": "A", "segment": "utilities"}, {"company": "RWE", "ats": "successfactors", "ok": true, "count": 1, "error": "", "source": "https://jobs.rwe.com", "careers_url": "https://jobs.rwe.com", "note": "", "rating": "A", "segment": "utilities"}, {"company": "Ørsted", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://orsted.com", "note": "no supported job system found", "rating": "B", "segment": "utilities"}, {"company": "Hafslund", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://www.hafslund.no", "note": "no supported job system found", "rating": "B", "segment": "utilities"}, {"company": "EnBW", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://www.enbw.com", "note": "no supported job system found", "rating": "B", "segment": "utilities"}, {"company": "E.ON", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://jobs.eon.com", "note": "own career site, not supported", "rating": "C", "segment": "utilities"}, {"company": "MVV Energie", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://www.mvv.de", "note": "no supported job system found", "rating": "C", "segment": "utilities"}, {"company": "Ingrid Capacity", "ats": "teamtailor", "ok": true, "count": 2, "error": "", "source": "https://careers.ingridcapacity.com", "careers_url": "https://www.ingridcapacity.com", "note": "", "rating": "A", "segment": "developers"}, {"company": "Flower", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://flower.se", "note": "name guess rejected (unverified)", "rating": "A", "segment": "developers"}, {"company": "Alight", "ats": "teamtailor", "ok": true, "count": 1, "error": "", "source": "https://careers.alight-energy.com", "careers_url": "https://careers.alight-energy.com", "note": "", "rating": "A", "segment": "developers"}, {"company": "European Energy", "ats": "workday", "ok": true, "count": 1, "error": "", "source": "https://europeanenergy.wd103.myworkdayjobs.com/European_Energy", "careers_url": "https://europeanenergy.com", "note": "", "rating": "A", "segment": "developers"}, {"company": "OX2", "ats": "successfactors", "ok": true, "count": 3, "error": "", "source": "https://jobs.ox2.com", "careers_url": "https://www.ox2.com", "note": "", "rating": "A", "segment": "developers"}, {"company": "Cloudberry Clean Energy", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://cloudberry.no", "note": "name guess rejected (unverified)", "rating": "A", "segment": "developers"}, {"company": "Kyon Energy", "ats": "personio", "ok": true, "count": 0, "error": "no matching open positions (or wrong id)", "source": "kyon-energy-gmbh", "careers_url": "https://www.kyon-energy.de", "note": "", "rating": "B", "segment": "developers"}, {"company": "terralayr", "ats": "personio", "ok": true, "count": 2, "error": "", "source": "terralayr", "careers_url": "https://www.terralayr.com", "note": "", "rating": "B", "segment": "developers"}, {"company": "Eco Stor", "ats": "teamtailor", "ok": true, "count": 0, "error": "no matching open positions (or wrong id)", "source": "https://ecostor.teamtailor.com", "careers_url": "https://www.eco-stor.com", "note": "", "rating": "B", "segment": "developers"}, {"company": "Capalo AI", "ats": "teamtailor", "ok": true, "count": 5, "error": "", "source": "https://capaloai.teamtailor.com", "careers_url": "https://www.capalo.ai", "note": "", "rating": "B", "segment": "energy_services"}, {"company": "Enertrag", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://enertrag.com", "note": "name guess rejected (unverified)", "rating": "B", "segment": "developers"}, {"company": "Eolus", "ats": "teamtailor", "ok": true, "count": 0, "error": "no matching open positions (or wrong id)", "source": "https://careers.eolus.com", "careers_url": "https://www.eolus.com", "note": "", "rating": "B", "segment": "developers"}, {"company": "Energiekontor", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://www.energiekontor.de", "note": "no supported job system found", "rating": "B", "segment": "developers"}, {"company": "PNE", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://www.pne-ag.com", "note": "no supported job system found", "rating": "C", "segment": "developers"}, {"company": "Ilmatar Energy", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://www.ilmatar.fi", "note": "no supported job system found", "rating": "C", "segment": "developers"}, {"company": "Flexens", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://flexens.com", "note": "no supported job system found", "rating": "C", "segment": "developers"}, {"company": "P2X Solutions", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://p2x.fi", "note": "no supported job system found", "rating": "C", "segment": "developers"}, {"company": "atNorth", "ats": "teamtailor", "ok": true, "count": 6, "error": "", "source": "https://careers.atnorth.com", "careers_url": "https://careers.atnorth.com/jobs", "note": "", "rating": "A", "segment": "data_centers"}, {"company": "Verne", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://verne.co", "note": "no supported job system found", "rating": "A", "segment": "data_centers"}, {"company": "Polarnode", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://polarnode.com", "note": "no supported job system found", "rating": "A", "segment": "data_centers"}, {"company": "EcoDataCenter", "ats": "teamtailor", "ok": true, "count": 0, "error": "no matching open positions (or wrong id)", "source": "https://career.ecodatacenter.tech", "careers_url": "https://www.ecodatacenter.tech", "note": "", "rating": "B", "segment": "data_centers"}, {"company": "Green Mountain", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://greenmountain.no", "note": "no supported job system found", "rating": "B", "segment": "data_centers"}, {"company": "Bulk Infrastructure", "ats": "teamtailor", "ok": true, "count": 0, "error": "no matching open positions (or wrong id)", "source": "https://careers.bulkinfrastructure.com", "careers_url": "https://bulkinfrastructure.com", "note": "", "rating": "C", "segment": "data_centers"}, {"company": "Locus Energy", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://www.locusenergy.se", "note": "no supported job system found", "rating": "B", "segment": "portfolio"}, {"company": "Elenia", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://www.elenia.fi", "note": "no supported job system found", "rating": "B", "segment": "portfolio"}, {"company": "Ellevio", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://www.ellevio.se", "note": "no supported job system found", "rating": "B", "segment": "portfolio"}, {"company": "Adven", "ats": "teamtailor", "ok": true, "count": 0, "error": "no matching open positions (or wrong id)", "source": "https://adven.teamtailor.com", "careers_url": "https://www.adven.com", "note": "", "rating": "B", "segment": "portfolio"}, {"company": "Caruna", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://caruna.fi", "note": "no supported job system found", "rating": "C", "segment": "portfolio"}, {"company": "EQT Infrastructure", "ats": "greenhouse", "ok": true, "count": 4, "error": "", "source": "eqtpartners", "careers_url": "https://job-boards.eu.greenhouse.io/eqtpartners", "note": "", "rating": "A", "segment": "pe"}, {"company": "Taaleri", "ats": "teamtailor", "ok": true, "count": 0, "error": "no matching open positions (or wrong id)", "source": "https://careers.taaleri.com", "careers_url": "https://careers.taaleri.com/jobs", "note": "", "rating": "A", "segment": "pe"}, {"company": "Ardian", "ats": "workday", "ok": true, "count": 7, "error": "", "source": "https://ardian.wd103.myworkdayjobs.com/ArdianCareers", "careers_url": "https://www.ardian.com", "note": "", "rating": "A", "segment": "pe"}, {"company": "Allianz Capital Partners", "ats": "successfactors", "ok": false, "count": 0, "error": "RuntimeError: SuccessFactors RSS feed not reachable: syntax error: line 1, column 0", "source": "https://careers.allianz.com", "careers_url": "https://careers.allianz.com", "note": "", "rating": "A", "segment": "pe"}, {"company": "Nordea", "ats": "successfactors", "ok": true, "count": 3, "error": "", "source": "https://careers.nordea.com", "careers_url": "https://careers.nordea.com", "note": "", "rating": "A", "segment": "pe"}, {"company": "SEB", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://sebgroup.com/career", "note": "own career site, not supported", "rating": "B", "segment": "pe"}, {"company": "DNB", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://www.dnb.no", "note": "name guess rejected (other company)", "rating": "B", "segment": "pe"}, {"company": "MEAG (Munich Re)", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://www.meag.com", "note": "no supported job system found", "rating": "B", "segment": "pe"}, {"company": "KfW IPEX-Bank", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://www.kfw-ipex-bank.de", "note": "no supported job system found", "rating": "B", "segment": "pe"}, {"company": "PensionDanmark", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://www.pensiondanmark.com", "note": "no supported job system found", "rating": "B", "segment": "pe"}, {"company": "Areim", "ats": "teamtailor", "ok": true, "count": 0, "error": "no matching open positions (or wrong id)", "source": "https://jobs.areim.se", "careers_url": "https://www.areim.se", "note": "", "rating": "B", "segment": "pe"}, {"company": "Infranode", "ats": "teamtailor", "ok": true, "count": 0, "error": "no matching open positions (or wrong id)", "source": "https://infranode.teamtailor.com", "careers_url": "https://www.infranode.se", "note": "", "rating": "B", "segment": "pe"}, {"company": "ATP", "ats": "linkedin", "ok": true, "count": 0, "error": "link only", "source": "", "careers_url": "https://www.atp.dk", "note": "name guess rejected (other company)", "rating": "C", "segment": "pe"}], "repo": "TheHoff26/job-shortlist", "linkedin": [{"company": "Cloudberry Clean Energy", "url": "https://www.linkedin.com/jobs/search/?keywords=%22Cloudberry+Clean+Energy%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "A", "reason": "name guess rejected (unverified)"}, {"company": "Copenhagen Infrastructure Partners", "url": "https://www.linkedin.com/jobs/search/?keywords=%22Copenhagen+Infrastructure+Partners%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "A", "reason": "2026-11-02, set manually"}, {"company": "Danske Commodities", "url": "https://www.linkedin.com/jobs/search/?keywords=%22Danske+Commodities%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "A", "reason": "no supported job system found"}, {"company": "Flower", "url": "https://www.linkedin.com/jobs/search/?keywords=%22Flower%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "A", "reason": "name guess rejected (unverified)"}, {"company": "Helen", "url": "https://www.linkedin.com/jobs/search/?keywords=%22Helen%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "A", "reason": "no supported job system found"}, {"company": "Polarnode", "url": "https://www.linkedin.com/jobs/search/?keywords=%22Polarnode%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "A", "reason": "no supported job system found"}, {"company": "St1", "url": "https://www.linkedin.com/jobs/search/?keywords=%22St1%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "A", "reason": "2026-11-02, set manually"}, {"company": "Vattenfall", "url": "https://www.linkedin.com/jobs/search/?keywords=%22Vattenfall%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "A", "reason": "own career site, not supported"}, {"company": "Verne", "url": "https://www.linkedin.com/jobs/search/?keywords=%22Verne%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "A", "reason": "no supported job system found"}, {"company": "DNB", "url": "https://www.linkedin.com/jobs/search/?keywords=%22DNB%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "B", "reason": "name guess rejected (other company)"}, {"company": "Elenia", "url": "https://www.linkedin.com/jobs/search/?keywords=%22Elenia%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "B", "reason": "no supported job system found"}, {"company": "Ellevio", "url": "https://www.linkedin.com/jobs/search/?keywords=%22Ellevio%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "B", "reason": "no supported job system found"}, {"company": "EnBW", "url": "https://www.linkedin.com/jobs/search/?keywords=%22EnBW%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "B", "reason": "no supported job system found"}, {"company": "Energi Danmark", "url": "https://www.linkedin.com/jobs/search/?keywords=%22Energi+Danmark%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "B", "reason": "no supported job system found"}, {"company": "Energiekontor", "url": "https://www.linkedin.com/jobs/search/?keywords=%22Energiekontor%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "B", "reason": "no supported job system found"}, {"company": "Enertrag", "url": "https://www.linkedin.com/jobs/search/?keywords=%22Enertrag%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "B", "reason": "name guess rejected (unverified)"}, {"company": "Green Mountain", "url": "https://www.linkedin.com/jobs/search/?keywords=%22Green+Mountain%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "B", "reason": "no supported job system found"}, {"company": "Hafslund", "url": "https://www.linkedin.com/jobs/search/?keywords=%22Hafslund%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "B", "reason": "no supported job system found"}, {"company": "KfW IPEX-Bank", "url": "https://www.linkedin.com/jobs/search/?keywords=%22KfW+IPEX-Bank%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "B", "reason": "no supported job system found"}, {"company": "Locus Energy", "url": "https://www.linkedin.com/jobs/search/?keywords=%22Locus+Energy%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "B", "reason": "no supported job system found"}, {"company": "MEAG (Munich Re)", "url": "https://www.linkedin.com/jobs/search/?keywords=%22MEAG+%28Munich+Re%29%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "B", "reason": "no supported job system found"}, {"company": "Next Kraftwerke", "url": "https://www.linkedin.com/jobs/search/?keywords=%22Next+Kraftwerke%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "B", "reason": "no supported job system found"}, {"company": "PensionDanmark", "url": "https://www.linkedin.com/jobs/search/?keywords=%22PensionDanmark%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "B", "reason": "no supported job system found"}, {"company": "SEB", "url": "https://www.linkedin.com/jobs/search/?keywords=%22SEB%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "B", "reason": "own career site, not supported"}, {"company": "Trianel", "url": "https://www.linkedin.com/jobs/search/?keywords=%22Trianel%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "B", "reason": "no supported job system found"}, {"company": "Uniper", "url": "https://www.linkedin.com/jobs/search/?keywords=%22Uniper%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "B", "reason": "no supported job system found"}, {"company": "Ørsted", "url": "https://www.linkedin.com/jobs/search/?keywords=%22%C3%98rsted%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "B", "reason": "no supported job system found"}, {"company": "ATP", "url": "https://www.linkedin.com/jobs/search/?keywords=%22ATP%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "C", "reason": "name guess rejected (other company)"}, {"company": "Caruna", "url": "https://www.linkedin.com/jobs/search/?keywords=%22Caruna%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "C", "reason": "no supported job system found"}, {"company": "E.ON", "url": "https://www.linkedin.com/jobs/search/?keywords=%22E.ON%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "C", "reason": "own career site, not supported"}, {"company": "Flexens", "url": "https://www.linkedin.com/jobs/search/?keywords=%22Flexens%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "C", "reason": "no supported job system found"}, {"company": "Ilmatar Energy", "url": "https://www.linkedin.com/jobs/search/?keywords=%22Ilmatar+Energy%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "C", "reason": "no supported job system found"}, {"company": "KONE", "url": "https://www.linkedin.com/jobs/search/?keywords=%22KONE%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "C", "reason": "2026-11-02, set manually"}, {"company": "MVV Energie", "url": "https://www.linkedin.com/jobs/search/?keywords=%22MVV+Energie%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "C", "reason": "no supported job system found"}, {"company": "Nord Pool", "url": "https://www.linkedin.com/jobs/search/?keywords=%22Nord+Pool%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "C", "reason": "no supported job system found"}, {"company": "P2X Solutions", "url": "https://www.linkedin.com/jobs/search/?keywords=%22P2X+Solutions%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "C", "reason": "no supported job system found"}, {"company": "PNE", "url": "https://www.linkedin.com/jobs/search/?keywords=%22PNE%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800", "rating": "C", "reason": "no supported job system found"}], "register_url": "https://thehoff26.github.io/company-scout/companies.json", "register_ok": true, "segments": [{"id": "utilities", "name": "Nordic utilities"}, {"id": "energy_intensive", "name": "Energy-intensive industries"}, {"id": "pe", "name": "Investors: PE, infrastructure funds, insurers, pension funds & banks"}, {"id": "portfolio", "name": "Portfolio companies"}, {"id": "energy_services", "name": "Energy service companies"}, {"id": "developers", "name": "Energy developers (PtX & renewables)"}, {"id": "trading", "name": "Energy trading houses"}, {"id": "oem", "name": "OEM & technology suppliers"}, {"id": "data_centers", "name": "Data centres"}, {"id": "others", "name": "Others"}], "paused": ["ABO Energy"], "profile": {"titles": ["strategy", "strategic", "corporate development", "M&A", "trading", "trader", "commodity", "commodities", "origination", "energy markets", "power markets", "portfolio", "optimisation", "optimization", "business development", "commercial", "new business", "growth", "partnerships", "innovation", "ventures", "energy transition", "electrification", "decarbonisation", "decarbonization", "hydrogen", "Power-to-X", "PtX", "renewable", "renewables", "low-carbon", "CO2", "investment", "investments", "infrastructure", "asset management", "procurement", "power purchase", "PPA", "energy management", "managing director", "general manager", "country manager", "business unit", "vice president", "VP", "head of", "director", "johtaja"], "seniority": ["senior", "lead", "executive"], "locations": ["Finland", "Suomi", "FI", "Helsinki", "Espoo", "Vantaa", "Kauniainen", "Copenhagen", "København", "Stockholm", "Oslo", "Berlin", "Hamburg", "Düsseldorf", "Dusseldorf", "Essen", "Cologne", "Köln", "Munich", "München", "Frankfurt"], "min_score": 35}}, "jobs": [{"company": "terralayr", "ats": "personio", "job_id": "2594674", "title": "Head of Grid (m/f/d)", "url": "https://terralayr.jobs.personio.de/job/2594674?language=en", "location": "All Offices or Remote", "department": "Asset Development", "posted": "2026-04-08", "workplace": "remote", "employment_type": "permanent / full-time", "salary": "", "rating": "B", "segment": "developers", "segments_secondary": ["trading"], "summary": "As our Grid Strategy & Access Lead, you are the central owner of terralayr’s grid access strategy and the key technical counterparty to DSOs/TSOs. Your mission is to improve conversion, speed, and quality of grid outcomes across the project lifecycle - from identifying promising “white spots” to securing and…", "responsibilities": ["DSO / TSO Counterparty Ownership: Act as terralayr’s main technical counterpart to DSOs/TSOs and lead ongoing discussions around connection…", "Grid Strategy & Project Prioritization: Identify and prioritize the most attractive connection opportunities across DSOs/TSOs and support…", "Grid Expertise & Technical Insight: Serve as terralayr’s internal grid expert by assessing grid capacity, connection constraints, technical…", "Grid Access Conversion: Support the conversion of grid opportunities into secured capacity through structured follow-ups, technical…"], "criteria": ["Experience: 5-10 years of relevant experience within a utility, TSO/DSO, grid consultancy, or leading renewable energy developer. Strong experience in grid…", "Education / Technical Profile: Degree in Electrical Engineering, Power Systems, or similar. Strong technical / electrical engineering depth is essential.", "Tooling & Analysis: Grid modelling / simulation capabilities are welcome, but not a must. More important is strong practical understanding of grid access…", "Execution & Influence: You are not just a technical analyst - you can use technical insight to influence outcomes, challenge assumptions, and move projects…", "Communication: Able to speak both the technical language of DSOs/TSOs and the commercial / strategic language of project developers, leadership, and investors.…"], "nice_to_have": [], "seniority": "executive", "years_experience": "5–10 years", "languages": ["German"], "education": "Degree (or equivalent)", "skills_matched": ["renewable energy", "wind", "solar", "battery storage", "BESS", "strategy", "stakeholder management", "hedging", "German"], "score": 100, "reasons": ["Title matches “head of”", "Seniority: executive ✓", "CV skills 9/48: renewable energy, wind, solar, battery storage, BESS, strategy, stakeholder management, hedging", "CV text similarity 24%", "Keywords: flexibility, BESS", "Location: remote", "Company rated B: +3"], "first_seen": "2026-11-02", "is_new": true, "key": "personio:terralayr:2594674"}, {"company": "Statkraft", "ats": "smartrecruiters", "job_id": "744000158266779", "title": "Senior Business Analyst (m/f/d)- Trading Business Support ", "url": "https://jobs.smartrecruiters.com/Statkraft1/744000158266779-senior-business-analyst-m-f-d-trading-business-support-", "location": "Düsseldorf, North Rhine-Westphalia, Germany", "department": "Other", "posted": "2026-10-28", "workplace": "hybrid", "employment_type": "Full-time", "salary": "", "rating": "A", "segment": "utilities", "segments_secondary": ["trading"], "summary": "The Trading Business Support team owns and continuously improves the operational platform for the Proprietary Trading department. It is the central point of contact for operational and administrative matters and works across Proprietary Trading, internal support and control functions, and external stakeholders.", "responsibilities": ["Take business ownership for strategic business development and improvement initiatives, translating objectives into structured plans and…", "Lead or coordinate cross-functional workstreams involving Proprietary Trading, Finance, Risk, Compliance, Legal, IT and operational support…", "Own financial planning and cost management for the Proprietary Trading department in close collaboration with Controlling & Performance…", "Act as a key interface between Proprietary Trading and finance-related departments, including Controlling & Performance Management…"], "criteria": ["University degree in business administration, economics, finance, accounting, business engineering or a related field.", "Several years of relevant professional experience in business management, consulting, advisory, project management or a comparable role.", "Experience in commodity trading, energy markets, financial services or another complex and regulated environment is an advantage.", "Commercial mindset, strong service orientation and attention to detail, with a proactive approach to supporting stakeholders and the confidence to challenge…", "Ability to structure ambiguous topics, apply sound judgement, balance strategic and operational priorities, and work independently with a high level of…", "Track record of taking ownership for cross-functional initiatives and delivering complex business and process changes from concept through implementation."], "nice_to_have": [], "seniority": "senior", "years_experience": "", "languages": ["English", "German (plus)", "Norwegian (plus)"], "education": "Degree", "skills_matched": ["hydrogen", "renewable energy", "business development", "German"], "score": 94, "reasons": ["Title matches “trading”", "Seniority: senior ✓", "CV skills 4/48: hydrogen, renewable energy, business development, German", "CV text similarity 35%", "Keywords: international", "Location: Düsseldorf, North Rhine-Westphalia, Germany", "Company rated A: +6"], "first_seen": "2026-11-02", "is_new": true, "key": "smartrecruiters:Statkraft:744000158266779"}, {"company": "Alight", "ats": "teamtailor", "job_id": "8610267", "title": "Head of Cyber", "url": "https://careers.alight-energy.com/jobs/8610267-head-of-cyber", "location": "Helsinki, Finland; Denmark, Denmark; Malmö, Sweden", "department": "", "posted": "2026-10-23", "workplace": "hybrid", "employment_type": "", "salary": "", "rating": "A", "segment": "developers", "segments_secondary": [], "summary": "This is a hands-on leadership role where you'll have the autonomy to build and improve our security programme as the business grows.", "responsibilities": ["Leadership & strategy: Lead and develop the IT and OT team, own the cyber security roadmap, manage risk and report to the executive team…", "IT & OT security: Strengthen infrastructure and operational technology security, including architecture, third-party access and supplier…", "Incident response & compliance: Develop detection and response capabilities, lead incident preparedness and oversee compliance with…", "Physical security: Oversee security risks across our operating sites and offices."], "criteria": ["Available to start soon, as a permanent employee (preferred) or a consultant.", "5 to 10 years of professional experience, including at least 3 years in team leadership.", "Hands-on experience securing IT environments, ideally including OT or industrial systems.", "Experience leading security projects, incident response, monitoring or security operations.", "Good understanding of NIS2 and frameworks such as ISO 27001 and IEC 62443.", "Confidence communicating security risks to senior leadership, boards, customers and investors."], "nice_to_have": [], "seniority": "executive", "years_experience": "5–10 years", "languages": ["English"], "education": "Degree", "skills_matched": ["renewable energy", "solar", "BESS", "strategy"], "score": 93, "reasons": ["Title matches “head of”", "Seniority: executive ✓", "CV skills 4/48: renewable energy, solar, BESS, strategy", "CV text similarity 18%", "Keywords: AI, flexibility, BESS", "Location: Helsinki, Finland; Denmark, Denmark; Malmö, Sweden", "Company rated A: +6"], "first_seen": "2026-11-02", "is_new": true, "key": "teamtailor:Alight:8610267"}, {"company": "Statkraft", "ats": "smartrecruiters", "job_id": "744000155280390", "title": "Lead Quant Analyst- Power Trading (m/f/d)", "url": "https://jobs.smartrecruiters.com/Statkraft1/744000155280390-lead-quant-analyst-power-trading-m-f-d-", "location": "Düsseldorf, North Rhine-Westphalia, Germany", "department": "Other", "posted": "2026-10-13", "workplace": "hybrid", "employment_type": "Full-time", "salary": "", "rating": "A", "segment": "utilities", "segments_secondary": ["trading"], "summary": "This is a high-impact role focused on shaping and enhancing the analytical framework that supports trading decisions across European power markets. The successful candidate will combine deep analytical expertise with a strong understanding of commercial trading environments.", "responsibilities": ["Develop, enhance, and maintain analytical models, tools, and frameworks supporting European power trading activities.", "Translate complex market fundamentals, exposures, and trading opportunities into clear and actionable insights.", "Analyse market trends, supply-demand dynamics, generation, weather, transmission constraints, interconnectors, and other key drivers of…", "Maintain and develop internal and external relationships to strengthen market intelligence."], "criteria": ["University degree in Mathematics, Economics, Science or similar.", "Substantial experience and proven track record in fundamental analysis and modelling of the European Power markets, ideally across more than one trading house.", "Extensive hands-on experience building and running fundamental models, with a track record of using them to form a clear, independent view on the market.", "In-depth knowledge of the German, French and UK power markets and the drivers that link them", "Knowledge of cross-border power flows, interconnectors, transmission constraints, and capacity markets.", "Strong understanding of how weather affects power demand, renewable output and prices"], "nice_to_have": [], "seniority": "lead", "years_experience": "5+ years", "languages": [], "education": "Degree (or equivalent)", "skills_matched": ["strategy", "market intelligence", "power markets", "German"], "score": 93, "reasons": ["Title matches “trading”", "Seniority: lead ✓", "CV skills 4/48: strategy, market intelligence, power markets, German", "CV text similarity 24%", "Keywords: P&L", "Location: Düsseldorf, North Rhine-Westphalia, Germany", "Company rated A: +6"], "first_seen": "2026-11-02", "is_new": true, "key": "smartrecruiters:Statkraft:744000155280390"}, {"company": "Ingrid Capacity", "ats": "teamtailor", "job_id": "8053254", "title": "Quantitative Power Trader", "url": "https://careers.ingridcapacity.com/jobs/8053254-quantitative-power-trader", "location": "Stockholm, Sweden", "department": "Tech", "posted": "2026-07-10", "workplace": "", "employment_type": "", "salary": "", "rating": "A", "segment": "developers", "segments_secondary": ["trading"], "summary": "As Quantitative Power Trader, you’ll own the intraday trading strategies at the heart of Ingrid’s BESS and renewable portfolio — building the arbitrage and proprietary strategies that turn market volatility into revenue. You’ll design, build, and refine the models and algorithms behind them, working hand-in-hand with…", "responsibilities": ["Design, backtest, and continuously improve intraday trading algorithms — arbitrage and proprietary strategies — applying…", "Execute trades with discipline and strong market feel while adhering to risk limits and governance frameworks.", "Build and maintain quantitative models for price forecasting, degradation-adjusted cycling economics, and cross-market arbitrage (ancillary…", "Monitor the performance of Ingrid’s automated trading platform, pinpointing where live results deviate from the theoretical optimum and…"], "criteria": ["2–5 years of experience in a Data Scientist, Quantitative, or similar role within the energy sector, with direct exposure to European intraday power markets…", "Strong grasp of forecasting, optimization, and pricing across ancillary, day-ahead, and intraday markets, with the intraday market as your core focus.", "Familiarity with market design and regulatory frameworks, plus a sharp feel for power fundamentals, volatility, and market dynamics.", "Strong programming capability (Python required; SQL and experience with data pipelines or model deployment a plus).", "Comfortable working with large, complex datasets, with the analytical rigor to match.", "Advanced degree (MSc or PhD) in a quantitative field such as Engineering, Applied Mathematics, Physics, or similar."], "nice_to_have": [], "seniority": "mid", "years_experience": "2–5 years", "languages": [], "education": "PhD (or equivalent)", "skills_matched": ["energy transition", "renewable energy", "BESS", "strategy", "price forecasting", "power markets", "optimization"], "score": 92, "reasons": ["Title matches “trader”", "Seniority: mid (close to your target)", "CV skills 7/48: energy transition, renewable energy, BESS, strategy, price forecasting, power markets, optimization", "CV text similarity 31%", "Keywords: BESS", "Location: Stockholm, Sweden", "Company rated A: +6"], "first_seen": "2026-11-02", "is_new": true, "key": "teamtailor:Ingrid Capacity:8053254"}, {"company": "atNorth", "ats": "teamtailor", "job_id": "8232744", "title": "Operations Commercial Manager, Kouvola", "url": "https://careers.atnorth.com/jobs/8232744-operations-commercial-manager-kouvola", "location": "Ummeljoki, Finland", "department": "Operations", "posted": "2026-08-18", "workplace": "", "employment_type": "", "salary": "", "rating": "A", "segment": "data_centers", "segments_secondary": ["portfolio", "energy_intensive"], "summary": "With sustainability at our core, our data centers run on renewable energy and are designed according to circular economy principles. Through innovative design, power efficiency, and intelligent operations, we deliver reliable, secure, and high-performance infrastructure.", "responsibilities": ["Translate customer service agreements into operational commercial baselines and support teams in understanding contractual obligations.", "Monitor commercial performance, operational costs, and margin development across service delivery operations.", "Identify, assess, and escalate commercial risks related to scope, cost, utilities, SLA performance, and service delivery.", "Support budgeting, forecasting, financial planning, and site-level commercial performance reviews."], "criteria": ["Bachelor's or Master's degree in Business Administration, Economics, Engineering, Facility Management, or a related field.", "Minimum 8 years of experience in commercial management, contract management, service delivery, infrastructure services, or operational environments.", "Strong understanding of contract governance, commercial risk management, and SLA-based service delivery.", "Experience monitoring operational costs, identifying margin exposure, and supporting commercial decision-making.", "Ability to translate contractual requirements into practical operational guidance for multiple stakeholders.", "Experience working with vendors, subcontractors, and customer-facing commercial governance processes."], "nice_to_have": [], "seniority": "lead", "years_experience": "8+ years", "languages": ["English", "Finnish (plus)"], "education": "Master's", "skills_matched": ["renewable energy", "data center", "risk management"], "score": 90, "reasons": ["Title matches “commercial”", "Seniority: lead ✓", "CV skills 3/48: renewable energy, data center, risk management", "CV text similarity 23%", "Keywords: international, data center", "Location: Ummeljoki, Finland", "Company rated A: +6"], "first_seen": "2026-11-02", "is_new": true, "key": "teamtailor:atNorth:8232744"}, {"company": "Capalo AI", "ats": "teamtailor", "job_id": "8435891", "title": "Business Development Manager - New and Emerging Markets", "url": "https://capaloai.teamtailor.com/jobs/8435891-business-development-manager-new-and-emerging-markets", "location": "Helsinki, Finland; Bucharest, Romania", "department": "Business Development", "posted": "2026-09-22", "workplace": "hybrid", "employment_type": "", "salary": "", "rating": "B", "segment": "energy_services", "segments_secondary": ["trading"], "summary": "We are looking for a Business Development Manager to help expand Capalo AI into new and emerging markets.", "responsibilities": ["Research new markets, identify potential customers and develop new business opportunities.", "Proactively reach out to prospective customers, initiate commercial discussions and build long-term relationships.", "Understand each customer's business, priorities and challenges to identify where Capalo Zeus VPP™ can create value.", "Present our technology and commercial offering in a way that is relevant to each customer's needs."], "criteria": ["3+ years of experience in B2B sales, business development or a similar customer-facing commercial role.", "A proactive, sales-driven mindset and the confidence to approach new customers, develop opportunities and negotiate commercial agreements.", "The ability to understand customer needs and turn them into relevant commercial solutions.", "A structured approach to managing a sales pipeline, following up with customers and moving opportunities forward.", "An interest in the energy sector and the motivation to develop your knowledge of electricity markets and energy storage.", "Confidence working with customers across different markets, business environments and cultures."], "nice_to_have": ["Experience entering new markets or building a customer base from the ground up.", "Knowledge of or connections within electricity markets, battery storage, renewable energy or virtual power plants.", "Experience selling software, SaaS or other technical solutions."], "seniority": "mid", "years_experience": "3+ years", "languages": ["English"], "education": "", "skills_matched": ["energy transition", "renewable energy", "battery storage", "business development", "optimization"], "score": 86, "reasons": ["Title matches “business development”", "Seniority: mid (close to your target)", "CV skills 5/48: energy transition, renewable energy, battery storage, business development, optimization", "CV text similarity 32%", "Keywords: AI, artificial intelligence", "Location: Helsinki, Finland; Bucharest, Romania", "Company rated B: +3"], "first_seen": "2026-11-02", "is_new": true, "key": "teamtailor:Capalo AI:8435891"}, {"company": "Ingrid Capacity", "ats": "teamtailor", "job_id": "8053205", "title": "Power Trader", "url": "https://careers.ingridcapacity.com/jobs/8053205-power-trader", "location": "Stockholm, Sweden", "department": "Tech", "posted": "2026-07-10", "workplace": "hybrid", "employment_type": "", "salary": "", "rating": "A", "segment": "developers", "segments_secondary": ["trading"], "summary": "We’re growing our BESS and renewable trading team and looking for a power trader to take operational ownership of our trading algorithms across day-ahead auctions, Nordic ancillary capacity auctions, and the continuous intraday market. This is a hands-on, market-facing role: you’ll be the person monitoring the…", "responsibilities": ["Monitor and operate BESS trading algorithms in real time across day-ahead, ancillary, and intraday markets — adjusting parameters and…", "Validate that bids generated by the optimization engine are correctly submitted to day-ahead auctions and Nordic ancillary capacity…", "Reconcile and validate trade results against expected outcomes, flagging and investigating discrepancies.", "Track and report on algorithm performance across all traded markets, identifying where live performance deviates from…"], "criteria": ["2–5 years of hands-on operational experience in a similar trading, dispatch, balancing, or portfolio operations role within the European power industry is…", "Solid understanding of wholesale power markets (day-ahead, intraday, balancing) and how Nordic ancillary service markets function (FCR, aFRR, mFRR).", "Understanding of BESS revenue streams and how they interact across markets.", "Good knowledge of the energy regulatory landscape, including REMIT, BRP obligations, settlement and imbalance processes, TSO market pre-qualification…", "Comfortable working with algorithmic and automated trading setups.", "Strong attention to detail, with the ability to work independently and make real-time decisions under pressure."], "nice_to_have": [], "seniority": "mid", "years_experience": "2–5 years", "languages": [], "education": "Master's (or equivalent)", "skills_matched": ["energy transition", "renewable energy", "BESS", "power markets", "optimization"], "score": 86, "reasons": ["Title matches “trader”", "Seniority: mid (close to your target)", "CV skills 5/48: energy transition, renewable energy, BESS, power markets, optimization", "CV text similarity 27%", "Keywords: BESS", "Location: Stockholm, Sweden", "Company rated A: +6"], "first_seen": "2026-11-02", "is_new": true, "key": "teamtailor:Ingrid Capacity:8053205"}, {"company": "Statkraft", "ats": "smartrecruiters", "job_id": "744000129203437", "title": "Senior Intraday Trader (m/f/d) - Proprietary Short-Term Power Trading ", "url": "https://jobs.smartrecruiters.com/Statkraft1/744000129203437-senior-intraday-trader-m-f-d-proprietary-short-term-power-trading-", "location": "Düsseldorf, North Rhine-Westphalia, Germany", "department": "Other", "posted": "2026-05-29", "workplace": "", "employment_type": "Full-time", "salary": "", "rating": "A", "segment": "utilities", "segments_secondary": ["trading"], "summary": "As Senior Intraday Trader, you will play a key role in strengthening and further developing our proprietary short-term trading setup in Germany. The role combines hands-on proprietary trading in the German day-ahead and intraday power markets with a meaningful contribution to how this trading activity is further…", "responsibilities": ["Actively trade proprietary day-ahead and intraday positions in the German power market with a high degree of ownership, judgement, and…", "Help strengthen and further develop discretionary trading in the German short-term power markets, including manual trading decisions and…", "Contribute to the development, monitoring, and refinement of systematic strategies and data-driven trading approaches for the German market.", "Identify trading opportunities across relevant short-term market timeframes and market constellations, and translate them into concrete…"], "criteria": ["We are looking for a highly capable trader with the experience and skills to help strengthen this setup.", "In particular, we would value the following:", "Proven hands-on track record in proprietary day-ahead and intraday power trading, ideally with deep exposure to the German power market.", "Strong understanding of short-term market behaviour, trading mechanics, and discretionary decision-making in fast-moving environments.", "Strong analytical and quantitative skills, with the ability to contribute across both systematic and discretionary trading contexts.", "Strong coding skills, ideally in Python, and confidence using data and code to analyse markets, monitor performance, and improve trading approaches."], "nice_to_have": [], "seniority": "senior", "years_experience": "", "languages": ["English", "German"], "education": "", "skills_matched": ["market analysis", "power markets", "German"], "score": 86, "reasons": ["Title matches “trading”", "Seniority: senior ✓", "CV skills 3/48: market analysis, power markets, German", "CV text similarity 20%", "Keywords: flexibility", "Location: Düsseldorf, North Rhine-Westphalia, Germany", "Company rated A: +6"], "first_seen": "2026-11-02", "is_new": true, "key": "smartrecruiters:Statkraft:744000129203437"}, {"company": "Nordea", "ats": "successfactors", "job_id": "1453282033", "title": "Head of GIA: Credit Risk", "url": "https://careers.nordea.com/job/Stockholm-Head-of-GIA-Credit-Risk-111-46/1453282033/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS", "location": "Stockholm, SE, 111 46", "department": "", "posted": "2026-11-02", "workplace": "", "employment_type": "", "salary": "", "rating": "A", "segment": "pe", "segments_secondary": [], "summary": "We are looking for an impactful and inspirational Head of Audit to lead our Credit risk team. In this role, you will help shape how Group Internal Audit delivers independent, risk-based assurance and advice across the Nordea's most material risk area.", "responsibilities": ["Lead, develop and inspire a team of audit professionals, fostering a culture of continuous learning, innovation and high performance.", "Develop and execute, in cooperation with other GIA teams the risk-based audit plans covering credit risk management activities across…", "Deliver high-quality audit assurance and insights that support informed decision making by senior management and the Board.", "Build trusted relationships with senior stakeholders while maintaining independence and professional scepticism."], "criteria": ["You are a trusted and confident leader with strong professional judgement, curiosity and a clear sense of purpose.", "You understand how business processes, systems, data, models and controls interact and can translate this understanding into impactful, forward-looking…", "You are motivated by helping both your team and stakeholders navigate an increasingly complex and rapidly changing risk landscape.", "You bring credibility in senior stakeholder discussions while remaining approachable, supportive and committed.", "You have a genuine commitment to developing people and teams.", "You act as a role model for Nordea’s values and demonstrate inclusive leadership, sound judgement and high integrity."], "nice_to_have": [], "seniority": "executive", "years_experience": "", "languages": [], "education": "Degree (or equivalent)", "skills_matched": ["strategy", "risk management"], "score": 84, "reasons": ["Title matches “head of”", "Seniority: executive ✓", "CV skills 2/48: strategy, risk management", "CV text similarity 21%", "Keywords: AI, international", "Location: Stockholm, SE, 111 46", "Company rated A: +6"], "first_seen": "2026-11-02", "is_new": true, "key": "successfactors:Nordea:1453282033"}, {"company": "Statkraft", "ats": "smartrecruiters", "job_id": "744000153729979", "title": "Talent Management Specialist, Origination", "url": "https://jobs.smartrecruiters.com/Statkraft1/744000153729979-talent-management-specialist-origination", "location": "Düsseldorf, North Rhine-Westphalia, Germany", "department": "Other", "posted": "2026-10-06", "workplace": "hybrid", "employment_type": "Full-time", "salary": "", "rating": "A", "segment": "utilities", "segments_secondary": ["trading"], "summary": "We look for an experienced Talent Management Specialist with the essential skills to future-proof our business and renewable energy solutions. These include:", "responsibilities": ["Source and hire for trading and origination roles across all Origination teams at Statkraft", "Run recruitment and selection end to end in line with Statkraft's hiring principles, tuned to the pace and precision Origination desks…", "Work in the Applicant Tracking System, and keep pushing for better ways to run the process for a business where timing and talent scarcity…", "Build and manage direct candidate pools for hard-to-fill specialist roles, keeping niche talent warm for the next opening"], "criteria": ["Hands-on recruitment experience, ideally including trading, origination, or other high-demand specialist talent role within European financial markets is a must", "Comfortable partnering with senior leaders and HR colleagues to achieve business goals while keeping appropriate hiring practices maintained", "Experience recruiting internally and externally within energy and renewables; exposure to trading, origination, or quantitative/technical talent is a strong…", "Working knowledge of applicant tracking systems (SmartRecruiters/Greenhouse)", "Proven ability to autonomously build and maintain successful direct hiring pipelines", "A track record of building strong, lasting relationships with the business"], "nice_to_have": [], "seniority": "mid", "years_experience": "", "languages": ["English", "German"], "education": "", "skills_matched": ["hydrogen", "renewables", "renewable energy", "market intelligence", "German"], "score": 83, "reasons": ["Title matches “origination”", "Seniority: mid (close to your target)", "CV skills 5/48: hydrogen, renewables, renewable energy, market intelligence, German", "CV text similarity 22%", "Location: Düsseldorf, North Rhine-Westphalia, Germany", "Company rated A: +6"], "first_seen": "2026-11-02", "is_new": true, "key": "smartrecruiters:Statkraft:744000153729979"}, {"company": "OX2", "ats": "successfactors", "job_id": "1372785755", "title": "Pipeline & Portfolio Analyst", "url": "https://jobs.ox2.com/job/Stockholm-Pipeline-&-Portfolio-Analyst-111-28/1372785755/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS", "location": "Stockholm, SE, 111 28", "department": "", "posted": "2026-10-14", "workplace": "", "employment_type": "", "salary": "", "rating": "A", "segment": "developers", "segments_secondary": ["portfolio"], "summary": "As Pipeline & Portfolio Analyst, you will be the operational engine of OX2's Global Project Datahub: a centrally owned, historised data layer. This is a newly created role at the center of OX2's data ambition, reporting to the Head of Data & Analytics, working in a team with a Senior Data Engineer, who are both…", "responsibilities": ["Product development: Identify use cases for the Global Projects Datahub and drive the implementation end to end (e.g., automation…", "Requirements & definitions: Collect requirements from Country teams, Project Delivery, Asset Management and other stakeholders, and support…", "Analysis: Perform pipeline and portfolio analyses – for example on project status, business case classification, or capacity by stage – to…", "Monthly process ownership: Run the monthly project data freeze process (starting from an IFS-based Excel prototype and evolving alongside…"], "criteria": ["You are structured, curious about how data sits together across systems, and comfortable holding a friendly but firm line with stakeholders on data quality and…", "A couple of years of relevant experience (we'd estimate around 2–4 years) in business or portfolio analysis, project development or management, controlling, or…", "Strong data-analysis skills, good excel skills, with working knowledge of Power BI or a genuine willingness and ability to build this quickly.", "A degree in Business, Finance, Engineering, Informatics or Mathematics or a related field.", "A detail-oriented, structured way of working, paired with curiosity about how data connects across systems.", "Confidence working directly with country teams, following up firmly but constructively on data quality and deadlines."], "nice_to_have": [], "seniority": "mid", "years_experience": "2–4 years", "languages": ["English", "Swedish (plus)"], "education": "Degree", "skills_matched": ["energy transition", "renewable energy", "project development"], "score": 76, "reasons": ["Title matches “portfolio”", "Seniority: mid (close to your target)", "CV skills 3/48: energy transition, renewable energy, project development", "CV text similarity 32%", "Keywords: international", "Location: Stockholm, SE, 111 28", "Company rated A: +6"], "first_seen": "2026-11-02", "is_new": true, "key": "successfactors:OX2:1372785755"}, {"company": "terralayr", "ats": "personio", "job_id": "2558066", "title": "Head of Accounting (m/f/d)", "url": "https://terralayr.jobs.personio.de/job/2558066?language=en", "location": "Berlin", "department": "Finance", "posted": "2026-03-09", "workplace": "", "employment_type": "permanent / full-time", "salary": "", "rating": "B", "segment": "developers", "segments_secondary": ["trading"], "summary": "We are looking for a Head of Accounting (m/f/d) to join our Finance team. In this role, you will take full ownership of Accounting, Tax, and Audit across our group entities and ensure the integrity, accuracy, and compliance of our financial records and processes across countries.", "responsibilities": ["Own and oversee accounting operations across all group entities, ensuring accurate bookkeeping, reconciliations, and timely monthly…", "Take full responsibility for the preparation and review of financial statements under local GAAP, while supporting group-level reporting…", "Own and coordinate all tax-related topics across countries in close collaboration with external tax advisors, including VAT, corporate tax…", "Lead all audit processes and act as the main point of contact for auditors, ensuring efficient coordination, timely delivery of…"], "criteria": ["Education: Completed vocational training or university degree in Accounting, Finance, Tax, or a related field. A qualification such as Steuerfachangestellter…", "Experience: 7+ years of relevant work experience in accounting, tax, and audit, ideally across both a tax advisory or audit environment and an in-house finance…", "Leadership & ownership: Strong sense of ownership and accountability, with the ability to independently lead the full accounting agenda across multiple…", "Mindset: Willingness to help build this company. We are a young company that has grown fast. We need both a hands on approach as well as the vision to transform", "Intercompany & multi-entity complexity: Proven experience managing intercompany transactions and accounting across multiple legal entities and jurisdictions.…", "Communication & language: Strong verbal and written communication skills in both English and German. German language skills at C2 level are required"], "nice_to_have": ["Accounting knowledge: Strong knowledge of HGB. Solid understanding of tax and audit processes in Germany is required. Exposure to…"], "seniority": "executive", "years_experience": "7+ years", "languages": ["English", "German"], "education": "Degree", "skills_matched": ["renewable energy", "wind", "solar", "BESS", "hedging", "German"], "score": 76, "reasons": ["Title matches “head of”", "Seniority: executive ✓", "CV skills 6/48: renewable energy, wind, solar, BESS, hedging, German", "CV text similarity 20%", "Keywords: international, flexibility, BESS", "Location: Berlin", "Lower-priority role (“accounting”): −25", "Company rated B: +3"], "first_seen": "2026-11-02", "is_new": true, "key": "personio:terralayr:2558066"}, {"company": "Valmet", "ats": "workday", "job_id": "R60307", "title": "Director, Service Sales", "url": "https://valmet.wd103.myworkdayjobs.com/External/job/Vantaa/Director--Service-Sales_R60307-1", "location": "Vantaa", "department": "", "posted": "2026-10-26", "workplace": "", "employment_type": "Full time", "salary": "", "rating": "C", "segment": "oem", "segments_secondary": [], "summary": "You are a commercially driven and customer-focused leader with a curious mindset and a passion for continuous learning. You quickly grasp new concepts, adapt to changing business environments, and turn insights into actions that create value for customers and the business.", "responsibilities": ["Take accountability – Act with ownership, set clear expectations, and follow through", "Lead with courage – Champion change, try bold ideas, and learn quickly", "Build on trust – Listen to understand, be open, and create psychological safety", "Collaborate for growth – Work across boundaries, value diverse perspectives, and focus on customer value"], "criteria": ["With our market-leading expertise, products and services we are committed to bring our customer's business forward.", "Support local sales organizations by providing service sales expertise, allowing greater focus on additional customer opportunities.", "Bachelor’s or Master’s degree in a relevant field", "+7 years’ experience in equipment sales, service sales, or a combination of both.", "Experience in leading, coaching and developing teams and organizations", "Good understanding of process industries, plant operations, reliability, maintenance and safety requirements."], "nice_to_have": [], "seniority": "executive", "years_experience": "7+ years", "languages": [], "education": "Master's (or equivalent)", "skills_matched": ["stakeholder management"], "score": 72, "reasons": ["Title matches “director”", "Seniority: executive ✓", "CV skills 1/48: stakeholder management", "CV text similarity 24%", "Keywords: international", "Location: Vantaa"], "first_seen": "2026-10-30", "is_new": true, "key": "workday:Valmet:R60307"}, {"company": "OX2", "ats": "successfactors", "job_id": "1369104955", "title": "Investment Analysis Associate", "url": "https://jobs.ox2.com/job/Helsinki-Investment-Analysis-Associate-00100/1369104955/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS", "location": "Helsinki, FI, 00100", "department": "", "posted": "2026-10-20", "workplace": "", "employment_type": "", "salary": "", "rating": "A", "segment": "developers", "segments_secondary": ["portfolio"], "summary": "As an Investment Analysis Associate, you will drive financial modelling, valuation, and data analysis to support investment decisions across our projects.", "responsibilities": ["Build and maintain financial models for renewable energy projects and portfolios", "Perform valuation, scenario analysis, and sensitivity modelling to assess investment opportunities", "Develop and update data-driven business cases across the project lifecycle", "Analyse market data, assumptions, and risk factors to support investment decisions"], "criteria": ["Academic background in Finance, Economics, Engineering, or similar", "2+ years of experience in investment analysis, M&A, valuation, transaction services, or similar", "Strong financial modelling and Excel skills", "Excellent analytical and numerical capabilities, with attention to detail", "Experience working with data, structured analysis, and quantitative problem-solving", "Fluent in English and Finnish is a must"], "nice_to_have": ["Experience from “Big Four” combined with exposure to the energy or renewable energy industry is considered a strong advantage"], "seniority": "junior", "years_experience": "2+ years", "languages": ["English", "Finnish"], "education": "", "skills_matched": ["energy transition", "renewable energy", "M&A"], "score": 68, "reasons": ["Title matches “investment”", "Seniority: junior (outside your target)", "CV skills 3/48: energy transition, renewable energy, M&A", "CV text similarity 29%", "Keywords: international", "Location: Helsinki, FI, 00100", "Company rated A: +6"], "first_seen": "2026-11-02", "is_new": true, "key": "successfactors:OX2:1369104955"}, {"company": "atNorth", "ats": "teamtailor", "job_id": "8485629", "title": "Project Procurement Manager", "url": "https://careers.atnorth.com/jobs/8485629-project-procurement-manager", "location": "Kista, Sweden; Oslo, Norway; Ummeljoki, Finland; Skovlunde, Denmark", "department": "", "posted": "2026-10-01", "workplace": "hybrid", "employment_type": "", "salary": "", "rating": "A", "segment": "data_centers", "segments_secondary": ["portfolio", "energy_intensive"], "summary": "Project Procurement Manager at atNorth (Sweden) You will play a pivotal role in the expansion of atNorth’s Nordic footprint. As a Project Procurement Manager, you will act as the commercial backbone of our Swedish operations, transforming high-value tenders into the critical infrastructure that powers our future.", "responsibilities": ["Lead multiple end-to-end RFQ/RFP processes for construction packages.", "Prepare and issue documentation, manage clarifications, and evaluate bids.", "Conduct contract negotiations with General Contractors and key suppliers.", "Ensure compliance with local laws, company policies, procedures, and standards throughout the procurement process."], "criteria": ["Degree in Civil Engineering, Business Administration, Law, or a related field (Master’s preferred).", "7+ years of experience in sourcing, procurement, or supply chain management within construction or data center environments.", "Strong negotiation skills with proven experience in contract negotiations with General Contractors.", "Excellent analytical abilities, with confidence in data interpretation and decision-making.", "Clear communication and collaboration skills, both internally and externally. Fluent in English and Swedish.", "Skilled in creating templates, workflows, and documentation."], "nice_to_have": ["Strong knowledge of Swedish construction standards and legal frameworks. Experience with FIDIC and RIBA standards is a strong advantage."], "seniority": "senior", "years_experience": "7+ years", "languages": ["English", "Swedish"], "education": "Master's", "skills_matched": ["renewable energy", "data center", "partnerships", "stakeholder management"], "score": 68, "reasons": ["Title matches “procurement”", "Seniority: senior ✓", "CV skills 4/48: renewable energy, data center, partnerships, stakeholder management", "CV text similarity 18%", "Keywords: international, data center", "Location: Kista, Sweden; Oslo, Norway; Ummeljoki, Finland; Skovlunde, Denmark", "Lower-priority role (“procurement”): −25", "Company rated A: +6"], "first_seen": "2026-11-02", "is_new": true, "key": "teamtailor:atNorth:8485629"}, {"company": "atNorth", "ats": "teamtailor", "job_id": "8485560", "title": "Project Procurement Manager", "url": "https://careers.atnorth.com/jobs/8485560-project-procurement-manager", "location": "Oslo, Norway", "department": "Finance", "posted": "2026-10-01", "workplace": "hybrid", "employment_type": "", "salary": "", "rating": "A", "segment": "data_centers", "segments_secondary": ["portfolio", "energy_intensive"], "summary": "We design mission-critical ecosystems powered by 100% renewable energy and circular economy principles, staying ahead through a relentless focus on reliability, security, and performance.", "responsibilities": ["Lead multiple end-to-end RFQ/RFP processes for construction packages.", "Prepare and issue documentation, manage clarifications, and evaluate bids.", "Conduct contract negotiations with General Contractors and key suppliers.", "Ensure compliance with local law, company polices, procedures etc. throughout the procurement process."], "criteria": ["You are a seasoned procurement professional with deep experience in the data center, construction, infrastructure, or technology sectors.", "Combining analytical sharpness with a service-oriented mindset, you excel at complex negotiations and stakeholder management.", "You are equally comfortable driving day-to-day operations and contributing to long-term strategic planning."], "nice_to_have": [], "seniority": "senior", "years_experience": "7+ years", "languages": [], "education": "", "skills_matched": ["renewable energy", "data center", "partnerships", "stakeholder management"], "score": 68, "reasons": ["Title matches “procurement”", "Seniority: senior ✓", "CV skills 4/48: renewable energy, data center, partnerships, stakeholder management", "CV text similarity 18%", "Keywords: international, data center", "Location: Oslo, Norway", "Lower-priority role (“procurement”): −25", "Company rated A: +6"], "first_seen": "2026-11-02", "is_new": true, "key": "teamtailor:atNorth:8485560"}, {"company": "atNorth", "ats": "teamtailor", "job_id": "8640831", "title": "Project Procurement Manager, Finland", "url": "https://careers.atnorth.com/jobs/8640831-project-procurement-manager-finland", "location": "Espoo, Finland", "department": "Development", "posted": "2026-10-30", "workplace": "", "employment_type": "", "salary": "", "rating": "A", "segment": "data_centers", "segments_secondary": ["portfolio", "energy_intensive"], "summary": "We design mission-critical ecosystems powered by 100% renewable energy and circular economy principles, staying ahead through a relentless focus on reliability, security, and performance.", "responsibilities": ["Lead multiple end-to-end RFQ/RFP processes for construction packages.", "Prepare or review documentation, manage clarifications, and evaluate bids.", "Conduct contract negotiations with General Contractors and key suppliers.", "Ensure compliance with local law, company polices, procedures etc. throughout the procurement process."], "criteria": ["You are a seasoned procurement professional with deep experience in construction, infrastructure, technology sector or data center industry, and communicate…", "Combining analytical sharpness with a service-oriented mindset, you excel at complex negotiations and stakeholder management.", "You are equally comfortable driving day-to-day operations and contributing to long-term strategic planning."], "nice_to_have": [], "seniority": "senior", "years_experience": "7+ years", "languages": ["Finnish", "English"], "education": "", "skills_matched": ["renewable energy", "data center", "partnerships", "stakeholder management"], "score": 68, "reasons": ["Title matches “procurement”", "Seniority: senior ✓", "CV skills 4/48: renewable energy, data center, partnerships, stakeholder management", "CV text similarity 19%", "Keywords: international, data center", "Location: Espoo, Finland", "Lower-priority role (“procurement”): −25", "Company rated A: +6"], "first_seen": "2026-11-02", "is_new": true, "key": "teamtailor:atNorth:8640831"}, {"company": "OX2", "ats": "successfactors", "job_id": "1372783355", "title": "Head of Data & Analytics", "url": "https://jobs.ox2.com/job/Stockholm-Head-of-Data-&-Analytics-111-28/1372783355/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS", "location": "Stockholm, SE, 111 28", "department": "", "posted": "2026-10-14", "workplace": "", "employment_type": "", "salary": "", "rating": "A", "segment": "developers", "segments_secondary": ["portfolio"], "summary": "OX2 is building a Global Project Datahub: a centrally owned, historised data layer connecting all datasources of the digital infrastructure in one governed backbone that serves as the source of truth. As Head of Data & Analytics, you will own this product end to end – you are its “face” to the organization, its main…", "responsibilities": ["Product ownership & roadmap: Own the roadmap, use-case prioritization and phased build-out of the Global Project Datahub, starting from a…", "Governance & definitions: Own and continuously develop OX2's data definitions catalogue, ensuring the same terms are understood the same…", "Data quality culture: Drive a clear data RACI across the organization, mapping data responsibility onto existing roles (Project…", "Change management & communication: Build organizational understanding of “why” the datahub matters, run stakeholder communication and…"], "criteria": ["You are someone who can hold a big, cross-functional vision and also get into the detail of how a data definition actually plays out in a country team's daily…", "You are equally comfortable in a steering committee and in a one-on-one conversation persuading a project manager why data quality matters to them personally.", "Solid experience (we'd estimate around 7+ years, though we care more about substance than years) in business/portfolio controlling, finance business…", "A relevant degree in Business, Finance, Engineering, Mathematics, Informatics or a related field.", "A track record of owning something end to end – a product, a process, or a function – from vision through adoption, including influencing stakeholders who do…", "The ability to speak both business and technical language, bridging Portfolio Management & Planning and Digital/data engineering without needing to be a coder…"], "nice_to_have": ["Experience in any role in the renewable energy projects value chain is a strong plus", "Hands on experience in Data Engineering or Data Analytics with knowledge of Microsoft Azure Infrastructure is considered a strong plus."], "seniority": "executive", "years_experience": "7+ years", "languages": [], "education": "Degree", "skills_matched": ["energy transition", "renewable energy", "stakeholder management"], "score": 66, "reasons": ["Title matches “head of”", "Seniority: executive ✓", "CV skills 3/48: energy transition, renewable energy, stakeholder management", "CV text similarity 24%", "Keywords: AI, international", "Location: Stockholm, SE, 111 28", "Lower-priority role (“data”): −25", "Company rated A: +6"], "first_seen": "2026-11-02", "is_new": true, "key": "successfactors:OX2:1372783355"}, {"company": "Capalo AI", "ats": "teamtailor", "job_id": "8111587", "title": "Senior Backend Engineer – Cloud Infrastructure", "url": "https://capaloai.teamtailor.com/jobs/8111587-senior-backend-engineer-cloud-infrastructure", "location": "Helsinki, Finland; Kuopio, Finland", "department": "Product, Production & Cloud Services", "posted": "2026-07-23", "workplace": "", "employment_type": "", "salary": "", "rating": "B", "segment": "energy_services", "segments_secondary": ["trading"], "summary": "Location: Helsinki, Finland (Hybrid) · Kuopio or remote within Finland · Relocation support available", "responsibilities": ["Design and build backend services for asset monitoring, schedule generation, command delivery, and battery dispatch", "Develop integrations with asset-side systems and market interfaces using REST APIs, MQTT, and IEC-104", "Build cloud-native infrastructure on AWS, including event-driven services, storage layers, deployment tooling, and operational foundations", "Develop the backend foundations that support forecasting and optimization pipelines, with a focus on data quality, traceability…"], "criteria": ["Significant experience building and operating production backend systems where reliability, maintainability, and correctness matter", "Strong hands-on Python and modern backend engineering, including APIs, asynchronous processing, and event-driven architectures", "Experience designing production systems, including service boundaries, APIs, failure handling, and operational ownership", "Production experience with AWS or another major cloud platform", "Comfort working across backend engineering, infrastructure, data, and domain logic in technically ambiguous environments"], "nice_to_have": ["Infrastructure as Code (Terraform or equivalent)", "Experience integrating with external APIs, industrial protocols, or machine-to-machine systems (MQTT, IEC-104, SCADA, or PPC experience is…", "Background in time-series systems, scheduling, control systems, or other operational software"], "seniority": "senior", "years_experience": "", "languages": [], "education": "", "skills_matched": ["energy transition", "battery storage", "optimization"], "score": 57, "reasons": ["Title matches “infrastructure”", "Seniority: senior ✓", "CV skills 3/48: energy transition, battery storage, optimization", "CV text similarity 16%", "Keywords: AI", "Location: Helsinki, Finland; Kuopio, Finland", "Lower-priority role (“engineer”): −25", "Company rated B: +3"], "first_seen": "2026-11-02", "is_new": true, "key": "teamtailor:Capalo AI:8111587"}, {"company": "atNorth", "ats": "teamtailor", "job_id": "7778447", "title": "Procurement Manager (OFCI)", "url": "https://careers.atnorth.com/jobs/7778447-procurement-manager-ofci", "location": "Oslo, Norway; Skovlunde, Denmark", "department": "Finance", "posted": "2026-05-22", "workplace": "", "employment_type": "", "salary": "", "rating": "A", "segment": "data_centers", "segments_secondary": ["portfolio", "energy_intensive"], "summary": "At atNorth, we believe that world-class technology is only possible through a world-class culture. We operate with a people-first mentality, where technical excellence and human wellbeing go hand in hand.", "responsibilities": ["Lead multiple end-to-end RFQ/RFP processes, including framework agreements and competitions with preferred suppliers.", "Prepare and issue tender documentation, manage clarifications, and evaluate complex bids.", "Conduct strategic negotiations with general contractors and key technology suppliers.", "Ensure compliance with internal policies, governance requirements, and international standards."], "criteria": ["5+ years of experience in sourcing or procurement, preferably within data centers, construction, or heavy infrastructure.", "Degree in Civil Engineering, Business Administration, Law, or a related field (Master’s preferred).", "Technical understanding of data center technologies, such as cooling and reserve power infrastructure.", "Proven track record in complex negotiations with OFCI suppliers.", "Analytical mindset with the ability to interpret data and make firm, value-based decisions.", "Fluent in English with excellent collaboration skills; proficiency in a Nordic language is an advantage."], "nice_to_have": [], "seniority": "senior", "years_experience": "5+ years", "languages": ["English"], "education": "Master's", "skills_matched": ["data center", "partnerships"], "score": 57, "reasons": ["Title matches “procurement”", "Seniority: senior ✓", "CV skills 2/48: data center, partnerships", "CV text similarity 16%", "Keywords: international, data center", "Location: Oslo, Norway; Skovlunde, Denmark", "Lower-priority role (“procurement”): −25", "Company rated A: +6"], "first_seen": "2026-11-02", "is_new": true, "key": "teamtailor:atNorth:7778447"}, {"company": "EQT Infrastructure", "ats": "greenhouse", "job_id": "4981387101", "title": "Business Line Controller - VP", "url": "https://job-boards.eu.greenhouse.io/eqtpartners/jobs/4981387101", "location": "Stockholm, Stockholm, Sweden", "department": "PC EU & NA BLC (Cost Center)", "posted": "2026-09-21", "workplace": "", "employment_type": "", "salary": "", "rating": "A", "segment": "pe", "segments_secondary": ["portfolio"], "summary": "EQT is looking for a Vice President Business Controller to join the Private Capital Europe & North America Business Controlling team in Stockholm. This is an important role supporting and strengthening a team of ten, based across Stockholm, Luxembourg, Amsterdam and Bengaluru, as EQT continues to expand its long-hold…", "responsibilities": ["Acting as sparring partner on strategic business controlling matters", "Monitoring portfolio company performance, fund liquidity planning and cash movements to give an accurate, real-time view of fund performance", "Lead valuation work on portfolio companies", "Tracking and monitoring exit forecasts"], "criteria": ["University degree in a relevant field", "Minimum 5 years' relevant experience in financial, business and/or cost controlling; international experience is a plus", "Experience in financial services or Big 4 is a merit", "Advanced Excel and BI skills", "Strong analytical skills paired with practical, commercial judgment", "Fluent written and spoken English"], "nice_to_have": [], "seniority": "executive", "years_experience": "5+ years", "languages": ["English"], "education": "Degree", "skills_matched": ["strategy"], "score": 54, "reasons": ["Title matches “VP”", "Seniority: executive ✓", "CV skills 1/48: strategy", "CV text similarity 30%", "Keywords: international", "Location: Stockholm, Stockholm, Sweden", "Lower-priority role (“controller”): −25", "Company rated A: +6"], "first_seen": "2026-11-02", "is_new": true, "key": "greenhouse:EQT Infrastructure:4981387101"}, {"company": "Capalo AI", "ats": "teamtailor", "job_id": "8472396", "title": "Junior Optimization Engineer – Revenue Distribution Focus", "url": "https://capaloai.teamtailor.com/jobs/8472396-junior-optimization-engineer-revenue-distribution-focus", "location": "", "department": "", "posted": "2026-09-29", "workplace": "", "employment_type": "", "salary": "", "rating": "B", "segment": "energy_services", "segments_secondary": ["trading"], "summary": "As a Junior Optimization Engineer within our Revenue Distribution team, you’ll work on the allocation engine that distributes aggregated market revenues back to the individual battery assets in our fleet. This is a quantitative systems problem.", "responsibilities": ["Economically fair", "Mathematically defensible", "Robust to edge cases", "Transparent to asset owners"], "criteria": ["A completed or soon-to-be-completed degree in applied mathematics, physics, optimization, operations research, quantitative economics, or a similar…", "A strong academic track record", "Solid Python skills (NumPy, pandas) and familiarity with good software practices such as testing and version control, e.g. through coursework, projects or…", "Ability to break down open-ended quantitative problems in a structured way, and eagerness to learn quickly", "Clear communication skills in English - able to explain mathematical reasoning to non-specialists"], "nice_to_have": ["Exposure to electricity markets or battery energy storage systems (BESS), e.g. through studies, a thesis or projects", "Coursework or projects involving revenue or cost allocation in multi-asset environments", "Studies in mechanism design or cooperative game theory"], "seniority": "junior", "years_experience": "", "languages": [], "education": "Degree (or equivalent)", "skills_matched": ["energy transition", "renewable energy", "BESS", "optimization"], "score": 45, "reasons": ["Title matches “optimization”", "Seniority: junior (outside your target)", "CV skills 4/48: energy transition, renewable energy, BESS, optimization", "CV text similarity 18%", "Keywords: AI, artificial intelligence, BESS", "Location: not stated", "Lower-priority role (“engineer”): −25", "Company rated B: +3"], "first_seen": "2026-11-02", "is_new": true, "key": "teamtailor:Capalo AI:8472396"}]};
 (function(){
-"use strict";
-const $ = s => document.querySelector(s);
-const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
-const store = { get(k){ try { return localStorage.getItem(k) || ""; } catch(e) { return ""; } },
-                set(k,v){ try { v ? localStorage.setItem(k, v) : localStorage.removeItem(k); } catch(e) {} } };
-const ATS = {successfactors:"SAP SuccessFactors", workday:"Workday", greenhouse:"Greenhouse", lever:"Lever", ashby:"Ashby",
-  smartrecruiters:"SmartRecruiters", personio:"Personio", recruitee:"Recruitee", teamtailor:"Teamtailor", linkedin:"LinkedIn link only"};
-const FILE = "docs/companies.json";
+  const $ = s => document.querySelector(s);
+  const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+  const LEVELS = ["intern","junior","mid","senior","lead","executive"];
+  const cap = s => s ? s[0].toUpperCase() + s.slice(1) : s;
 
-let data = null, sha = null, key = null, privateCache = {}, editing = null;
+  if (!DATA) { $("#list").append(Object.assign(el("div","empty"),{innerHTML:"<b>No data yet</b>Run <code>python -m jobfinder</code> to collect positions."})); return; }
+  const jobs = DATA.jobs, meta = DATA.meta;
 
-/* ---------- theme ---------- */
-const root = document.documentElement;
-try { const t = localStorage.getItem("cs-theme"); if (t) root.dataset.theme = t; } catch(e) {}
-$("#theme").onclick = () => {
-  const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
-  root.dataset.theme = dark ? "light" : "dark"; store.set("cs-theme", root.dataset.theme);
-};
-
-/* ---------- GitHub ---------- */
-const guessRepo = () => {
-  const h = location.hostname.match(/^([\w-]+)\.github\.io$/);
-  const seg = location.pathname.split("/").filter(Boolean)[0];
-  return h ? h[1] + "/" + (seg || h[1] + ".github.io") : "";
-};
-const repo = () => store.get("cs-repo") || guessRepo();
-const token = () => store.get("cs-token");
-const b64decode = s => new TextDecoder().decode(Uint8Array.from(atob(s.replace(/\s/g, "")), c => c.charCodeAt(0)));
-const b64encode = s => { const b = new TextEncoder().encode(s); let bin = ""; b.forEach(x => bin += String.fromCharCode(x)); return btoa(bin); };
-const api = () => `https://api.github.com/repos/${repo()}/contents/${FILE}`;
-const ghHeaders = () => ({Authorization: "Bearer " + token(), Accept: "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28"});
-function explain(r){
-  return r.status === 401 ? "GitHub did not accept the access token. Check it under GitHub access."
-    : r.status === 403 ? "The token may not change this repository. It needs Contents: Read and write."
-    : r.status === 404 ? "GitHub could not find the repository or docs/companies.json. Check the repository name under GitHub access."
-    : `GitHub returned an error (${r.status}). Try again in a minute.`;
-}
-async function ghRead(){
-  const r = await fetch(api() + "?ref=main&t=" + Date.now(), {headers: ghHeaders(), cache: "no-store"});
-  if (!r.ok) throw new Error(explain(r));
-  const f = await r.json();
-  return {data: JSON.parse(b64decode(f.content)), sha: f.sha};
-}
-// Read the newest file, apply `change`, write it back; retries if the file changed meanwhile.
-async function commit(change, message){
-  if (!repo() || !token()) throw new Error("Add your GitHub access first (button GitHub access).");
-  for (let i = 0; i < 3; i++){
-    const cur = await ghRead();
-    change(cur.data);
-    cur.data.updated = new Date().toISOString().slice(0, 10);
-    const body = JSON.stringify(cur.data, null, 2) + "\n";
-    const r = await fetch(api(), {method: "PUT", headers: ghHeaders(),
-      body: JSON.stringify({message, content: b64encode(body), sha: cur.sha, branch: "main"})});
-    if (r.status === 409 || r.status === 422){ await new Promise(res => setTimeout(res, 1200)); continue; }
-    if (!r.ok) throw new Error(explain(r));
-    data = cur.data; sha = (await r.json()).content.sha;
-    return;
-  }
-  throw new Error("The file was changed elsewhere at the same moment. Please save again.");
-}
-
-/* ---------- encryption (AES-GCM, key from passphrase via PBKDF2) ---------- */
-const enc = new TextEncoder(), dec = new TextDecoder();
-const toB64 = buf => btoa(String.fromCharCode(...new Uint8Array(buf)));
-const fromB64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
-async function deriveKey(pass, saltB64, iterations){
-  const base = await crypto.subtle.importKey("raw", enc.encode(pass), "PBKDF2", false, ["deriveKey"]);
-  return crypto.subtle.deriveKey({name: "PBKDF2", hash: "SHA-256", salt: fromB64(saltB64), iterations},
-    base, {name: "AES-GCM", length: 256}, false, ["encrypt", "decrypt"]);
-}
-async function seal(k, obj){
-  const iv = crypto.getRandomValues(new Uint8Array(12));
-  const ct = await crypto.subtle.encrypt({name: "AES-GCM", iv}, k, enc.encode(JSON.stringify(obj)));
-  return {iv: toB64(iv), ct: toB64(ct)};
-}
-async function open_(k, box){
-  const pt = await crypto.subtle.decrypt({name: "AES-GCM", iv: fromB64(box.iv)}, k, fromB64(box.ct));
-  return JSON.parse(dec.decode(pt));
-}
-
-/* ---------- formatting ---------- */
-const segName = id => (data.segments.find(s => s.id === id) || {}).name || id || "–";
-const fmt = (v, d = 0) => v == null || v === "" || isNaN(v) ? "–" : Number(v).toLocaleString("en-GB", {maximumFractionDigits: d});
-function money(m, cur){ if (m == null || m === "") return "–"; const v = Number(m); const c = cur === "EUR" || !cur ? "€" : cur + " ";
-  const sign = v < 0 ? "−" : "", a = Math.abs(v);
-  return a >= 1000 ? `${sign}${c}${(a / 1000).toLocaleString("en-GB", {minimumFractionDigits: 1, maximumFractionDigits: 1})} bn` : `${sign}${c}${fmt(a)} m`; }
-function mcap(f){ const m = f && f.market_cap; if (!m || m.value_bn == null) return "–";
-  return (m.currency === "EUR" ? "€" : m.currency === "USD" ? "$" : (m.currency || "") + " ") + fmt(m.value_bn, 1) + " bn"; }
-function jobText(c){
-  const j = c.jobs || {};
-  if (c.status === "paused") return {t: "Paused – not searched", cls: ""};
-  if (!j.ats && j.detect_failed){
-    const d = new Date(j.detect_failed.slice(0, 10)); d.setDate(d.getDate() + 7);
-    return {t: "LinkedIn link only · no job system found, next try " + d.toLocaleDateString("en-GB", {day: "numeric", month: "short"}), cls: "warn"};
-  }
-  if (!j.ats) return {t: "LinkedIn link only · job system being checked", cls: "warn"};
-  if (j.ats === "linkedin"){
-    const why = (j.detected || "").split("– ")[1] || "";
-    return {t: "LinkedIn link only" + (why ? " · " + why : ""), cls: ""};
-  }
-  let t = ATS[j.ats] || j.ats, cls = "";
-  if (j.check && j.check.ok === false){ t += " · check failed " + j.check.date; cls = "bad"; }
-  else if (/verify/.test(j.detected || "")){ t += " · please verify"; cls = "warn"; }
-  return {t, cls};
-}
-
-/* ---------- list ---------- */
-function render(){
-  const q = $("#f-q").value.trim().toLowerCase(), seg = $("#f-seg").value, rt = $("#f-rating").value, st = $("#f-status").value, sort = $("#f-sort").value;
-  let rows = data.companies.filter(c =>
-    (!seg || c.segment === seg || (c.segments_secondary || []).includes(seg)) && (!rt || c.rating === rt) && (!st || c.status === st) &&
-    (!q || [c.name, c.segment_detail, segName(c.segment), c.country, c.hq, c.description, c.fit].join(" ").toLowerCase().includes(q)));
-  const f = c => c.financials || {};
-  const by = {
-    rating: (a, b) => (a.rating || "Z").localeCompare(b.rating || "Z") || a.name.localeCompare(b.name),
-    name: (a, b) => a.name.localeCompare(b.name),
-    revenue: (a, b) => (f(b).revenue_m || -1) - (f(a).revenue_m || -1),
-    employees: (a, b) => (f(b).employees || -1) - (f(a).employees || -1),
-    updated: (a, b) => (b.updated || "").localeCompare(a.updated || ""),
+  // theme toggle (remembered per browser)
+  const root = document.documentElement;
+  try { const t = localStorage.getItem("jf-theme"); if (t) root.dataset.theme = t; } catch(e) {}
+  $("#theme").onclick = () => {
+    const dark = root.dataset.theme ? root.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    root.dataset.theme = dark ? "light" : "dark";
+    try { localStorage.setItem("jf-theme", root.dataset.theme); } catch(e) {}
   };
-  rows.sort(by[sort]);
-  const tb = $("#rows"); tb.replaceChildren();
-  if (!rows.length){ const tr = el("tr"), td = el("td", "empty", data.companies.length ? "No companies match these filters." : "No companies yet. Use Add company to start the register."); td.colSpan = 10; tr.append(td); tb.append(tr); }
-  rows.forEach(c => {
-    const tr = el("tr"); tr.tabIndex = 0; tr.setAttribute("aria-label", "Open " + c.name);
-    const td = (cls, child) => { const d = el("td", cls); if (child instanceof Node) d.append(child); else d.textContent = child; tr.append(d); return d; };
-    td("c-rating", el("span", "rating r-" + (c.rating || "C"), c.rating || "–"));
-    const co = el("div", "co"); co.append(el("b", null, c.name), el("span", null, c.segment_detail || ""));
-    const fm = el("span", "fig-m", [money(f(c).revenue_m, f(c).currency) + " revenue", fmt(f(c).employees) + " employees", c.country].filter(x => !/^–/.test(x)).join(" · "));
-    co.append(fm); td("c-co", co);
-    td("c-seg hide-m", segName(c.segment));
-    td("hide-m", c.country || "–");
-    td("num hide-m", money(f(c).revenue_m, f(c).currency));
-    td("num hide-m", money(f(c).operating_profit_m, f(c).currency));
-    td("num hide-m", f(c).employees ? fmt(f(c).employees) : (f(c).employees_label || "–"));
-    td("num hide-m", f(c).aum_bn ? "AUM €" + fmt(f(c).aum_bn) + " bn" : mcap(f(c)));
-    td("c-status", el("span", "pill st-" + c.status, c.status ? c.status[0].toUpperCase() + c.status.slice(1) : "–"));
-    const jt = jobText(c); td("c-jobs", el("span", "src " + jt.cls, jt.t));
-    tr.onclick = () => openCompany(c.id);
-    tr.onkeydown = e => { if (e.key === "Enter") openCompany(c.id); };
-    tb.append(tr);
-  });
-  $("#t-all").textContent = data.companies.length;
-  $("#t-a").textContent = data.companies.filter(c => c.rating === "A").length;
-  $("#t-applied").textContent = data.companies.filter(c => c.status === "applied").length;
-  $("#updated").textContent = "Register updated " + (data.updated || "–");
-}
-["#f-q", "#f-seg", "#f-rating", "#f-status", "#f-sort"].forEach(s => $(s).addEventListener("input", render));
 
-function banner(msg, err){ const b = $("#banner"); b.replaceChildren(); if (msg){ const d = el("div", "banner" + (err ? " err" : ""), msg); b.append(d); } }
+  // filter options
+  [...new Set(jobs.map(j => j.company))].sort().forEach(c => $("#f-co").append(new Option(c, c)));
+  LEVELS.filter(l => jobs.some(j => j.seniority === l)).forEach(l => $("#f-lvl").append(new Option(cap(l), l)));
+  if (jobs.some(j => !j.seniority)) $("#f-lvl").append(new Option("Not stated", "-"));
+  const when = new Date(meta.generated);
+  $("#updated").textContent = "Updated " + when.toLocaleString(undefined, {dateStyle:"medium", timeStyle:"short"});
 
-/* ---------- company dialog ---------- */
-const form = $("#co-form"), F = n => form.elements[n];
-const setStatus = (id, msg, kind) => { const s = $(id); s.textContent = msg; s.className = "status" + (kind ? " " + kind : ""); };
+  const SEG = Object.fromEntries((meta.segments || []).map(s => [s.id, s.name]));
+  const usedSeg = new Set(jobs.flatMap(j => [j.segment, ...(j.segments_secondary || [])]).filter(Boolean));
+  (meta.segments || []).filter(s => usedSeg.has(s.id)).forEach(s => $("#f-seg").append(new Option(s.name, s.id)));
+  if (meta.register_url) $("#reg-link").href = meta.register_url.replace(/companies\.json.*$/, "");
+  const band = s => s >= 70 ? "hi" : s >= 50 ? "md" : "lo";
 
-function contactRow(c = {}){
-  const row = el("div", "contact");
-  [["Name", "name", "text"], ["Role", "role", "text"], ["Email", "email", "email"], ["Phone", "phone", "tel"]].forEach(([lab, k, type]) => {
-    const l = el("label", null, lab), i = el("input"); i.type = type; i.dataset.k = k; i.value = c[k] || ""; i.disabled = !key; l.append(i); row.append(l);
-  });
-  const rm = el("button", "btn small", "Remove"); rm.type = "button"; rm.disabled = !key; rm.onclick = () => row.remove(); row.append(rm);
-  return row;
-}
-
-async function openCompany(id){
-  const c = id ? structuredClone(data.companies.find(x => x.id === id)) : {
-    id: null, name: "", rating: "B", status: "watching", segment: "others", segments_secondary: [], financials: {currency: "EUR"},
-    jobs: {}, sources: [], private: null};
-  editing = c;
-  $("#co-h").textContent = id ? c.name : "Add company";
-  $("#co-sub").textContent = id ? `Added ${c.added || "–"} · last updated ${c.updated || "–"}` : "Name and careers page are enough – the job source is detected automatically after saving.";
-  $("#co-delete").hidden = !id;
-  form.reset();
-  const segSel = F("segment"); segSel.replaceChildren(...data.segments.map(s => new Option(s.name, s.id)));
-  const sec = $("#co-sec"); sec.replaceChildren(...data.segments.map(s => {
-    const l = el("label"), i = el("input"); i.type = "checkbox"; i.value = s.id; i.checked = (c.segments_secondary || []).includes(s.id);
-    l.append(i, document.createTextNode(s.name)); return l; }));
-  ["name", "rating", "status", "segment", "segment_detail", "country", "hq", "ownership", "description", "fit", "careers_url"].forEach(k => F(k).value = c[k] || (k === "rating" ? "B" : k === "status" ? "watching" : ""));
-  F("linkedin_id").value = c.linkedin_id || "";
-  const f = c.financials || {};
-  ["year", "currency", "revenue_m", "employees", "operating_profit_m", "operating_profit_label", "net_profit_m", "net_debt_m", "equity_ratio_pct", "total_assets_m"]
-    .forEach(k => F("f_" + k).value = f[k] == null ? (k === "currency" ? "EUR" : "") : f[k]);
-  const m = f.market_cap || {}; F("m_value_bn").value = m.value_bn ?? ""; F("m_currency").value = m.currency || ""; F("m_as_of").value = m.as_of || "";
-  const j = c.jobs || {};
-  F("ats").value = j.ats || ""; F("ats_target").value = j.url || j.id || "";
-  $("#co-jobs-note").textContent = j.detected ? "Found " + j.detected + "." : j.detect_failed ? "Not found " + j.detect_failed + ". Add the careers page, or choose LinkedIn link only." : id ? "" : "Leave on Detect automatically unless you know the system.";
-  F("sources").value = (c.sources || []).join("\n");
-  const links = $("#co-source-links"); links.replaceChildren(...(c.sources || []).filter(u => /^https?:\/\//.test(u)).map(u => { const a = el("a", null, u.replace(/^https?:\/\/(www\.)?/, "").slice(0, 80)); a.href = u; a.target = "_blank"; a.rel = "noopener"; return a; }));
-  await fillPrivate(c);
-  setStatus("#co-status", "");
-  $("#dlg-co").showModal();
-}
-
-async function fillPrivate(c){
-  const box = $("#co-contacts"); box.replaceChildren();
-  const wrap = $("#co-private");
-  let p = {contacts: [], comment: ""};
-  if (key && c.private){
-    try { p = await open_(key, c.private); } catch(e) { p = {contacts: [], comment: ""}; setStatus("#co-status", "These contacts were saved with a different passphrase.", "err"); }
+  function gauge(score){
+    const r = 28, c = 2 * Math.PI * r;
+    const g = el("div", "gauge " + band(score));
+    g.innerHTML = `<svg viewBox="0 0 64 64" aria-hidden="true"><circle class="trk" cx="32" cy="32" r="${r}" fill="none" stroke-width="5"/>
+      <circle class="val" cx="32" cy="32" r="${r}" fill="none" stroke-width="5" stroke-linecap="round" stroke-dasharray="${c}" stroke-dashoffset="${c * (1 - score/100)}"/></svg>`;
+    const s = el("span", null, score); g.append(s);
+    g.setAttribute("role","img"); g.setAttribute("aria-label", `Match score ${score} of 100`);
+    return g;
   }
-  wrap.classList.toggle("locked", !key);
-  $("#co-private-hint").textContent = key ? "Encrypted with your passphrase before saving. Only you can read them."
-    : c.private ? "Locked. Use Unlock contacts to view and edit them." : "Unlock contacts to add names, emails, phone numbers and a comment.";
-  (p.contacts || []).forEach(x => box.append(contactRow(x)));
-  F("comment").value = p.comment || ""; F("comment").disabled = !key;
-  $("#co-add-contact").disabled = !key;
-}
-$("#co-add-contact").onclick = () => $("#co-contacts").append(contactRow());
-$("#co-cancel").onclick = () => $("#dlg-co").close();
 
-const num = v => { v = String(v).trim().replace(/\s/g, "").replace(",", "."); return v === "" || isNaN(v) ? null : Number(v); };
-const slug = s => s.normalize("NFKD").replace(/[̀-ͯ]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  function listBlock(title, items, plus){
+    const d = el("div"); d.append(el("h3", null, title));
+    const ul = el("ul");
+    items.forEach(t => ul.append(el("li", null, t)));
+    (plus||[]).forEach(t => ul.append(el("li", "plus", "Plus: " + t)));
+    d.append(ul); return d;
+  }
 
-async function collect(){
-  const c = editing, name = F("name").value.trim();
-  if (!name) throw new Error("Enter the company name.");
-  const url = F("careers_url").value.trim();
-  if (url && !/^https?:\/\/\S+\.\S+/.test(url)) throw new Error("The careers page must be a full web address starting with https://");
-  const out = {...c, name, rating: F("rating").value, status: F("status").value, segment: F("segment").value,
-    segments_secondary: [...$("#co-sec").querySelectorAll("input:checked")].map(i => i.value).filter(v => v !== F("segment").value),
-    segment_detail: F("segment_detail").value.trim(), country: F("country").value.trim(), hq: F("hq").value.trim(),
-    ownership: F("ownership").value.trim(), description: F("description").value.trim(), fit: F("fit").value.trim(),
-    careers_url: url, linkedin_id: F("linkedin_id").value.trim() || null,
-    sources: F("sources").value.split("\n").map(s => s.trim()).filter(Boolean),
-    updated: new Date().toISOString().slice(0, 10)};
-  const f = {...(c.financials || {})};
-  ["year", "revenue_m", "employees", "operating_profit_m", "net_profit_m", "net_debt_m", "equity_ratio_pct", "total_assets_m"].forEach(k => f[k] = num(F("f_" + k).value));
-  f.currency = F("f_currency").value.trim() || "EUR"; f.operating_profit_label = F("f_operating_profit_label").value.trim();
-  const mv = num(F("m_value_bn").value);
-  f.market_cap = mv == null ? null : {value_bn: mv, currency: F("m_currency").value.trim() || "EUR", as_of: F("m_as_of").value.trim(), source: (c.financials && c.financials.market_cap && c.financials.market_cap.source) || ""};
-  out.financials = f;
-  // job source: keep detection results unless the user changed the system or address
-  const ats = F("ats").value, target = F("ats_target").value.trim(), old = c.jobs || {};
-  const oldTarget = old.url || old.id || "";
-  if (ats !== (old.ats || "") || target !== oldTarget || (!ats && url !== (c.careers_url || ""))){
-    if (!ats) out.jobs = {ats: null};
-    else if (ats === "linkedin") out.jobs = {ats: "linkedin", detected: out.updated + ", set manually", check: null};
-    else {
-      if (!target) throw new Error("Enter the job system address or account, or choose Detect automatically.");
-      out.jobs = {ats, [/^https?:/.test(target) ? "url" : "id"]: target, detected: out.updated + ", set manually", check: null};
+  function card(j){
+    const a = el("article", "job");
+    a.append(gauge(j.score));
+    const body = el("div");
+
+    const head = el("div", "head");
+    const h2 = el("h2"); const link = el("a", null, j.title); link.href = j.url; link.target = "_blank"; link.rel = "noopener";
+    h2.append(link); head.append(h2, el("span", "company", j.company));
+    if (j.rating){ const r = el("span", "rt rt-" + j.rating, j.rating); r.title = "Company rating " + j.rating; head.append(r); }
+    if (j.is_new) head.append(el("span", "newtag", "New"));
+    body.append(head);
+
+    const facts = el("ul", "facts");
+    const add = t => t && facts.append(el("li", null, t));
+    add(SEG[j.segment] || "");
+    add(j.seniority ? cap(j.seniority) : "");
+    add(j.location);
+    add(cap(j.workplace));
+    add(j.employment_type);
+    add(j.years_experience ? j.years_experience + " experience" : "");
+    add(j.education);
+    add(j.languages.length ? j.languages.join(", ") : "");
+    add(j.salary);
+    add(j.posted ? "Posted " + j.posted : "");
+    body.append(facts);
+
+    if (j.summary) body.append(el("p", "summary", j.summary));
+
+    const cols = el("div", "cols");
+    if (j.responsibilities.length) cols.append(listBlock("What you would do", j.responsibilities));
+    if (j.criteria.length || j.nice_to_have.length) cols.append(listBlock("What they ask for", j.criteria, j.nice_to_have));
+    if (cols.children.length) body.append(cols);
+
+    if (j.skills_matched.length){
+      const sk = el("div", "skills"); sk.append(el("b", null, "Your skills mentioned"));
+      j.skills_matched.forEach(s => sk.append(el("span", null, s)));
+      body.append(sk);
     }
-  }
-  if (key){
-    const contacts = [...$("#co-contacts").querySelectorAll(".contact")].map(r => {
-      const o = {}; r.querySelectorAll("input").forEach(i => o[i.dataset.k] = i.value.trim()); return o; })
-      .filter(o => o.name || o.email || o.phone);
-    const comment = F("comment").value.trim();
-    out.private = contacts.length || comment ? await seal(key, {contacts, comment}) : null;
-  }
-  if (!c.id){
-    let id = slug(name) || "company", n = 2;
-    while (data.companies.some(x => x.id === id)) id = slug(name) + "-" + n++;
-    out.id = id; out.added = out.updated;
-  }
-  return out;
-}
-
-form.onsubmit = async e => {
-  e.preventDefault();
-  let co;
-  try { co = await collect(); } catch(err) { setStatus("#co-status", err.message, "err"); return; }
-  const isNew = !editing.id;
-  if (isNew && data.companies.some(x => x.name.toLowerCase() === co.name.toLowerCase())){ setStatus("#co-status", co.name + " is already in the register.", "err"); return; }
-  $("#co-save").disabled = true; setStatus("#co-status", "Saving…");
-  try {
-    await commit(d => {
-      const i = d.companies.findIndex(x => x.id === co.id);
-      if (i >= 0) d.companies[i] = co; else d.companies.push(co);
-    }, (isNew ? "Add " : "Update ") + co.name);
-    $("#dlg-co").close(); render();
-    banner(co.jobs && !co.jobs.ats ? `${co.name} saved. The job source is being detected and appears here in about 2 minutes (reload the page).` : `${co.name} saved.`);
-  } catch(err) { setStatus("#co-status", err.message, "err"); }
-  $("#co-save").disabled = false;
-};
-
-$("#co-delete").onclick = async () => {
-  const c = editing;
-  if ($("#co-delete").dataset.confirm !== c.id){ $("#co-delete").dataset.confirm = c.id; $("#co-delete").textContent = "Click again to delete"; return; }
-  $("#co-delete").dataset.confirm = ""; $("#co-delete").textContent = "Delete company";
-  setStatus("#co-status", "Deleting…");
-  try {
-    await commit(d => { d.companies = d.companies.filter(x => x.id !== c.id); }, "Delete " + c.name);
-    $("#dlg-co").close(); render(); banner(c.name + " deleted.");
-  } catch(err) { setStatus("#co-status", err.message, "err"); }
-};
-$("#dlg-co").addEventListener("close", () => { $("#co-delete").dataset.confirm = ""; $("#co-delete").textContent = "Delete company"; });
-
-$("#btn-add").onclick = () => openCompany(null);
-
-/* ---------- passphrase ---------- */
-function setLockButton(){ $("#btn-unlock span").textContent = key ? "Contacts unlocked" : "Unlock contacts"; }
-$("#btn-unlock").onclick = () => {
-  if (key){ key = null; setLockButton(); banner("Contacts locked."); return; }
-  const first = !data.crypto;
-  $("#pass-h").textContent = first ? "Set a passphrase" : "Unlock contacts";
-  $("#pass-hint").textContent = first
-    ? "Contacts and comments are encrypted with this passphrase before they are saved. Choose at least 10 characters. If you forget it, the contacts cannot be recovered."
-    : "Enter your passphrase to read and edit contacts and comments.";
-  $("#pass-2-wrap").hidden = !first; $("#pass-ok").textContent = first ? "Set passphrase" : "Unlock";
-  $("#pass-1").value = ""; $("#pass-2").value = ""; setStatus("#pass-status", "");
-  $("#dlg-pass").showModal(); $("#pass-1").focus();
-};
-$("#pass-cancel").onclick = () => $("#dlg-pass").close();
-$("#pass-form").onsubmit = async e => {
-  e.preventDefault();
-  const p = $("#pass-1").value;
-  try {
-    if (!data.crypto){
-      if (p.length < 10){ setStatus("#pass-status", "Use at least 10 characters.", "err"); return; }
-      if (p !== $("#pass-2").value){ setStatus("#pass-status", "The two passphrases differ.", "err"); return; }
-      setStatus("#pass-status", "Saving…");
-      const salt = toB64(crypto.getRandomValues(new Uint8Array(16))), iterations = 310000;
-      const k = await deriveKey(p, salt, iterations);
-      const block = {kdf: "PBKDF2-SHA256", iterations, salt, check: await seal(k, "company-scout")};
-      await commit(d => { if (d.crypto) throw new Error("A passphrase was set elsewhere meanwhile. Reload the page."); d.crypto = block; }, "Set passphrase for contacts");
-      key = k;
-    } else {
-      setStatus("#pass-status", "Checking…");
-      const k = await deriveKey(p, data.crypto.salt, data.crypto.iterations);
-      try { await open_(k, data.crypto.check); } catch(err) { setStatus("#pass-status", "Wrong passphrase.", "err"); return; }
-      key = k;
+    if (j.reasons.length){
+      const d = el("details", "why"); d.append(el("summary", null, "Why this score"));
+      const ul = el("ul"); j.reasons.forEach(r => ul.append(el("li", null, r))); d.append(ul);
+      body.append(d);
     }
-    $("#dlg-pass").close(); setLockButton(); banner("Contacts unlocked for this visit. Open a company to see them.");
-  } catch(err) { setStatus("#pass-status", err.message, "err"); }
-};
-
-/* ---------- access ---------- */
-$("#btn-access").onclick = () => { $("#acc-repo").value = repo(); $("#acc-token").value = token(); setStatus("#acc-status", ""); $("#dlg-access").showModal(); };
-$("#acc-cancel").onclick = () => $("#dlg-access").close();
-$("#acc-form").onsubmit = async e => {
-  e.preventDefault();
-  const r = $("#acc-repo").value.trim().replace(/^https?:\/\/github\.com\//, "").replace(/\/$/, "");
-  if (!/^[\w.-]+\/[\w.-]+$/.test(r)){ setStatus("#acc-status", "Enter the repository as user/name.", "err"); return; }
-  store.set("cs-repo", r); store.set("cs-token", $("#acc-token").value.trim());
-  setStatus("#acc-status", "Checking…");
-  try { const cur = await ghRead(); data = cur.data; sha = cur.sha; render(); $("#dlg-access").close(); banner("GitHub access works. Changes are saved directly to the repository."); }
-  catch(err) { setStatus("#acc-status", err.message, "err"); }
-};
-
-/* ---------- start ---------- */
-async function load(){
-  try {
-    if (repo() && token()){ const cur = await ghRead(); data = cur.data; sha = cur.sha; }
-  } catch(e) { banner(e.message + " Showing the published copy instead.", true); }
-  if (!data){
-    const r = await fetch("companies.json?t=" + Date.now(), {cache: "no-store"});
-    data = await r.json();
+    const ap = el("a", "apply", "Open posting"); ap.href = j.url; ap.target = "_blank"; ap.rel = "noopener";
+    body.append(ap);
+    a.append(body);
+    return a;
   }
-  const segSel = $("#f-seg");
-  data.segments.forEach(s => segSel.append(new Option(s.name, s.id)));
+
+  function render(){
+    const q = $("#f-q").value.trim().toLowerCase();
+    const co = $("#f-co").value, lvl = $("#f-lvl").value, wp = $("#f-wp").value;
+    const sg = $("#f-seg").value, rt = $("#f-rt").value;
+    const min = +$("#f-min").value, onlyNew = $("#f-new").checked, sort = $("#f-sort").value;
+    $("#f-min-v").textContent = min;
+    let rows = jobs.filter(j =>
+      (!co || j.company === co) &&
+      (!lvl || (lvl === "-" ? !j.seniority : j.seniority === lvl)) &&
+      (!wp || j.workplace === wp) &&
+      (!sg || j.segment === sg || (j.segments_secondary || []).includes(sg)) &&
+      (!rt || rt.includes(j.rating || "-")) &&
+      j.score >= min && (!onlyNew || j.is_new) &&
+      (!q || [j.title, j.company, j.location, j.summary, ...j.criteria, ...j.skills_matched].join(" ").toLowerCase().includes(q)));
+    if (sort === "new") rows.sort((a,b) => (b.first_seen||"").localeCompare(a.first_seen||"") || b.score - a.score);
+    else if (sort === "company") rows.sort((a,b) => a.company.localeCompare(b.company) || b.score - a.score);
+    else rows.sort((a,b) => b.score - a.score);
+
+    const list = $("#list"); list.replaceChildren();
+    if (!rows.length){
+      const e = el("div", "empty");
+      e.append(el("b", null, jobs.length ? "No positions match these filters" : "No matching positions right now"));
+      e.append(document.createTextNode(jobs.length ? "Lower the minimum match or clear the search." :
+        "Widen the titles or locations in config/profile.yaml, or add companies in config/companies.yaml."));
+      list.append(e);
+    } else rows.forEach(j => list.append(card(j)));
+    $("#t-shown").textContent = rows.length;
+    $("#t-new").textContent = rows.filter(j => j.is_new).length;
+    $("#t-co").textContent = new Set(rows.map(j => j.company)).size;
+  }
+  ["#f-q","#f-co","#f-lvl","#f-seg","#f-rt","#f-wp","#f-sort","#f-min","#f-new"].forEach(s => $(s).addEventListener("input", render));
+
+  // LinkedIn search links
+  if ((meta.linkedin || []).length){
+    meta.linkedin.forEach(l => {
+      const li = el("li"), a = el("a", null, l.company);
+      a.href = l.url; a.target = "_blank"; a.rel = "noopener";
+      li.append(a);
+      if (l.rating) li.append(el("span", null, l.rating));
+      $("#li-list").append(li);
+    });
+    $("#li-h").textContent = `Check on LinkedIn (${meta.linkedin.length})`;
+    $("#li").hidden = false;
+  }
+
+  // footer: source status
+  const f = $("#footer");
+  if (meta.register_url && !meta.register_ok) f.append(el("p", "bad", "The company register could not be read on the last run – the previous copy was used."));
+  const det = el("details"), sm = el("summary", null, `Sources checked on the last run (${meta.companies.length} companies` + ((meta.paused || []).length ? `, ${meta.paused.length} paused)` : ")"));
+  det.append(sm); f.append(det);
+  const t = el("table");
+  meta.companies.forEach(c => {
+    const tr = el("tr");
+    tr.append(el("td", null, c.company), el("td", null, c.ats),
+      el("td", c.ok ? null : "bad", !c.ok ? "Failed: " + c.error : c.error === "link only" ? "LinkedIn link only" + (c.note ? " – " + c.note : "") : `${c.count} title matches`));
+    t.append(tr);
+  });
+  det.append(t);
   render();
-}
-load().catch(() => banner("The register could not be loaded. Reload the page.", true));
 })();
+
 </script>
 </body>
 </html>
