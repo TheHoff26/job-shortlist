@@ -42,6 +42,15 @@ titles:
   - renewables
   - low-carbon
   - CO2
+  # Investors, finance, data centres
+  - investment
+  - investments
+  - infrastructure
+  - asset management
+  - procurement
+  - power purchase
+  - PPA
+  - energy management
   # P&L / general management
   - managing director
   - general manager
@@ -101,6 +110,8 @@ keywords:
   - industrial customers
   - PPA
   - flexibility
+  - data center
+  - BESS
 
 # 2) SENIORITY -----------------------------------------------------------------
 seniority:
@@ -123,6 +134,17 @@ locations:
   - København
   - Stockholm
   - Oslo
+  # Germany: main energy hubs
+  - Berlin
+  - Hamburg
+  - Düsseldorf
+  - Dusseldorf
+  - Essen
+  - Cologne
+  - Köln
+  - Munich
+  - München
+  - Frankfurt
 remote_ok: true
 
 # 4) MATCH TO YOUR CV --------------------------------------------------------------
@@ -146,6 +168,11 @@ cv_skills:
   - decarbonization
   - decarbonisation
   - electrification
+  - battery storage
+  - BESS
+  - PPA
+  - data center
+  - data centre
   # Commercial & business development
   - business development
   - commercialization
@@ -192,7 +219,14 @@ linkedin:
     - hydrogen
     - decarbonisation
 
-# 6) OUTPUT ------------------------------------------------------------------------
+# 6) COMPANY RATING ------------------------------------------------------------
+# Points added to a job's score based on the company's rating in the register.
+rating_bonus:
+  A: 6
+  B: 3
+  C: 0
+
+# 7) OUTPUT ------------------------------------------------------------------------
 min_score: 35
 new_days: 3
 max_jobs_per_company: 0

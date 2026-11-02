@@ -1,95 +1,17 @@
 # ---------------------------------------------------------------------------
-# Companies to watch. Add, remove or comment out entries freely.
+# Companies are managed in the Company Scout register:
+#   https://thehoff26.github.io/company-scout/
 #
-# Each entry needs:
-#   name:  display name
-#   ats:   greenhouse | lever | ashby | smartrecruiters | personio | recruitee | workday
-#   id:    the company's identifier on that system (see "How to find the id")
+# The job search reads the register at every run. Companies with status
+# "paused" are skipped. Companies without a readable job system get a LinkedIn
+# search link on the job page instead.
 #
-# How to find the id - open the company's careers page, click a job and look
-# at the URL:
-#   greenhouse       boards.greenhouse.io/<id>  or  job-boards.greenhouse.io/<id>
-#   lever            jobs.lever.co/<id>  (EU boards: jobs.eu.lever.co/<id>)
-#   ashby            jobs.ashbyhq.com/<id>
-#   smartrecruiters  jobs.smartrecruiters.com/<id>   (case-sensitive)
-#   personio         <id>.jobs.personio.de  or  <id>.jobs.personio.com
-#   recruitee        <id>.recruitee.com
-#   workday          use `url:` instead of `id:` - the career site URL, e.g.
-#                    https://<tenant>.wd3.myworkdayjobs.com/en-US/<SiteName>
-#   linkedin         no id needed: the company is NOT fetched, it only gets a
-#                    "Search on LinkedIn" link (for companies whose careers
-#                    site uses none of the systems above)
-#
-# Optional per company:
-#   enabled: false   skip without deleting
-#   language: en     (Personio only) feed language
-#   linkedin_id: 1234  LinkedIn company id - makes the LinkedIn link filter by
-#                    this exact company. Find it by searching jobs on LinkedIn,
-#                    choosing the company in the "Company" filter and copying
-#                    the number after f_C= from the address bar.
-#   linkedin: false  no LinkedIn link for this company
-#
-# Every enabled company gets a LinkedIn search link on the page (settings in
-# profile.yaml -> linkedin).
-#
-# The entries below are EXAMPLES so the first run produces output.
-# Replace them with the companies you care about.
+# If the register can't be reached, the copy from the last run is used
+# (data/register-cache.json).
 # ---------------------------------------------------------------------------
 
-companies:
-  # --- SAP SuccessFactors career sites ---
-  
-  - name: Fortum
-    ats: successfactors
-    url: https://jobs.fortum.com/Fortum
+register: https://thehoff26.github.io/company-scout/companies.json
 
-  - name: Neste
-    ats: successfactors
-    url: https://jobs.neste.com
-
-  - name: Wärtsilä
-    ats: successfactors
-    url: https://careers.wartsila.com
-
-  - name: Metso
-    ats: successfactors
-    url: https://careers.metso.com
-
-  # Workday example (experimental - Workday has no official public API):
-  # - name: NVIDIA
-  #   ats: workday
-  #   url: https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite
-  
-  - name: Metsä Group
-    ats: workday
-    url: https://metsagroup.wd103.myworkdayjobs.com/en-US/MetsaGroup_Careers
-
-  - name: Stora Enso
-    ats: workday
-    url: https://storaenso.wd502.myworkdayjobs.com/Stora_Enso_site_opportunities
-
-  - name: Valmet
-    ats: workday
-    url: https://valmet.wd103.myworkdayjobs.com/en-US/External
-
-  # --- No supported feed: LinkedIn link only ---
-  # - name: Supercell
-  #   ats: linkedin
-  
-  - name: KONE
-    ats: linkedin
-
-  - name: St1
-    ats: linkedin
-
-  - name: Copenhagen Infrastructure Partners
-    ats: linkedin
-
-  # --- added from the website ---
-  - name: "Orsted"
-    careers_url: "https://orsted.com/en/careers/vacancies-list"
-    detect_failed: "2026-10-30, no supported job system found"
-  - name: "Uniper"
-    careers_url: "https://www.uniper.energy/career"
-    detect_failed: "2026-10-30, no supported job system found"
-
+# Optional: extra companies that are NOT in the register (same format as before,
+# e.g.  - {name: Example Oy, ats: workday, url: https://...}). Normally empty.
+companies: []
