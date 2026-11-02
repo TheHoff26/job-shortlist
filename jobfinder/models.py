@@ -22,6 +22,9 @@ class Job:
     salary: str = ""
     seniority_hint: str = ""         # seniority supplied by the job board itself
     years_hint: str = ""             # years of experience supplied by the board
+    rating: str = ""                 # company rating A/B/C from the register
+    segment: str = ""                # company main segment id from the register
+    segments_secondary: list[str] = field(default_factory=list)
 
     # Filled in by extract.py / score.py
     summary: str = ""

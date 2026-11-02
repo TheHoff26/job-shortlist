@@ -15,6 +15,7 @@ import yaml
 from .discover import resolve_companies
 from .extract import enrich
 from .linkedin import build_links
+from .register import companies_from
 from .render import write_outputs
 from .score import load_profile, score_job, title_filter
 from .sources import fetch_all, make_session
@@ -47,8 +48,12 @@ def update_state(jobs, state_path: Path, new_days: int, today: date) -> None:
 
 def run(config_dir: Path, out_dir: Path, state_path: Path, session=None) -> dict:
     session = session or make_session()
-    # find job sources for newly added companies; results are written back to the file
-    companies = resolve_companies(config_dir / "companies.yaml", session)
+    cfg = _load_yaml(config_dir / "companies.yaml")
+    if cfg.get("companies") and not cfg.get("register"):
+        # local list only: find job sources for newly added companies (written back to the file)
+        resolve_companies(config_dir / "companies.yaml", session)
+        cfg = _load_yaml(config_dir / "companies.yaml")
+    companies, reg = companies_from(cfg, session, state_path.parent / "register-cache.json")
     profile = load_profile(_load_yaml(config_dir / "profile.yaml"), ROOT)
 
     terms = profile["titles"] if profile["require_title_match"] else []
@@ -79,6 +84,10 @@ def run(config_dir: Path, out_dir: Path, state_path: Path, session=None) -> dict
         "companies": status,
         "repo": os.environ.get("GITHUB_REPOSITORY", ""),
         "linkedin": build_links(companies, profile),
+        "register_url": reg["register_url"],
+        "register_ok": reg["register_ok"],
+        "segments": reg["segments"],
+        "paused": sorted(c["name"] for c in companies if c.get("enabled") is False),
         "profile": {k: profile[k] for k in ("titles", "seniority", "locations", "min_score")},
     }
     write_outputs(kept, meta, out_dir)

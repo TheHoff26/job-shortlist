@@ -94,8 +94,15 @@ def _json(session: requests.Session, url: str, **kw):
 # --------------------------------------------------------------------------- #
 def fetch_greenhouse(session, company: dict, keep: TitleFilter) -> list[Job]:
     board = company["id"]
-    data = _json(session, f"https://boards-api.greenhouse.io/v1/boards/{board}/jobs",
-                 params={"content": "true"})
+    data, last_exc = None, None
+    for host in ("https://boards-api.greenhouse.io", "https://boards-api.eu.greenhouse.io"):
+        try:
+            data = _json(session, f"{host}/v1/boards/{board}/jobs", params={"content": "true"})
+            break
+        except (requests.HTTPError, ValueError) as exc:
+            last_exc = exc
+    if data is None:
+        raise RuntimeError(f"Greenhouse board not reachable: {last_exc}")
     jobs = []
     for j in data.get("jobs", []):
         title = j.get("title", "")
@@ -395,6 +402,7 @@ def fetch_workday(session, company: dict, keep: TitleFilter) -> list[Job]:
 # --------------------------------------------------------------------------- #
 # SAP SuccessFactors career sites (e.g. jobs.neste.com, careers.metso.com)
 # --------------------------------------------------------------------------- #
+SF_LOCALES = ["en_US", "en_GB", "fi_FI", "sv_SE", "de_DE", "nb_NO", "da_DK"]
 _SF_TITLE_LOC = re.compile(r"^(.*?)\s*\(([^()]*)\)\s*$")
 
 
@@ -413,34 +421,46 @@ def fetch_successfactors(session, company: dict, keep: TitleFilter) -> list[Job]
     base = company["url"].rstrip("/")
     u = urlparse(base)
     bases = [base] + ([f"{u.scheme}://{u.netloc}"] if u.path.strip("/") else [])
-    locale = company.get("locale", "en_US")
-    terms = company.get("_terms") or [""]
+    # Jobs are published per language setting, so read the feed in several locales
+    # (no keyword = all jobs) and filter by title afterwards.
+    locales = company.get("locales") or SF_LOCALES
     items: dict[str, dict] = {}
     feed_ok, last_exc = False, None
+
+    def read(b, loc, keywords=""):
+        nonlocal feed_ok, last_exc
+        try:
+            r = session.get(f"{b}/services/rss/job/", timeout=TIMEOUT,
+                            params={"locale": loc, "keywords": keywords},
+                            headers={"Accept": "application/rss+xml, application/xml, text/xml"})
+            r.raise_for_status()
+            root = ET.fromstring(r.content)
+        except Exception as exc:
+            last_exc = exc
+            return
+        feed_ok = True
+        for it in root.iter("item"):
+            link = (it.findtext("link") or "").strip()
+            ids = re.findall(r"/(\d{5,})/?", link)
+            key = ids[-1] if ids else link
+            if link and key not in items:
+                items[key] = {"link": link, **{k: (it.findtext(k) or "") for k in ("title", "description", "pubDate")}}
+        time.sleep(0.3)
+
     for b in bases:
-        for term in terms:
-            try:
-                r = session.get(f"{b}/services/rss/job/", timeout=TIMEOUT,
-                                params={"locale": locale, "keywords": f"({term})" if term else ""},
-                                headers={"Accept": "application/rss+xml, application/xml, text/xml"})
-                r.raise_for_status()
-                root = ET.fromstring(r.content)
-            except Exception as exc:
-                last_exc = exc
-                break
-            feed_ok = True
-            for it in root.iter("item"):
-                link = (it.findtext("link") or "").strip()
-                if link and link not in items:
-                    items[link] = {k: (it.findtext(k) or "") for k in ("title", "description", "pubDate")}
-            time.sleep(0.3)
-        if feed_ok:
+        for loc in locales:
+            read(b, loc)
+        if items:
             break
+    if feed_ok and not items:                      # some sites only answer keyword searches
+        for term in (company.get("_terms") or [])[:40]:
+            read(bases[-1], "en_US", f"({term})")
     if not feed_ok:
         raise RuntimeError(f"SuccessFactors RSS feed not reachable: {last_exc}")
 
     jobs = []
-    for link, it in items.items():
+    for _key, it in items.items():
+        link = it["link"]
         raw_title = html.unescape(it["title"]).strip()
         m = _SF_TITLE_LOC.match(raw_title)
         title, location = (m.group(1), m.group(2)) if m else (raw_title, "")
@@ -462,6 +482,56 @@ def fetch_successfactors(session, company: dict, keep: TitleFilter) -> list[Job]
     return jobs
 
 
+# --------------------------------------------------------------------------- #
+# Teamtailor career sites (public RSS feed at <careers site>/jobs.rss)
+# --------------------------------------------------------------------------- #
+def _local(tag: str) -> str:
+    return tag.rsplit("}", 1)[-1].lower()
+
+
+def _tt_location(it) -> str:
+    places = []
+    for el in it.iter():
+        if _local(el.tag) == "location":
+            parts = {_local(c.tag): (c.text or "").strip() for c in el}
+            name = ", ".join(x for x in (parts.get("city"), parts.get("country")) if x) or parts.get("name") \
+                or (el.text or "").strip()
+            if name and name not in places:
+                places.append(name)
+    return "; ".join(places)
+
+
+def fetch_teamtailor(session, company: dict, keep: TitleFilter) -> list[Job]:
+    base = company["url"].rstrip("/")
+    items, offset = [], 0
+    while True:
+        r = session.get(f"{base}/jobs.rss", params={"per_page": 100, "offset": offset}, timeout=TIMEOUT,
+                        headers={"Accept": "application/rss+xml, application/xml, text/xml"})
+        r.raise_for_status()
+        page = list(ET.fromstring(r.content).iter("item"))
+        items.extend(page)
+        if len(page) < 100 or offset >= 900:
+            break
+        offset += 100
+    jobs = []
+    for it in items:
+        title = (it.findtext("title") or "").strip()
+        if not keep(title):
+            continue
+        link = (it.findtext("link") or "").strip()
+        extra = {_local(c.tag): (c.text or "").strip() for c in it}
+        ids = re.findall(r"/jobs/(\d+)", link)
+        remote = (extra.get("remotestatus") or extra.get("remote-status") or extra.get("remote_status") or "").lower()
+        jobs.append(Job(
+            company=company["name"], ats="teamtailor", job_id=ids[0] if ids else link, title=title, url=link,
+            location=_tt_location(it), department=extra.get("department", ""),
+            description_html=html.unescape(it.findtext("description") or ""),
+            posted=_date(it.findtext("pubDate") or ""),
+            workplace=_workplace(remote),
+        ))
+    return jobs
+
+
 FETCHERS: dict[str, Callable] = {
     "greenhouse": fetch_greenhouse,
     "lever": fetch_lever,
@@ -471,6 +541,7 @@ FETCHERS: dict[str, Callable] = {
     "recruitee": fetch_recruitee,
     "workday": fetch_workday,
     "successfactors": fetch_successfactors,
+    "teamtailor": fetch_teamtailor,
 }
 
 
@@ -490,7 +561,8 @@ def fetch_all(companies: Iterable[dict], keep: TitleFilter,
         row = {"company": c.get("name", "?"), "ats": ats, "ok": False, "count": 0, "error": "",
                "source": str(c.get("url") or c.get("id") or ""),
                "careers_url": c.get("careers_url", ""),
-               "note": str(c.get("detected") or c.get("detect_failed") or "")}
+               "note": str(c.get("detected") or c.get("detect_failed") or c.get("link_reason") or ""),
+               "rating": c.get("rating", ""), "segment": c.get("segment", "")}
         if ats in ("linkedin", "none"):
             row.update(ok=True, error="link only")
             status.append(row)
@@ -500,6 +572,10 @@ def fetch_all(companies: Iterable[dict], keep: TitleFilter,
         else:
             try:
                 jobs = fetcher(session, c, keep)
+                for j in jobs:
+                    j.rating = c.get("rating", "")
+                    j.segment = c.get("segment", "")
+                    j.segments_secondary = list(c.get("segments_secondary") or [])
                 all_jobs.extend(jobs)
                 row.update(ok=True, count=len(jobs))
                 if not jobs:

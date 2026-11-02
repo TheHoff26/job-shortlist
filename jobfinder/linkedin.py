@@ -63,5 +63,13 @@ def build_links(companies: list[dict], profile: dict) -> list[dict]:
     li = profile.get("linkedin") or {}
     if li.get("enabled") is False:
         return []
-    return [{"company": c.get("name", "?"), "url": search_url(c, profile)}
-            for c in companies if c.get("enabled") is not False and c.get("linkedin") is not False]
+    out = []
+    for c in companies:
+        if c.get("enabled") is False or c.get("linkedin") is False:
+            continue
+        if (c.get("ats") or "linkedin") != "linkedin" and not li.get("all_companies"):
+            continue            # jobs of this company are read directly
+        out.append({"company": c.get("name", "?"), "url": search_url(c, profile),
+                    "rating": c.get("rating", ""), "reason": c.get("link_reason", "")})
+    out.sort(key=lambda x: (x["rating"] or "Z", x["company"]))
+    return out

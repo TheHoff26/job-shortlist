@@ -25,6 +25,7 @@ DEFAULTS = {
     "seniority": [], "locations": [], "remote_ok": True, "cv_skills": [], "cv_file": "",
     "min_score": 35, "new_days": 3, "max_jobs_per_company": 0,
     "linkedin": {"enabled": True, "location": "", "posted_within_days": 7},
+    "rating_bonus": {"A": 6, "B": 3, "C": 0},
 }
 
 
@@ -172,5 +173,9 @@ def score_job(job: Job, profile: dict) -> bool:
         reasons.append(f"Lower-priority role (“{low}”): −25")
 
     job.score = max(0, int(round(pts * 100 / max_pts)))
+    bonus = int((profile.get("rating_bonus") or {}).get(job.rating or "", 0) or 0)
+    if bonus:
+        job.score = min(100, job.score + bonus)
+        reasons.append(f"Company rated {job.rating}: +{bonus}")
     job.reasons = reasons
     return job.score >= int(profile["min_score"])
