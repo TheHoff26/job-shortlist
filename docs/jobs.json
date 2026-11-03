@@ -1,15 +1,15 @@
 {
  "meta": {
-  "generated": "2026-11-02T13:19+00:00",
-  "total_matches": 23,
-  "new_matches": 23,
+  "generated": "2026-11-03T05:35+00:00",
+  "total_matches": 25,
+  "new_matches": 24,
   "companies": [
    {
     "company": "Fortum",
     "ats": "successfactors",
     "ok": true,
-    "count": 1,
-    "error": "",
+    "count": 0,
+    "error": "no matching open positions (or wrong id)",
     "source": "https://jobs.fortum.com",
     "careers_url": "https://www.fortum.com/careers",
     "note": "",
@@ -152,7 +152,7 @@
     "company": "RWE Supply & Trading",
     "ats": "successfactors",
     "ok": true,
-    "count": 1,
+    "count": 2,
     "error": "",
     "source": "https://jobs.rwe.com",
     "careers_url": "https://jobs.rwe.com",
@@ -260,7 +260,7 @@
     "company": "RWE",
     "ats": "successfactors",
     "ok": true,
-    "count": 1,
+    "count": 2,
     "error": "",
     "source": "https://jobs.rwe.com",
     "careers_url": "https://jobs.rwe.com",
@@ -440,7 +440,7 @@
     "company": "Capalo AI",
     "ats": "teamtailor",
     "ok": true,
-    "count": 5,
+    "count": 3,
     "error": "",
     "source": "https://capaloai.teamtailor.com",
     "careers_url": "https://www.capalo.ai",
@@ -1178,6 +1178,129 @@
  },
  "jobs": [
   {
+   "company": "RWE",
+   "ats": "successfactors",
+   "job_id": "1453436533",
+   "title": "Senior Strategy Manager d/f/m",
+   "url": "https://jobs.rwe.com/RWE/job/Essen-Senior-Strategy-Manager-dfm-NW-45141/1453436533/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS",
+   "location": "Essen, NW, DE, 45141",
+   "department": "",
+   "posted": "2026-11-02",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "rating": "A",
+   "segment": "utilities",
+   "segments_secondary": [
+    "developers",
+    "trading"
+   ],
+   "summary": "To start as soon as possible, full time, permanent",
+   "responsibilities": [
+    "Provide a clear view on renewables energy markets trends based on economic, regulatory, technology and supply chain information to enable…",
+    "Monitor competitor developments, analyse competitive benchmarks, technologies, and market developments for all business areas and assess…",
+    "Lead and facilitate strategic processes in cooperation with RWE’s operational and functional business units.",
+    "Become the responsible strategy contact for single RWE Renewables’ business areas to create and steer the strategy, evaluate opportunities…"
+   ],
+   "criteria": [
+    "Excellent business, engineering, or natural science degree, preferably post-graduate degree / MBA.",
+    "Several years (3-5 years) of proven professional experience and in-depth expertise in the renewables energy business either through a position in the…",
+    "Strong analytical and conceptual mind with the ability to simultaneously consider a multitude of different variables and to draw meaningful conclusions from…",
+    "Ability to summarise complex topics and extract decision options.",
+    "Excellent project and stakeholder management skills.",
+    "Creative and open-minded individual with an ability to link theoretical scenarios with actual feasibility for the company."
+   ],
+   "nice_to_have": [],
+   "seniority": "senior",
+   "years_experience": "3–5 years",
+   "languages": [
+    "English"
+   ],
+   "education": "Master's",
+   "skills_matched": [
+    "renewables",
+    "renewable energy",
+    "wind",
+    "solar",
+    "battery storage",
+    "strategy",
+    "stakeholder management"
+   ],
+   "score": 100,
+   "reasons": [
+    "Title matches “strategy”",
+    "Seniority: senior ✓",
+    "CV skills 7/48: renewables, renewable energy, wind, solar, battery storage, strategy, stakeholder management",
+    "CV text similarity 33%",
+    "Location: Essen, NW, DE, 45141",
+    "Company rated A: +6"
+   ],
+   "first_seen": "2026-11-03",
+   "is_new": true,
+   "key": "successfactors:RWE:1453436533"
+  },
+  {
+   "company": "RWE Supply & Trading",
+   "ats": "successfactors",
+   "job_id": "1453436533",
+   "title": "Senior Strategy Manager d/f/m",
+   "url": "https://jobs.rwe.com/RWE/job/Essen-Senior-Strategy-Manager-dfm-NW-45141/1453436533/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS",
+   "location": "Essen, NW, DE, 45141",
+   "department": "",
+   "posted": "2026-11-02",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "rating": "A",
+   "segment": "trading",
+   "segments_secondary": [
+    "utilities"
+   ],
+   "summary": "To start as soon as possible, full time, permanent",
+   "responsibilities": [
+    "Provide a clear view on renewables energy markets trends based on economic, regulatory, technology and supply chain information to enable…",
+    "Monitor competitor developments, analyse competitive benchmarks, technologies, and market developments for all business areas and assess…",
+    "Lead and facilitate strategic processes in cooperation with RWE’s operational and functional business units.",
+    "Become the responsible strategy contact for single RWE Renewables’ business areas to create and steer the strategy, evaluate opportunities…"
+   ],
+   "criteria": [
+    "Excellent business, engineering, or natural science degree, preferably post-graduate degree / MBA.",
+    "Several years (3-5 years) of proven professional experience and in-depth expertise in the renewables energy business either through a position in the…",
+    "Strong analytical and conceptual mind with the ability to simultaneously consider a multitude of different variables and to draw meaningful conclusions from…",
+    "Ability to summarise complex topics and extract decision options.",
+    "Excellent project and stakeholder management skills.",
+    "Creative and open-minded individual with an ability to link theoretical scenarios with actual feasibility for the company."
+   ],
+   "nice_to_have": [],
+   "seniority": "senior",
+   "years_experience": "3–5 years",
+   "languages": [
+    "English"
+   ],
+   "education": "Master's",
+   "skills_matched": [
+    "renewables",
+    "renewable energy",
+    "wind",
+    "solar",
+    "battery storage",
+    "strategy",
+    "stakeholder management"
+   ],
+   "score": 100,
+   "reasons": [
+    "Title matches “strategy”",
+    "Seniority: senior ✓",
+    "CV skills 7/48: renewables, renewable energy, wind, solar, battery storage, strategy, stakeholder management",
+    "CV text similarity 33%",
+    "Location: Essen, NW, DE, 45141",
+    "Company rated A: +6"
+   ],
+   "first_seen": "2026-11-03",
+   "is_new": true,
+   "key": "successfactors:RWE Supply & Trading:1453436533"
+  },
+  {
    "company": "terralayr",
    "ats": "personio",
    "job_id": "2594674",
@@ -1536,70 +1659,6 @@
    "key": "teamtailor:atNorth:8232744"
   },
   {
-   "company": "Capalo AI",
-   "ats": "teamtailor",
-   "job_id": "8435891",
-   "title": "Business Development Manager - New and Emerging Markets",
-   "url": "https://capaloai.teamtailor.com/jobs/8435891-business-development-manager-new-and-emerging-markets",
-   "location": "Helsinki, Finland; Bucharest, Romania",
-   "department": "Business Development",
-   "posted": "2026-09-22",
-   "workplace": "hybrid",
-   "employment_type": "",
-   "salary": "",
-   "rating": "B",
-   "segment": "energy_services",
-   "segments_secondary": [
-    "trading"
-   ],
-   "summary": "We are looking for a Business Development Manager to help expand Capalo AI into new and emerging markets.",
-   "responsibilities": [
-    "Research new markets, identify potential customers and develop new business opportunities.",
-    "Proactively reach out to prospective customers, initiate commercial discussions and build long-term relationships.",
-    "Understand each customer's business, priorities and challenges to identify where Capalo Zeus VPP™ can create value.",
-    "Present our technology and commercial offering in a way that is relevant to each customer's needs."
-   ],
-   "criteria": [
-    "3+ years of experience in B2B sales, business development or a similar customer-facing commercial role.",
-    "A proactive, sales-driven mindset and the confidence to approach new customers, develop opportunities and negotiate commercial agreements.",
-    "The ability to understand customer needs and turn them into relevant commercial solutions.",
-    "A structured approach to managing a sales pipeline, following up with customers and moving opportunities forward.",
-    "An interest in the energy sector and the motivation to develop your knowledge of electricity markets and energy storage.",
-    "Confidence working with customers across different markets, business environments and cultures."
-   ],
-   "nice_to_have": [
-    "Experience entering new markets or building a customer base from the ground up.",
-    "Knowledge of or connections within electricity markets, battery storage, renewable energy or virtual power plants.",
-    "Experience selling software, SaaS or other technical solutions."
-   ],
-   "seniority": "mid",
-   "years_experience": "3+ years",
-   "languages": [
-    "English"
-   ],
-   "education": "",
-   "skills_matched": [
-    "energy transition",
-    "renewable energy",
-    "battery storage",
-    "business development",
-    "optimization"
-   ],
-   "score": 86,
-   "reasons": [
-    "Title matches “business development”",
-    "Seniority: mid (close to your target)",
-    "CV skills 5/48: energy transition, renewable energy, battery storage, business development, optimization",
-    "CV text similarity 32%",
-    "Keywords: AI, artificial intelligence",
-    "Location: Helsinki, Finland; Bucharest, Romania",
-    "Company rated B: +3"
-   ],
-   "first_seen": "2026-11-02",
-   "is_new": true,
-   "key": "teamtailor:Capalo AI:8435891"
-  },
-  {
    "company": "Ingrid Capacity",
    "ats": "teamtailor",
    "job_id": "8053205",
@@ -1954,6 +2013,107 @@
    "key": "personio:terralayr:2558066"
   },
   {
+   "company": "RWE",
+   "ats": "successfactors",
+   "job_id": "1453436633",
+   "title": "Senior Strategy Manager d/w/m",
+   "url": "https://jobs.rwe.com/RWE/job/Essen-Senior-Strategy-Manager-dwm-NW-45141/1453436633/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS",
+   "location": "Essen, NW, DE, 45141",
+   "department": "",
+   "posted": "2026-11-02",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "rating": "A",
+   "segment": "utilities",
+   "segments_secondary": [
+    "developers",
+    "trading"
+   ],
+   "summary": "Start zum nächstmöglichen Zeitpunkt, Vollzeit, unbefristet",
+   "responsibilities": [
+    "Bereitstellung eines klaren Überblicks über die Trends auf den Märkten für erneuerbare Energien auf der Grundlage von Informationen zu…",
+    "Beobachtung von Wettbewerbsentwicklungen, Analyse von Wettbewerbsbenchmarks, Technologien und Marktentwicklungen für alle Geschäftsbereiche…",
+    "Leitung und Moderation strategischer Prozesse in Zusammenarbeit mit den operativen und funktionalen Geschäftseinheiten von RWE.",
+    "Verantwortliche strategische Ansprechperson für die einzelnen Geschäftsfelder der RWE Renewables sein, um die Strategie zu entwickeln und…"
+   ],
+   "criteria": [
+    "Erfolgreich abgeschlossenes Hochschulstudium in Wirtschaftswissenschaften, Ingenieur- oder Naturwissenschaften, vorzugsweise mit postgradualem Abschluss / MBA.",
+    "Mehrjährige (3-5 Jahre) relevante Berufserfahrung und fundierte Kenntnisse im Bereich der erneuerbaren Energien, entweder durch eine Position im operativen…"
+   ],
+   "nice_to_have": [],
+   "seniority": "senior",
+   "years_experience": "3–5 years",
+   "languages": [],
+   "education": "Master's",
+   "skills_matched": [
+    "renewables",
+    "strategy"
+   ],
+   "score": 72,
+   "reasons": [
+    "Title matches “strategy”",
+    "Seniority: senior ✓",
+    "CV skills 2/48: renewables, strategy",
+    "CV text similarity 3%",
+    "Location: Essen, NW, DE, 45141",
+    "Company rated A: +6"
+   ],
+   "first_seen": "2026-11-03",
+   "is_new": true,
+   "key": "successfactors:RWE:1453436633"
+  },
+  {
+   "company": "RWE Supply & Trading",
+   "ats": "successfactors",
+   "job_id": "1453436633",
+   "title": "Senior Strategy Manager d/w/m",
+   "url": "https://jobs.rwe.com/RWE/job/Essen-Senior-Strategy-Manager-dwm-NW-45141/1453436633/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS",
+   "location": "Essen, NW, DE, 45141",
+   "department": "",
+   "posted": "2026-11-02",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "rating": "A",
+   "segment": "trading",
+   "segments_secondary": [
+    "utilities"
+   ],
+   "summary": "Start zum nächstmöglichen Zeitpunkt, Vollzeit, unbefristet",
+   "responsibilities": [
+    "Bereitstellung eines klaren Überblicks über die Trends auf den Märkten für erneuerbare Energien auf der Grundlage von Informationen zu…",
+    "Beobachtung von Wettbewerbsentwicklungen, Analyse von Wettbewerbsbenchmarks, Technologien und Marktentwicklungen für alle Geschäftsbereiche…",
+    "Leitung und Moderation strategischer Prozesse in Zusammenarbeit mit den operativen und funktionalen Geschäftseinheiten von RWE.",
+    "Verantwortliche strategische Ansprechperson für die einzelnen Geschäftsfelder der RWE Renewables sein, um die Strategie zu entwickeln und…"
+   ],
+   "criteria": [
+    "Erfolgreich abgeschlossenes Hochschulstudium in Wirtschaftswissenschaften, Ingenieur- oder Naturwissenschaften, vorzugsweise mit postgradualem Abschluss / MBA.",
+    "Mehrjährige (3-5 Jahre) relevante Berufserfahrung und fundierte Kenntnisse im Bereich der erneuerbaren Energien, entweder durch eine Position im operativen…"
+   ],
+   "nice_to_have": [],
+   "seniority": "senior",
+   "years_experience": "3–5 years",
+   "languages": [],
+   "education": "Master's",
+   "skills_matched": [
+    "renewables",
+    "strategy"
+   ],
+   "score": 72,
+   "reasons": [
+    "Title matches “strategy”",
+    "Seniority: senior ✓",
+    "CV skills 2/48: renewables, strategy",
+    "CV text similarity 3%",
+    "Location: Essen, NW, DE, 45141",
+    "Company rated A: +6"
+   ],
+   "first_seen": "2026-11-03",
+   "is_new": true,
+   "key": "successfactors:RWE Supply & Trading:1453436633"
+  },
+  {
    "company": "Valmet",
    "ats": "workday",
    "job_id": "R60307",
@@ -2001,7 +2161,7 @@
     "Location: Vantaa"
    ],
    "first_seen": "2026-10-30",
-   "is_new": true,
+   "is_new": false,
    "key": "workday:Valmet:R60307"
   },
   {
@@ -2479,67 +2639,6 @@
    "first_seen": "2026-11-02",
    "is_new": true,
    "key": "greenhouse:EQT Infrastructure:4981387101"
-  },
-  {
-   "company": "Capalo AI",
-   "ats": "teamtailor",
-   "job_id": "8472396",
-   "title": "Junior Optimization Engineer – Revenue Distribution Focus",
-   "url": "https://capaloai.teamtailor.com/jobs/8472396-junior-optimization-engineer-revenue-distribution-focus",
-   "location": "",
-   "department": "",
-   "posted": "2026-09-29",
-   "workplace": "",
-   "employment_type": "",
-   "salary": "",
-   "rating": "B",
-   "segment": "energy_services",
-   "segments_secondary": [
-    "trading"
-   ],
-   "summary": "As a Junior Optimization Engineer within our Revenue Distribution team, you’ll work on the allocation engine that distributes aggregated market revenues back to the individual battery assets in our fleet. This is a quantitative systems problem.",
-   "responsibilities": [
-    "Economically fair",
-    "Mathematically defensible",
-    "Robust to edge cases",
-    "Transparent to asset owners"
-   ],
-   "criteria": [
-    "A completed or soon-to-be-completed degree in applied mathematics, physics, optimization, operations research, quantitative economics, or a similar…",
-    "A strong academic track record",
-    "Solid Python skills (NumPy, pandas) and familiarity with good software practices such as testing and version control, e.g. through coursework, projects or…",
-    "Ability to break down open-ended quantitative problems in a structured way, and eagerness to learn quickly",
-    "Clear communication skills in English - able to explain mathematical reasoning to non-specialists"
-   ],
-   "nice_to_have": [
-    "Exposure to electricity markets or battery energy storage systems (BESS), e.g. through studies, a thesis or projects",
-    "Coursework or projects involving revenue or cost allocation in multi-asset environments",
-    "Studies in mechanism design or cooperative game theory"
-   ],
-   "seniority": "junior",
-   "years_experience": "",
-   "languages": [],
-   "education": "Degree (or equivalent)",
-   "skills_matched": [
-    "energy transition",
-    "renewable energy",
-    "BESS",
-    "optimization"
-   ],
-   "score": 45,
-   "reasons": [
-    "Title matches “optimization”",
-    "Seniority: junior (outside your target)",
-    "CV skills 4/48: energy transition, renewable energy, BESS, optimization",
-    "CV text similarity 18%",
-    "Keywords: AI, artificial intelligence, BESS",
-    "Location: not stated",
-    "Lower-priority role (“engineer”): −25",
-    "Company rated B: +3"
-   ],
-   "first_seen": "2026-11-02",
-   "is_new": true,
-   "key": "teamtailor:Capalo AI:8472396"
   }
  ]
 }
