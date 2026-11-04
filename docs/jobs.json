@@ -1,8 +1,8 @@
 {
  "meta": {
-  "generated": "2026-11-03T05:35+00:00",
-  "total_matches": 25,
-  "new_matches": 24,
+  "generated": "2026-11-04T05:39+00:00",
+  "total_matches": 27,
+  "new_matches": 26,
   "companies": [
    {
     "company": "Fortum",
@@ -35,7 +35,7 @@
     "count": 0,
     "error": "link only",
     "source": "",
-    "careers_url": "https://www.st1.com",
+    "careers_url": "https://st1.com/about-us/people-and-careers/open-positions",
     "note": "2026-11-02, set manually",
     "rating": "A",
     "segment": "developers"
@@ -92,7 +92,7 @@
     "company": "Valmet",
     "ats": "workday",
     "ok": true,
-    "count": 9,
+    "count": 12,
     "error": "",
     "source": "https://valmet.wd103.myworkdayjobs.com/en-US/External",
     "careers_url": "https://valmet.com/careers",
@@ -104,8 +104,8 @@
     "company": "Metso",
     "ats": "successfactors",
     "ok": true,
-    "count": 0,
-    "error": "no matching open positions (or wrong id)",
+    "count": 3,
+    "error": "",
     "source": "https://careers.metso.com",
     "careers_url": "https://www.metso.com/careers",
     "note": "",
@@ -131,7 +131,7 @@
     "count": 0,
     "error": "link only",
     "source": "",
-    "careers_url": "https://danskecommodities.com/life-at-dc",
+    "careers_url": "https://danskecommodities.com/join-us/vacancies",
     "note": "no supported job system found",
     "rating": "A",
     "segment": "trading"
@@ -179,9 +179,9 @@
     "count": 0,
     "error": "link only",
     "source": "",
-    "careers_url": "https://www.uniper.energy",
+    "careers_url": "https://careers.uniper.energy/",
     "note": "no supported job system found",
-    "rating": "B",
+    "rating": "A",
     "segment": "trading"
    },
    {
@@ -251,7 +251,7 @@
     "count": 0,
     "error": "link only",
     "source": "",
-    "careers_url": "https://www.helen.fi",
+    "careers_url": "https://www.helen.fi/en/about-us/join-us/open-positions",
     "note": "no supported job system found",
     "rating": "A",
     "segment": "utilities"
@@ -275,7 +275,7 @@
     "count": 0,
     "error": "link only",
     "source": "",
-    "careers_url": "https://orsted.com",
+    "careers_url": "https://orsted.com/en/careers/",
     "note": "no supported job system found",
     "rating": "B",
     "segment": "utilities"
@@ -299,7 +299,7 @@
     "count": 0,
     "error": "link only",
     "source": "",
-    "careers_url": "https://www.enbw.com",
+    "careers_url": "https://careers.enbw.com/global/en/management",
     "note": "no supported job system found",
     "rating": "B",
     "segment": "utilities"
@@ -505,19 +505,7 @@
     "source": "",
     "careers_url": "https://www.ilmatar.fi",
     "note": "no supported job system found",
-    "rating": "C",
-    "segment": "developers"
-   },
-   {
-    "company": "Flexens",
-    "ats": "linkedin",
-    "ok": true,
-    "count": 0,
-    "error": "link only",
-    "source": "",
-    "careers_url": "https://flexens.com",
-    "note": "no supported job system found",
-    "rating": "C",
+    "rating": "A",
     "segment": "developers"
    },
    {
@@ -692,7 +680,7 @@
     "company": "Ardian",
     "ats": "workday",
     "ok": true,
-    "count": 7,
+    "count": 6,
     "error": "",
     "source": "https://ardian.wd103.myworkdayjobs.com/ArdianCareers",
     "careers_url": "https://www.ardian.com",
@@ -755,7 +743,7 @@
     "count": 0,
     "error": "link only",
     "source": "",
-    "careers_url": "https://www.meag.com",
+    "careers_url": "https://careers.munichre.com/",
     "note": "no supported job system found",
     "rating": "B",
     "segment": "pe"
@@ -819,6 +807,18 @@
     "note": "name guess rejected (other company)",
     "rating": "C",
     "segment": "pe"
+   },
+   {
+    "company": "Ren-Gas",
+    "ats": "teamtailor",
+    "ok": true,
+    "count": 0,
+    "error": "no matching open positions (or wrong id)",
+    "source": "https://careers.ren-gas.com",
+    "careers_url": "https://careers.ren-gas.com/",
+    "note": "",
+    "rating": "A",
+    "segment": "developers"
    }
   ],
   "repo": "TheHoff26/job-shortlist",
@@ -854,6 +854,12 @@
     "reason": "no supported job system found"
    },
    {
+    "company": "Ilmatar Energy",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Ilmatar+Energy%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800",
+    "rating": "A",
+    "reason": "no supported job system found"
+   },
+   {
     "company": "Polarnode",
     "url": "https://www.linkedin.com/jobs/search/?keywords=%22Polarnode%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "A",
@@ -864,6 +870,12 @@
     "url": "https://www.linkedin.com/jobs/search/?keywords=%22St1%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "A",
     "reason": "2026-11-02, set manually"
+   },
+   {
+    "company": "Uniper",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Uniper%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800",
+    "rating": "A",
+    "reason": "no supported job system found"
    },
    {
     "company": "Vattenfall",
@@ -974,12 +986,6 @@
     "reason": "no supported job system found"
    },
    {
-    "company": "Uniper",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Uniper%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800",
-    "rating": "B",
-    "reason": "no supported job system found"
-   },
-   {
     "company": "Ørsted",
     "url": "https://www.linkedin.com/jobs/search/?keywords=%22%C3%98rsted%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
@@ -1002,18 +1008,6 @@
     "url": "https://www.linkedin.com/jobs/search/?keywords=%22E.ON%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "C",
     "reason": "own career site, not supported"
-   },
-   {
-    "company": "Flexens",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Flexens%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800",
-    "rating": "C",
-    "reason": "no supported job system found"
-   },
-   {
-    "company": "Ilmatar Energy",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Ilmatar+Energy%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800",
-    "rating": "C",
-    "reason": "no supported job system found"
    },
    {
     "company": "KONE",
@@ -1091,7 +1085,8 @@
    }
   ],
   "paused": [
-   "ABO Energy"
+   "ABO Energy",
+   "Flexens"
   ],
   "profile": {
    "titles": [
@@ -1362,6 +1357,56 @@
    "first_seen": "2026-11-02",
    "is_new": true,
    "key": "personio:terralayr:2594674"
+  },
+  {
+   "company": "Metso",
+   "ats": "successfactors",
+   "job_id": "1376592257",
+   "title": "Director, Product Management & Sales Support, Repairs",
+   "url": "https://careers.metso.com/job/Espoo-Director%2C-Product-Management-&-Sales-Support%2C-Repairs/1376592257/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS",
+   "location": "Espoo, FI",
+   "department": "",
+   "posted": "2026-11-03",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "rating": "C",
+   "segment": "oem",
+   "segments_secondary": [],
+   "summary": "Our world depends on rocks, minerals, metals and other raw materials – the building blocks of modern society. As an industry leader, Metso helps transform these essential materials to enable sustainable modern life.",
+   "responsibilities": [
+    "Lead and develop the global Product Management & Sales Support team.",
+    "Own and develop the Repairs product strategy, roadmap and portfolio.",
+    "Drive the development, commercialization and launch of Repairs products, based on customer needs, installed base potential and Market Area…",
+    "Develop commercially attractive offerings through effective packaging, pricing and promotion, enabling our sales teams and Service Centers…"
+   ],
+   "criteria": [
+    "We are looking for an experienced commercial and product management professional who knows how to turn products and services into successful customer offerings."
+   ],
+   "nice_to_have": [],
+   "seniority": "executive",
+   "years_experience": "10+ years",
+   "languages": [],
+   "education": "",
+   "skills_matched": [
+    "renewable energy",
+    "electrification",
+    "commercialization",
+    "strategy",
+    "stakeholder management"
+   ],
+   "score": 94,
+   "reasons": [
+    "Title matches “director”",
+    "Seniority: executive ✓",
+    "CV skills 5/48: renewable energy, electrification, commercialization, strategy, stakeholder management",
+    "CV text similarity 22%",
+    "Keywords: international, electrification, flexibility",
+    "Location: Espoo, FI"
+   ],
+   "first_seen": "2026-11-04",
+   "is_new": true,
+   "key": "successfactors:Metso:1376592257"
   },
   {
    "company": "Statkraft",
@@ -2584,6 +2629,59 @@
    "key": "teamtailor:atNorth:7778447"
   },
   {
+   "company": "Metso",
+   "ats": "successfactors",
+   "job_id": "1374021157",
+   "title": "Director, Engineering Management",
+   "url": "https://careers.metso.com/job/Espoo-Director%2C-Engineering-Management/1374021157/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS",
+   "location": "Espoo, FI",
+   "department": "",
+   "posted": "2026-11-04",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "rating": "C",
+   "segment": "oem",
+   "segments_secondary": [],
+   "summary": "Our world depends on rocks, minerals, metals and other raw materials – the building blocks of modern society. As an industry leader, Metso helps transform these essential materials to enable sustainable modern life.",
+   "responsibilities": [
+    "Lead engineering execution for complex customer projects, ensuring contractual requirements for quality, schedule and budget are met while…",
+    "Own and develop Engineering Management guidelines, governance principles and best practices, and harmonize engineering processes, tools and…",
+    "Drive continuous improvement and engineering performance through Key Performance Indicators (KPIs), operational excellence and…",
+    "Optimize engineering resource utilization and work allocation across internal engineering teams and external partners while strengthening…"
+   ],
+   "criteria": [
+    "Support sales and proposal activities with engineering expertise and collaborate with stakeholders across regions and business lines.",
+    "Master's degree or equivalent in Engineering.",
+    "Extensive experience in engineering, project execution or industrial operations, including leading engineering execution in large Engineering, Procurement and…",
+    "Solid understanding of engineering, technologies, industrial business, customer needs and market dynamics.",
+    "Experience with discipline-specific computer-aided engineering tools, engineering workflows and digital engineering environments.",
+    "Ability to influence change, drive transformation and implement continuous improvement initiatives."
+   ],
+   "nice_to_have": [],
+   "seniority": "executive",
+   "years_experience": "",
+   "languages": [],
+   "education": "Master's (or equivalent)",
+   "skills_matched": [
+    "renewable energy",
+    "electrification"
+   ],
+   "score": 55,
+   "reasons": [
+    "Title matches “director”",
+    "Seniority: executive ✓",
+    "CV skills 2/48: renewable energy, electrification",
+    "CV text similarity 26%",
+    "Keywords: international, electrification, flexibility",
+    "Location: Espoo, FI",
+    "Lower-priority role (“engineering”): −25"
+   ],
+   "first_seen": "2026-11-04",
+   "is_new": true,
+   "key": "successfactors:Metso:1374021157"
+  },
+  {
    "company": "EQT Infrastructure",
    "ats": "greenhouse",
    "job_id": "4981387101",
@@ -2630,7 +2728,7 @@
     "Title matches “VP”",
     "Seniority: executive ✓",
     "CV skills 1/48: strategy",
-    "CV text similarity 30%",
+    "CV text similarity 28%",
     "Keywords: international",
     "Location: Stockholm, Stockholm, Sweden",
     "Lower-priority role (“controller”): −25",
