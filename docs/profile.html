@@ -128,19 +128,23 @@ dialog .row{display:flex;gap:8px;justify-content:flex-end;margin-top:16px;flex-w
 .wrow output{font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
 .wrow .pct{font-size:13px;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
 @media (max-width:560px){.wrow{grid-template-columns:1fr 3em 3.5em}.wrow span:first-child{grid-column:1/-1}}
+.sitenav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 20px;margin:-8px 0 28px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.sitenav .brand{font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sitenav ul{display:flex;gap:4px;list-style:none;margin:0;padding:4px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.sitenav a{display:block;text-decoration:none;font-weight:600;font-size:15px;padding:7px 14px;border-radius:8px;color:var(--muted);white-space:nowrap}
+.sitenav a:hover{color:var(--ink);background:var(--bg)}
+.sitenav a[aria-current="page"]{background:var(--ink);color:var(--surface)}
+@media (max-width:560px){.sitenav ul{width:100%}.sitenav li{flex:1}.sitenav a{text-align:center;padding:7px 6px;font-size:14px}}
 </style>
 </head>
 <body>
 <div class="wrap">
+  <nav class="sitenav" aria-label="Job search tools"><span class="brand">Job search</span><ul><li><a href="/job-shortlist/">Job shortlist</a></li><li><a href="/job-shortlist/profile.html" aria-current="page">Search profile</a></li><li><a href="/company-scout/">Company register</a></li></ul></nav>
   <header class="top">
     <div>
       <h1>Search profile</h1>
       <p class="lede">What the job search looks for: job titles, seniority, places and your skills. Changes are saved to <code>config/profile.yaml</code>, and the job search restarts with them.</p>
     </div>
-    <nav class="nav">
-      <a class="btn" href="./">Job shortlist</a>
-      <a class="btn" id="reg-link" href="../company-scout/">Company register</a>
-    </nav>
   </header>
 
   <div class="bar" role="region" aria-label="Save">
@@ -309,7 +313,6 @@ const defaultRepo = () => {
   return owner + "/" + (seg && !seg.includes(".") ? seg : "job-shortlist");
 };
 const repo = () => jget("jf-sync-repo") || defaultRepo();
-$("#reg-link").href = location.hostname.endsWith(".github.io") ? `https://${location.hostname}/company-scout/` : "#";
 
 // ---------- vocabulary for suggestions and text analysis ----------
 // "Label|synonym|synonym" – the label is what goes into the profile.
@@ -484,7 +487,7 @@ async function save(){
       if (r.ok) { ORIG = text; SHA = (await r.json()).content?.sha || null;
         setState("Saved " + new Date().toLocaleTimeString(undefined, {timeStyle: "short"}) + " – the job search restarts now; new results in about 5 minutes", "ok");
         refreshBar(); $("#b-discard").disabled = true; return; }
-      if (r.status !== 409 && r.status !== 422) throw new Error(r.status === 403 || r.status === 404 ? "token can't write to " + repo() : "GitHub answered " + r.status);
+      if (r.status !== 409 && r.status !== 422) throw new Error(r.status === 403 || r.status === 404 ? "the token can't write to " + repo() + " – add this repository to your token (Contents: Read and write)" : "GitHub answered " + r.status);
     }
     throw new Error("conflict, please try again");
   } catch(e) { setState("Not saved – " + e.message, "err"); $("#b-save").disabled = false; }
