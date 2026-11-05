@@ -1,0 +1,733 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Search Profile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/4.1.0/js-yaml.min.js"></script>
+<style>
+:root{
+  --bg:#F3F6F8; --surface:#FFFFFF; --ink:#16232E; --muted:#5A6A77; --line:#D3DCE2;
+  --pine:#23604F; --pine-soft:#DCEBE5; --ochre:#9A6A12; --ochre-soft:#F3E7CC;
+  --slate:#6D7C88; --slate-soft:#E4E9ED; --berry:#A3214A; --berry-soft:#F6DDE5;
+  --sky:#2A5F8F; --sky-soft:#DDE9F4; --focus:#2C6FB0;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0F171D; --surface:#16212A; --ink:#E3EAEF; --muted:#94A3AF; --line:#2A3945;
+  --pine:#6CC3A6; --pine-soft:#173A31; --ochre:#E0B25A; --ochre-soft:#3A2E14;
+  --slate:#9AA8B3; --slate-soft:#22303B; --berry:#F07A9C; --berry-soft:#3E1726;
+  --sky:#8CC0EE; --sky-soft:#17304A; --focus:#7DB4EA;}}
+:root[data-theme="dark"]{
+  --bg:#0F171D; --surface:#16212A; --ink:#E3EAEF; --muted:#94A3AF; --line:#2A3945;
+  --pine:#6CC3A6; --pine-soft:#173A31; --ochre:#E0B25A; --ochre-soft:#3A2E14;
+  --slate:#9AA8B3; --slate-soft:#22303B; --berry:#F07A9C; --berry-soft:#3E1726;
+  --sky:#8CC0EE; --sky-soft:#17304A; --focus:#7DB4EA;}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.55 "Schibsted Grotesk",system-ui,sans-serif}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-radius:4px}
+.wrap{max-width:1120px;margin:0 auto;padding:32px 16px 96px}
+header.top{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px 32px;margin-bottom:24px}
+h1{font-size:clamp(28px,4vw,40px);line-height:1.1;font-weight:800;letter-spacing:-.02em;margin:0}
+.lede{color:var(--muted);margin:6px 0 0;max-width:62ch}
+.nav{display:flex;flex-wrap:wrap;gap:8px}
+.btn{font:inherit;font-size:15px;font-weight:600;border-radius:8px;padding:8px 14px;cursor:pointer;border:1px solid var(--line);background:var(--surface);color:var(--ink);text-decoration:none;display:inline-block}
+.btn:hover{border-color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.btn.primary:hover{background:var(--pine);border-color:var(--pine)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.sm{font-size:14px;padding:5px 10px}
+.btn.link{border:none;background:none;padding:4px 6px;font-size:14px;color:var(--muted);text-decoration:underline;text-underline-offset:3px}
+/* save bar */
+.bar{position:sticky;top:0;z-index:5;display:flex;flex-wrap:wrap;align-items:center;gap:8px 16px;justify-content:space-between;
+  background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin-bottom:24px;box-shadow:0 6px 18px -14px rgba(0,0,0,.5)}
+.bar .state{font-size:14px;color:var(--muted)}
+.bar .state.dirty{color:var(--ochre);font-weight:600}
+.bar .state.ok{color:var(--pine)} .bar .state.err{color:var(--berry)}
+.bar .acts{display:flex;flex-wrap:wrap;gap:8px}
+/* layout */
+.layout{display:grid;grid-template-columns:200px 1fr;gap:32px;align-items:start}
+.toc{position:sticky;top:84px;display:grid;gap:2px;font-size:15px}
+main{min-width:0}
+@media (max-width:900px){.layout{grid-template-columns:1fr}.toc{display:none}}
+.toc a{text-decoration:none;color:var(--muted);padding:6px 10px;border-radius:8px;border-left:3px solid transparent}
+.toc a:hover{color:var(--ink);background:var(--surface)}
+.toc a b{color:var(--ink);font-weight:600;margin-right:6px;font-variant-numeric:tabular-nums}
+section{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px 22px 18px;margin-bottom:20px}
+@media (max-width:560px){section{padding:18px 14px}}
+section > h2{margin:0;font-size:22px;letter-spacing:-.01em;display:flex;gap:10px;align-items:baseline}
+section > h2 .n{font-size:14px;color:var(--muted);font-weight:700;font-variant-numeric:tabular-nums}
+section > p.intro{margin:4px 0 16px;color:var(--muted);max-width:70ch;font-size:15px}
+.group{padding:14px 0;border-top:1px solid var(--line)}
+.group:first-of-type{border-top:0;padding-top:4px}
+.group h3{margin:0 0 2px;font-size:16px;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.group h3 .cnt{font-size:13px;color:var(--muted);font-weight:500}
+.group .hint{margin:0 0 10px;font-size:14px;color:var(--muted)}
+.tag{font-size:11px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;border-radius:5px;padding:2px 6px}
+/* chips */
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px;padding:0;list-style:none}
+.chip{display:inline-flex;align-items:center;gap:2px;border-radius:999px;font-size:14px;font-weight:600;padding:3px 4px 3px 11px;
+  background:var(--c-soft);color:var(--c);border:1px solid transparent}
+.chip .k{font-size:12px;font-weight:500;opacity:.8;margin-left:5px;font-variant-numeric:tabular-nums}
+.chip button{font:inherit;border:0;background:none;color:inherit;cursor:pointer;width:24px;height:24px;border-radius:999px;display:grid;place-items:center;opacity:.7}
+.chip button:hover{opacity:1;background:var(--surface)}
+.chip.warn{border-color:var(--berry)}
+.c-pine{--c:var(--pine);--c-soft:var(--pine-soft)} .c-ochre{--c:var(--ochre);--c-soft:var(--ochre-soft)}
+.c-slate{--c:var(--slate);--c-soft:var(--slate-soft)} .c-berry{--c:var(--berry);--c-soft:var(--berry-soft)}
+.c-sky{--c:var(--sky);--c-soft:var(--sky-soft)}
+.adder{display:flex;gap:8px;max-width:520px}
+input[type=text],input[type=password],input[type=number],textarea{font:inherit;font-size:15px;color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:8px 10px;width:100%}
+textarea{min-height:180px;resize:vertical;line-height:1.5}
+.warnline{font-size:14px;color:var(--berry);margin:4px 0 0}
+/* suggestion chips */
+.sugg{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+.sg{font:inherit;font-size:13px;font-weight:500;border:1px dashed var(--line);background:none;color:var(--muted);border-radius:999px;padding:3px 10px;cursor:pointer}
+.sg:hover{border-color:var(--ink);color:var(--ink)}
+.sg::before{content:"+ ";font-weight:700}
+details.more{margin-top:10px}
+details.more summary{cursor:pointer;font-size:14px;font-weight:600;color:var(--muted);width:max-content}
+details.more h4{margin:12px 0 0;font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+/* levels */
+.levels{display:flex;flex-wrap:wrap;gap:0;border:1px solid var(--line);border-radius:10px;overflow:hidden;width:max-content;max-width:100%}
+.levels button{font:inherit;font-size:15px;font-weight:600;border:0;border-right:1px solid var(--line);background:var(--surface);color:var(--muted);padding:9px 16px;cursor:pointer}
+.levels button:last-child{border-right:0}
+.levels button[aria-pressed="true"]{background:var(--pine);color:#fff}
+:root[data-theme="dark"] .levels button[aria-pressed="true"]{color:var(--bg)}
+.check{display:flex;gap:8px;align-items:center;font-weight:500;margin-top:8px}
+.check input{width:18px;height:18px;accent-color:var(--pine)}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.field{display:grid;gap:4px;font-size:14px;font-weight:600}
+.field small{font-weight:400;color:var(--muted)}
+.rng{display:flex;align-items:center;gap:10px}
+.rng input{flex:1;accent-color:var(--pine)}
+.rng output{font-weight:800;font-size:20px;min-width:2.5ch;text-align:right;font-variant-numeric:tabular-nums}
+/* free text results */
+.found{display:grid;gap:14px;margin-top:16px}
+.found[hidden]{display:none}
+.fgroup{border:1px solid var(--line);border-radius:10px;padding:12px}
+.fgroup h4{margin:0 0 8px;font-size:15px;display:flex;justify-content:space-between;gap:8px;flex-wrap:wrap;align-items:center}
+.pick{display:inline-flex;align-items:center;gap:6px;font-size:14px;border:1px solid var(--line);border-radius:999px;padding:3px 10px 3px 6px;cursor:pointer;background:var(--surface)}
+.pick input{accent-color:var(--pine);width:16px;height:16px;margin:0}
+.pick.has{opacity:.55;cursor:default}
+.pick em{font-style:normal;font-size:12px;color:var(--muted)}
+.picks{display:flex;flex-wrap:wrap;gap:6px}
+.note{font-size:14px;color:var(--muted);background:var(--slate-soft);border-radius:10px;padding:10px 12px;margin:12px 0 0}
+dialog{border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);max-width:min(480px,calc(100vw - 32px));padding:20px}
+dialog::backdrop{background:rgba(10,20,28,.45)}
+dialog h2{margin:0 0 8px;font-size:20px}
+dialog label{display:grid;gap:4px;font-size:14px;font-weight:600;margin:12px 0}
+dialog .row{display:flex;gap:8px;justify-content:flex-end;margin-top:16px;flex-wrap:wrap}
+.small{font-size:13px;color:var(--muted)}
+.wgrid{display:grid;gap:8px;max-width:640px}
+.wrow{display:grid;grid-template-columns:minmax(150px,200px) 1fr 3.2em 3.5em;gap:10px;align-items:center;font-size:15px}
+.wrow input{accent-color:var(--pine)}
+.wrow output{font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+.wrow .pct{font-size:13px;color:var(--muted);text-align:right;font-variant-numeric:tabular-nums}
+@media (max-width:560px){.wrow{grid-template-columns:1fr 3em 3.5em}.wrow span:first-child{grid-column:1/-1}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1>Search profile</h1>
+      <p class="lede">What the job search looks for: job titles, seniority, places and your skills. Changes are saved to <code>config/profile.yaml</code>, and the job search restarts with them.</p>
+    </div>
+    <nav class="nav">
+      <a class="btn" href="./">Job shortlist</a>
+      <a class="btn" id="reg-link" href="../company-scout/">Company register</a>
+    </nav>
+  </header>
+
+  <div class="bar" role="region" aria-label="Save">
+    <span class="state" id="state" aria-live="polite">Loading profile…</span>
+    <div class="acts">
+      <button class="btn link" type="button" id="b-access">GitHub access</button>
+      <button class="btn sm" type="button" id="b-download">Download profile.yaml</button>
+      <button class="btn sm" type="button" id="b-discard" disabled>Discard changes</button>
+      <button class="btn primary sm" type="button" id="b-save" disabled>Save and restart search</button>
+    </div>
+  </div>
+
+  <div class="layout">
+    <nav class="toc" aria-label="Sections">
+      <a href="#s-titles"><b>1</b>Job titles</a>
+      <a href="#s-level"><b>2</b>Seniority</a>
+      <a href="#s-places"><b>3</b>Countries &amp; towns</a>
+      <a href="#s-skills"><b>4</b>Skills &amp; competences</a>
+      <a href="#s-text"><b>5</b>Generate from text</a>
+      <a href="#s-score"><b>6</b>Ranking</a>
+    </nav>
+
+    <main>
+      <section id="s-titles">
+        <h2>Job titles</h2>
+        <p class="intro">A job is shown only if its title contains one of the wanted terms. Short terms catch more (“strategy” matches “Head of Strategy” and “Strategy Manager”). The grey number shows how many jobs on the current shortlist contain the term.</p>
+        <div class="group" data-list="titles" data-color="c-pine">
+          <h3>Wanted titles <span class="cnt"></span></h3>
+          <p class="hint">At least one must appear in the job title.</p>
+        </div>
+        <div class="group" data-list="lower_priority_titles" data-color="c-ochre">
+          <h3>Ranked lower <span class="tag c-ochre chip" style="padding:2px 6px">−25 points</span> <span class="cnt"></span></h3>
+          <p class="hint">Still shown, but further down – your areas of lesser interest.</p>
+        </div>
+        <div class="group" data-list="exclude_titles" data-color="c-berry">
+          <h3>Never show <span class="cnt"></span></h3>
+          <p class="hint">Jobs with these words in the title are dropped.</p>
+        </div>
+        <div class="group" data-list="linkedin.titles" data-color="c-slate">
+          <h3>LinkedIn search terms <span class="cnt"></span></h3>
+          <p class="hint">Short list used for the “Check on LinkedIn” links.</p>
+        </div>
+      </section>
+
+      <section id="s-level">
+        <h2>Seniority</h2>
+        <p class="intro">Levels you are aiming for. Jobs at these levels get full points, neighbouring levels get partial points.</p>
+        <div class="levels" id="levels" role="group" aria-label="Seniority levels"></div>
+      </section>
+
+      <section id="s-places">
+        <h2>Countries &amp; towns</h2>
+        <p class="intro">A job is shown if its location contains one of these names. Add both local and English spellings (München, Munich). Jobs without a stated location are always kept.</p>
+        <div class="group" data-list="locations" data-color="c-sky">
+          <h3>Places <span class="cnt"></span></h3>
+          <p class="hint">Countries, regions, cities or country codes.</p>
+          <div class="sugg" id="loc-groups"></div>
+          <label class="check"><input type="checkbox" id="remote_ok"> Also show remote jobs from anywhere</label>
+        </div>
+        <div class="group">
+          <h3>LinkedIn search location</h3>
+          <p class="hint">One place for the LinkedIn links (e.g. Finland, Helsinki, Germany).</p>
+          <div class="adder"><input type="text" id="li_loc" autocomplete="off"></div>
+        </div>
+      </section>
+
+      <section id="s-skills">
+        <h2>Skills &amp; competences</h2>
+        <p class="intro">Professional and personal skills are scored separately, each with its own weight (see section 6). The number shows how many jobs on the current shortlist mention the skill.</p>
+        <div class="group" data-list="cv_skills" data-color="c-pine" data-sugg="pro">
+          <h3>Professional <span class="cnt"></span></h3>
+          <p class="hint">Fields, technologies, methods, markets, languages. Default: up to 30 points, full points at 6 matches.</p>
+        </div>
+        <div class="group" data-list="personal_skills" data-color="c-sky" data-sugg="personal">
+          <h3>Personal <span class="cnt"></span></h3>
+          <p class="hint">Leadership, ways of working, strengths. Default: up to 10 points, full points at 3 matches.</p>
+        </div>
+        <div class="group" data-list="keywords" data-color="c-ochre">
+          <h3>Bonus keywords <span class="tag c-ochre chip" style="padding:2px 6px">up to +5</span> <span class="cnt"></span></h3>
+          <p class="hint">Topics you especially want (e.g. P&amp;L, AI, international).</p>
+        </div>
+        <p class="note">Your CV text is stored as the GitHub secret <code>JOBFINDER_CV_TEXT</code> and adds up to 10 points for overall similarity. Secrets can't be displayed – to update it, paste the new text under <i>Settings → Secrets and variables → Actions</i> in the repository. To turn CV text into skills, use section 5.</p>
+      </section>
+
+      <section id="s-text">
+        <h2>Generate from text</h2>
+        <p class="intro">Paste any text – a CV section, a reference letter, notes on what you want next, or a job ad you like. The page lists the skills, competences and job titles it recognises; tick the ones you want and add them. The text itself is not saved in the repository.</p>
+        <textarea id="free" placeholder="E.g. “Led a team of 8 in developing Power-to-X projects in Finland and Germany, negotiated PPAs with industrial customers, built partnerships with OEMs …”"></textarea>
+        <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+          <button class="btn primary" type="button" id="b-find">Find skills and titles</button>
+          <button class="btn link" type="button" id="b-clear">Clear text</button>
+        </div>
+        <div class="found" id="found" hidden></div>
+      </section>
+
+      <section id="s-score">
+        <h2>Ranking</h2>
+        <p class="intro">How strict the shortlist is.</p>
+        <div class="grid2">
+          <div class="field">Minimum match score
+            <div class="rng"><input type="range" id="min_score" min="0" max="90" step="5"><output id="min_score_v"></output></div>
+            <small>Jobs below this score are not shown.</small>
+          </div>
+          <label class="field">“New” label for
+            <div class="rng"><input type="range" id="new_days" min="1" max="14" step="1"><output id="new_days_v"></output></div>
+            <small>days after a job first appears.</small>
+          </label>
+          <label class="field">Max jobs per company
+            <input type="number" id="max_jobs_per_company" min="0" max="50">
+            <small>0 = no limit.</small>
+          </label>
+          <div class="field">Company rating bonus
+            <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+              <label class="small">A <input type="number" id="rb_A" min="0" max="20"></label>
+              <label class="small">B <input type="number" id="rb_B" min="0" max="20"></label>
+              <label class="small">C <input type="number" id="rb_C" min="0" max="20"></label>
+            </div>
+            <small>Points added for the company's rating in the register.</small>
+          </div>
+        </div>
+        <div class="group" style="margin-top:18px">
+          <h3>Weights of the match score</h3>
+          <p class="hint">How much each part counts. The total is rescaled to 0–100, so only the proportions matter. Parts that don't apply (no CV text, no personal skills) are left out.</p>
+          <div class="wgrid" id="weights"></div>
+          <div class="grid2" style="margin-top:14px">
+            <label class="field">Full points for professional skills at
+              <input type="number" id="fp_professional" min="1" max="20"><small>matches in a posting</small></label>
+            <label class="field">Full points for personal skills at
+              <input type="number" id="fp_personal" min="1" max="20"><small>matches in a posting</small></label>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</div>
+
+<dialog id="acc">
+  <form method="dialog">
+    <h2>GitHub access</h2>
+    <p class="small">Saving writes <code>config/profile.yaml</code> in your repository. It needs an access token with <b>Contents: Read and write</b> on that repository – the same token as for “Sync across devices” on the job page. It stays in this browser only.</p>
+    <label>Repository <input type="text" id="acc-repo" placeholder="owner/repo" autocomplete="off" spellcheck="false"></label>
+    <label>Access token <input type="password" id="acc-tok" placeholder="github_pat_…" autocomplete="off" spellcheck="false"></label>
+    <div class="row">
+      <button class="btn" value="cancel" type="submit">Cancel</button>
+      <button class="btn primary" value="save" type="submit">Save</button>
+    </div>
+  </form>
+</dialog>
+
+<script>
+(function(){
+const $ = s => document.querySelector(s);
+const el = (t, c, x) => { const e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; };
+const LEVELS = ["intern","junior","mid","senior","lead","executive"];
+const LISTS = ["titles","lower_priority_titles","exclude_titles","linkedin.titles","locations","cv_skills","personal_skills","keywords"];
+const PATH = "config/profile.yaml";
+
+// ---------- storage (shared with the job page: same site) ----------
+const ls = { get(k){ try { return localStorage.getItem(k); } catch(e) { return null; } },
+             set(k,v){ try { localStorage.setItem(k, v); } catch(e) {} } };
+const jget = (k) => { try { return JSON.parse(ls.get(k)); } catch(e) { return null; } };
+const token = () => jget("jf-sync-token") || ls.get("cs-token") || "";
+const defaultRepo = () => {
+  const owner = location.hostname.endsWith(".github.io") ? location.hostname.split(".")[0] : "TheHoff26";
+  const seg = location.pathname.split("/").filter(Boolean)[0];
+  return owner + "/" + (seg && !seg.includes(".") ? seg : "job-shortlist");
+};
+const repo = () => jget("jf-sync-repo") || defaultRepo();
+$("#reg-link").href = location.hostname.endsWith(".github.io") ? `https://${location.hostname}/company-scout/` : "#";
+
+// ---------- vocabulary for suggestions and text analysis ----------
+// "Label|synonym|synonym" – the label is what goes into the profile.
+const VOCAB = {
+  pro: {
+    "Energy & technology": ["energy transition","renewables|renewable energy|renewable power","wind|wind power|onshore wind|offshore wind|wind farm","solar|solar PV|photovoltaic|photovoltaics",
+      "BESS|battery storage|battery energy storage|energy storage","hydrogen|green hydrogen","Power-to-X|PtX|power to x|P2X","electrolysis|electrolyser|electrolyzer|electrolysers|electrolyzers",
+      "e-fuels|efuels|synthetic fuels|e-methanol|e-methane","CCS|carbon capture|carbon capture and storage","CCUS","CDR|carbon removal|carbon dioxide removal","biogenic CO2",
+      "biomethane|biogas","district heating","heat pumps|heat pump","grid connection|grid connections","flexibility|demand response|demand-side flexibility","electrification",
+      "decarbonisation|decarbonization|decarbonise|decarbonize","nuclear|SMR|small modular reactor","data center|data centre|data centers|data centres","EU ETS|emissions trading|ETS",
+      "carbon markets|carbon credits|voluntary carbon market","guarantees of origin|GoO|GOs","natural gas|LNG|gas supply",
+      "hydropower|hydro power|hydroelectric","pumped storage|pumped hydro","geothermal","bioenergy|biomass|bio-energy","SAF|sustainable aviation fuel","ammonia|green ammonia",
+      "methanol|green methanol","fuel cells|fuel cell","smart grid|smart grids","microgrids|microgrid","virtual power plant|VPP","EV charging|e-mobility|electric vehicles|charging infrastructure",
+      "energy efficiency","waste heat|heat recovery|excess heat","green steel|fossil-free steel","industrial heat|process heat","long-duration storage|LDES","thermal storage|heat storage",
+      "grid services|grid balancing","transmission|distribution grid|TSO|DSO","offshore|offshore energy","hybrid power plants|hybrid parks|co-location"],
+    "Markets & trading": ["energy trading|power trading|gas trading","commodities|commodity trading|commodity","origination","PPA|power purchase agreement|power purchase agreements|PPAs",
+      "hedging|hedge","risk management|market risk","ETRM","portfolio management","market analysis|market analyses","market intelligence","price forecasting|price forecasts",
+      "fundamental analysis|fundamental modelling","power markets|electricity markets|power market|electricity market","balancing markets|ancillary services|balancing",
+      "optimisation|optimization|asset optimisation|asset optimization","derivatives|futures|options trading",
+      "intraday trading|intraday","day-ahead|day ahead|spot market","Nord Pool","EEX|ICE Endex","frequency reserves|FCR|aFRR|mFRR","capacity markets|capacity market",
+      "route-to-market|route to market","merchant risk","structuring|deal structuring|PPA structuring","credit risk|counterparty risk","value at risk|VaR",
+      "algorithmic trading|algo trading|automated trading","quantitative analysis|quant|quantitative","gas storage","LNG trading","asset-backed trading","market access",
+      "shaping|profile risk|volume risk","baseload|pay-as-produced"],
+    "Commercial & strategy": ["strategy|corporate strategy|strategic planning","business development","M&A|mergers and acquisitions|acquisitions","due diligence","partnerships|strategic partnerships|partnering",
+      "joint venture|joint ventures","commercialisation|commercialization|commercialise|commercialize","go-to-market|go to market|GTM","B2B sales|sales","key account management|key accounts|account management",
+      "contract negotiation|contract negotiations|contracting","tendering|tenders|bids|bidding","pricing","P&L|profit and loss|P&L responsibility","business case|business cases",
+      "financial modelling|financial modeling|financial model","valuation|valuations","project finance","investment|investments|investing","fundraising|capital raising",
+      "budgeting|budget responsibility","innovation|innovation management","corporate venturing|venture building|ventures","product management|product development","market entry|new markets","international business|international markets",
+      "business planning|business plan","commercial strategy","offtake|offtake agreements|offtaker","long-term contracts|long-term agreements","industrial customers|energy-intensive industry|energy-intensive industries",
+      "public funding|grants|subsidies|IPCEI|Innovation Fund","energy policy|market design","customer acquisition","growth strategy|scaling","portfolio strategy",
+      "origination of deals|deal origination|deal sourcing","value proposition","new business models|business model|business models","licensing|technology licensing"],
+    "Investment & finance": ["private equity|PE fund|buyout","infrastructure investment|infrastructure funds|infrastructure fund|infrastructure investing","portfolio companies|portfolio company",
+      "value creation","investment committee|IC memo","IRR|NPV|DCF","capital allocation","debt financing|green bonds|green finance|sustainable finance","transactions|transaction management",
+      "asset rotation|divestment|divestments","board work|board member|supervisory board","fund management|fund manager","family office","pension fund|pension funds|insurers","venture capital|VC"],
+    "Carbon & sustainability": ["carbon accounting|emissions reporting|GHG accounting|Scope 3|Scope 1|Scope 2","SBTi|science based targets|science-based targets","CBAM|carbon border",
+      "EU taxonomy|taxonomy","CSRD|ESRS","net zero|net-zero","carbon offsetting|offsets","circular economy|circularity","biochar","direct air capture|DAC","BECCS|bio-CCS"],
+    "Data centres & digital infrastructure": ["colocation|colo","hyperscale|hyperscaler|hyperscalers","PUE|power usage effectiveness","liquid cooling|data center cooling|cooling",
+      "power capacity|grid capacity|MW capacity","AI infrastructure|AI data center|AI factory|GPU","heat reuse|waste heat utilisation","site selection|site acquisition","fibre|fiber|connectivity"],
+    "Projects & operations": ["project development|project developer","project management","project portfolio","FEED","EPC","permitting|permits","procurement","supply chain",
+      "asset management","stakeholder management|stakeholder engagement","public affairs","regulatory affairs|regulation|regulatory","ESG|sustainability","life cycle assessment|LCA"],
+    "Digital & data": ["AI|artificial intelligence","machine learning","data analytics|data analysis","Python","SQL","Power BI","digitalisation|digitalization|digital transformation","automation","SAP",
+      "generative AI|GenAI|LLM|large language models","forecasting models|forecast models","energy modelling|energy modeling|market modelling|market modeling|Aurora|PLEXOS","optimisation models|optimization models|MILP",
+      "digital twin|digital twins","IoT|internet of things","SCADA","cloud|Azure|AWS","Tableau","VBA"],
+    "Languages": ["English","German|Deutsch","Finnish|suomi","Swedish|svenska","Danish|dansk","Norwegian|norsk","French","Spanish","Dutch","Italian","Polish"],
+  },
+  personal: {
+    "Leadership": ["leadership|leader","team leadership|team lead|led a team|leading teams|lead a team","people management|line management|direct reports","coaching","mentoring|mentor",
+      "change management|transformation","decision making|decision-making","strategic thinking|strategic mindset","visionary","ownership|accountability",
+      "executive presence|C-level|board-level","building teams|team building|built a team|built up a team|recruiting","empowerment|empowering","leading through change|turnaround","P&L ownership|business ownership"],
+    "Working with others": ["communication|communication skills|communicator","negotiation|negotiating|negotiations|negotiated","presentation skills|presenting|presentations",
+      "intercultural|cross-cultural|multicultural|international teams","collaboration|teamwork|team player|cross-functional","networking|network","influencing|persuasion|persuasive",
+      "conflict resolution","customer focus|customer orientation|customer-centric|client relationships",
+      "facilitation|workshops|facilitating","storytelling","relationship building|relationship management","diplomacy|diplomatic","empathy|empathetic","listening|active listening"],
+    "Ways of working": ["analytical thinking|analytical|analytics mindset","problem solving|problem-solving","entrepreneurial|entrepreneurship|entrepreneur","initiative|proactive|self-driven|self-starter",
+      "structured|organised|organized","hands-on","resilience|resilient","adaptability|adaptable","creativity|creative","curiosity|curious","results-oriented|result-oriented|results-driven|delivery",
+      "dealing with ambiguity|ambiguity","prioritisation|prioritization|time management","attention to detail|detail-oriented","independent|autonomous|independently",
+      "learning agility|fast learner|quick learner|eager to learn","business acumen|commercial acumen|commercial mindset","integrity|reliability|reliable","pragmatic|pragmatism","ambition|ambitious|highly motivated",
+      "international mindset|global mindset|international experience|abroad"],
+  },
+  titles: ["strategy manager|head of strategy|strategy director","business development manager|business developer|head of business development|business development director",
+    "origination manager|originator|head of origination","trader|energy trader|power trader","portfolio manager","investment manager|investment director|investment professional",
+    "commercial manager|commercial director|head of commercial","managing director","general manager","country manager","vice president|VP","director","head of",
+    "programme manager|program manager|programme director","project director","partnership manager|partnerships manager","venture lead|venture builder|venture partner",
+    "market analyst|energy analyst","chief commercial officer|CCO","chief strategy officer|CSO","chief executive officer|CEO","chief operating officer|COO",
+    "head of trading|trading manager|trading director","origination lead|commercial lead","M&A manager|M&A director|head of M&A","corporate development manager|head of corporate development|corporate development director",
+    "investment associate|investment principal|principal","asset manager|head of asset management","development director|head of development|development manager","energy manager|head of energy|energy procurement manager",
+    "PPA manager|PPA originator","sustainability director|head of sustainability","transformation director|head of transformation","business unit director|business unit head|head of business unit",
+    "innovation manager|head of innovation","partner|senior partner","advisor|senior advisor|adviser","board member|non-executive director"],
+};
+const LOC_GROUPS = {
+  "Helsinki region": ["Finland","Suomi","FI","Helsinki","Espoo","Vantaa","Kauniainen"],
+  "Nordic capitals": ["Copenhagen","København","Stockholm","Oslo","Reykjavik"],
+  "German energy hubs": ["Berlin","Hamburg","Düsseldorf","Dusseldorf","Essen","Cologne","Köln","Munich","München","Frankfurt"],
+  "Other Nordic hubs": ["Gothenburg","Göteborg","Malmö","Aarhus","Bergen","Stavanger","Tampere","Turku","Oulu"],
+  "Countries": ["Denmark","Sweden","Norway","Germany","Netherlands","United Kingdom","Switzerland"],
+};
+const parse = s => s.split("|");
+const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+const rxFor = term => new RegExp("(?<![\\p{L}\\p{N}])" + esc(term) + "(?![\\p{L}\\p{N}])", "iu");
+const norm = s => s.trim().toLowerCase();
+
+// ---------- state ----------
+let P = null, SHA = null, ORIG = "", JOBS = [];
+const get = (k) => k.includes(".") ? ((P[k.split(".")[0]] || {})[k.split(".")[1]] || []) : (P[k] || []);
+const put = (k, v) => { if (k.includes(".")) { const [a,b] = k.split("."); P[a] = {...(P[a] || {}), [b]: v}; } else P[k] = v; };
+const has = (k, term) => get(k).some(x => norm(String(x)) === norm(term));
+
+function setState(txt, cls){ const s = $("#state"); s.textContent = txt; s.className = "state " + (cls || ""); }
+function dirty(){ return P && emit(P) !== ORIG; }
+function refreshBar(){
+  const d = dirty();
+  $("#b-save").disabled = !d; $("#b-discard").disabled = !d;
+  if (d) setState("Unsaved changes", "dirty");
+  else if ($("#state").classList.contains("dirty")) setState("No unsaved changes");
+}
+window.addEventListener("beforeunload", e => { if (dirty()) { e.preventDefault(); e.returnValue = ""; } });
+
+// ---------- YAML output (keeps the file readable, quotes every text) ----------
+const ORDER = ["titles","require_title_match","exclude_titles","lower_priority_titles","seniority","locations","remote_ok",
+  "cv_skills","personal_skills","keywords","cv_file","linkedin","rating_bonus","weights","full_points_at","min_score","new_days","max_jobs_per_company"];
+const NOTE = {
+  titles: "1) JOB TITLES – a job is kept only if its title contains one of these terms",
+  exclude_titles: "Always dropped",
+  lower_priority_titles: "Kept but ranked lower (-25 points)",
+  seniority: "2) SENIORITY – intern, junior, mid, senior, lead, executive",
+  locations: "3) LOCATION",
+  cv_skills: "4) SKILLS – professional skills found in a posting raise the score",
+  personal_skills: "Personal skills (scored separately, see weights)",
+  keywords: "Bonus (up to +5) when the description mentions these",
+  cv_file: "CV text comes from the GitHub secret JOBFINDER_CV_TEXT",
+  linkedin: "5) LINKEDIN SEARCH LINKS",
+  rating_bonus: "6) COMPANY RATING – points added for the rating in the register",
+  weights: "7) MATCH SCORE – weight of each part (rescaled to 0-100)",
+  min_score: "8) OUTPUT",
+};
+const key = k => /^[A-Za-z_][\w-]*$/.test(k) && !/^(y|n|yes|no|on|off|true|false|null)$/i.test(k) ? k : JSON.stringify(k);
+function val(v, ind){
+  if (v === null || v === undefined) return " null";
+  if (Array.isArray(v)) return v.length ? "\n" + v.map(x => ind + "  - " + (x !== null && typeof x === "object" ? JSON.stringify(x) : scal(x))).join("\n") : " []";
+  if (typeof v === "object") { const ks = Object.keys(v); return ks.length ? "\n" + ks.map(k => ind + "  " + key(k) + ":" + val(v[k], ind + "  ")).join("\n") : " {}"; }
+  return " " + scal(v);
+}
+const scal = x => typeof x === "string" ? JSON.stringify(x) : String(x);
+function emit(p){
+  const keys = [...ORDER.filter(k => k in p), ...Object.keys(p).filter(k => !ORDER.includes(k))];
+  let out = "# Search profile – edited on the profile page (profile.html).\n# You can still edit this file by hand; the page keeps all settings.\n";
+  keys.forEach(k => { if (NOTE[k]) out += "\n# " + NOTE[k] + "\n"; out += key(k) + ":" + val(p[k], "") + "\n"; });
+  return out;
+}
+
+// ---------- GitHub ----------
+const b64 = s => btoa(String.fromCharCode(...new TextEncoder().encode(s)));
+const unb64 = s => new TextDecoder().decode(Uint8Array.from(atob(s.replace(/\s/g, "")), c => c.charCodeAt(0)));
+const api = (path, opt = {}) => fetch(`https://api.github.com/repos/${repo()}/contents/${path}`, {...opt,
+  headers: {"Authorization": "Bearer " + token(), "Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28", ...(opt.headers || {})}});
+async function readRemote(){
+  if (token()){
+    const r = await api(PATH + "?ref=main&t=" + Date.now());
+    if (r.ok) { const f = await r.json(); return {text: unb64(f.content), sha: f.sha}; }
+    if (r.status === 401) throw new Error("token not accepted");
+  }
+  const r = await fetch(`https://raw.githubusercontent.com/${repo()}/main/${PATH}?t=${Date.now()}`, {cache: "no-store"});
+  if (!r.ok) throw new Error("profile not reachable (" + r.status + ")");
+  return {text: await r.text(), sha: null};
+}
+async function load(){
+  try {
+    const {text, sha} = await readRemote();
+    P = jsyaml.load(text) || {}; SHA = sha;
+    ORIG = emit(P);
+    setState(token() ? "Profile loaded – ready to edit" : "Profile loaded – read-only until GitHub access is set", token() ? "ok" : "");
+  } catch(e) {
+    setState("Could not load the profile: " + e.message, "err"); P = null; return;
+  }
+  try { const r = await fetch("jobs.json?t=" + Date.now(), {cache: "no-store"}); if (r.ok) JOBS = (await r.json()).jobs || []; } catch(e) {}
+  renderAll();
+}
+async function save(){
+  if (!token()) { openAccess(); return; }
+  $("#b-save").disabled = true; setState("Saving…");
+  try {
+    for (let i = 0; i < 3; i++){
+      const r0 = await api(PATH + "?ref=main&t=" + Date.now());
+      if (!r0.ok) throw new Error(r0.status === 401 ? "token not accepted" : r0.status === 404 || r0.status === 403 ? "token has no access to " + repo() : "GitHub answered " + r0.status);
+      const f = await r0.json();
+      const remote = jsyaml.load(unb64(f.content)) || {};
+      // keep settings that were changed elsewhere and that this page does not edit
+      Object.keys(remote).forEach(k => { if (!(k in P)) P[k] = remote[k]; });
+      const text = emit(P);
+      const r = await api(PATH, {method: "PUT", headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({message: "Update search profile", content: b64(text), sha: f.sha, branch: "main"})});
+      if (r.ok) { ORIG = text; SHA = (await r.json()).content?.sha || null;
+        setState("Saved " + new Date().toLocaleTimeString(undefined, {timeStyle: "short"}) + " – the job search restarts now; new results in about 5 minutes", "ok");
+        refreshBar(); $("#b-discard").disabled = true; return; }
+      if (r.status !== 409 && r.status !== 422) throw new Error(r.status === 403 || r.status === 404 ? "token can't write to " + repo() : "GitHub answered " + r.status);
+    }
+    throw new Error("conflict, please try again");
+  } catch(e) { setState("Not saved – " + e.message, "err"); $("#b-save").disabled = false; }
+}
+
+// ---------- rendering ----------
+function countIn(listKey, term){
+  if (!JOBS.length) return null;
+  const rx = rxFor(term);
+  if (["titles","lower_priority_titles","exclude_titles","linkedin.titles"].includes(listKey)) return JOBS.filter(j => rx.test(j.title)).length;
+  if (listKey === "locations") return JOBS.filter(j => rx.test(j.location || "")).length;
+  if (listKey === "cv_skills") return JOBS.filter(j => (j.skills_matched || []).some(s => norm(s) === norm(term))).length;
+  if (listKey === "personal_skills") return JOBS.some(j => j.personal_matched) ? JOBS.filter(j => (j.personal_matched || []).some(s => norm(s) === norm(term))).length : null;
+  return null;
+}
+const TITLE_LISTS = ["titles","lower_priority_titles","exclude_titles"];
+function conflicts(listKey, term){
+  if (!TITLE_LISTS.includes(listKey)) return [];
+  return TITLE_LISTS.filter(k => k !== listKey && has(k, term));
+}
+function addTerms(listKey, raw){
+  const terms = raw.split(/[,;\n]/).map(s => s.trim()).filter(Boolean);
+  const cur = [...get(listKey)];
+  terms.forEach(t => { if (!cur.some(x => norm(String(x)) === norm(t))) cur.push(t); });
+  put(listKey, cur); renderAll();
+}
+function removeTerm(listKey, term){ put(listKey, get(listKey).filter(x => norm(String(x)) !== norm(term))); renderAll(); }
+
+function renderGroup(g){
+  const listKey = g.dataset.list, color = g.dataset.color;
+  g.querySelectorAll(".chips,.adder,.warnline,.sugg.s,details.more").forEach(x => x.remove());
+  const items = get(listKey).map(String);
+  g.querySelector(".cnt").textContent = items.length ? `(${items.length})` : "";
+  const ul = el("ul", "chips");
+  const warns = [];
+  items.forEach(t => {
+    const li = el("li", "chip " + color);
+    li.append(t);
+    const n = countIn(listKey, t);
+    if (n !== null) { const k = el("span", "k", n); k.title = `${n} job${n === 1 ? "" : "s"} on the current shortlist`; li.append(k); }
+    const c = conflicts(listKey, t);
+    if (c.length) {
+      li.classList.add("warn");
+      const all = [listKey, ...c];
+      warns.push(`“${t}” is in more than one list – ` + (all.includes("exclude_titles") ? "jobs with it are never shown." : "jobs with it are shown, but ranked lower."));
+    }
+    const b = el("button", null, "×"); b.type = "button"; b.setAttribute("aria-label", "Remove " + t); b.onclick = () => removeTerm(listKey, t);
+    li.append(b); ul.append(li);
+  });
+  if (!items.length) ul.append(el("li", "small", "Nothing yet."));
+  const ad = el("div", "adder");
+  const inp = el("input"); inp.type = "text"; inp.placeholder = "Add – separate several with commas"; inp.setAttribute("aria-label", "Add to " + g.querySelector("h3").firstChild.textContent.trim());
+  const ab = el("button", "btn sm", "Add"); ab.type = "button";
+  const go = () => { if (inp.value.trim()) { addTerms(listKey, inp.value); const again = document.querySelector(`[data-list="${listKey}"] .adder input`); again && again.focus(); } };
+  ab.onclick = go; inp.onkeydown = e => { if (e.key === "Enter") { e.preventDefault(); go(); } };
+  ad.append(inp, ab);
+  const hint = g.querySelector(".hint");
+  hint.after(ul); ul.after(ad);
+  if (warns.length) { const w = el("p", "warnline", warns.join(" · ") + " Remove it from one list if that isn't intended."); ad.after(w); }
+
+  // suggestions from the vocabulary
+  const sk = g.dataset.sugg || (listKey === "titles" ? "titles" : null);
+  if (sk){
+    const det = el("details", "more"); det.append(el("summary", null, "Suggestions"));
+    const cats = sk === "titles" ? {"Common titles": VOCAB.titles} : VOCAB[sk];
+    Object.entries(cats).forEach(([cat, arr]) => {
+      const free = arr.map(e => parse(e)[0]).filter(l => !has(listKey, l));
+      if (!free.length) return;
+      det.append(el("h4", null, cat));
+      const box = el("div", "sugg");
+      free.forEach(l => { const b = el("button", "sg", l); b.type = "button"; b.onclick = () => { addTerms(listKey, l); }; box.append(b); });
+      det.append(box);
+    });
+    det.open = !!openSugg[listKey];
+    det.ontoggle = () => openSugg[listKey] = det.open;
+    (g.querySelector(".warnline") || ad).after(det);
+  }
+}
+const openSugg = {};
+
+function renderAll(){
+  if (!P) return;
+  document.querySelectorAll(".group[data-list]").forEach(renderGroup);
+  // levels
+  const lv = $("#levels"); lv.replaceChildren();
+  const want = (P.seniority || []).map(norm);
+  LEVELS.forEach(l => {
+    const b = el("button", null, l[0].toUpperCase() + l.slice(1)); b.type = "button";
+    b.setAttribute("aria-pressed", want.includes(l));
+    b.onclick = () => { const cur = (P.seniority || []).map(norm); P.seniority = cur.includes(l) ? cur.filter(x => x !== l) : LEVELS.filter(x => cur.includes(x) || x === l); renderAll(); };
+    lv.append(b);
+  });
+  // location groups
+  const lg = $("#loc-groups"); lg.replaceChildren();
+  Object.entries(LOC_GROUPS).forEach(([name, arr]) => {
+    const miss = arr.filter(x => !has("locations", x));
+    if (!miss.length) return;
+    const b = el("button", "sg", name); b.type = "button"; b.title = "Adds: " + miss.join(", ");
+    b.onclick = () => addTerms("locations", miss.join(","));
+    lg.append(b);
+  });
+  $("#remote_ok").checked = P.remote_ok !== false;
+  $("#li_loc").value = (P.linkedin || {}).location || "";
+  const num = (id, v, d) => { $("#" + id).value = v ?? d; const o = $("#" + id + "_v"); if (o) o.textContent = $("#" + id).value; };
+  num("min_score", P.min_score, 35); num("new_days", P.new_days, 3); num("max_jobs_per_company", P.max_jobs_per_company, 0);
+  const rb = P.rating_bonus || {}; ["A","B","C"].forEach(k => $("#rb_" + k).value = rb[k] ?? 0);
+  renderWeights();
+  const fp = {...FULL_DEF, ...(P.full_points_at || {})};
+  ["professional","personal"].forEach(k => $("#fp_" + k).value = fp[k]);
+  refreshBar();
+}
+
+// simple inputs
+$("#remote_ok").onchange = e => { P.remote_ok = e.target.checked; refreshBar(); };
+$("#li_loc").oninput = e => { P.linkedin = {...(P.linkedin || {}), location: e.target.value.trim()}; refreshBar(); };
+["min_score","new_days","max_jobs_per_company"].forEach(id => $("#" + id).oninput = e => {
+  P[id] = Math.max(0, parseInt(e.target.value || "0", 10)); const o = $("#" + id + "_v"); if (o) o.textContent = P[id]; refreshBar(); });
+["A","B","C"].forEach(k => $("#rb_" + k).oninput = e => { P.rating_bonus = {...(P.rating_bonus || {}), [k]: Math.max(0, parseInt(e.target.value || "0", 10))}; refreshBar(); });
+
+// ---------- weights ----------
+const W_DEF = {title: 35, seniority: 20, professional: 30, personal: 10, cv_text: 10, keywords: 5};
+const W_NAME = {title: "Job title", seniority: "Seniority", professional: "Professional skills", personal: "Personal skills", cv_text: "CV text similarity", keywords: "Bonus keywords"};
+const FULL_DEF = {professional: 6, personal: 3};
+function renderWeights(){
+  const w = {...W_DEF, ...(P.weights || {})};
+  const sum = Object.values(w).reduce((a, b) => a + (+b || 0), 0) || 1;
+  const box = $("#weights"); box.replaceChildren();
+  Object.keys(W_DEF).forEach(k => {
+    const row = el("label", "wrow");
+    const r = el("input"); r.type = "range"; r.min = 0; r.max = 60; r.step = 1; r.value = w[k];
+    const o = el("output", null, w[k]), pc = el("span", "pct", Math.round(100 * w[k] / sum) + " %");
+    r.oninput = () => { P.weights = {...W_DEF, ...(P.weights || {}), [k]: +r.value}; o.textContent = r.value;
+      const s2 = Object.values({...W_DEF, ...P.weights}).reduce((a, b) => a + (+b || 0), 0) || 1;
+      box.querySelectorAll(".wrow").forEach((row2, i) => row2.querySelector(".pct").textContent = Math.round(100 * (+row2.querySelector("input").value) / s2) + " %");
+      refreshBar(); };
+    row.append(el("span", null, W_NAME[k]), r, o, pc); box.append(row);
+  });
+}
+["professional","personal"].forEach(k => $("#fp_" + k).oninput = e => {
+  P.full_points_at = {...FULL_DEF, ...(P.full_points_at || {}), [k]: Math.max(1, parseInt(e.target.value || "1", 10))}; refreshBar(); });
+
+// ---------- generate from text ----------
+const draft = jget("jf-profile-text"); if (draft) $("#free").value = draft;
+$("#free").oninput = e => ls.set("jf-profile-text", JSON.stringify(e.target.value));
+$("#b-clear").onclick = () => { $("#free").value = ""; ls.set("jf-profile-text", "\"\""); $("#found").hidden = true; };
+
+function scan(text){
+  const hits = (entries) => entries.map(parse).filter(syn => syn.some(s => rxFor(s).test(text))).map(syn => {
+    const m = syn.map(s => (text.match(rxFor(s)) || [])[0]).find(Boolean); return {label: syn[0], seen: m};
+  });
+  const pro = Object.values(VOCAB.pro).flatMap(hits);
+  const personal = Object.values(VOCAB.personal).flatMap(hits);
+  const titles = hits(VOCAB.titles);
+  // title phrases like "Head of Origination", "Business Development Manager"
+  const tp = new Set();
+  for (const m of text.matchAll(/\b(?:Head|Director|VP|Vice President)\s+(?:of\s+)?((?:[A-Z][\w&\-]*|&|and)(?:\s+(?:[A-Z][\w&\-]*|&|and)){0,3})/g)) tp.add(m[0].trim());
+  for (const m of text.matchAll(/\b((?:[A-Z][\w&\-]+\s+){1,3}(?:Manager|Director|Lead|Officer|Analyst|Trader|Originator|Advisor|Adviser|Consultant|Partner|Engineer))\b/g)) tp.add(m[1].trim());
+  const known = new Set([...pro, ...personal, ...titles].map(x => norm(x.label)));
+  const phraseTitles = [...tp].filter(t => !known.has(norm(t))).map(t => ({label: t}));
+  // other terms: acronyms and capitalised phrases not in the vocabulary
+  const vocabAll = new Set([...Object.values(VOCAB.pro), ...Object.values(VOCAB.personal), [VOCAB.titles]].flat(2).flatMap(parse).map(norm));
+  const other = new Map();
+  for (const m of text.matchAll(/\b[A-Z][A-Z0-9&\-]{1,6}s?\b/g)) {
+    const t = m[0]; if (!vocabAll.has(norm(t)) && !/^(I|A|CV|THE|AND|OR|MSC|BSC|MBA|PHD|CEO|CFO|CTO|USA|EU|UK|LTD|GMBH|OY|AB|AS|INC)$/i.test(t)) other.set(norm(t), t);
+  }
+  for (const m of text.matchAll(/\b([A-Z][a-zäöü]+(?:[\s-][A-Z][a-zäöü]+){1,3})\b/g)) {
+    let t = m[1];
+    if (m.index === 0 || /[.!?:;]\s*$|\n\s*$/.test(text.slice(0, m.index))) {   // sentence start: drop the first word
+      t = t.split(/[\s-]/).slice(1).join(" "); if (!t.includes(" ")) continue;
+    }
+    if ([...tp].some(x => x.includes(t) || t.includes(x))) continue; if (!vocabAll.has(norm(t)) && !tp.has(t) && !/^(Dear|Best|Kind|Yours|The|In|At|For|From|With)\b/.test(t)) other.set(norm(t), t);
+  }
+  return {pro, personal, titles: [...titles, ...phraseTitles], other: [...other.values()].slice(0, 24).map(t => ({label: t}))};
+}
+
+function fgroup(title, items, targets, preselect){
+  const box = el("div", "fgroup");
+  const h = el("h4"); h.append(el("span", null, `${title} (${items.length})`));
+  const acts = el("span"); acts.style.display = "flex"; acts.style.gap = "6px"; acts.style.flexWrap = "wrap";
+  h.append(acts); box.append(h);
+  const picks = el("div", "picks");
+  const firstTarget = targets[0][1];
+  items.forEach(it => {
+    const already = targets.some(([, k]) => has(k, it.label));
+    const lab = el("label", "pick" + (already ? " has" : ""));
+    const cb = el("input"); cb.type = "checkbox"; cb.value = it.label; cb.checked = !already && preselect; cb.disabled = already;
+    lab.append(cb, it.label);
+    if (already) lab.append(el("em", null, "in profile"));
+    else if (it.seen && norm(it.seen) !== norm(it.label)) lab.append(el("em", null, "“" + it.seen + "”"));
+    picks.append(lab);
+  });
+  box.append(picks);
+  targets.forEach(([name, k]) => {
+    const b = el("button", "btn sm" + (k === firstTarget ? " primary" : ""), "Add selected to " + name); b.type = "button";
+    b.onclick = () => {
+      const sel = [...picks.querySelectorAll("input:checked")].map(x => x.value);
+      if (!sel.length) return;
+      addTerms(k, sel.join(","));
+      runScan(); setState(`Added ${sel.length} to ${name} – remember to save`, "dirty");
+    };
+    acts.append(b);
+  });
+  if (!items.length) box.append(el("p", "small", "Nothing recognised."));
+  return box;
+}
+function runScan(){
+  const text = $("#free").value;
+  const f = $("#found"); f.replaceChildren();
+  if (!text.trim()) { f.hidden = true; return; }
+  const r = scan(text);
+  f.append(
+    fgroup("Professional skills", r.pro, [["Professional", "cv_skills"], ["Bonus keywords", "keywords"]], true),
+    fgroup("Personal skills", r.personal, [["Personal", "personal_skills"]], true),
+    fgroup("Possible job titles", r.titles, [["Wanted titles", "titles"], ["LinkedIn terms", "linkedin.titles"]], false),
+    fgroup("Other terms – check before adding", r.other, [["Professional", "cv_skills"], ["Personal", "personal_skills"]], false));
+  f.hidden = false;
+}
+$("#b-find").onclick = () => { if (!P) return; runScan(); $("#found").scrollIntoView({behavior: "smooth", block: "nearest"}); };
+
+// ---------- buttons ----------
+$("#b-save").onclick = save;
+$("#b-discard").onclick = () => { P = jsyaml.load(ORIG) || {}; renderAll(); setState("Changes discarded"); if (!$("#found").hidden) runScan(); };
+$("#b-download").onclick = () => {
+  if (!P) return;
+  const a = el("a"); a.href = URL.createObjectURL(new Blob([emit(P)], {type: "text/yaml"})); a.download = "profile.yaml"; a.click();
+  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+};
+const dlg = $("#acc");
+function openAccess(){ $("#acc-repo").value = repo(); $("#acc-tok").value = token(); dlg.showModal(); }
+$("#b-access").onclick = openAccess;
+dlg.addEventListener("close", () => {
+  if (dlg.returnValue !== "save") return;
+  ls.set("jf-sync-repo", JSON.stringify($("#acc-repo").value.trim().replace(/^https:\/\/github\.com\//, "").replace(/\/$/, "")));
+  ls.set("jf-sync-token", JSON.stringify($("#acc-tok").value.trim()));
+  if (dirty()) save(); else { setState("Reloading…"); load(); }
+});
+
+// theme follows the job page setting
+try { const t = localStorage.getItem("jf-theme"); if (t) document.documentElement.dataset.theme = t; } catch(e) {}
+
+if (!window.jsyaml) { setState("Could not load the YAML reader – check your internet connection and reload", "err"); return; }
+load();
+})();
+</script>
+</body>
+</html>
