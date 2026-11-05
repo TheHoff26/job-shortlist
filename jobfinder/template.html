@@ -12,16 +12,16 @@
   --bg:#F3F6F8; --surface:#FFFFFF; --ink:#16232E; --muted:#5A6A77; --line:#D3DCE2;
   --pine:#23604F; --pine-soft:#DCEBE5; --ochre:#9A6A12; --ochre-soft:#F3E7CC;
   --slate:#6D7C88; --slate-soft:#E4E9ED; --berry:#A3214A; --berry-soft:#F6DDE5;
-  --focus:#2C6FB0;
+  --focus:#2C6FB0; --sky:#2A5F8F; --sky-soft:#DDE9F4;
 }
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
   --bg:#0F171D; --surface:#16212A; --ink:#E3EAEF; --muted:#94A3AF; --line:#2A3945;
   --pine:#6CC3A6; --pine-soft:#173A31; --ochre:#E0B25A; --ochre-soft:#3A2E14;
-  --slate:#9AA8B3; --slate-soft:#22303B; --berry:#F07A9C; --berry-soft:#3E1726; --focus:#7DB4EA;}}
+  --slate:#9AA8B3; --slate-soft:#22303B; --berry:#F07A9C; --berry-soft:#3E1726; --focus:#7DB4EA; --sky:#8CC0EE; --sky-soft:#17304A;}}
 :root[data-theme="dark"]{
   --bg:#0F171D; --surface:#16212A; --ink:#E3EAEF; --muted:#94A3AF; --line:#2A3945;
   --pine:#6CC3A6; --pine-soft:#173A31; --ochre:#E0B25A; --ochre-soft:#3A2E14;
-  --slate:#9AA8B3; --slate-soft:#22303B; --berry:#F07A9C; --berry-soft:#3E1726; --focus:#7DB4EA;}
+  --slate:#9AA8B3; --slate-soft:#22303B; --berry:#F07A9C; --berry-soft:#3E1726; --focus:#7DB4EA; --sky:#8CC0EE; --sky-soft:#17304A;}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);
@@ -81,6 +81,8 @@ h1{font-size:clamp(28px,4vw,40px);line-height:1.1;font-weight:800;letter-spacing
 .skills{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px;align-items:center;font-size:13px}
 .skills b{font-weight:600;color:var(--muted);margin-right:2px}
 .skills span{background:var(--pine-soft);color:var(--pine);border-radius:999px;padding:2px 9px;font-weight:600}
+.skills.pers span{background:var(--sky-soft);color:var(--sky)}
+.skills + .skills{margin-top:8px}
 details.why{margin-top:12px;font-size:14px;color:var(--muted)}
 details.why summary{cursor:pointer;font-weight:600;width:max-content}
 details.why ul{margin:6px 0 0;padding-left:18px}
@@ -169,6 +171,7 @@ dialog .row{display:flex;gap:8px;justify-content:flex-end;margin-top:16px;flex-w
         <div class="new"><b id="t-new">0</b>new</div>
         <div><b id="t-co">0</b>companies</div>
       </div>
+      <a class="btn" href="profile.html">Search profile</a>
       <a class="btn" id="reg-link" href="https://thehoff26.github.io/company-scout/" target="_blank" rel="noopener">Company register</a>
     </div>
   </header>
@@ -383,8 +386,13 @@ const DATA = /*__JOB_DATA__*/null;
     if (cols.children.length) body.append(cols);
 
     if (j.skills_matched.length){
-      const sk = el("div", "skills"); sk.append(el("b", null, "Your skills mentioned"));
+      const sk = el("div", "skills"); sk.append(el("b", null, "Your professional skills mentioned"));
       j.skills_matched.forEach(s => sk.append(el("span", null, s)));
+      body.append(sk);
+    }
+    if ((j.personal_matched || []).length){
+      const sk = el("div", "skills pers"); sk.append(el("b", null, "Your personal strengths mentioned"));
+      j.personal_matched.forEach(s => sk.append(el("span", null, s)));
       body.append(sk);
     }
     if (j.reasons.length){
@@ -417,7 +425,7 @@ const DATA = /*__JOB_DATA__*/null;
       (!sg || j.segment === sg || (j.segments_secondary || []).includes(sg)) &&
       (!rt || rt.includes(j.rating || "-")) &&
       j.score >= min && (!onlyNew || j.is_new) &&
-      (!q || [j.title, j.company, j.location, j.summary, ...j.criteria, ...j.skills_matched].join(" ").toLowerCase().includes(q)));
+      (!q || [j.title, j.company, j.location, j.summary, ...j.criteria, ...j.skills_matched, ...(j.personal_matched || [])].join(" ").toLowerCase().includes(q)));
     if (sort === "new") rows.sort((a,b) => (b.first_seen||"").localeCompare(a.first_seen||"") || b.score - a.score);
     else if (sort === "deadline") rows.sort((a,b) => (a.deadline || "9999").localeCompare(b.deadline || "9999") || b.score - a.score);
     else if (sort === "company") rows.sort((a,b) => a.company.localeCompare(b.company) || b.score - a.score);

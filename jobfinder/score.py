@@ -1,12 +1,14 @@
 """Relevance filter and score (0-100) against the profile in config/profile.yaml.
 
-Score components (max points):
+Score components (default weights, adjustable under `weights:` in profile.yaml):
   Title match ............ 35   a wanted title appears in the job title
-  Seniority .............. 20   level matches (adjacent level: 8, unknown: 10)
-  CV skills .............. 30   share of your cv_skills found in the posting
-                                 (6 matches = full points)
-  CV text similarity ..... 10   only if a CV text is provided, else rescaled
+  Seniority .............. 20   level matches (adjacent level: 40 %, unknown: 50 %)
+  Professional skills .... 30   cv_skills found in the posting (full points at 6 matches)
+  Personal skills ........ 10   personal_skills found in the posting (full points at 3 matches)
+  CV text similarity ..... 10   only if a CV text is provided
   Keyword bonus ..........  5
+The sum is rescaled to 0-100. Parts that don't apply (no CV text, no personal
+skills) are left out of the total.
 """
 
 from __future__ import annotations
@@ -22,19 +24,23 @@ from .models import Job
 
 DEFAULTS = {
     "titles": [], "require_title_match": True, "exclude_titles": [], "lower_priority_titles": [], "keywords": [],
-    "seniority": [], "locations": [], "remote_ok": True, "cv_skills": [], "cv_file": "",
+    "seniority": [], "locations": [], "remote_ok": True, "cv_skills": [], "personal_skills": [], "cv_file": "",
     "min_score": 35, "new_days": 3, "max_jobs_per_company": 0,
     "linkedin": {"enabled": True, "location": "", "posted_within_days": 7},
     "rating_bonus": {"A": 6, "B": 3, "C": 0},
+    "weights": {"title": 35, "seniority": 20, "professional": 30, "personal": 10, "cv_text": 10, "keywords": 5},
+    "full_points_at": {"professional": 6, "personal": 3},
 }
 
 
 def load_profile(data: dict | None, base_dir: Path) -> dict:
     prof = {**DEFAULTS, **(data or {})}
-    for k in ("titles", "exclude_titles", "lower_priority_titles", "keywords", "seniority", "locations", "cv_skills"):
+    for k in ("titles", "exclude_titles", "lower_priority_titles", "keywords", "seniority", "locations", "cv_skills", "personal_skills"):
         prof[k] = [str(x).strip() for x in (prof.get(k) or []) if str(x).strip()]
     prof["seniority"] = [s.lower() for s in prof["seniority"]]
     prof["linkedin"] = {**DEFAULTS["linkedin"], **(prof.get("linkedin") or {})}
+    for k in ("weights", "full_points_at"):
+        prof[k] = {**DEFAULTS[k], **{a: max(0, float(b or 0)) for a, b in (prof.get(k) or {}).items()}}
     cv = os.environ.get("JOBFINDER_CV_TEXT", "")
     if not cv and prof.get("cv_file"):
         p = (base_dir / prof["cv_file"]).resolve()
@@ -106,73 +112,85 @@ def score_job(job: Job, profile: dict) -> bool:
         return False
 
     text = plain_text(job)
-    reasons, pts, max_pts = [], 0.0, 90.0
+    W, FULL = profile["weights"], profile["full_points_at"]
+    reasons, pts, max_pts = [], 0.0, 0.0
+
+    def part(name: str, share: float):
+        nonlocal pts, max_pts
+        pts += W[name] * share
+        max_pts += W[name]
 
     # Title -----------------------------------------------------------------
     t_hit = next((t for t in profile["titles"] if contains(job.title, t)), None)
     if t_hit:
-        pts += 35
+        part("title", 1.0)
         reasons.append(f"Title matches “{t_hit}”")
     elif profile["titles"]:
         if profile["require_title_match"]:
             return False
         d_hit = next((t for t in profile["titles"] if contains(text, t)), None)
+        part("title", 15 / 35 if d_hit else 0.0)
         if d_hit:
-            pts += 15
             reasons.append(f"Description mentions “{d_hit}”")
     else:
-        pts += 20
+        part("title", 20 / 35)
 
     # Seniority -------------------------------------------------------------
     wanted = profile["seniority"]
     lvl = job.seniority
     if not wanted:
-        pts += 20
+        part("seniority", 1.0)
     elif not lvl:
-        pts += 10
+        part("seniority", 0.5)
         reasons.append("Seniority: not stated")
     elif lvl in wanted:
-        pts += 20
+        part("seniority", 1.0)
         reasons.append(f"Seniority: {lvl} ✓")
     else:
         idx = LEVELS.index(lvl) if lvl in LEVELS else -9
         near = any(abs(idx - LEVELS.index(w)) == 1 for w in wanted if w in LEVELS)
-        pts += 8 if near else 0
+        part("seniority", 0.4 if near else 0.0)
         reasons.append(f"Seniority: {lvl} ({'close to' if near else 'outside'} your target)")
 
-    # CV skills ---------------------------------------------------------------
+    # Professional skills -----------------------------------------------------
     skills = profile["cv_skills"]
     matched = [s for s in skills if contains(text, s)]
     job.skills_matched = matched
     if skills:
-        pts += 30 * min(1.0, len(matched) / min(len(skills), 6))
-        reasons.append(f"CV skills {len(matched)}/{len(skills)}"
+        part("professional", min(1.0, len(matched) / max(1, min(len(skills), FULL["professional"]))))
+        reasons.append(f"Professional skills {len(matched)}/{len(skills)}"
                        + (f": {', '.join(matched[:8])}" if matched else ""))
     else:
-        pts += 15
+        part("professional", 0.5)
+
+    # Personal skills -----------------------------------------------------------
+    personal = [p for p in profile["personal_skills"] if p.lower() not in {s.lower() for s in skills}]
+    if personal:
+        pm = [p for p in personal if contains(text, p)]
+        job.personal_matched = pm
+        part("personal", min(1.0, len(pm) / max(1, min(len(personal), FULL["personal"]))))
+        reasons.append(f"Personal skills {len(pm)}/{len(personal)}" + (f": {', '.join(pm[:6])}" if pm else ""))
 
     # CV similarity -------------------------------------------------------------
     if profile.get("_cv_vector"):
-        max_pts = 100.0
         sim = _cosine(profile["_cv_vector"], _vector(text))
-        pts += 10 * min(1.0, sim / 0.25)
+        part("cv_text", min(1.0, sim / 0.25))
         reasons.append(f"CV text similarity {sim:.0%}")
 
     # Keywords ------------------------------------------------------------------
     kw = [k for k in profile["keywords"] if contains(text, k)]
+    part("keywords", min(1.0, len(kw) / 2))
     if kw:
-        pts += 5 * min(1.0, len(kw) / 2)
         reasons.append("Keywords: " + ", ".join(kw))
 
     if loc_reason:
         reasons.append(loc_reason)
     # Lower-priority roles: kept, but ranked down -------------------------------
     low = next((t for t in profile["lower_priority_titles"] if contains(job.title, t)), None)
+    job.score = max(0, min(100, int(round(pts * 100 / max_pts)))) if max_pts else 0
     if low:
-        pts -= 25
+        job.score = max(0, job.score - 25)
         reasons.append(f"Lower-priority role (“{low}”): −25")
-
-    job.score = max(0, int(round(pts * 100 / max_pts)))
     bonus = int((profile.get("rating_bonus") or {}).get(job.rating or "", 0) or 0)
     if bonus:
         job.score = min(100, job.score + bonus)

@@ -22,7 +22,7 @@ def write_outputs(jobs, meta: dict, out_dir: Path) -> None:
     (out_dir / ".nojekyll").write_text("", encoding="utf-8")
 
     cols = ["score", "is_new", "company", "title", "seniority", "location", "workplace",
-            "years_experience", "languages", "education", "skills_matched", "summary",
+            "years_experience", "languages", "education", "skills_matched", "personal_matched", "summary",
             "criteria", "url", "posted", "deadline", "first_seen"]
     with (out_dir / "jobs.csv").open("w", newline="", encoding="utf-8-sig") as fh:
         w = csv.writer(fh)

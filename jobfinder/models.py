@@ -36,7 +36,8 @@ class Job:
     years_experience: str = ""
     languages: list[str] = field(default_factory=list)
     education: str = ""
-    skills_matched: list[str] = field(default_factory=list)
+    skills_matched: list[str] = field(default_factory=list)      # professional skills
+    personal_matched: list[str] = field(default_factory=list)    # personal skills
     score: int = 0
     reasons: list[str] = field(default_factory=list)
     deadline_source: str = ""        # "board" | "text" | ""
