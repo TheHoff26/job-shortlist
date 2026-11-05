@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-11-05T07:53+00:00",
+  "generated": "2026-11-05T18:30+00:00",
   "total_matches": 24,
   "new_matches": 23,
   "companies": [
@@ -92,7 +92,7 @@
     "company": "Valmet",
     "ats": "workday",
     "ok": true,
-    "count": 12,
+    "count": 13,
     "error": "",
     "source": "https://valmet.wd103.myworkdayjobs.com/en-US/External",
     "careers_url": "https://valmet.com/careers",
@@ -104,7 +104,7 @@
     "company": "Metso",
     "ats": "successfactors",
     "ok": true,
-    "count": 4,
+    "count": 5,
     "error": "",
     "source": "https://careers.metso.com",
     "careers_url": "https://www.metso.com/careers",
@@ -140,7 +140,7 @@
     "company": "Centrica Energy Trading",
     "ats": "workday",
     "ok": true,
-    "count": 4,
+    "count": 5,
     "error": "",
     "source": "https://centrica.wd3.myworkdayjobs.com/Centrica",
     "careers_url": "https://centricaenergy.com",
@@ -152,7 +152,7 @@
     "company": "RWE Supply & Trading",
     "ats": "successfactors",
     "ok": true,
-    "count": 4,
+    "count": 2,
     "error": "",
     "source": "https://jobs.rwe.com",
     "careers_url": "https://jobs.rwe.com",
@@ -260,7 +260,7 @@
     "company": "RWE",
     "ats": "successfactors",
     "ok": true,
-    "count": 4,
+    "count": 2,
     "error": "",
     "source": "https://jobs.rwe.com",
     "careers_url": "https://jobs.rwe.com",
@@ -368,7 +368,7 @@
     "company": "European Energy",
     "ats": "workday",
     "ok": true,
-    "count": 1,
+    "count": 2,
     "error": "",
     "source": "https://europeanenergy.wd103.myworkdayjobs.com/European_Energy",
     "careers_url": "https://europeanenergy.com",
@@ -704,8 +704,8 @@
     "company": "Nordea",
     "ats": "successfactors",
     "ok": true,
-    "count": 2,
-    "error": "",
+    "count": 0,
+    "error": "no matching open positions (or wrong id)",
     "source": "https://careers.nordea.com",
     "careers_url": "https://careers.nordea.com",
     "note": "",
@@ -819,6 +819,54 @@
     "note": "",
     "rating": "A",
     "segment": "developers"
+   },
+   {
+    "company": "OMV",
+    "ats": "successfactors",
+    "ok": true,
+    "count": 3,
+    "error": "",
+    "source": "https://careers.omv.com",
+    "careers_url": "https://careers.omv.com/",
+    "note": "",
+    "rating": "A",
+    "segment": "trading"
+   },
+   {
+    "company": "Verbund",
+    "ats": "linkedin",
+    "ok": true,
+    "count": 0,
+    "error": "link only",
+    "source": "",
+    "careers_url": "https://jobs.verbund.com/de/jobportal",
+    "note": "no supported job system found",
+    "rating": "A",
+    "segment": "trading"
+   },
+   {
+    "company": "Hy24",
+    "ats": "linkedin",
+    "ok": true,
+    "count": 0,
+    "error": "link only",
+    "source": "",
+    "careers_url": "",
+    "note": "no supported job system found",
+    "rating": "A",
+    "segment": "portfolio"
+   },
+   {
+    "company": "SkyNRG",
+    "ats": "ashby",
+    "ok": true,
+    "count": 2,
+    "error": "",
+    "source": "skynrg",
+    "careers_url": "",
+    "note": "",
+    "rating": "A",
+    "segment": "portfolio"
    }
   ],
   "repo": "TheHoff26/job-shortlist",
@@ -854,6 +902,12 @@
     "reason": "no supported job system found"
    },
    {
+    "company": "Hy24",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Hy24%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800",
+    "rating": "A",
+    "reason": "no supported job system found"
+   },
+   {
     "company": "Ilmatar Energy",
     "url": "https://www.linkedin.com/jobs/search/?keywords=%22Ilmatar+Energy%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "A",
@@ -882,6 +936,12 @@
     "url": "https://www.linkedin.com/jobs/search/?keywords=%22Vattenfall%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "A",
     "reason": "own career site, not supported"
+   },
+   {
+    "company": "Verbund",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Verbund%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800",
+    "rating": "A",
+    "reason": "no supported job system found"
    },
    {
     "company": "Verne",
@@ -1222,11 +1282,12 @@
     "hedging",
     "German"
    ],
+   "personal_matched": [],
    "score": 100,
    "reasons": [
     "Title matches “head of”",
     "Seniority: executive ✓",
-    "CV skills 9/48: renewable energy, wind, solar, battery storage, BESS, strategy, stakeholder management, hedging",
+    "Professional skills 9/48: renewable energy, wind, solar, battery storage, BESS, strategy, stakeholder management, hedging",
     "CV text similarity 24%",
     "Keywords: flexibility, BESS",
     "Location: remote",
@@ -1236,58 +1297,6 @@
    "first_seen": "2026-11-02",
    "is_new": true,
    "key": "personio:terralayr:2594674"
-  },
-  {
-   "company": "Metso",
-   "ats": "successfactors",
-   "job_id": "1376592257",
-   "title": "Director, Product Management & Sales Support, Repairs",
-   "url": "https://careers.metso.com/job/Espoo-Director%2C-Product-Management-&-Sales-Support%2C-Repairs/1376592257/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS",
-   "location": "Espoo, FI",
-   "department": "",
-   "posted": "2026-11-03",
-   "workplace": "",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "",
-   "rating": "C",
-   "segment": "oem",
-   "segments_secondary": [],
-   "summary": "Our world depends on rocks, minerals, metals and other raw materials – the building blocks of modern society. As an industry leader, Metso helps transform these essential materials to enable sustainable modern life.",
-   "responsibilities": [
-    "Lead and develop the global Product Management & Sales Support team.",
-    "Own and develop the Repairs product strategy, roadmap and portfolio.",
-    "Drive the development, commercialization and launch of Repairs products, based on customer needs, installed base potential and Market Area…",
-    "Develop commercially attractive offerings through effective packaging, pricing and promotion, enabling our sales teams and Service Centers…"
-   ],
-   "criteria": [
-    "We are looking for an experienced commercial and product management professional who knows how to turn products and services into successful customer offerings."
-   ],
-   "nice_to_have": [],
-   "seniority": "executive",
-   "years_experience": "10+ years",
-   "languages": [],
-   "education": "",
-   "skills_matched": [
-    "renewable energy",
-    "electrification",
-    "commercialization",
-    "strategy",
-    "stakeholder management"
-   ],
-   "score": 94,
-   "reasons": [
-    "Title matches “director”",
-    "Seniority: executive ✓",
-    "CV skills 5/48: renewable energy, electrification, commercialization, strategy, stakeholder management",
-    "CV text similarity 22%",
-    "Keywords: international, electrification, flexibility",
-    "Location: Espoo, FI"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-04",
-   "is_new": true,
-   "key": "successfactors:Metso:1376592257"
   },
   {
    "company": "Statkraft",
@@ -1337,11 +1346,12 @@
     "business development",
     "German"
    ],
+   "personal_matched": [],
    "score": 94,
    "reasons": [
     "Title matches “trading”",
     "Seniority: senior ✓",
-    "CV skills 4/48: hydrogen, renewable energy, business development, German",
+    "Professional skills 4/48: hydrogen, renewable energy, business development, German",
     "CV text similarity 35%",
     "Keywords: international",
     "Location: Düsseldorf, North Rhine-Westphalia, Germany",
@@ -1396,11 +1406,12 @@
     "BESS",
     "strategy"
    ],
+   "personal_matched": [],
    "score": 93,
    "reasons": [
     "Title matches “head of”",
     "Seniority: executive ✓",
-    "CV skills 4/48: renewable energy, solar, BESS, strategy",
+    "Professional skills 4/48: renewable energy, solar, BESS, strategy",
     "CV text similarity 18%",
     "Keywords: AI, flexibility, BESS",
     "Location: Helsinki, Finland; Denmark, Denmark; Malmö, Sweden",
@@ -1455,11 +1466,12 @@
     "power markets",
     "German"
    ],
+   "personal_matched": [],
    "score": 93,
    "reasons": [
     "Title matches “trading”",
     "Seniority: lead ✓",
-    "CV skills 4/48: strategy, market intelligence, power markets, German",
+    "Professional skills 4/48: strategy, market intelligence, power markets, German",
     "CV text similarity 24%",
     "Keywords: P&L",
     "Location: Düsseldorf, North Rhine-Westphalia, Germany",
@@ -1517,11 +1529,12 @@
     "power markets",
     "optimization"
    ],
+   "personal_matched": [],
    "score": 92,
    "reasons": [
     "Title matches “trader”",
     "Seniority: mid (close to your target)",
-    "CV skills 7/48: energy transition, renewable energy, BESS, strategy, price forecasting, power markets, optimization",
+    "Professional skills 7/48: energy transition, renewable energy, BESS, strategy, price forecasting, power markets, optimization",
     "CV text similarity 31%",
     "Keywords: BESS",
     "Location: Stockholm, Sweden",
@@ -1588,11 +1601,12 @@
     "hedging",
     "German"
    ],
+   "personal_matched": [],
    "score": 91,
    "reasons": [
     "Title matches “strategic”",
     "Seniority: mid (close to your target)",
-    "CV skills 13/48: renewables, renewable energy, wind, solar, battery storage, business development, partnerships, M&A",
+    "Professional skills 13/48: renewables, renewable energy, wind, solar, battery storage, business development, partnerships, M&A",
     "CV text similarity 42%",
     "Keywords: AI, flexibility",
     "Location: Berlin",
@@ -1602,6 +1616,65 @@
    "first_seen": "2026-11-05",
    "is_new": true,
    "key": "personio:terralayr:2875809"
+  },
+  {
+   "company": "Metso",
+   "ats": "successfactors",
+   "job_id": "1376778857",
+   "title": "VP, Field & Expert Services Product Group",
+   "url": "https://careers.metso.com/job/Espoo-VP%2C-Field-&-Expert-Services-Product-Group/1376778857/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS",
+   "location": "Espoo, FI",
+   "department": "",
+   "posted": "2026-11-05",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "C",
+   "segment": "oem",
+   "segments_secondary": [],
+   "summary": "Our world depends on rocks, minerals, metals and other raw materials – the building blocks of modern society. As an industry leader, Metso helps transform these essential materials to enable sustainable modern life.",
+   "responsibilities": [
+    "Own the global strategy and P&L, agree plans and targets with Market Areas, and drive performance and corrective action where needed.",
+    "Drive proactive sales, pricing and opportunity development across spot services, Life Cycle Services and service projects.",
+    "Set offering priorities, oversee global deployment and lead the Field & Expert Services digitalization agenda.",
+    "Oversee Global Field Services for installation, commissioning and complex service delivery, with safety, quality and reliability at the…"
+   ],
+   "criteria": [
+    "Proven P&L leadership, delivering growth, margin and measurable results through multi-year strategy execution.",
+    "A strong background in field, industrial, aftermarket, maintenance or lifecycle services, or a comparable global service business.",
+    "Commercial and financial acumen, including pricing and sales enablement.",
+    "Experience leading through influence in a global matrix, with excellent communication and stakeholder management skills.",
+    "Global or multi-site operations experience, with a strong record in safety, quality and continuous improvement.",
+    "A track record of building international teams, developing leaders and strengthening succession pipelines."
+   ],
+   "nice_to_have": [],
+   "seniority": "executive",
+   "years_experience": "",
+   "languages": [
+    "English"
+   ],
+   "education": "",
+   "skills_matched": [
+    "renewable energy",
+    "electrification",
+    "strategy",
+    "stakeholder management"
+   ],
+   "personal_matched": [],
+   "score": 90,
+   "reasons": [
+    "Title matches “VP”",
+    "Seniority: executive ✓",
+    "Professional skills 4/48: renewable energy, electrification, strategy, stakeholder management",
+    "CV text similarity 26%",
+    "Keywords: P&L, international, electrification, flexibility",
+    "Location: Espoo, FI"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-05",
+   "is_new": true,
+   "key": "successfactors:Metso:1376778857"
   },
   {
    "company": "atNorth",
@@ -1650,11 +1723,12 @@
     "data center",
     "risk management"
    ],
+   "personal_matched": [],
    "score": 90,
    "reasons": [
     "Title matches “commercial”",
     "Seniority: lead ✓",
-    "CV skills 3/48: renewable energy, data center, risk management",
+    "Professional skills 3/48: renewable energy, data center, risk management",
     "CV text similarity 23%",
     "Keywords: international, data center",
     "Location: Ummeljoki, Finland",
@@ -1710,11 +1784,12 @@
     "power markets",
     "optimization"
    ],
+   "personal_matched": [],
    "score": 86,
    "reasons": [
     "Title matches “trader”",
     "Seniority: mid (close to your target)",
-    "CV skills 5/48: energy transition, renewable energy, BESS, power markets, optimization",
+    "Professional skills 5/48: energy transition, renewable energy, BESS, power markets, optimization",
     "CV text similarity 27%",
     "Keywords: BESS",
     "Location: Stockholm, Sweden",
@@ -1771,11 +1846,12 @@
     "power markets",
     "German"
    ],
+   "personal_matched": [],
    "score": 86,
    "reasons": [
     "Title matches “trading”",
     "Seniority: senior ✓",
-    "CV skills 3/48: market analysis, power markets, German",
+    "Professional skills 3/48: market analysis, power markets, German",
     "CV text similarity 20%",
     "Keywords: flexibility",
     "Location: Düsseldorf, North Rhine-Westphalia, Germany",
@@ -1785,61 +1861,6 @@
    "first_seen": "2026-11-02",
    "is_new": true,
    "key": "smartrecruiters:Statkraft:744000129203437"
-  },
-  {
-   "company": "Nordea",
-   "ats": "successfactors",
-   "job_id": "1453282033",
-   "title": "Head of GIA: Credit Risk",
-   "url": "https://careers.nordea.com/job/Stockholm-Head-of-GIA-Credit-Risk-111-46/1453282033/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS",
-   "location": "Stockholm, SE, 111 46",
-   "department": "",
-   "posted": "2026-11-02",
-   "workplace": "",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "",
-   "rating": "A",
-   "segment": "pe",
-   "segments_secondary": [],
-   "summary": "We are looking for an impactful and inspirational Head of Audit to lead our Credit risk team. In this role, you will help shape how Group Internal Audit delivers independent, risk-based assurance and advice across the Nordea's most material risk area.",
-   "responsibilities": [
-    "Lead, develop and inspire a team of audit professionals, fostering a culture of continuous learning, innovation and high performance.",
-    "Develop and execute, in cooperation with other GIA teams the risk-based audit plans covering credit risk management activities across…",
-    "Deliver high-quality audit assurance and insights that support informed decision making by senior management and the Board.",
-    "Build trusted relationships with senior stakeholders while maintaining independence and professional scepticism."
-   ],
-   "criteria": [
-    "You are a trusted and confident leader with strong professional judgement, curiosity and a clear sense of purpose.",
-    "You understand how business processes, systems, data, models and controls interact and can translate this understanding into impactful, forward-looking…",
-    "You are motivated by helping both your team and stakeholders navigate an increasingly complex and rapidly changing risk landscape.",
-    "You bring credibility in senior stakeholder discussions while remaining approachable, supportive and committed.",
-    "You have a genuine commitment to developing people and teams.",
-    "You act as a role model for Nordea’s values and demonstrate inclusive leadership, sound judgement and high integrity."
-   ],
-   "nice_to_have": [],
-   "seniority": "executive",
-   "years_experience": "",
-   "languages": [],
-   "education": "Degree (or equivalent)",
-   "skills_matched": [
-    "strategy",
-    "risk management"
-   ],
-   "score": 84,
-   "reasons": [
-    "Title matches “head of”",
-    "Seniority: executive ✓",
-    "CV skills 2/48: strategy, risk management",
-    "CV text similarity 21%",
-    "Keywords: AI, international",
-    "Location: Stockholm, SE, 111 46",
-    "Company rated A: +6"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-02",
-   "is_new": true,
-   "key": "successfactors:Nordea:1453282033"
   },
   {
    "company": "Statkraft",
@@ -1889,11 +1910,12 @@
     "market intelligence",
     "German"
    ],
+   "personal_matched": [],
    "score": 83,
    "reasons": [
     "Title matches “origination”",
     "Seniority: mid (close to your target)",
-    "CV skills 5/48: hydrogen, renewables, renewable energy, market intelligence, German",
+    "Professional skills 5/48: hydrogen, renewables, renewable energy, market intelligence, German",
     "CV text similarity 22%",
     "Location: Düsseldorf, North Rhine-Westphalia, Germany",
     "Company rated A: +6"
@@ -1949,11 +1971,12 @@
     "renewable energy",
     "project development"
    ],
+   "personal_matched": [],
    "score": 76,
    "reasons": [
     "Title matches “portfolio”",
     "Seniority: mid (close to your target)",
-    "CV skills 3/48: energy transition, renewable energy, project development",
+    "Professional skills 3/48: energy transition, renewable energy, project development",
     "CV text similarity 32%",
     "Keywords: international",
     "Location: Stockholm, SE, 111 28",
@@ -2015,11 +2038,12 @@
     "hedging",
     "German"
    ],
+   "personal_matched": [],
    "score": 76,
    "reasons": [
     "Title matches “head of”",
     "Seniority: executive ✓",
-    "CV skills 6/48: renewable energy, wind, solar, BESS, hedging, German",
+    "Professional skills 6/48: renewable energy, wind, solar, BESS, hedging, German",
     "CV text similarity 20%",
     "Keywords: international, flexibility, BESS",
     "Location: Berlin",
@@ -2070,11 +2094,12 @@
    "skills_matched": [
     "stakeholder management"
    ],
+   "personal_matched": [],
    "score": 72,
    "reasons": [
     "Title matches “director”",
     "Seniority: executive ✓",
-    "CV skills 1/48: stakeholder management",
+    "Professional skills 1/48: stakeholder management",
     "CV text similarity 24%",
     "Keywords: international",
     "Location: Vantaa"
@@ -2132,11 +2157,12 @@
     "renewable energy",
     "M&A"
    ],
+   "personal_matched": [],
    "score": 68,
    "reasons": [
     "Title matches “investment”",
     "Seniority: junior (outside your target)",
-    "CV skills 3/48: energy transition, renewable energy, M&A",
+    "Professional skills 3/48: energy transition, renewable energy, M&A",
     "CV text similarity 29%",
     "Keywords: international",
     "Location: Helsinki, FI, 00100",
@@ -2197,11 +2223,12 @@
     "partnerships",
     "stakeholder management"
    ],
+   "personal_matched": [],
    "score": 68,
    "reasons": [
     "Title matches “procurement”",
     "Seniority: senior ✓",
-    "CV skills 4/48: renewable energy, data center, partnerships, stakeholder management",
+    "Professional skills 4/48: renewable energy, data center, partnerships, stakeholder management",
     "CV text similarity 18%",
     "Keywords: international, data center",
     "Location: Kista, Sweden; Oslo, Norway; Ummeljoki, Finland; Skovlunde, Denmark",
@@ -2255,11 +2282,12 @@
     "partnerships",
     "stakeholder management"
    ],
+   "personal_matched": [],
    "score": 68,
    "reasons": [
     "Title matches “procurement”",
     "Seniority: senior ✓",
-    "CV skills 4/48: renewable energy, data center, partnerships, stakeholder management",
+    "Professional skills 4/48: renewable energy, data center, partnerships, stakeholder management",
     "CV text similarity 18%",
     "Keywords: international, data center",
     "Location: Oslo, Norway",
@@ -2316,11 +2344,12 @@
     "partnerships",
     "stakeholder management"
    ],
+   "personal_matched": [],
    "score": 68,
    "reasons": [
     "Title matches “procurement”",
     "Seniority: senior ✓",
-    "CV skills 4/48: renewable energy, data center, partnerships, stakeholder management",
+    "Professional skills 4/48: renewable energy, data center, partnerships, stakeholder management",
     "CV text similarity 19%",
     "Keywords: international, data center",
     "Location: Espoo, Finland",
@@ -2378,11 +2407,12 @@
     "renewable energy",
     "stakeholder management"
    ],
+   "personal_matched": [],
    "score": 66,
    "reasons": [
     "Title matches “head of”",
     "Seniority: executive ✓",
-    "CV skills 3/48: energy transition, renewable energy, stakeholder management",
+    "Professional skills 3/48: energy transition, renewable energy, stakeholder management",
     "CV text similarity 24%",
     "Keywords: AI, international",
     "Location: Stockholm, SE, 111 28",
@@ -2440,11 +2470,12 @@
     "battery storage",
     "optimization"
    ],
+   "personal_matched": [],
    "score": 57,
    "reasons": [
     "Title matches “infrastructure”",
     "Seniority: senior ✓",
-    "CV skills 3/48: energy transition, battery storage, optimization",
+    "Professional skills 3/48: energy transition, battery storage, optimization",
     "CV text similarity 16%",
     "Keywords: AI",
     "Location: Helsinki, Finland; Kuopio, Finland",
@@ -2501,11 +2532,12 @@
     "data center",
     "partnerships"
    ],
+   "personal_matched": [],
    "score": 57,
    "reasons": [
     "Title matches “procurement”",
     "Seniority: senior ✓",
-    "CV skills 2/48: data center, partnerships",
+    "Professional skills 2/48: data center, partnerships",
     "CV text similarity 16%",
     "Keywords: international, data center",
     "Location: Oslo, Norway; Skovlunde, Denmark",
@@ -2557,11 +2589,12 @@
     "renewable energy",
     "electrification"
    ],
+   "personal_matched": [],
    "score": 55,
    "reasons": [
     "Title matches “director”",
     "Seniority: executive ✓",
-    "CV skills 2/48: renewable energy, electrification",
+    "Professional skills 2/48: renewable energy, electrification",
     "CV text similarity 26%",
     "Keywords: international, electrification, flexibility",
     "Location: Espoo, FI",
@@ -2615,11 +2648,12 @@
    "skills_matched": [
     "strategy"
    ],
-   "score": 54,
+   "personal_matched": [],
+   "score": 53,
    "reasons": [
     "Title matches “VP”",
     "Seniority: executive ✓",
-    "CV skills 1/48: strategy",
+    "Professional skills 1/48: strategy",
     "CV text similarity 28%",
     "Keywords: international",
     "Location: Stockholm, Stockholm, Sweden",
@@ -2630,6 +2664,65 @@
    "first_seen": "2026-11-02",
    "is_new": true,
    "key": "greenhouse:EQT Infrastructure:4981387101"
+  },
+  {
+   "company": "Metso",
+   "ats": "successfactors",
+   "job_id": "1376800557",
+   "title": "Project Procurement Manager",
+   "url": "https://careers.metso.com/job/Espoo-Project-Procurement-Manager/1376800557/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS",
+   "location": "Espoo, FI",
+   "department": "",
+   "posted": "2026-11-05",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "C",
+   "segment": "oem",
+   "segments_secondary": [],
+   "summary": "You will join the Separation BL Project Procurement team in Espoo. The team is responsible for managing procurement activities that support project execution, supplier performance, commercial outcomes, and delivery commitments across project organizations.",
+   "responsibilities": [
+    "Mitigate project related risks through procurement practices",
+    "Operate on the existing Procurement plan basis and apply that to the projects",
+    "Prepare and file the project-specific purchasing documentation ​",
+    "Update and maintain the Project Procurement Plan and Project Savings Report​"
+   ],
+   "criteria": [
+    "You have an academic background in a technical or economic discipline with legal mindset (Bachelor´s or Master’s degree)",
+    "Work experience in procurement, sourcing, or supply chain management or similar",
+    "Solid business and industry understanding",
+    "Good contractual skills",
+    "Profound knowledge of supply processes and practices",
+    "Strong communication and negotiating skills"
+   ],
+   "nice_to_have": [],
+   "seniority": "",
+   "years_experience": "",
+   "languages": [
+    "English",
+    "Finnish"
+   ],
+   "education": "Master's (or equivalent)",
+   "skills_matched": [
+    "renewable energy",
+    "electrification"
+   ],
+   "personal_matched": [],
+   "score": 42,
+   "reasons": [
+    "Title matches “procurement”",
+    "Seniority: not stated",
+    "Professional skills 2/48: renewable energy, electrification",
+    "CV text similarity 19%",
+    "Keywords: electrification, flexibility",
+    "Location: Espoo, FI",
+    "Lower-priority role (“procurement”): −25"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-05",
+   "is_new": true,
+   "key": "successfactors:Metso:1376800557"
   }
  ]
 }
