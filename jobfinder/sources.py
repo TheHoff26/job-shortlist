@@ -329,6 +329,7 @@ def fetch_recruitee(session, company: dict, keep: TitleFilter) -> list[Job]:
             employment_type=(o.get("employment_type_code") or "").replace("_", " "),
             salary=salary,
             seniority_hint=(o.get("experience_code") or "").replace("_", " "),
+            deadline=_date(o.get("close_at")) if o.get("close_at") else "",
         ))
     return jobs
 
@@ -394,6 +395,7 @@ def fetch_workday(session, company: dict, keep: TitleFilter) -> list[Job]:
             posted=_date(info.get("startDate")) if info.get("startDate") else "",
             workplace=_workplace(info.get("remoteType")),
             employment_type=info.get("timeType", ""),
+            deadline=_date(info.get("endDate")) if info.get("endDate") else "",
         ))
         time.sleep(0.3)
     return jobs

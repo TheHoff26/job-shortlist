@@ -23,7 +23,7 @@ def write_outputs(jobs, meta: dict, out_dir: Path) -> None:
 
     cols = ["score", "is_new", "company", "title", "seniority", "location", "workplace",
             "years_experience", "languages", "education", "skills_matched", "summary",
-            "criteria", "url", "posted", "first_seen"]
+            "criteria", "url", "posted", "deadline", "first_seen"]
     with (out_dir / "jobs.csv").open("w", newline="", encoding="utf-8-sig") as fh:
         w = csv.writer(fh)
         w.writerow(cols)

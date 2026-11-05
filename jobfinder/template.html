@@ -113,6 +113,46 @@ footer details summary{cursor:pointer}
 .btn.primary:hover{background:var(--pine);border-color:var(--pine)}
 .btn:disabled{opacity:.45;cursor:not-allowed}
 .btn.link{border:none;background:none;padding:4px 6px;font-size:14px;color:var(--berry);text-decoration:underline;text-underline-offset:3px}
+/* views, decisions, dates, level */
+.views{display:flex;flex-wrap:wrap;gap:0;margin:0 0 14px;border:1px solid var(--line);border-radius:10px;width:max-content;max-width:100%;overflow:hidden;background:var(--surface)}
+.views button{font:inherit;font-size:15px;font-weight:600;border:0;background:none;color:var(--muted);padding:8px 16px;cursor:pointer;border-right:1px solid var(--line)}
+.views button:last-child{border-right:0}
+.views button[aria-pressed="true"]{background:var(--ink);color:var(--surface)}
+.views button span{font-weight:400;margin-left:4px;font-variant-numeric:tabular-nums}
+.job{grid-template-columns:76px 1fr auto}
+@media (max-width:560px){.job{grid-template-columns:56px 1fr;grid-template-areas:"g acts" ". body";row-gap:6px}
+  .job>.gauge{grid-area:g}.job>.acts{grid-area:acts;flex-direction:row!important;align-self:center}.job>div:not(.gauge):not(.acts){grid-area:body}}
+.job.kept{background:linear-gradient(90deg,var(--pine-soft),transparent 40%)}
+.job.kept .gauge{margin-left:4px}
+.acts{display:flex;flex-direction:column;gap:8px;align-items:stretch}
+.dec{font:inherit;font-size:14px;font-weight:600;min-width:92px;border-radius:8px;padding:6px 12px;cursor:pointer;
+  border:1px solid var(--line);background:var(--surface);color:var(--ink);display:inline-flex;gap:6px;align-items:center;justify-content:center}
+.dec:hover{border-color:var(--ink)}
+.dec.keep[aria-pressed="true"]{background:var(--pine);border-color:var(--pine);color:var(--surface)}
+.dec.hide:hover{border-color:var(--berry);color:var(--berry)}
+.dec svg{width:15px;height:15px;flex:none}
+.lvlb{font-size:12px;font-weight:700;letter-spacing:.02em;text-transform:uppercase;border-radius:6px;padding:3px 8px;align-self:center}
+.lvl-executive,.lvl-lead{background:var(--pine-soft);color:var(--pine)}
+.lvl-senior{background:var(--ochre-soft);color:var(--ochre)}
+.lvl-mid,.lvl-junior,.lvl-intern,.lvl-none{background:var(--slate-soft);color:var(--slate)}
+.lvl-none{text-transform:none;font-weight:600;letter-spacing:0}
+.dates{display:flex;flex-wrap:wrap;gap:4px 18px;margin:8px 0 0;font-size:14px;color:var(--muted)}
+.dates b{color:var(--ink);font-weight:600}
+.dates .soon b,.dates .soon{color:var(--berry)}
+.dates .past{color:var(--berry);text-decoration:line-through}
+.sync{display:grid;gap:8px;font-size:14px}
+.sync h2{font-size:15px;font-weight:700;margin:0}
+.sync p{margin:0}
+.sync .ok{color:var(--pine)} .sync .err{color:var(--berry)}
+.gone{margin-top:24px;font-size:15px}
+.gone h3{font-size:15px;margin:0 0 6px}
+.gone ul{margin:0;padding-left:18px}
+dialog{border:1px solid var(--line);border-radius:12px;background:var(--surface);color:var(--ink);max-width:min(480px,calc(100vw - 32px));padding:20px}
+dialog::backdrop{background:rgba(10,20,28,.45)}
+dialog h2{margin:0 0 8px;font-size:20px}
+dialog label{display:grid;gap:4px;font-size:14px;font-weight:600;margin:12px 0}
+dialog input{font:inherit;font-weight:400;font-size:15px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+dialog .row{display:flex;gap:8px;justify-content:flex-end;margin-top:16px;flex-wrap:wrap}
 @media (prefers-reduced-motion:no-preference){.gauge .val{transition:stroke-dashoffset .6s ease-out}}
 </style>
 </head>
@@ -141,9 +181,6 @@ footer details summary{cursor:pointer}
       <label>Company
         <select id="f-co"><option value="">All companies</option></select>
       </label>
-      <label>Seniority
-        <select id="f-lvl"><option value="">Any level</option></select>
-      </label>
       <label>Segment
         <select id="f-seg"><option value="">All segments</option></select>
       </label>
@@ -154,7 +191,7 @@ footer details summary{cursor:pointer}
         <select id="f-wp"><option value="">Any</option><option value="remote">Remote</option><option value="hybrid">Hybrid</option><option value="onsite">On-site</option></select>
       </label>
       <label>Sort by
-        <select id="f-sort"><option value="score">Best match</option><option value="new">Newest first</option><option value="company">Company</option></select>
+        <select id="f-sort"><option value="score">Best match</option><option value="new">Newest first</option><option value="deadline">Deadline soonest</option><option value="company">Company</option></select>
       </label>
       <label class="full">Minimum match: <span id="f-min-v">0</span>
         <input type="range" id="f-min" min="0" max="100" step="5" value="0">
@@ -169,22 +206,47 @@ footer details summary{cursor:pointer}
         <p class="small">These companies publish jobs on sites the tool can't read. Each link opens a LinkedIn search with your titles and location filled in.</p>
         <ul id="li-list"></ul>
       </details>
+      <div class="full sync" id="sync">
+        <h2>Keep / Hide decisions</h2>
+        <p class="small" id="sync-state">Saved in this browser.</p>
+        <div><button class="btn" type="button" id="sync-btn">Sync across devices…</button></div>
+      </div>
       <div class="full"><button class="themebtn" id="theme" type="button">Switch theme</button></div>
     </aside>
 
     <main>
+      <div class="views" role="group" aria-label="Which jobs to show">
+        <button type="button" data-view="active" aria-pressed="true">Active<span id="n-active"></span></button>
+        <button type="button" data-view="keep" aria-pressed="false">Kept<span id="n-keep"></span></button>
+        <button type="button" data-view="hide" aria-pressed="false">Hidden<span id="n-hide"></span></button>
+      </div>
       <div class="list" id="list"></div>
+      <div class="gone" id="gone" hidden></div>
       <footer id="footer"></footer>
     </main>
   </div>
 </div>
+
+<dialog id="sync-dlg">
+  <form method="dialog" id="sync-form">
+    <h2>Sync decisions across devices</h2>
+    <p class="small">Your Keep / Hide choices are saved to <code id="sync-file">docs/decisions.json</code> in your repository. This needs a GitHub access token with <b>Contents: Read and write</b> on <code id="sync-repo"></code>. The token stays in this browser only.</p>
+    <label>Repository <input id="sync-repo-in" autocomplete="off" spellcheck="false" placeholder="owner/repo"></label>
+    <label>Access token <input id="sync-tok" type="password" autocomplete="off" spellcheck="false" placeholder="github_pat_…"></label>
+    <p class="small" id="sync-msg"></p>
+    <div class="row">
+      <button class="btn link" value="off" id="sync-off" type="submit">Turn sync off</button>
+      <button class="btn" value="cancel" type="submit">Cancel</button>
+      <button class="btn primary" value="save" id="sync-save" type="submit">Save and sync</button>
+    </div>
+  </form>
+</dialog>
 
 <script>
 const DATA = /*__JOB_DATA__*/null;
 (function(){
   const $ = s => document.querySelector(s);
   const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
-  const LEVELS = ["intern","junior","mid","senior","lead","executive"];
   const cap = s => s ? s[0].toUpperCase() + s.slice(1) : s;
 
   if (!DATA) { $("#list").append(Object.assign(el("div","empty"),{innerHTML:"<b>No data yet</b>Run <code>python -m jobfinder</code> to collect positions."})); return; }
@@ -201,8 +263,6 @@ const DATA = /*__JOB_DATA__*/null;
 
   // filter options
   [...new Set(jobs.map(j => j.company))].sort().forEach(c => $("#f-co").append(new Option(c, c)));
-  LEVELS.filter(l => jobs.some(j => j.seniority === l)).forEach(l => $("#f-lvl").append(new Option(cap(l), l)));
-  if (jobs.some(j => !j.seniority)) $("#f-lvl").append(new Option("Not stated", "-"));
   const when = new Date(meta.generated);
   $("#updated").textContent = "Updated " + when.toLocaleString(undefined, {dateStyle:"medium", timeStyle:"short"});
 
@@ -222,6 +282,65 @@ const DATA = /*__JOB_DATA__*/null;
     return g;
   }
 
+  // ---------- dates ----------
+  const MS = 864e5;
+  const today = new Date(); today.setHours(0,0,0,0);
+  const parseD = s => { const m = /^(\d{4})-(\d\d)-(\d\d)/.exec(s || ""); return m ? new Date(+m[1], m[2]-1, +m[3]) : null; };
+  const fmtD = d => d.toLocaleDateString(undefined, {day:"numeric", month:"short", year:"numeric"});
+
+  function dates(j){
+    const p = el("p", "dates");
+    const posted = parseD(j.posted), seen = parseD(j.first_seen);
+    const lst = el("span");
+    if (posted) lst.append("Listed ", el("b", null, fmtD(posted)));
+    else if (seen) lst.append("First seen ", el("b", null, fmtD(seen)));
+    else lst.append("Listing date not stated");
+    p.append(lst);
+    const dl = parseD(j.deadline), ds = el("span");
+    if (dl){
+      const left = Math.round((dl - today) / MS);
+      ds.append("Apply by ", el("b", null, fmtD(dl)));
+      if (left < 0){ ds.className = "past"; ds.append(" (closed)"); }
+      else { ds.append(left === 0 ? " (today)" : ` (${left} day${left === 1 ? "" : "s"} left)`); if (left <= 7) ds.className = "soon"; }
+      if (j.deadline_source === "text") ds.title = "Read from the posting text – check the posting";
+    } else ds.append("Deadline not stated");
+    p.append(ds);
+    return p;
+  }
+
+  // ---------- keep / hide decisions ----------
+  const LS_KEY = "jf-decisions";
+  const load = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch(e) { return d; } };
+  const save = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch(e) {} };
+  let DEC = load(LS_KEY, {});                       // key -> {state: keep|hide|"", at, title, company, url}
+  const stateOf = j => (DEC[j.key] || {}).state || "";
+  let view = "active";
+
+  function decide(j, st){
+    const cur = stateOf(j);
+    const next = cur === st ? "" : st;              // pressing again undoes
+    DEC[j.key] = {state: next, at: new Date().toISOString(), title: j.title, company: j.company, url: j.url};
+    save(LS_KEY, DEC);
+    queuePush();
+    render();
+  }
+
+  const ICON = {
+    keep: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.5l1.9 4 4.4.5-3.3 3 .9 4.3L8 11.1 4.1 13.3l.9-4.3-3.3-3 4.4-.5z" fill="currentColor"/></svg>',
+    hide: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3.5 3.5l9 9M12.5 3.5l-9 9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>',
+    back: '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3L2.5 6.5 6 10M3 6.5h6.5a4 4 0 010 8H7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+  };
+  function decButton(j, st){
+    const cur = stateOf(j);
+    const b = el("button", "dec " + st); b.type = "button";
+    if (st === "keep"){ b.innerHTML = ICON.keep; b.append(cur === "keep" ? "Kept" : "Keep"); b.setAttribute("aria-pressed", cur === "keep"); }
+    else if (cur === "hide"){ b.innerHTML = ICON.back; b.append("Restore"); }
+    else { b.innerHTML = ICON.hide; b.append("Hide"); }
+    b.setAttribute("aria-label", b.textContent + ": " + j.title);
+    b.onclick = () => decide(j, st);
+    return b;
+  }
+
   function listBlock(title, items, plus){
     const d = el("div"); d.append(el("h3", null, title));
     const ul = el("ul");
@@ -231,21 +350,22 @@ const DATA = /*__JOB_DATA__*/null;
   }
 
   function card(j){
-    const a = el("article", "job");
+    const a = el("article", "job" + (stateOf(j) === "keep" ? " kept" : ""));
     a.append(gauge(j.score));
     const body = el("div");
 
     const head = el("div", "head");
     const h2 = el("h2"); const link = el("a", null, j.title); link.href = j.url; link.target = "_blank"; link.rel = "noopener";
-    h2.append(link); head.append(h2, el("span", "company", j.company));
+    h2.append(link); head.append(h2);
+    const lv = el("span", "lvlb lvl-" + (j.seniority || "none"), j.seniority ? cap(j.seniority) : "Level not stated");
+    lv.title = "Seniority level"; head.append(lv, el("span", "company", j.company));
     if (j.rating){ const r = el("span", "rt rt-" + j.rating, j.rating); r.title = "Company rating " + j.rating; head.append(r); }
     if (j.is_new) head.append(el("span", "newtag", "New"));
-    body.append(head);
+    body.append(head, dates(j));
 
     const facts = el("ul", "facts");
     const add = t => t && facts.append(el("li", null, t));
     add(SEG[j.segment] || "");
-    add(j.seniority ? cap(j.seniority) : "");
     add(j.location);
     add(cap(j.workplace));
     add(j.employment_type);
@@ -253,7 +373,6 @@ const DATA = /*__JOB_DATA__*/null;
     add(j.education);
     add(j.languages.length ? j.languages.join(", ") : "");
     add(j.salary);
-    add(j.posted ? "Posted " + j.posted : "");
     body.append(facts);
 
     if (j.summary) body.append(el("p", "summary", j.summary));
@@ -275,41 +394,67 @@ const DATA = /*__JOB_DATA__*/null;
     }
     const ap = el("a", "apply", "Open posting"); ap.href = j.url; ap.target = "_blank"; ap.rel = "noopener";
     body.append(ap);
-    a.append(body);
+    const acts = el("div", "acts");
+    acts.append(decButton(j, "keep"), decButton(j, "hide"));
+    a.append(body, acts);
     return a;
   }
 
   function render(){
     const q = $("#f-q").value.trim().toLowerCase();
-    const co = $("#f-co").value, lvl = $("#f-lvl").value, wp = $("#f-wp").value;
+    const co = $("#f-co").value, wp = $("#f-wp").value;
     const sg = $("#f-seg").value, rt = $("#f-rt").value;
     const min = +$("#f-min").value, onlyNew = $("#f-new").checked, sort = $("#f-sort").value;
     $("#f-min-v").textContent = min;
-    let rows = jobs.filter(j =>
+    const counts = {active: 0, keep: 0, hide: 0};
+    jobs.forEach(j => { const s = stateOf(j); counts[s === "hide" ? "hide" : "active"]++; if (s === "keep") counts.keep++; });
+    ["active","keep","hide"].forEach(v => $("#n-" + v).textContent = counts[v]);
+    document.querySelectorAll(".views button").forEach(b => b.setAttribute("aria-pressed", b.dataset.view === view));
+    const inView = j => { const s = stateOf(j); return view === "active" ? s !== "hide" : s === view; };
+    let rows = jobs.filter(j => inView(j) &&
       (!co || j.company === co) &&
-      (!lvl || (lvl === "-" ? !j.seniority : j.seniority === lvl)) &&
       (!wp || j.workplace === wp) &&
       (!sg || j.segment === sg || (j.segments_secondary || []).includes(sg)) &&
       (!rt || rt.includes(j.rating || "-")) &&
       j.score >= min && (!onlyNew || j.is_new) &&
       (!q || [j.title, j.company, j.location, j.summary, ...j.criteria, ...j.skills_matched].join(" ").toLowerCase().includes(q)));
     if (sort === "new") rows.sort((a,b) => (b.first_seen||"").localeCompare(a.first_seen||"") || b.score - a.score);
+    else if (sort === "deadline") rows.sort((a,b) => (a.deadline || "9999").localeCompare(b.deadline || "9999") || b.score - a.score);
     else if (sort === "company") rows.sort((a,b) => a.company.localeCompare(b.company) || b.score - a.score);
     else rows.sort((a,b) => b.score - a.score);
 
     const list = $("#list"); list.replaceChildren();
     if (!rows.length){
       const e = el("div", "empty");
-      e.append(el("b", null, jobs.length ? "No positions match these filters" : "No matching positions right now"));
-      e.append(document.createTextNode(jobs.length ? "Lower the minimum match or clear the search." :
+      const msg = !jobs.length ? null : view === "keep" ? ["Nothing kept yet", "Press Keep on a job to collect it here."]
+        : view === "hide" ? ["Nothing hidden", "Jobs you hide are listed here and can be restored."] : null;
+      e.append(el("b", null, msg ? msg[0] : jobs.length ? "No positions match these filters" : "No matching positions right now"));
+      e.append(document.createTextNode(msg ? msg[1] : jobs.length ? "Lower the minimum match or clear the search." :
         "Widen the titles or locations in config/profile.yaml, or add companies in config/companies.yaml."));
       list.append(e);
     } else rows.forEach(j => list.append(card(j)));
     $("#t-shown").textContent = rows.length;
     $("#t-new").textContent = rows.filter(j => j.is_new).length;
     $("#t-co").textContent = new Set(rows.map(j => j.company)).size;
+
+    // kept jobs that are no longer on the job boards
+    const live = new Set(jobs.map(j => j.key));
+    const gone = Object.entries(DEC).filter(([k, d]) => d.state === "keep" && !live.has(k));
+    const g = $("#gone"); g.replaceChildren(); g.hidden = !(view === "keep" && gone.length);
+    if (!g.hidden){
+      g.append(el("h3", null, `Kept, but no longer listed (${gone.length})`));
+      const ul = el("ul");
+      gone.forEach(([k, d]) => {
+        const li = el("li"), a = el("a", null, d.title || k); a.href = d.url || "#"; a.target = "_blank"; a.rel = "noopener";
+        const rm = el("button", "btn link", "Remove"); rm.type = "button";
+        rm.onclick = () => { DEC[k] = {...d, state: "", at: new Date().toISOString()}; save(LS_KEY, DEC); queuePush(); render(); };
+        li.append(a, " – " + (d.company || ""), " ", rm); ul.append(li);
+      });
+      g.append(ul);
+    }
   }
-  ["#f-q","#f-co","#f-lvl","#f-seg","#f-rt","#f-wp","#f-sort","#f-min","#f-new"].forEach(s => $(s).addEventListener("input", render));
+  document.querySelectorAll(".views button").forEach(b => b.onclick = () => { view = b.dataset.view; render(); });
+  ["#f-q","#f-co","#f-seg","#f-rt","#f-wp","#f-sort","#f-min","#f-new"].forEach(s => $(s).addEventListener("input", render));
 
   // LinkedIn search links
   if ((meta.linkedin || []).length){
@@ -337,7 +482,99 @@ const DATA = /*__JOB_DATA__*/null;
     t.append(tr);
   });
   det.append(t);
+
+  // ---------- optional sync to the repository (docs/decisions.json) ----------
+  const SYNC_PATH = "docs/decisions.json";
+  const tok = () => load("jf-sync-token", null) || "";
+  const repo = () => load("jf-sync-repo", null) || meta.repo || "";
+  const syncOn = () => load("jf-sync-on", false) && tok() && repo();
+  const setState = (txt, cls) => { const s = $("#sync-state"); s.textContent = txt; s.className = "small " + (cls || ""); };
+  const b64 = s => btoa(String.fromCharCode(...new TextEncoder().encode(s)));
+  const unb64 = s => new TextDecoder().decode(Uint8Array.from(atob(s.replace(/\s/g, "")), c => c.charCodeAt(0)));
+  const api = (path, opt = {}) => fetch(`https://api.github.com/repos/${repo()}/contents/${path}`, {...opt,
+    headers: {"Authorization": "Bearer " + tok(), "Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28", ...(opt.headers || {})}});
+
+  function merge(remote){
+    let changed = false;
+    Object.entries(remote || {}).forEach(([k, d]) => {
+      if (!DEC[k] || (d.at || "") > (DEC[k].at || "")) { DEC[k] = d; changed = true; }
+    });
+    if (changed) save(LS_KEY, DEC);
+    return changed;
+  }
+  async function pull(){
+    const r = await api(SYNC_PATH + "?ref=main&t=" + Date.now());
+    if (r.status === 404) return {sha: null, jobs: {}};
+    if (!r.ok) throw new Error(r.status === 401 ? "token not accepted" : r.status === 403 ? "token has no access to " + repo() : "GitHub answered " + r.status);
+    const f = await r.json();
+    return {sha: f.sha, jobs: (JSON.parse(unb64(f.content || "")) || {}).jobs || {}};
+  }
+  let pushTimer = null, busy = false, again = false;
+  function queuePush(){
+    if (!syncOn()) { setState("Saved in this browser."); return; }
+    setState("Saving…"); clearTimeout(pushTimer); pushTimer = setTimeout(push, 1200);
+  }
+  async function push(){
+    if (busy) { again = true; return; }
+    busy = true;
+    try {
+      for (let attempt = 0; attempt < 3; attempt++){
+        const cur = await pull();
+        merge(cur.jobs);
+        const body = JSON.stringify({version: 1, updated: new Date().toISOString(), jobs: DEC}, null, 1);
+        const r = await api(SYNC_PATH, {method: "PUT", headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({message: "Update keep/hide decisions", content: b64(body), branch: "main", ...(cur.sha ? {sha: cur.sha} : {})})});
+        if (r.ok) { setState("Synced with " + repo() + " · " + new Date().toLocaleTimeString(undefined, {timeStyle: "short"}), "ok"); break; }
+        if (r.status !== 409 && r.status !== 422) throw new Error(r.status === 403 || r.status === 404 ? "token can't write to " + repo() : "GitHub answered " + r.status);
+        if (attempt === 2) throw new Error("conflict, try again");
+      }
+    } catch(e) { setState("Saved in this browser – sync failed: " + e.message, "err"); }
+    busy = false;
+    if (again) { again = false; push(); }
+  }
+  async function startSync(){
+    if (!syncOn()) {
+      // without a token: read the published copy (read-only) so other devices' choices still show
+      try {
+        const r = await fetch("decisions.json?t=" + Date.now(), {cache: "no-store"});
+        if (r.ok && merge(((await r.json()) || {}).jobs)) render();
+      } catch(e) {}
+      setState("Saved in this browser."); return;
+    }
+    setState("Syncing…");
+    try {
+      const cur = await pull();
+      const before = JSON.stringify(DEC);
+      merge(cur.jobs); render();
+      const localNewer = Object.entries(DEC).some(([k, d]) => !cur.jobs[k] || (d.at || "") > (cur.jobs[k].at || ""));
+      if (localNewer) await push();
+      else setState("Synced with " + repo(), "ok");
+    } catch(e) { setState("Saved in this browser – sync failed: " + e.message, "err"); }
+  }
+
+  const csTok = () => { try { return localStorage.getItem("cs-token") || ""; } catch(e) { return ""; } };
+  const dlg = $("#sync-dlg");
+  $("#sync-btn").onclick = () => {
+    $("#sync-repo-in").value = repo();
+    $("#sync-repo").textContent = repo() || "your job-shortlist repository";
+    $("#sync-tok").value = tok() || csTok();
+    $("#sync-msg").textContent = !tok() && csTok() ? "Prefilled with the token from your company register – it works once job-shortlist is added to it." : "";
+    $("#sync-off").hidden = !syncOn();
+    dlg.showModal ? dlg.showModal() : dlg.setAttribute("open", "");
+  };
+  dlg.addEventListener("close", () => {
+    if (dlg.returnValue === "save"){
+      save("jf-sync-repo", $("#sync-repo-in").value.trim().replace(/^https:\/\/github\.com\//, "").replace(/\/$/, ""));
+      save("jf-sync-token", $("#sync-tok").value.trim()); save("jf-sync-on", true);
+      startSync();
+    } else if (dlg.returnValue === "off"){
+      save("jf-sync-on", false); try { localStorage.removeItem("jf-sync-token"); } catch(e) {}
+      setState("Saved in this browser.");
+    }
+  });
+
   render();
+  startSync();
 })();
 
 </script>

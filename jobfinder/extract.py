@@ -304,9 +304,108 @@ def detect_seniority(title: str, hint: str, min_years: int | None) -> tuple[str,
 
 
 # --------------------------------------------------------------------------- #
+# Application deadline
+# --------------------------------------------------------------------------- #
+MONTHS = {
+    # en
+    "january": 1, "february": 2, "march": 3, "april": 4, "may": 5, "june": 6, "july": 7,
+    "august": 8, "september": 9, "october": 10, "november": 11, "december": 12,
+    "jan": 1, "feb": 2, "mar": 3, "apr": 4, "jun": 6, "jul": 7, "aug": 8, "sep": 9,
+    "sept": 9, "oct": 10, "nov": 11, "dec": 12,
+    # de
+    "januar": 1, "jänner": 1, "februar": 2, "märz": 3, "maerz": 3, "mai": 5, "juni": 6,
+    "juli": 7, "oktober": 10, "dezember": 12,
+    # sv / da / no
+    "januari": 1, "februari": 2, "mars": 3, "maj": 5, "augusti": 8, "okt": 10,
+    "marts": 3, "desember": 12, "des": 12,
+    # fi (genitive / partitive forms)
+    "tammikuuta": 1, "helmikuuta": 2, "maaliskuuta": 3, "huhtikuuta": 4, "toukokuuta": 5,
+    "kesäkuuta": 6, "heinäkuuta": 7, "elokuuta": 8, "syyskuuta": 9, "lokakuuta": 10,
+    "marraskuuta": 11, "joulukuuta": 12,
+}
+DEADLINE_CUE = re.compile(
+    r"(application\s+deadline|deadline|apply\s+(?:by|before|until|no\s+later\s+than)|"
+    r"closing\s+date|close[sd]?\s+on|last\s+(?:day|date)\s+(?:to|for|of)\s+appl\w*|"
+    r"applications?\s+(?:are\s+)?(?:accepted|open|due|received)\s+(?:until|by|before)|"
+    r"no\s+later\s+than|by\s+the\s+latest|"
+    r"viimeistään|hakuaika\s+päättyy|haku\s+päättyy|hakuaika|"
+    r"bewerbungsfrist|bewerbungsschluss|bis\s+(?:zum|spätestens)|spätestens|"
+    r"sista\s+ansökningsdag(?:en)?|ansök\s+senast|senast|"
+    r"ansøgningsfrist|søknadsfrist|frist)", re.I)
+BEFORE_CUE = re.compile(r"\b(mennessä|viimeistään)\b", re.I)
+_MON = "|".join(sorted(MONTHS, key=len, reverse=True))
+DATE_PATTERNS = [
+    (re.compile(r"\b(20\d\d)-(\d{1,2})-(\d{1,2})\b"), "ymd"),
+    (re.compile(r"\b(\d{1,2})[./](\d{1,2})[./](20\d\d|\d\d)\b"), "dmy"),
+    (re.compile(rf"\b(\d{{1,2}})(?:st|nd|rd|th)?\.?\s+(?:of\s+)?({_MON})\.?,?\s+(20\d\d)\b", re.I), "d_mon_y"),
+    (re.compile(rf"\b({_MON})\.?\s+(\d{{1,2}})(?:st|nd|rd|th)?,?\s+(20\d\d)\b", re.I), "mon_d_y"),
+    (re.compile(rf"\b(\d{{1,2}})(?:st|nd|rd|th)?\.?\s+(?:of\s+)?({_MON})\b", re.I), "d_mon"),
+    (re.compile(r"\b(\d{1,2})\.(\d{1,2})\.(?!\d)"), "dm"),
+]
+
+
+def _mkdate(y: int | None, m: int, d: int, ref):
+    from datetime import date
+    if y is not None and y < 100:
+        y += 2000
+    try:
+        if y is None:                     # no year: next occurrence after the reference
+            cand = date(ref.year, m, d)
+            if cand < ref - __import__("datetime").timedelta(days=30):
+                cand = date(ref.year + 1, m, d)
+            return cand
+        return date(y, m, d)
+    except ValueError:
+        return None
+
+
+def _first_date(text: str, ref):
+    best = None
+    for rx, kind in DATE_PATTERNS:
+        for m in rx.finditer(text):
+            g = m.groups()
+            if kind == "ymd":
+                d = _mkdate(int(g[0]), int(g[1]), int(g[2]), ref)
+            elif kind == "dmy":
+                d = _mkdate(int(g[2]), int(g[1]), int(g[0]), ref)
+            elif kind == "d_mon_y":
+                d = _mkdate(int(g[2]), MONTHS[g[1].lower()], int(g[0]), ref)
+            elif kind == "mon_d_y":
+                d = _mkdate(int(g[2]), MONTHS[g[0].lower()], int(g[1]), ref)
+            elif kind == "d_mon":
+                d = _mkdate(None, MONTHS[g[1].lower()], int(g[0]), ref)
+            else:
+                d = _mkdate(None, int(g[1]), int(g[0]), ref)
+            if d and (best is None or m.start() < best[0]):
+                best = (m.start(), d)
+        if best:
+            return best[1]                # patterns are ordered by reliability
+    return None
+
+
+def find_deadline(texts: list[str], today=None) -> str:
+    """Application deadline as ISO date, found in text after a cue word
+    (EN/DE/FI/SV/DA/NO). Returns "" when none is stated or it's implausible."""
+    from datetime import date, timedelta
+    today = today or date.today()
+    lo, hi = today - timedelta(days=7), today + timedelta(days=365)
+    for t in texts:
+        for cue in BEFORE_CUE.finditer(t):           # "22.11. mennessä"
+            d = _first_date(t[max(0, cue.start() - 25): cue.start()], today)
+            if d and lo <= d <= hi:
+                return d.isoformat()
+        for cue in DEADLINE_CUE.finditer(t):
+            window = t[cue.start(): cue.end() + 60]
+            d = _first_date(window[cue.end() - cue.start():], today)
+            if d and lo <= d <= hi:
+                return d.isoformat()
+    return ""
+
+
+# --------------------------------------------------------------------------- #
 # Main entry point
 # --------------------------------------------------------------------------- #
-def enrich(job: Job) -> Job:
+def enrich(job: Job, today=None) -> Job:
     sections = html_to_sections(job.description_html)
 
     role = [s for s in sections if s.kind == "role"]
@@ -369,6 +468,12 @@ def enrich(job: Job) -> Job:
                                    [n for n in nice_items if n not in req_raw])
     job.education = find_education(req_items or all_text)
     job.seniority, _src = detect_seniority(job.title, job.seniority_hint, min_years)
+
+    if job.deadline:
+        job.deadline_source = "board"
+    else:
+        job.deadline = find_deadline(all_text, today)
+        job.deadline_source = "text" if job.deadline else ""
 
     if not job.workplace:
         blob = (job.location + " " + job.title).lower()
