@@ -156,10 +156,18 @@ dialog label{display:grid;gap:4px;font-size:14px;font-weight:600;margin:12px 0}
 dialog input{font:inherit;font-weight:400;font-size:15px;padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
 dialog .row{display:flex;gap:8px;justify-content:flex-end;margin-top:16px;flex-wrap:wrap}
 @media (prefers-reduced-motion:no-preference){.gauge .val{transition:stroke-dashoffset .6s ease-out}}
+.sitenav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px 20px;margin:-8px 0 28px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.sitenav .brand{font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.sitenav ul{display:flex;gap:4px;list-style:none;margin:0;padding:4px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+.sitenav a{display:block;text-decoration:none;font-weight:600;font-size:15px;padding:7px 14px;border-radius:8px;color:var(--muted);white-space:nowrap}
+.sitenav a:hover{color:var(--ink);background:var(--bg)}
+.sitenav a[aria-current="page"]{background:var(--ink);color:var(--surface)}
+@media (max-width:560px){.sitenav ul{width:100%}.sitenav li{flex:1}.sitenav a{text-align:center;padding:7px 6px;font-size:14px}}
 </style>
 </head>
 <body>
 <div class="wrap">
+  <nav class="sitenav" aria-label="Job search tools"><span class="brand">Job search</span><ul><li><a href="/job-shortlist/" aria-current="page">Job shortlist</a></li><li><a href="/job-shortlist/profile.html">Search profile</a></li><li><a href="/company-scout/" id="reg-link">Company register</a></li></ul></nav>
   <header class="top">
     <div>
       <h1>Job shortlist</h1>
@@ -171,8 +179,6 @@ dialog .row{display:flex;gap:8px;justify-content:flex-end;margin-top:16px;flex-w
         <div class="new"><b id="t-new">0</b>new</div>
         <div><b id="t-co">0</b>companies</div>
       </div>
-      <a class="btn" href="profile.html">Search profile</a>
-      <a class="btn" id="reg-link" href="https://thehoff26.github.io/company-scout/" target="_blank" rel="noopener">Company register</a>
     </div>
   </header>
 
@@ -533,7 +539,7 @@ const DATA = /*__JOB_DATA__*/null;
         const r = await api(SYNC_PATH, {method: "PUT", headers: {"Content-Type": "application/json"},
           body: JSON.stringify({message: "Update keep/hide decisions", content: b64(body), branch: "main", ...(cur.sha ? {sha: cur.sha} : {})})});
         if (r.ok) { setState("Synced with " + repo() + " · " + new Date().toLocaleTimeString(undefined, {timeStyle: "short"}), "ok"); break; }
-        if (r.status !== 409 && r.status !== 422) throw new Error(r.status === 403 || r.status === 404 ? "token can't write to " + repo() : "GitHub answered " + r.status);
+        if (r.status !== 409 && r.status !== 422) throw new Error(r.status === 403 || r.status === 404 ? "the token can't write to " + repo() + " – add this repository to your token (Contents: Read and write)" : "GitHub answered " + r.status);
         if (attempt === 2) throw new Error("conflict, try again");
       }
     } catch(e) { setState("Saved in this browser – sync failed: " + e.message, "err"); }
