@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-11-05T18:30+00:00",
+  "generated": "2026-11-05T18:49+00:00",
   "total_matches": 24,
   "new_matches": 23,
   "companies": [
@@ -349,7 +349,7 @@
     "source": "",
     "careers_url": "https://flower.se",
     "note": "name guess rejected (unverified)",
-    "rating": "A",
+    "rating": "C",
     "segment": "developers"
    },
    {
@@ -890,12 +890,6 @@
     "reason": "no supported job system found"
    },
    {
-    "company": "Flower",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Flower%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800",
-    "rating": "A",
-    "reason": "name guess rejected (unverified)"
-   },
-   {
     "company": "Helen",
     "url": "https://www.linkedin.com/jobs/search/?keywords=%22Helen%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "A",
@@ -1068,6 +1062,12 @@
     "url": "https://www.linkedin.com/jobs/search/?keywords=%22E.ON%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "C",
     "reason": "own career site, not supported"
+   },
+   {
+    "company": "Flower",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Flower%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800",
+    "rating": "C",
+    "reason": "name guess rejected (unverified)"
    },
    {
     "company": "KONE",
