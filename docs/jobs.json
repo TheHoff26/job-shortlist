@@ -1,8 +1,8 @@
 {
  "meta": {
-  "generated": "2026-11-05T18:49+00:00",
-  "total_matches": 24,
-  "new_matches": 23,
+  "generated": "2026-11-06T05:41+00:00",
+  "total_matches": 22,
+  "new_matches": 4,
   "companies": [
    {
     "company": "Fortum",
@@ -104,7 +104,7 @@
     "company": "Metso",
     "ats": "successfactors",
     "ok": true,
-    "count": 5,
+    "count": 4,
     "error": "",
     "source": "https://careers.metso.com",
     "careers_url": "https://www.metso.com/careers",
@@ -152,7 +152,7 @@
     "company": "RWE Supply & Trading",
     "ats": "successfactors",
     "ok": true,
-    "count": 2,
+    "count": 8,
     "error": "",
     "source": "https://jobs.rwe.com",
     "careers_url": "https://jobs.rwe.com",
@@ -260,7 +260,7 @@
     "company": "RWE",
     "ats": "successfactors",
     "ok": true,
-    "count": 2,
+    "count": 8,
     "error": "",
     "source": "https://jobs.rwe.com",
     "careers_url": "https://jobs.rwe.com",
@@ -380,7 +380,7 @@
     "company": "OX2",
     "ats": "successfactors",
     "ok": true,
-    "count": 3,
+    "count": 1,
     "error": "",
     "source": "https://jobs.ox2.com",
     "careers_url": "https://www.ox2.com",
@@ -824,7 +824,7 @@
     "company": "OMV",
     "ats": "successfactors",
     "ok": true,
-    "count": 3,
+    "count": 1,
     "error": "",
     "source": "https://careers.omv.com",
     "careers_url": "https://careers.omv.com/",
@@ -1295,7 +1295,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-02",
-   "is_new": true,
+   "is_new": false,
    "key": "personio:terralayr:2594674"
   },
   {
@@ -1359,7 +1359,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-02",
-   "is_new": true,
+   "is_new": false,
    "key": "smartrecruiters:Statkraft:744000158266779"
   },
   {
@@ -1419,7 +1419,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-02",
-   "is_new": true,
+   "is_new": false,
    "key": "teamtailor:Alight:8610267"
   },
   {
@@ -1479,7 +1479,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-02",
-   "is_new": true,
+   "is_new": false,
    "key": "smartrecruiters:Statkraft:744000155280390"
   },
   {
@@ -1542,7 +1542,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-02",
-   "is_new": true,
+   "is_new": false,
    "key": "teamtailor:Ingrid Capacity:8053254"
   },
   {
@@ -1736,7 +1736,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-02",
-   "is_new": true,
+   "is_new": false,
    "key": "teamtailor:atNorth:8232744"
   },
   {
@@ -1797,7 +1797,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-02",
-   "is_new": true,
+   "is_new": false,
    "key": "teamtailor:Ingrid Capacity:8053205"
   },
   {
@@ -1859,7 +1859,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-02",
-   "is_new": true,
+   "is_new": false,
    "key": "smartrecruiters:Statkraft:744000129203437"
   },
   {
@@ -1922,70 +1922,8 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-02",
-   "is_new": true,
+   "is_new": false,
    "key": "smartrecruiters:Statkraft:744000153729979"
-  },
-  {
-   "company": "OX2",
-   "ats": "successfactors",
-   "job_id": "1372785755",
-   "title": "Pipeline & Portfolio Analyst",
-   "url": "https://jobs.ox2.com/job/Stockholm-Pipeline-&-Portfolio-Analyst-111-28/1372785755/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS",
-   "location": "Stockholm, SE, 111 28",
-   "department": "",
-   "posted": "2026-10-14",
-   "workplace": "",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "",
-   "rating": "A",
-   "segment": "developers",
-   "segments_secondary": [
-    "portfolio"
-   ],
-   "summary": "As Pipeline & Portfolio Analyst, you will be the operational engine of OX2's Global Project Datahub: a centrally owned, historised data layer. This is a newly created role at the center of OX2's data ambition, reporting to the Head of Data & Analytics, working in a team with a Senior Data Engineer, who are both…",
-   "responsibilities": [
-    "Product development: Identify use cases for the Global Projects Datahub and drive the implementation end to end (e.g., automation…",
-    "Requirements & definitions: Collect requirements from Country teams, Project Delivery, Asset Management and other stakeholders, and support…",
-    "Analysis: Perform pipeline and portfolio analyses – for example on project status, business case classification, or capacity by stage – to…",
-    "Monthly process ownership: Run the monthly project data freeze process (starting from an IFS-based Excel prototype and evolving alongside…"
-   ],
-   "criteria": [
-    "You are structured, curious about how data sits together across systems, and comfortable holding a friendly but firm line with stakeholders on data quality and…",
-    "A couple of years of relevant experience (we'd estimate around 2–4 years) in business or portfolio analysis, project development or management, controlling, or…",
-    "Strong data-analysis skills, good excel skills, with working knowledge of Power BI or a genuine willingness and ability to build this quickly.",
-    "A degree in Business, Finance, Engineering, Informatics or Mathematics or a related field.",
-    "A detail-oriented, structured way of working, paired with curiosity about how data connects across systems.",
-    "Confidence working directly with country teams, following up firmly but constructively on data quality and deadlines."
-   ],
-   "nice_to_have": [],
-   "seniority": "mid",
-   "years_experience": "2–4 years",
-   "languages": [
-    "English",
-    "Swedish (plus)"
-   ],
-   "education": "Degree",
-   "skills_matched": [
-    "energy transition",
-    "renewable energy",
-    "project development"
-   ],
-   "personal_matched": [],
-   "score": 76,
-   "reasons": [
-    "Title matches “portfolio”",
-    "Seniority: mid (close to your target)",
-    "Professional skills 3/48: energy transition, renewable energy, project development",
-    "CV text similarity 32%",
-    "Keywords: international",
-    "Location: Stockholm, SE, 111 28",
-    "Company rated A: +6"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-02",
-   "is_new": true,
-   "key": "successfactors:OX2:1372785755"
   },
   {
    "company": "terralayr",
@@ -2052,7 +1990,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-02",
-   "is_new": true,
+   "is_new": false,
    "key": "personio:terralayr:2558066"
   },
   {
@@ -2170,7 +2108,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-02",
-   "is_new": true,
+   "is_new": false,
    "key": "successfactors:OX2:1369104955"
   },
   {
@@ -2237,7 +2175,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-02",
-   "is_new": true,
+   "is_new": false,
    "key": "teamtailor:atNorth:8485629"
   },
   {
@@ -2296,7 +2234,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-02",
-   "is_new": true,
+   "is_new": false,
    "key": "teamtailor:atNorth:8485560"
   },
   {
@@ -2358,71 +2296,8 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-02",
-   "is_new": true,
+   "is_new": false,
    "key": "teamtailor:atNorth:8640831"
-  },
-  {
-   "company": "OX2",
-   "ats": "successfactors",
-   "job_id": "1372783355",
-   "title": "Head of Data & Analytics",
-   "url": "https://jobs.ox2.com/job/Stockholm-Head-of-Data-&-Analytics-111-28/1372783355/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS",
-   "location": "Stockholm, SE, 111 28",
-   "department": "",
-   "posted": "2026-10-14",
-   "workplace": "",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "",
-   "rating": "A",
-   "segment": "developers",
-   "segments_secondary": [
-    "portfolio"
-   ],
-   "summary": "OX2 is building a Global Project Datahub: a centrally owned, historised data layer connecting all datasources of the digital infrastructure in one governed backbone that serves as the source of truth. As Head of Data & Analytics, you will own this product end to end – you are its “face” to the organization, its main…",
-   "responsibilities": [
-    "Product ownership & roadmap: Own the roadmap, use-case prioritization and phased build-out of the Global Project Datahub, starting from a…",
-    "Governance & definitions: Own and continuously develop OX2's data definitions catalogue, ensuring the same terms are understood the same…",
-    "Data quality culture: Drive a clear data RACI across the organization, mapping data responsibility onto existing roles (Project…",
-    "Change management & communication: Build organizational understanding of “why” the datahub matters, run stakeholder communication and…"
-   ],
-   "criteria": [
-    "You are someone who can hold a big, cross-functional vision and also get into the detail of how a data definition actually plays out in a country team's daily…",
-    "You are equally comfortable in a steering committee and in a one-on-one conversation persuading a project manager why data quality matters to them personally.",
-    "Solid experience (we'd estimate around 7+ years, though we care more about substance than years) in business/portfolio controlling, finance business…",
-    "A relevant degree in Business, Finance, Engineering, Mathematics, Informatics or a related field.",
-    "A track record of owning something end to end – a product, a process, or a function – from vision through adoption, including influencing stakeholders who do…",
-    "The ability to speak both business and technical language, bridging Portfolio Management & Planning and Digital/data engineering without needing to be a coder…"
-   ],
-   "nice_to_have": [
-    "Experience in any role in the renewable energy projects value chain is a strong plus",
-    "Hands on experience in Data Engineering or Data Analytics with knowledge of Microsoft Azure Infrastructure is considered a strong plus."
-   ],
-   "seniority": "executive",
-   "years_experience": "7+ years",
-   "languages": [],
-   "education": "Degree",
-   "skills_matched": [
-    "energy transition",
-    "renewable energy",
-    "stakeholder management"
-   ],
-   "personal_matched": [],
-   "score": 66,
-   "reasons": [
-    "Title matches “head of”",
-    "Seniority: executive ✓",
-    "Professional skills 3/48: energy transition, renewable energy, stakeholder management",
-    "CV text similarity 24%",
-    "Keywords: AI, international",
-    "Location: Stockholm, SE, 111 28",
-    "Lower-priority role (“data”): −25",
-    "Company rated A: +6"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-02",
-   "is_new": true,
-   "key": "successfactors:OX2:1372783355"
   },
   {
    "company": "Capalo AI",
@@ -2484,7 +2359,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-02",
-   "is_new": true,
+   "is_new": false,
    "key": "teamtailor:Capalo AI:8111587"
   },
   {
@@ -2546,7 +2421,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-02",
-   "is_new": true,
+   "is_new": false,
    "key": "teamtailor:atNorth:7778447"
   },
   {
@@ -2662,7 +2537,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-02",
-   "is_new": true,
+   "is_new": false,
    "key": "greenhouse:EQT Infrastructure:4981387101"
   },
   {
