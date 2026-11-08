@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-11-07T05:31+00:00",
+  "generated": "2026-11-08T05:32+00:00",
   "total_matches": 17,
   "new_matches": 1,
   "companies": [
@@ -56,7 +56,7 @@
     "company": "Wärtsilä",
     "ats": "successfactors",
     "ok": true,
-    "count": 1,
+    "count": 2,
     "error": "",
     "source": "https://careers.wartsila.com",
     "careers_url": "https://www.wartsila.com/careers",
@@ -140,7 +140,7 @@
     "company": "Centrica Energy Trading",
     "ats": "workday",
     "ok": true,
-    "count": 8,
+    "count": 7,
     "error": "",
     "source": "https://centrica.wd3.myworkdayjobs.com/Centrica",
     "careers_url": "https://centricaenergy.com",
@@ -152,7 +152,7 @@
     "company": "RWE Supply & Trading",
     "ats": "successfactors",
     "ok": true,
-    "count": 8,
+    "count": 1,
     "error": "",
     "source": "https://jobs.rwe.com",
     "careers_url": "https://jobs.rwe.com",
@@ -260,7 +260,7 @@
     "company": "RWE",
     "ats": "successfactors",
     "ok": true,
-    "count": 8,
+    "count": 1,
     "error": "",
     "source": "https://jobs.rwe.com",
     "careers_url": "https://jobs.rwe.com",
