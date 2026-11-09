@@ -1,232 +1,242 @@
-# ---------------------------------------------------------------------------
-# Search profile - Christian Hoffmann
-# All matching is case-insensitive and on whole words.
-# ---------------------------------------------------------------------------
+# Search profile – edited on the profile page (profile.html).
+# You can still edit this file by hand; the page keeps all settings.
 
-# 1) JOB TITLES -----------------------------------------------------------------
-# A job is kept only if its title contains at least one of these terms.
+# 1) JOB TITLES – a job is kept only if its title contains one of these terms
 titles:
-  # Strategy
-  - strategy
-  - strategic
-  - corporate development
-  - M&A
-  # Commodities & trading
-  - trading
-  - trader
-  - commodity
-  - commodities
-  - origination
-  - energy markets
-  - power markets
-  - portfolio
-  - optimisation
-  - optimization
-  # Business development, partnerships, innovation
-  - business development
-  - commercial
-  - new business
-  - growth
-  - partnerships
-  - innovation
-  - ventures
-  # Energy transition, electrification, decarbonisation
-  - energy transition
-  - electrification
-  - decarbonisation
-  - decarbonization
-  - hydrogen
-  - Power-to-X
-  - PtX
-  - renewable
-  - renewables
-  - low-carbon
-  - CO2
-  # Investors, finance, data centres
-  - investment
-  - investments
-  - infrastructure
-  - asset management
-  - procurement
-  - power purchase
-  - PPA
-  - energy management
-  # P&L / general management
-  - managing director
-  - general manager
-  - country manager
-  - business unit
-  - vice president
-  - VP
-  - head of
-  - director
-  - johtaja
-
+  - "strategy"
+  - "strategic"
+  - "corporate development"
+  - "M&A"
+  - "trading"
+  - "trader"
+  - "commodity"
+  - "commodities"
+  - "origination"
+  - "energy markets"
+  - "power markets"
+  - "portfolio"
+  - "optimisation"
+  - "optimization"
+  - "business development"
+  - "commercial"
+  - "new business"
+  - "growth"
+  - "partnerships"
+  - "innovation"
+  - "ventures"
+  - "energy transition"
+  - "electrification"
+  - "decarbonisation"
+  - "decarbonization"
+  - "hydrogen"
+  - "Power-to-X"
+  - "PtX"
+  - "renewable"
+  - "renewables"
+  - "low-carbon"
+  - "CO2"
+  - "investment"
+  - "investments"
+  - "infrastructure"
+  - "asset management"
+  - "procurement"
+  - "power purchase"
+  - "PPA"
+  - "energy management"
+  - "managing director"
+  - "general manager"
+  - "country manager"
+  - "business unit"
+  - "vice president"
+  - "VP"
+  - "head of"
+  - "director"
+  - "johtaja"
 require_title_match: true
 
 # Always dropped
 exclude_titles:
-  - intern
-  - internship
-  - trainee
-  - summer
-  - thesis
-  - student
-  - apprentice
-  - operator
-  - technician
-  - mechanic
-  - installer
-  - harjoittelija
-  - kesätyö
+  - "intern"
+  - "internship"
+  - "trainee"
+  - "summer"
+  - "thesis"
+  - "student"
+  - "apprentice"
+  - "operator"
+  - "technician"
+  - "mechanic"
+  - "installer"
+  - "harjoittelija"
+  - "kesätyö"
 
-# Kept but ranked lower (-25 points): your "areas of lesser interest"
+# Kept but ranked lower (-25 points)
 lower_priority_titles:
-  - IT
-  - data
-  - digital
-  - regulatory
-  - regulation
-  - public affairs
-  - controller
-  - controlling
-  - accounting
-  - sourcing
-  - procurement
-  - purchasing
-  - engineer
-  - engineering
-  - technical
+  - "IT"
+  - "data"
+  - "digital"
+  - "regulatory"
+  - "regulation"
+  - "public affairs"
+  - "controller"
+  - "controlling"
+  - "accounting"
+  - "sourcing"
+  - "purchasing"
+  - "engineer"
+  - "engineering"
+  - "technical"
+
+# 2) SENIORITY – intern, junior, mid, senior, lead, executive
+seniority:
+  - "senior"
+  - "lead"
+  - "executive"
+
+# 3) LOCATION
+locations:
+  - "Finland"
+  - "Suomi"
+  - "FI"
+  - "Helsinki"
+  - "Espoo"
+  - "Vantaa"
+  - "Kauniainen"
+  - "Copenhagen"
+  - "København"
+  - "Stockholm"
+  - "Oslo"
+  - "Berlin"
+  - "Hamburg"
+  - "Düsseldorf"
+  - "Dusseldorf"
+  - "Essen"
+  - "Cologne"
+  - "Köln"
+  - "Munich"
+  - "München"
+  - "Frankfurt"
+  - "Germany"
+  - "Denmark"
+  - "Vienna"
+  - "Wien"
+remote_ok: true
+
+# 4) SKILLS – professional skills found in a posting raise the score
+cv_skills:
+  - "energy transition"
+  - "Power-to-X"
+  - "PtX"
+  - "hydrogen"
+  - "electrolyzer"
+  - "electrolysis"
+  - "renewables"
+  - "renewable energy"
+  - "wind"
+  - "solar"
+  - "CCS"
+  - "carbon capture"
+  - "CDR"
+  - "carbon removal"
+  - "biogenic CO2"
+  - "decarbonization"
+  - "decarbonisation"
+  - "electrification"
+  - "battery storage"
+  - "BESS"
+  - "PPA"
+  - "data center"
+  - "data centre"
+  - "business development"
+  - "commercialization"
+  - "commercialisation"
+  - "partnerships"
+  - "joint venture"
+  - "M&A"
+  - "strategy"
+  - "project portfolio"
+  - "project development"
+  - "FEED"
+  - "stakeholder engagement"
+  - "stakeholder management"
+  - "energy trading"
+  - "commodities"
+  - "ETRM"
+  - "risk management"
+  - "hedging"
+  - "market analysis"
+  - "market intelligence"
+  - "price forecasting"
+  - "power markets"
+  - "natural gas"
+  - "optimisation"
+  - "optimization"
+  - "German"
+
+# Personal skills (scored separately, see weights)
+personal_skills:
+  - "leadership"
+  - "decision making"
+  - "visionary"
+  - "coaching"
+  - "strategic thinking"
+  - "communication"
+  - "presentation skills"
+  - "dealing with ambiguity"
+  - "entrepreneurial"
+  - "initiative"
 
 # Bonus (up to +5) when the description mentions these
 keywords:
-  - P&L
-  - profit and loss
-  - AI
-  - artificial intelligence
-  - international
-  - electrification
-  - energy-intensive
-  - industrial customers
-  - PPA
-  - flexibility
-  - data center
-  - BESS
-
-# 2) SENIORITY -----------------------------------------------------------------
-seniority:
-  - senior
-  - lead
-  - executive
-
-# 3) LOCATION --------------------------------------------------------------------
-# Finland (mainly Helsinki/Espoo), Copenhagen, Stockholm, Oslo; remote OK.
-# Finnish-language postings are included.
-locations:
-  - Finland
-  - Suomi
-  - FI
-  - Helsinki
-  - Espoo
-  - Vantaa
-  - Kauniainen
-  - Copenhagen
-  - København
-  - Stockholm
-  - Oslo
-  # Germany: main energy hubs
-  - Berlin
-  - Hamburg
-  - Düsseldorf
-  - Dusseldorf
-  - Essen
-  - Cologne
-  - Köln
-  - Munich
-  - München
-  - Frankfurt
-remote_ok: true
-
-# 4) MATCH TO YOUR CV --------------------------------------------------------------
-cv_skills:
-  # Energy transition & technologies
-  - energy transition
-  - Power-to-X
-  - PtX
-  - hydrogen
-  - electrolyzer
-  - electrolysis
-  - renewables
-  - renewable energy
-  - wind
-  - solar
-  - CCS
-  - carbon capture
-  - CDR
-  - carbon removal
-  - biogenic CO2
-  - decarbonization
-  - decarbonisation
-  - electrification
-  - battery storage
-  - BESS
-  - PPA
-  - data center
-  - data centre
-  # Commercial & business development
-  - business development
-  - commercialization
-  - commercialisation
-  - partnerships
-  - joint venture
-  - M&A
-  - strategy
-  - project portfolio
-  - project development
-  - FEED
-  - stakeholder engagement
-  - stakeholder management
-  # Markets, trading & risk
-  - energy trading
-  - commodities
-  - ETRM
-  - risk management
-  - hedging
-  - market analysis
-  - market intelligence
-  - price forecasting
-  - power markets
-  - natural gas
-  - optimisation
-  - optimization
-  # Languages
-  - German
+  - "P&L"
+  - "profit and loss"
+  - "AI"
+  - "artificial intelligence"
+  - "international"
+  - "electrification"
+  - "energy-intensive"
+  - "industrial customers"
+  - "PPA"
+  - "flexibility"
+  - "data center"
+  - "BESS"
 
 # CV text comes from the GitHub secret JOBFINDER_CV_TEXT
 cv_file: ""
 
-# 5) LINKEDIN SEARCH LINKS ------------------------------------------------------
+# 5) LINKEDIN SEARCH LINKS
 linkedin:
   enabled: true
-  location: "Finland"
+  location: "Finland, Helsinki, Germany"
   posted_within_days: 7
-  titles:                 # short list for the LinkedIn search
-    - strategy
-    - business development
-    - trading
-    - origination
-    - energy transition
-    - hydrogen
-    - decarbonisation
+  titles:
+    - "strategy"
+    - "business development"
+    - "trading"
+    - "origination"
+    - "energy transition"
+    - "hydrogen"
+    - "decarbonisation"
+    - "Head of"
+    - "Managing Director"
+    - "Director"
 
-# 6) COMPANY RATING ------------------------------------------------------------
-# Points added to a job's score based on the company's rating in the register.
+# 6) COMPANY RATING – points added for the rating in the register
 rating_bonus:
   A: 6
   B: 3
   C: 0
 
-# 7) OUTPUT ------------------------------------------------------------------------
+# 7) MATCH SCORE – weight of each part (rescaled to 0-100)
+weights:
+  title: 35
+  seniority: 30
+  professional: 30
+  personal: 21
+  cv_text: 10
+  keywords: 5
+
+# 8) OUTPUT
 min_score: 35
 new_days: 3
 max_jobs_per_company: 0
