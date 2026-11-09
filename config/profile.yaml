@@ -229,11 +229,11 @@ rating_bonus:
 
 # 7) MATCH SCORE – weight of each part (rescaled to 0-100)
 weights:
-  title: 35
-  seniority: 30
-  professional: 30
-  personal: 21
-  cv_text: 10
+  title: 23
+  seniority: 43
+  professional: 50
+  personal: 39
+  cv_text: 51
   keywords: 5
 
 # 8) OUTPUT
