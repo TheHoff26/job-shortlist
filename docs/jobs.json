@@ -1,7 +1,7 @@
 {
  "meta": {
-  "generated": "2026-11-08T05:32+00:00",
-  "total_matches": 17,
+  "generated": "2026-11-09T05:44+00:00",
+  "total_matches": 16,
   "new_matches": 1,
   "companies": [
    {
@@ -92,7 +92,7 @@
     "company": "Valmet",
     "ats": "workday",
     "ok": true,
-    "count": 12,
+    "count": 8,
     "error": "",
     "source": "https://valmet.wd103.myworkdayjobs.com/en-US/External",
     "careers_url": "https://valmet.com/careers",
@@ -152,8 +152,8 @@
     "company": "RWE Supply & Trading",
     "ats": "successfactors",
     "ok": true,
-    "count": 1,
-    "error": "",
+    "count": 0,
+    "error": "no matching open positions (or wrong id)",
     "source": "https://jobs.rwe.com",
     "careers_url": "https://jobs.rwe.com",
     "note": "",
@@ -260,8 +260,8 @@
     "company": "RWE",
     "ats": "successfactors",
     "ok": true,
-    "count": 1,
-    "error": "",
+    "count": 0,
+    "error": "no matching open positions (or wrong id)",
     "source": "https://jobs.rwe.com",
     "careers_url": "https://jobs.rwe.com",
     "note": "",
@@ -428,7 +428,7 @@
     "company": "Capalo AI",
     "ats": "teamtailor",
     "ok": true,
-    "count": 3,
+    "count": 2,
     "error": "",
     "source": "https://capaloai.teamtailor.com",
     "careers_url": "https://www.capalo.ai",
@@ -522,13 +522,13 @@
    },
    {
     "company": "Verne",
-    "ats": "linkedin",
+    "ats": "ashby",
     "ok": true,
-    "count": 0,
-    "error": "link only",
-    "source": "",
+    "count": 1,
+    "error": "",
+    "source": "verne",
     "careers_url": "https://verne.co",
-    "note": "no supported job system found",
+    "note": "",
     "rating": "A",
     "segment": "data_centers"
    },
@@ -940,12 +940,6 @@
    {
     "company": "Verbund",
     "url": "https://www.linkedin.com/jobs/search/?keywords=%22Verbund%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800",
-    "rating": "A",
-    "reason": "no supported job system found"
-   },
-   {
-    "company": "Verne",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Verne%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22%29&location=Finland&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "A",
     "reason": "no supported job system found"
    },
@@ -1734,60 +1728,6 @@
    "first_seen": "2026-11-02",
    "is_new": false,
    "key": "smartrecruiters:Statkraft:744000153729979"
-  },
-  {
-   "company": "Valmet",
-   "ats": "workday",
-   "job_id": "R60307",
-   "title": "Director, Service Sales",
-   "url": "https://valmet.wd103.myworkdayjobs.com/External/job/Vantaa/Director--Service-Sales_R60307-1",
-   "location": "Vantaa",
-   "department": "",
-   "posted": "2026-10-26",
-   "workplace": "",
-   "employment_type": "Full time",
-   "salary": "",
-   "deadline": "2026-11-09",
-   "rating": "C",
-   "segment": "oem",
-   "segments_secondary": [],
-   "summary": "You are a commercially driven and customer-focused leader with a curious mindset and a passion for continuous learning. You quickly grasp new concepts, adapt to changing business environments, and turn insights into actions that create value for customers and the business.",
-   "responsibilities": [
-    "Take accountability – Act with ownership, set clear expectations, and follow through",
-    "Lead with courage – Champion change, try bold ideas, and learn quickly",
-    "Build on trust – Listen to understand, be open, and create psychological safety",
-    "Collaborate for growth – Work across boundaries, value diverse perspectives, and focus on customer value"
-   ],
-   "criteria": [
-    "With our market-leading expertise, products and services we are committed to bring our customer's business forward.",
-    "Support local sales organizations by providing service sales expertise, allowing greater focus on additional customer opportunities.",
-    "Bachelor’s or Master’s degree in a relevant field",
-    "+7 years’ experience in equipment sales, service sales, or a combination of both.",
-    "Experience in leading, coaching and developing teams and organizations",
-    "Good understanding of process industries, plant operations, reliability, maintenance and safety requirements."
-   ],
-   "nice_to_have": [],
-   "seniority": "executive",
-   "years_experience": "7+ years",
-   "languages": [],
-   "education": "Master's (or equivalent)",
-   "skills_matched": [
-    "stakeholder management"
-   ],
-   "personal_matched": [],
-   "score": 72,
-   "reasons": [
-    "Title matches “director”",
-    "Seniority: executive ✓",
-    "Professional skills 1/48: stakeholder management",
-    "CV text similarity 24%",
-    "Keywords: international",
-    "Location: Vantaa"
-   ],
-   "deadline_source": "board",
-   "first_seen": "2026-10-30",
-   "is_new": false,
-   "key": "workday:Valmet:R60307"
   },
   {
    "company": "OX2",
