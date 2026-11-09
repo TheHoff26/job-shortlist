@@ -1,8 +1,8 @@
 {
  "meta": {
-  "generated": "2026-11-09T08:23+00:00",
-  "total_matches": 18,
-  "new_matches": 3,
+  "generated": "2026-11-09T11:35+00:00",
+  "total_matches": 17,
+  "new_matches": 2,
   "companies": [
    {
     "company": "Fortum",
@@ -313,7 +313,7 @@
     "source": "",
     "careers_url": "https://jobs.eon.com",
     "note": "own career site, not supported",
-    "rating": "C",
+    "rating": "B",
     "segment": "utilities"
    },
    {
@@ -397,7 +397,7 @@
     "source": "",
     "careers_url": "https://cloudberry.no",
     "note": "name guess rejected (unverified)",
-    "rating": "A",
+    "rating": "B",
     "segment": "developers"
    },
    {
@@ -668,7 +668,7 @@
     "company": "Ardian",
     "ats": "workday",
     "ok": true,
-    "count": 6,
+    "count": 7,
     "error": "",
     "source": "https://ardian.wd103.myworkdayjobs.com/ArdianCareers",
     "careers_url": "https://www.ardian.com",
@@ -692,8 +692,8 @@
     "company": "Nordea",
     "ats": "successfactors",
     "ok": true,
-    "count": 0,
-    "error": "no matching open positions (or wrong id)",
+    "count": 1,
+    "error": "",
     "source": "https://careers.nordea.com",
     "careers_url": "https://careers.nordea.com",
     "note": "",
@@ -872,12 +872,6 @@
   "repo": "TheHoff26/job-shortlist",
   "linkedin": [
    {
-    "company": "Cloudberry Clean Energy",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Cloudberry+Clean+Energy%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
-    "rating": "A",
-    "reason": "name guess rejected (unverified)"
-   },
-   {
     "company": "Copenhagen Infrastructure Partners",
     "url": "https://www.linkedin.com/jobs/search/?keywords=%22Copenhagen+Infrastructure+Partners%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "A",
@@ -944,10 +938,22 @@
     "reason": "no supported job system found"
    },
    {
+    "company": "Cloudberry Clean Energy",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Cloudberry+Clean+Energy%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "rating": "B",
+    "reason": "name guess rejected (unverified)"
+   },
+   {
     "company": "DNB",
     "url": "https://www.linkedin.com/jobs/search/?keywords=%22DNB%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
     "reason": "name guess rejected (other company)"
+   },
+   {
+    "company": "E.ON",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22E.ON%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "rating": "B",
+    "reason": "own career site, not supported"
    },
    {
     "company": "Elenia",
@@ -1056,12 +1062,6 @@
     "url": "https://www.linkedin.com/jobs/search/?keywords=%22Caruna%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "C",
     "reason": "no supported job system found"
-   },
-   {
-    "company": "E.ON",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22E.ON%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
-    "rating": "C",
-    "reason": "own career site, not supported"
    },
    {
     "company": "Flower",
@@ -1238,6 +1238,75 @@
  },
  "jobs": [
   {
+   "company": "Ingrid Capacity",
+   "ats": "teamtailor",
+   "job_id": "8053254",
+   "title": "Quantitative Power Trader",
+   "url": "https://careers.ingridcapacity.com/jobs/8053254-quantitative-power-trader",
+   "location": "Stockholm, Sweden",
+   "department": "Tech",
+   "posted": "2026-07-10",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "developers",
+   "segments_secondary": [
+    "trading"
+   ],
+   "summary": "As Quantitative Power Trader, you’ll own the intraday trading strategies at the heart of Ingrid’s BESS and renewable portfolio — building the arbitrage and proprietary strategies that turn market volatility into revenue. You’ll design, build, and refine the models and algorithms behind them, working hand-in-hand with…",
+   "responsibilities": [
+    "Design, backtest, and continuously improve intraday trading algorithms — arbitrage and proprietary strategies — applying…",
+    "Execute trades with discipline and strong market feel while adhering to risk limits and governance frameworks.",
+    "Build and maintain quantitative models for price forecasting, degradation-adjusted cycling economics, and cross-market arbitrage (ancillary…",
+    "Monitor the performance of Ingrid’s automated trading platform, pinpointing where live results deviate from the theoretical optimum and…"
+   ],
+   "criteria": [
+    "2–5 years of experience in a Data Scientist, Quantitative, or similar role within the energy sector, with direct exposure to European intraday power markets…",
+    "Strong grasp of forecasting, optimization, and pricing across ancillary, day-ahead, and intraday markets, with the intraday market as your core focus.",
+    "Familiarity with market design and regulatory frameworks, plus a sharp feel for power fundamentals, volatility, and market dynamics.",
+    "Strong programming capability (Python required; SQL and experience with data pipelines or model deployment a plus).",
+    "Comfortable working with large, complex datasets, with the analytical rigor to match.",
+    "Advanced degree (MSc or PhD) in a quantitative field such as Engineering, Applied Mathematics, Physics, or similar."
+   ],
+   "nice_to_have": [],
+   "seniority": "mid",
+   "years_experience": "2–5 years",
+   "languages": [],
+   "education": "PhD (or equivalent)",
+   "skills_matched": [
+    "energy transition",
+    "renewable energy",
+    "BESS",
+    "strategy",
+    "price forecasting",
+    "power markets",
+    "optimization"
+   ],
+   "personal_matched": [
+    "leadership",
+    "strategic thinking",
+    "communication",
+    "initiative"
+   ],
+   "score": 93,
+   "reasons": [
+    "Title matches “trader”",
+    "Seniority: mid (close to your target)",
+    "Professional skills 7/48: energy transition, renewable energy, BESS, strategy, price forecasting, power markets, optimization",
+    "Personal skills 4/10: leadership, strategic thinking, communication, initiative",
+    "CV text similarity 31%",
+    "Keywords: BESS",
+    "Location: Stockholm, Sweden",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-02",
+   "is_new": false,
+   "key": "teamtailor:Ingrid Capacity:8053254"
+  },
+  {
    "company": "Alight",
    "ats": "teamtailor",
    "job_id": "8610267",
@@ -1286,7 +1355,7 @@
     "coaching",
     "entrepreneurial"
    ],
-   "score": 96,
+   "score": 91,
    "reasons": [
     "Title matches “head of”",
     "Seniority: executive ✓",
@@ -1371,75 +1440,6 @@
    "key": "smartrecruiters:Statkraft:744000158266779"
   },
   {
-   "company": "Ingrid Capacity",
-   "ats": "teamtailor",
-   "job_id": "8053254",
-   "title": "Quantitative Power Trader",
-   "url": "https://careers.ingridcapacity.com/jobs/8053254-quantitative-power-trader",
-   "location": "Stockholm, Sweden",
-   "department": "Tech",
-   "posted": "2026-07-10",
-   "workplace": "",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "",
-   "rating": "A",
-   "segment": "developers",
-   "segments_secondary": [
-    "trading"
-   ],
-   "summary": "As Quantitative Power Trader, you’ll own the intraday trading strategies at the heart of Ingrid’s BESS and renewable portfolio — building the arbitrage and proprietary strategies that turn market volatility into revenue. You’ll design, build, and refine the models and algorithms behind them, working hand-in-hand with…",
-   "responsibilities": [
-    "Design, backtest, and continuously improve intraday trading algorithms — arbitrage and proprietary strategies — applying…",
-    "Execute trades with discipline and strong market feel while adhering to risk limits and governance frameworks.",
-    "Build and maintain quantitative models for price forecasting, degradation-adjusted cycling economics, and cross-market arbitrage (ancillary…",
-    "Monitor the performance of Ingrid’s automated trading platform, pinpointing where live results deviate from the theoretical optimum and…"
-   ],
-   "criteria": [
-    "2–5 years of experience in a Data Scientist, Quantitative, or similar role within the energy sector, with direct exposure to European intraday power markets…",
-    "Strong grasp of forecasting, optimization, and pricing across ancillary, day-ahead, and intraday markets, with the intraday market as your core focus.",
-    "Familiarity with market design and regulatory frameworks, plus a sharp feel for power fundamentals, volatility, and market dynamics.",
-    "Strong programming capability (Python required; SQL and experience with data pipelines or model deployment a plus).",
-    "Comfortable working with large, complex datasets, with the analytical rigor to match.",
-    "Advanced degree (MSc or PhD) in a quantitative field such as Engineering, Applied Mathematics, Physics, or similar."
-   ],
-   "nice_to_have": [],
-   "seniority": "mid",
-   "years_experience": "2–5 years",
-   "languages": [],
-   "education": "PhD (or equivalent)",
-   "skills_matched": [
-    "energy transition",
-    "renewable energy",
-    "BESS",
-    "strategy",
-    "price forecasting",
-    "power markets",
-    "optimization"
-   ],
-   "personal_matched": [
-    "leadership",
-    "strategic thinking",
-    "communication",
-    "initiative"
-   ],
-   "score": 90,
-   "reasons": [
-    "Title matches “trader”",
-    "Seniority: mid (close to your target)",
-    "Professional skills 7/48: energy transition, renewable energy, BESS, strategy, price forecasting, power markets, optimization",
-    "Personal skills 4/10: leadership, strategic thinking, communication, initiative",
-    "CV text similarity 31%",
-    "Keywords: BESS",
-    "Location: Stockholm, Sweden",
-    "Company rated A: +6"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-02",
-   "is_new": false,
-   "key": "teamtailor:Ingrid Capacity:8053254"
-  },
-  {
    "company": "Statkraft",
    "ats": "smartrecruiters",
    "job_id": "744000155280390",
@@ -1486,7 +1486,7 @@
    "personal_matched": [
     "communication"
    ],
-   "score": 86,
+   "score": 84,
    "reasons": [
     "Title matches “trading”",
     "Seniority: lead ✓",
@@ -1550,7 +1550,7 @@
    "personal_matched": [
     "communication"
    ],
-   "score": 86,
+   "score": 80,
    "reasons": [
     "Title matches “procurement”",
     "Seniority: senior ✓",
@@ -1619,7 +1619,7 @@
    "personal_matched": [
     "communication"
    ],
-   "score": 85,
+   "score": 79,
    "reasons": [
     "Title matches “procurement”",
     "Seniority: senior ✓",
@@ -1680,7 +1680,7 @@
    "personal_matched": [
     "communication"
    ],
-   "score": 85,
+   "score": 79,
    "reasons": [
     "Title matches “procurement”",
     "Seniority: senior ✓",
@@ -1695,199 +1695,6 @@
    "first_seen": "2026-11-02",
    "is_new": false,
    "key": "teamtailor:atNorth:8485560"
-  },
-  {
-   "company": "Statkraft",
-   "ats": "smartrecruiters",
-   "job_id": "744000129203437",
-   "title": "Senior Intraday Trader (m/f/d) - Proprietary Short-Term Power Trading ",
-   "url": "https://jobs.smartrecruiters.com/Statkraft1/744000129203437-senior-intraday-trader-m-f-d-proprietary-short-term-power-trading-",
-   "location": "Düsseldorf, North Rhine-Westphalia, Germany",
-   "department": "Other",
-   "posted": "2026-05-29",
-   "workplace": "",
-   "employment_type": "Full-time",
-   "salary": "",
-   "deadline": "",
-   "rating": "A",
-   "segment": "utilities",
-   "segments_secondary": [
-    "trading"
-   ],
-   "summary": "As Senior Intraday Trader, you will play a key role in strengthening and further developing our proprietary short-term trading setup in Germany. The role combines hands-on proprietary trading in the German day-ahead and intraday power markets with a meaningful contribution to how this trading activity is further…",
-   "responsibilities": [
-    "Actively trade proprietary day-ahead and intraday positions in the German power market with a high degree of ownership, judgement, and…",
-    "Help strengthen and further develop discretionary trading in the German short-term power markets, including manual trading decisions and…",
-    "Contribute to the development, monitoring, and refinement of systematic strategies and data-driven trading approaches for the German market.",
-    "Identify trading opportunities across relevant short-term market timeframes and market constellations, and translate them into concrete…"
-   ],
-   "criteria": [
-    "We are looking for a highly capable trader with the experience and skills to help strengthen this setup.",
-    "In particular, we would value the following:",
-    "Proven hands-on track record in proprietary day-ahead and intraday power trading, ideally with deep exposure to the German power market.",
-    "Strong understanding of short-term market behaviour, trading mechanics, and discretionary decision-making in fast-moving environments.",
-    "Strong analytical and quantitative skills, with the ability to contribute across both systematic and discretionary trading contexts.",
-    "Strong coding skills, ideally in Python, and confidence using data and code to analyse markets, monitor performance, and improve trading approaches."
-   ],
-   "nice_to_have": [],
-   "seniority": "senior",
-   "years_experience": "",
-   "languages": [
-    "English",
-    "German"
-   ],
-   "education": "",
-   "skills_matched": [
-    "market analysis",
-    "power markets",
-    "German"
-   ],
-   "personal_matched": [
-    "communication"
-   ],
-   "score": 80,
-   "reasons": [
-    "Title matches “trading”",
-    "Seniority: senior ✓",
-    "Professional skills 3/48: market analysis, power markets, German",
-    "Personal skills 1/10: communication",
-    "CV text similarity 20%",
-    "Keywords: flexibility",
-    "Location: Düsseldorf, North Rhine-Westphalia, Germany",
-    "Company rated A: +6"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-02",
-   "is_new": false,
-   "key": "smartrecruiters:Statkraft:744000129203437"
-  },
-  {
-   "company": "atNorth",
-   "ats": "teamtailor",
-   "job_id": "8232744",
-   "title": "Operations Commercial Manager, Kouvola",
-   "url": "https://careers.atnorth.com/jobs/8232744-operations-commercial-manager-kouvola",
-   "location": "Ummeljoki, Finland",
-   "department": "Operations",
-   "posted": "2026-08-18",
-   "workplace": "",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "",
-   "rating": "A",
-   "segment": "data_centers",
-   "segments_secondary": [
-    "portfolio",
-    "energy_intensive"
-   ],
-   "summary": "With sustainability at our core, our data centers run on renewable energy and are designed according to circular economy principles. Through innovative design, power efficiency, and intelligent operations, we deliver reliable, secure, and high-performance infrastructure.",
-   "responsibilities": [
-    "Translate customer service agreements into operational commercial baselines and support teams in understanding contractual obligations.",
-    "Monitor commercial performance, operational costs, and margin development across service delivery operations.",
-    "Identify, assess, and escalate commercial risks related to scope, cost, utilities, SLA performance, and service delivery.",
-    "Support budgeting, forecasting, financial planning, and site-level commercial performance reviews."
-   ],
-   "criteria": [
-    "Bachelor's or Master's degree in Business Administration, Economics, Engineering, Facility Management, or a related field.",
-    "Minimum 8 years of experience in commercial management, contract management, service delivery, infrastructure services, or operational environments.",
-    "Strong understanding of contract governance, commercial risk management, and SLA-based service delivery.",
-    "Experience monitoring operational costs, identifying margin exposure, and supporting commercial decision-making.",
-    "Ability to translate contractual requirements into practical operational guidance for multiple stakeholders.",
-    "Experience working with vendors, subcontractors, and customer-facing commercial governance processes."
-   ],
-   "nice_to_have": [],
-   "seniority": "lead",
-   "years_experience": "8+ years",
-   "languages": [
-    "English",
-    "Finnish (plus)"
-   ],
-   "education": "Master's",
-   "skills_matched": [
-    "renewable energy",
-    "data center",
-    "risk management"
-   ],
-   "personal_matched": [],
-   "score": 78,
-   "reasons": [
-    "Title matches “commercial”",
-    "Seniority: lead ✓",
-    "Professional skills 3/48: renewable energy, data center, risk management",
-    "Personal skills 0/10",
-    "CV text similarity 23%",
-    "Keywords: international, data center",
-    "Location: Ummeljoki, Finland",
-    "Company rated A: +6"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-02",
-   "is_new": false,
-   "key": "teamtailor:atNorth:8232744"
-  },
-  {
-   "company": "atNorth",
-   "ats": "teamtailor",
-   "job_id": "7778447",
-   "title": "Procurement Manager (OFCI)",
-   "url": "https://careers.atnorth.com/jobs/7778447-procurement-manager-ofci",
-   "location": "Oslo, Norway; Skovlunde, Denmark",
-   "department": "Finance",
-   "posted": "2026-05-22",
-   "workplace": "",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "",
-   "rating": "A",
-   "segment": "data_centers",
-   "segments_secondary": [
-    "portfolio",
-    "energy_intensive"
-   ],
-   "summary": "At atNorth, we believe that world-class technology is only possible through a world-class culture. We operate with a people-first mentality, where technical excellence and human wellbeing go hand in hand.",
-   "responsibilities": [
-    "Lead multiple end-to-end RFQ/RFP processes, including framework agreements and competitions with preferred suppliers.",
-    "Prepare and issue tender documentation, manage clarifications, and evaluate complex bids.",
-    "Conduct strategic negotiations with general contractors and key technology suppliers.",
-    "Ensure compliance with internal policies, governance requirements, and international standards."
-   ],
-   "criteria": [
-    "5+ years of experience in sourcing or procurement, preferably within data centers, construction, or heavy infrastructure.",
-    "Degree in Civil Engineering, Business Administration, Law, or a related field (Master’s preferred).",
-    "Technical understanding of data center technologies, such as cooling and reserve power infrastructure.",
-    "Proven track record in complex negotiations with OFCI suppliers.",
-    "Analytical mindset with the ability to interpret data and make firm, value-based decisions.",
-    "Fluent in English with excellent collaboration skills; proficiency in a Nordic language is an advantage."
-   ],
-   "nice_to_have": [],
-   "seniority": "senior",
-   "years_experience": "5+ years",
-   "languages": [
-    "English"
-   ],
-   "education": "Master's",
-   "skills_matched": [
-    "data center",
-    "partnerships"
-   ],
-   "personal_matched": [
-    "initiative"
-   ],
-   "score": 77,
-   "reasons": [
-    "Title matches “procurement”",
-    "Seniority: senior ✓",
-    "Professional skills 2/48: data center, partnerships",
-    "Personal skills 1/10: initiative",
-    "CV text similarity 16%",
-    "Keywords: international, data center",
-    "Location: Oslo, Norway; Skovlunde, Denmark",
-    "Company rated A: +6"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-02",
-   "is_new": false,
-   "key": "teamtailor:atNorth:7778447"
   },
   {
    "company": "Ingrid Capacity",
@@ -1956,6 +1763,135 @@
   {
    "company": "Statkraft",
    "ats": "smartrecruiters",
+   "job_id": "744000129203437",
+   "title": "Senior Intraday Trader (m/f/d) - Proprietary Short-Term Power Trading ",
+   "url": "https://jobs.smartrecruiters.com/Statkraft1/744000129203437-senior-intraday-trader-m-f-d-proprietary-short-term-power-trading-",
+   "location": "Düsseldorf, North Rhine-Westphalia, Germany",
+   "department": "Other",
+   "posted": "2026-05-29",
+   "workplace": "",
+   "employment_type": "Full-time",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "utilities",
+   "segments_secondary": [
+    "trading"
+   ],
+   "summary": "As Senior Intraday Trader, you will play a key role in strengthening and further developing our proprietary short-term trading setup in Germany. The role combines hands-on proprietary trading in the German day-ahead and intraday power markets with a meaningful contribution to how this trading activity is further…",
+   "responsibilities": [
+    "Actively trade proprietary day-ahead and intraday positions in the German power market with a high degree of ownership, judgement, and…",
+    "Help strengthen and further develop discretionary trading in the German short-term power markets, including manual trading decisions and…",
+    "Contribute to the development, monitoring, and refinement of systematic strategies and data-driven trading approaches for the German market.",
+    "Identify trading opportunities across relevant short-term market timeframes and market constellations, and translate them into concrete…"
+   ],
+   "criteria": [
+    "We are looking for a highly capable trader with the experience and skills to help strengthen this setup.",
+    "In particular, we would value the following:",
+    "Proven hands-on track record in proprietary day-ahead and intraday power trading, ideally with deep exposure to the German power market.",
+    "Strong understanding of short-term market behaviour, trading mechanics, and discretionary decision-making in fast-moving environments.",
+    "Strong analytical and quantitative skills, with the ability to contribute across both systematic and discretionary trading contexts.",
+    "Strong coding skills, ideally in Python, and confidence using data and code to analyse markets, monitor performance, and improve trading approaches."
+   ],
+   "nice_to_have": [],
+   "seniority": "senior",
+   "years_experience": "",
+   "languages": [
+    "English",
+    "German"
+   ],
+   "education": "",
+   "skills_matched": [
+    "market analysis",
+    "power markets",
+    "German"
+   ],
+   "personal_matched": [
+    "communication"
+   ],
+   "score": 75,
+   "reasons": [
+    "Title matches “trading”",
+    "Seniority: senior ✓",
+    "Professional skills 3/48: market analysis, power markets, German",
+    "Personal skills 1/10: communication",
+    "CV text similarity 20%",
+    "Keywords: flexibility",
+    "Location: Düsseldorf, North Rhine-Westphalia, Germany",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-02",
+   "is_new": false,
+   "key": "smartrecruiters:Statkraft:744000129203437"
+  },
+  {
+   "company": "atNorth",
+   "ats": "teamtailor",
+   "job_id": "8232744",
+   "title": "Operations Commercial Manager, Kouvola",
+   "url": "https://careers.atnorth.com/jobs/8232744-operations-commercial-manager-kouvola",
+   "location": "Ummeljoki, Finland",
+   "department": "Operations",
+   "posted": "2026-08-18",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "data_centers",
+   "segments_secondary": [
+    "portfolio",
+    "energy_intensive"
+   ],
+   "summary": "With sustainability at our core, our data centers run on renewable energy and are designed according to circular economy principles. Through innovative design, power efficiency, and intelligent operations, we deliver reliable, secure, and high-performance infrastructure.",
+   "responsibilities": [
+    "Translate customer service agreements into operational commercial baselines and support teams in understanding contractual obligations.",
+    "Monitor commercial performance, operational costs, and margin development across service delivery operations.",
+    "Identify, assess, and escalate commercial risks related to scope, cost, utilities, SLA performance, and service delivery.",
+    "Support budgeting, forecasting, financial planning, and site-level commercial performance reviews."
+   ],
+   "criteria": [
+    "Bachelor's or Master's degree in Business Administration, Economics, Engineering, Facility Management, or a related field.",
+    "Minimum 8 years of experience in commercial management, contract management, service delivery, infrastructure services, or operational environments.",
+    "Strong understanding of contract governance, commercial risk management, and SLA-based service delivery.",
+    "Experience monitoring operational costs, identifying margin exposure, and supporting commercial decision-making.",
+    "Ability to translate contractual requirements into practical operational guidance for multiple stakeholders.",
+    "Experience working with vendors, subcontractors, and customer-facing commercial governance processes."
+   ],
+   "nice_to_have": [],
+   "seniority": "lead",
+   "years_experience": "8+ years",
+   "languages": [
+    "English",
+    "Finnish (plus)"
+   ],
+   "education": "Master's",
+   "skills_matched": [
+    "renewable energy",
+    "data center",
+    "risk management"
+   ],
+   "personal_matched": [],
+   "score": 73,
+   "reasons": [
+    "Title matches “commercial”",
+    "Seniority: lead ✓",
+    "Professional skills 3/48: renewable energy, data center, risk management",
+    "Personal skills 0/10",
+    "CV text similarity 23%",
+    "Keywords: international, data center",
+    "Location: Ummeljoki, Finland",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-02",
+   "is_new": false,
+   "key": "teamtailor:atNorth:8232744"
+  },
+  {
+   "company": "Statkraft",
+   "ats": "smartrecruiters",
    "job_id": "744000153729979",
    "title": "Talent Management Specialist, Origination",
    "url": "https://jobs.smartrecruiters.com/Statkraft1/744000153729979-talent-management-specialist-origination",
@@ -2004,7 +1940,7 @@
    "personal_matched": [
     "communication"
    ],
-   "score": 73,
+   "score": 72,
    "reasons": [
     "Title matches “origination”",
     "Seniority: mid (close to your target)",
@@ -2018,6 +1954,70 @@
    "first_seen": "2026-11-02",
    "is_new": false,
    "key": "smartrecruiters:Statkraft:744000153729979"
+  },
+  {
+   "company": "atNorth",
+   "ats": "teamtailor",
+   "job_id": "7778447",
+   "title": "Procurement Manager (OFCI)",
+   "url": "https://careers.atnorth.com/jobs/7778447-procurement-manager-ofci",
+   "location": "Oslo, Norway; Skovlunde, Denmark",
+   "department": "Finance",
+   "posted": "2026-05-22",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "data_centers",
+   "segments_secondary": [
+    "portfolio",
+    "energy_intensive"
+   ],
+   "summary": "At atNorth, we believe that world-class technology is only possible through a world-class culture. We operate with a people-first mentality, where technical excellence and human wellbeing go hand in hand.",
+   "responsibilities": [
+    "Lead multiple end-to-end RFQ/RFP processes, including framework agreements and competitions with preferred suppliers.",
+    "Prepare and issue tender documentation, manage clarifications, and evaluate complex bids.",
+    "Conduct strategic negotiations with general contractors and key technology suppliers.",
+    "Ensure compliance with internal policies, governance requirements, and international standards."
+   ],
+   "criteria": [
+    "5+ years of experience in sourcing or procurement, preferably within data centers, construction, or heavy infrastructure.",
+    "Degree in Civil Engineering, Business Administration, Law, or a related field (Master’s preferred).",
+    "Technical understanding of data center technologies, such as cooling and reserve power infrastructure.",
+    "Proven track record in complex negotiations with OFCI suppliers.",
+    "Analytical mindset with the ability to interpret data and make firm, value-based decisions.",
+    "Fluent in English with excellent collaboration skills; proficiency in a Nordic language is an advantage."
+   ],
+   "nice_to_have": [],
+   "seniority": "senior",
+   "years_experience": "5+ years",
+   "languages": [
+    "English"
+   ],
+   "education": "Master's",
+   "skills_matched": [
+    "data center",
+    "partnerships"
+   ],
+   "personal_matched": [
+    "initiative"
+   ],
+   "score": 69,
+   "reasons": [
+    "Title matches “procurement”",
+    "Seniority: senior ✓",
+    "Professional skills 2/48: data center, partnerships",
+    "Personal skills 1/10: initiative",
+    "CV text similarity 16%",
+    "Keywords: international, data center",
+    "Location: Oslo, Norway; Skovlunde, Denmark",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-02",
+   "is_new": false,
+   "key": "teamtailor:atNorth:7778447"
   },
   {
    "company": "OX2",
@@ -2070,7 +2070,7 @@
    "personal_matched": [
     "entrepreneurial"
    ],
-   "score": 59,
+   "score": 60,
    "reasons": [
     "Title matches “investment”",
     "Seniority: junior (outside your target)",
@@ -2198,7 +2198,7 @@
     "communication",
     "entrepreneurial"
    ],
-   "score": 55,
+   "score": 54,
    "reasons": [
     "Title matches “VP”",
     "Seniority: executive ✓",
@@ -2257,7 +2257,7 @@
    "personal_matched": [
     "communication"
    ],
-   "score": 54,
+   "score": 48,
    "reasons": [
     "Title matches “procurement”",
     "Seniority: mid (close to your target)",
@@ -2320,7 +2320,7 @@
     "optimization"
    ],
    "personal_matched": [],
-   "score": 46,
+   "score": 38,
    "reasons": [
     "Title matches “infrastructure”",
     "Seniority: senior ✓",
@@ -2336,65 +2336,6 @@
    "first_seen": "2026-11-02",
    "is_new": false,
    "key": "teamtailor:Capalo AI:8111587"
-  },
-  {
-   "company": "Wärtsilä",
-   "ats": "successfactors",
-   "job_id": "1445928133",
-   "title": "Field Service / Commissioning Engineer - Ship Electrification Solutions (m/w/d)",
-   "url": "https://careers.wartsila.com/job/Hamburg-Field-Service-Commissioning-Engineer-Ship-Electrification-Solutions-%28mwd%29/1445928133/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS",
-   "location": "Hamburg, DE",
-   "department": "",
-   "posted": "2026-11-07",
-   "workplace": "",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "",
-   "rating": "B",
-   "segment": "oem",
-   "segments_secondary": [
-    "energy_services"
-   ],
-   "summary": "As Field Service / Commissioning Engineer - SES your work will focus on these responsibilities:",
-   "responsibilities": [
-    "Commissioning-, repair- and warranty works in the areas of electrical power generation, power distribution & electrical shore connection…",
-    "System testing and analysis on equipment and systems on site",
-    "Testing and acceptance of installation as well as the necessary adjustments",
-    "Supervision of sea trials, training of ship's crews"
-   ],
-   "criteria": [
-    "A Masters or Bachelor's degree in a relevant area (Electrical Engineering or Ships Operational Technology with strong focus on electrical part), or equivalent",
-    "Professional experience, especially in the fields of power generations plants, control and converter technology, medium-voltage systems",
-    "Structured and practical way of working with hands-on attitude"
-   ],
-   "nice_to_have": [],
-   "seniority": "",
-   "years_experience": "",
-   "languages": [],
-   "education": "Master's (or equivalent)",
-   "skills_matched": [
-    "decarbonisation",
-    "electrification"
-   ],
-   "personal_matched": [
-    "initiative"
-   ],
-   "score": 36,
-   "reasons": [
-    "Title matches “electrification”",
-    "Seniority: not stated",
-    "Professional skills 2/48: decarbonisation, electrification",
-    "Personal skills 1/10: initiative",
-    "CV text similarity 15%",
-    "Keywords: electrification",
-    "Location: Hamburg, DE",
-    "Lower-priority role (“engineer”): −25",
-    "Company rated B: +3"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-07",
-   "is_new": true,
-   "key": "successfactors:Wärtsilä:1445928133"
   }
  ]
 }
