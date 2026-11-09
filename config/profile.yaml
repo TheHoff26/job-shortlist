@@ -52,6 +52,8 @@ titles:
   - "head of"
   - "director"
   - "johtaja"
+  - "sustainability"
+  - "Leader"
 require_title_match: true
 
 # Always dropped
@@ -101,7 +103,6 @@ locations:
   - "Helsinki"
   - "Espoo"
   - "Vantaa"
-  - "Kauniainen"
   - "Copenhagen"
   - "København"
   - "Stockholm"
@@ -120,6 +121,12 @@ locations:
   - "Denmark"
   - "Vienna"
   - "Wien"
+  - "Reykjavik"
+  - "Sweden"
+  - "Norway"
+  - "Netherlands"
+  - "United Kingdom"
+  - "Switzerland"
 remote_ok: true
 
 # 4) SKILLS – professional skills found in a posting raise the score
@@ -172,6 +179,7 @@ cv_skills:
   - "optimisation"
   - "optimization"
   - "German"
+  - "english"
 
 # Personal skills (scored separately, see weights)
 personal_skills:
@@ -220,6 +228,8 @@ linkedin:
     - "Head of"
     - "Managing Director"
     - "Director"
+    - "Vice President"
+    - "VP"
 
 # 6) COMPANY RATING – points added for the rating in the register
 rating_bonus:
