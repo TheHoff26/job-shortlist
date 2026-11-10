@@ -1,14 +1,14 @@
 {
  "meta": {
-  "generated": "2026-11-09T11:35+00:00",
-  "total_matches": 17,
-  "new_matches": 2,
+  "generated": "2026-11-10T05:36+00:00",
+  "total_matches": 21,
+  "new_matches": 6,
   "companies": [
    {
     "company": "Fortum",
     "ats": "successfactors",
     "ok": true,
-    "count": 1,
+    "count": 3,
     "error": "",
     "source": "https://jobs.fortum.com",
     "careers_url": "https://www.fortum.com/careers",
@@ -80,8 +80,8 @@
     "company": "Metsä Group",
     "ats": "workday",
     "ok": true,
-    "count": 0,
-    "error": "no matching open positions (or wrong id)",
+    "count": 2,
+    "error": "",
     "source": "https://metsagroup.wd103.myworkdayjobs.com/en-US/MetsaGroup_Careers",
     "careers_url": "https://metsagroup.com/careers/work-with-us/open-jobs",
     "note": "",
@@ -104,8 +104,8 @@
     "company": "Metso",
     "ats": "successfactors",
     "ok": true,
-    "count": 0,
-    "error": "no matching open positions (or wrong id)",
+    "count": 1,
+    "error": "",
     "source": "https://careers.metso.com",
     "careers_url": "https://www.metso.com/careers",
     "note": "",
@@ -236,7 +236,7 @@
     "company": "Statkraft",
     "ats": "smartrecruiters",
     "ok": true,
-    "count": 12,
+    "count": 11,
     "error": "",
     "source": "Statkraft1",
     "careers_url": "https://careers.smartrecruiters.com/Statkraft1",
@@ -668,7 +668,7 @@
     "company": "Ardian",
     "ats": "workday",
     "ok": true,
-    "count": 7,
+    "count": 11,
     "error": "",
     "source": "https://ardian.wd103.myworkdayjobs.com/ArdianCareers",
     "careers_url": "https://www.ardian.com",
@@ -812,7 +812,7 @@
     "company": "OMV",
     "ats": "successfactors",
     "ok": true,
-    "count": 2,
+    "count": 3,
     "error": "",
     "source": "https://careers.omv.com",
     "careers_url": "https://careers.omv.com/",
@@ -873,229 +873,229 @@
   "linkedin": [
    {
     "company": "Copenhagen Infrastructure Partners",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Copenhagen+Infrastructure+Partners%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Copenhagen+Infrastructure+Partners%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "A",
     "reason": "2026-11-02, set manually"
    },
    {
     "company": "Danske Commodities",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Danske+Commodities%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Danske+Commodities%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "A",
     "reason": "no supported job system found"
    },
    {
     "company": "Helen",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Helen%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Helen%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "A",
     "reason": "no supported job system found"
    },
    {
     "company": "Hy24",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Hy24%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Hy24%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "A",
     "reason": "no supported job system found"
    },
    {
     "company": "Ilmatar Energy",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Ilmatar+Energy%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Ilmatar+Energy%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "A",
     "reason": "no supported job system found"
    },
    {
     "company": "Polarnode",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Polarnode%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Polarnode%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "A",
     "reason": "no supported job system found"
    },
    {
     "company": "Siemens Energy",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Siemens+Energy%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Siemens+Energy%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "A",
     "reason": "no supported job system found"
    },
    {
     "company": "St1",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22St1%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22St1%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "A",
     "reason": "2026-11-02, set manually"
    },
    {
     "company": "Uniper",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Uniper%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Uniper%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "A",
     "reason": "no supported job system found"
    },
    {
     "company": "Vattenfall",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Vattenfall%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Vattenfall%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "A",
     "reason": "own career site, not supported"
    },
    {
     "company": "Verbund",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Verbund%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Verbund%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "A",
     "reason": "no supported job system found"
    },
    {
     "company": "Cloudberry Clean Energy",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Cloudberry+Clean+Energy%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Cloudberry+Clean+Energy%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
     "reason": "name guess rejected (unverified)"
    },
    {
     "company": "DNB",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22DNB%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22DNB%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
     "reason": "name guess rejected (other company)"
    },
    {
     "company": "E.ON",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22E.ON%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22E.ON%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
     "reason": "own career site, not supported"
    },
    {
     "company": "Elenia",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Elenia%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Elenia%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
     "reason": "no supported job system found"
    },
    {
     "company": "Ellevio",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Ellevio%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Ellevio%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
     "reason": "no supported job system found"
    },
    {
     "company": "EnBW",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22EnBW%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22EnBW%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
     "reason": "no supported job system found"
    },
    {
     "company": "Energi Danmark",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Energi+Danmark%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Energi+Danmark%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
     "reason": "no supported job system found"
    },
    {
     "company": "Energiekontor",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Energiekontor%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Energiekontor%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
     "reason": "no supported job system found"
    },
    {
     "company": "Enertrag",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Enertrag%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Enertrag%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
     "reason": "name guess rejected (unverified)"
    },
    {
     "company": "Green Mountain",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Green+Mountain%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Green+Mountain%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
     "reason": "no supported job system found"
    },
    {
     "company": "Hafslund",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Hafslund%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Hafslund%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
     "reason": "no supported job system found"
    },
    {
     "company": "KfW IPEX-Bank",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22KfW+IPEX-Bank%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22KfW+IPEX-Bank%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
     "reason": "no supported job system found"
    },
    {
     "company": "Locus Energy",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Locus+Energy%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Locus+Energy%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
     "reason": "no supported job system found"
    },
    {
     "company": "MEAG (Munich Re)",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22MEAG+%28Munich+Re%29%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22MEAG+%28Munich+Re%29%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
     "reason": "no supported job system found"
    },
    {
     "company": "Next Kraftwerke",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Next+Kraftwerke%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Next+Kraftwerke%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
     "reason": "no supported job system found"
    },
    {
     "company": "PensionDanmark",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22PensionDanmark%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22PensionDanmark%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
     "reason": "no supported job system found"
    },
    {
     "company": "SEB",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22SEB%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22SEB%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
     "reason": "own career site, not supported"
    },
    {
     "company": "Trianel",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Trianel%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Trianel%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
     "reason": "no supported job system found"
    },
    {
     "company": "Ørsted",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22%C3%98rsted%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22%C3%98rsted%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
     "reason": "no supported job system found"
    },
    {
     "company": "ATP",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22ATP%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22ATP%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "C",
     "reason": "name guess rejected (other company)"
    },
    {
     "company": "Caruna",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Caruna%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Caruna%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "C",
     "reason": "no supported job system found"
    },
    {
     "company": "Flower",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Flower%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Flower%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "C",
     "reason": "name guess rejected (unverified)"
    },
    {
     "company": "KONE",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22KONE%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22KONE%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "C",
     "reason": "2026-11-02, set manually"
    },
    {
     "company": "MVV Energie",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22MVV+Energie%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22MVV+Energie%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "C",
     "reason": "no supported job system found"
    },
    {
     "company": "Nord Pool",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Nord+Pool%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Nord+Pool%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "C",
     "reason": "no supported job system found"
    },
    {
     "company": "P2X Solutions",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22P2X+Solutions%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22P2X+Solutions%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "C",
     "reason": "no supported job system found"
    },
    {
     "company": "PNE",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22PNE%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22PNE%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "C",
     "reason": "no supported job system found"
    }
@@ -1199,7 +1199,9 @@
     "VP",
     "head of",
     "director",
-    "johtaja"
+    "johtaja",
+    "sustainability",
+    "Leader"
    ],
    "seniority": [
     "senior",
@@ -1213,7 +1215,6 @@
     "Helsinki",
     "Espoo",
     "Vantaa",
-    "Kauniainen",
     "Copenhagen",
     "København",
     "Stockholm",
@@ -1231,81 +1232,18 @@
     "Germany",
     "Denmark",
     "Vienna",
-    "Wien"
+    "Wien",
+    "Reykjavik",
+    "Sweden",
+    "Norway",
+    "Netherlands",
+    "United Kingdom",
+    "Switzerland"
    ],
    "min_score": 35
   }
  },
  "jobs": [
-  {
-   "company": "Ingrid Capacity",
-   "ats": "teamtailor",
-   "job_id": "8053254",
-   "title": "Quantitative Power Trader",
-   "url": "https://careers.ingridcapacity.com/jobs/8053254-quantitative-power-trader",
-   "location": "Stockholm, Sweden",
-   "department": "Tech",
-   "posted": "2026-07-10",
-   "workplace": "",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "",
-   "rating": "A",
-   "segment": "developers",
-   "segments_secondary": [
-    "trading"
-   ],
-   "summary": "As Quantitative Power Trader, you’ll own the intraday trading strategies at the heart of Ingrid’s BESS and renewable portfolio — building the arbitrage and proprietary strategies that turn market volatility into revenue. You’ll design, build, and refine the models and algorithms behind them, working hand-in-hand with…",
-   "responsibilities": [
-    "Design, backtest, and continuously improve intraday trading algorithms — arbitrage and proprietary strategies — applying…",
-    "Execute trades with discipline and strong market feel while adhering to risk limits and governance frameworks.",
-    "Build and maintain quantitative models for price forecasting, degradation-adjusted cycling economics, and cross-market arbitrage (ancillary…",
-    "Monitor the performance of Ingrid’s automated trading platform, pinpointing where live results deviate from the theoretical optimum and…"
-   ],
-   "criteria": [
-    "2–5 years of experience in a Data Scientist, Quantitative, or similar role within the energy sector, with direct exposure to European intraday power markets…",
-    "Strong grasp of forecasting, optimization, and pricing across ancillary, day-ahead, and intraday markets, with the intraday market as your core focus.",
-    "Familiarity with market design and regulatory frameworks, plus a sharp feel for power fundamentals, volatility, and market dynamics.",
-    "Strong programming capability (Python required; SQL and experience with data pipelines or model deployment a plus).",
-    "Comfortable working with large, complex datasets, with the analytical rigor to match.",
-    "Advanced degree (MSc or PhD) in a quantitative field such as Engineering, Applied Mathematics, Physics, or similar."
-   ],
-   "nice_to_have": [],
-   "seniority": "mid",
-   "years_experience": "2–5 years",
-   "languages": [],
-   "education": "PhD (or equivalent)",
-   "skills_matched": [
-    "energy transition",
-    "renewable energy",
-    "BESS",
-    "strategy",
-    "price forecasting",
-    "power markets",
-    "optimization"
-   ],
-   "personal_matched": [
-    "leadership",
-    "strategic thinking",
-    "communication",
-    "initiative"
-   ],
-   "score": 93,
-   "reasons": [
-    "Title matches “trader”",
-    "Seniority: mid (close to your target)",
-    "Professional skills 7/48: energy transition, renewable energy, BESS, strategy, price forecasting, power markets, optimization",
-    "Personal skills 4/10: leadership, strategic thinking, communication, initiative",
-    "CV text similarity 31%",
-    "Keywords: BESS",
-    "Location: Stockholm, Sweden",
-    "Company rated A: +6"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-02",
-   "is_new": false,
-   "key": "teamtailor:Ingrid Capacity:8053254"
-  },
   {
    "company": "Alight",
    "ats": "teamtailor",
@@ -1348,18 +1286,19 @@
     "renewable energy",
     "solar",
     "BESS",
-    "strategy"
+    "strategy",
+    "english"
    ],
    "personal_matched": [
     "leadership",
     "coaching",
     "entrepreneurial"
    ],
-   "score": 91,
+   "score": 95,
    "reasons": [
     "Title matches “head of”",
     "Seniority: executive ✓",
-    "Professional skills 4/48: renewable energy, solar, BESS, strategy",
+    "Professional skills 5/49: renewable energy, solar, BESS, strategy, english",
     "Personal skills 3/10: leadership, coaching, entrepreneurial",
     "CV text similarity 18%",
     "Keywords: AI, flexibility, BESS",
@@ -1417,17 +1356,18 @@
     "hydrogen",
     "renewable energy",
     "business development",
-    "German"
+    "German",
+    "english"
    ],
    "personal_matched": [
     "leadership",
     "communication"
    ],
-   "score": 91,
+   "score": 95,
    "reasons": [
     "Title matches “trading”",
     "Seniority: senior ✓",
-    "Professional skills 4/48: hydrogen, renewable energy, business development, German",
+    "Professional skills 5/49: hydrogen, renewable energy, business development, German, english",
     "Personal skills 2/10: leadership, communication",
     "CV text similarity 35%",
     "Keywords: international",
@@ -1438,6 +1378,203 @@
    "first_seen": "2026-11-02",
    "is_new": false,
    "key": "smartrecruiters:Statkraft:744000158266779"
+  },
+  {
+   "company": "Ingrid Capacity",
+   "ats": "teamtailor",
+   "job_id": "8053254",
+   "title": "Quantitative Power Trader",
+   "url": "https://careers.ingridcapacity.com/jobs/8053254-quantitative-power-trader",
+   "location": "Stockholm, Sweden",
+   "department": "Tech",
+   "posted": "2026-07-10",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "developers",
+   "segments_secondary": [
+    "trading"
+   ],
+   "summary": "As Quantitative Power Trader, you’ll own the intraday trading strategies at the heart of Ingrid’s BESS and renewable portfolio — building the arbitrage and proprietary strategies that turn market volatility into revenue. You’ll design, build, and refine the models and algorithms behind them, working hand-in-hand with…",
+   "responsibilities": [
+    "Design, backtest, and continuously improve intraday trading algorithms — arbitrage and proprietary strategies — applying…",
+    "Execute trades with discipline and strong market feel while adhering to risk limits and governance frameworks.",
+    "Build and maintain quantitative models for price forecasting, degradation-adjusted cycling economics, and cross-market arbitrage (ancillary…",
+    "Monitor the performance of Ingrid’s automated trading platform, pinpointing where live results deviate from the theoretical optimum and…"
+   ],
+   "criteria": [
+    "2–5 years of experience in a Data Scientist, Quantitative, or similar role within the energy sector, with direct exposure to European intraday power markets…",
+    "Strong grasp of forecasting, optimization, and pricing across ancillary, day-ahead, and intraday markets, with the intraday market as your core focus.",
+    "Familiarity with market design and regulatory frameworks, plus a sharp feel for power fundamentals, volatility, and market dynamics.",
+    "Strong programming capability (Python required; SQL and experience with data pipelines or model deployment a plus).",
+    "Comfortable working with large, complex datasets, with the analytical rigor to match.",
+    "Advanced degree (MSc or PhD) in a quantitative field such as Engineering, Applied Mathematics, Physics, or similar."
+   ],
+   "nice_to_have": [],
+   "seniority": "mid",
+   "years_experience": "2–5 years",
+   "languages": [],
+   "education": "PhD (or equivalent)",
+   "skills_matched": [
+    "energy transition",
+    "renewable energy",
+    "BESS",
+    "strategy",
+    "price forecasting",
+    "power markets",
+    "optimization"
+   ],
+   "personal_matched": [
+    "leadership",
+    "strategic thinking",
+    "communication",
+    "initiative"
+   ],
+   "score": 93,
+   "reasons": [
+    "Title matches “trader”",
+    "Seniority: mid (close to your target)",
+    "Professional skills 7/49: energy transition, renewable energy, BESS, strategy, price forecasting, power markets, optimization",
+    "Personal skills 4/10: leadership, strategic thinking, communication, initiative",
+    "CV text similarity 31%",
+    "Keywords: BESS",
+    "Location: Stockholm, Sweden",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-02",
+   "is_new": false,
+   "key": "teamtailor:Ingrid Capacity:8053254"
+  },
+  {
+   "company": "EQT Infrastructure",
+   "ats": "greenhouse",
+   "job_id": "4962404101",
+   "title": "Product Lead, Investment Value Stream",
+   "url": "https://job-boards.eu.greenhouse.io/eqtpartners/jobs/4962404101",
+   "location": "London, England, United Kingdom",
+   "department": "Investment Value Stream (Cost Center)",
+   "posted": "2026-08-27",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "pe",
+   "segments_secondary": [
+    "portfolio"
+   ],
+   "summary": "Senior product leadership in EQT's Investment Value Stream, covering pre-deal intelligence, diligence & deal execution alongside end-to-end deal and relationship management.",
+   "responsibilities": [
+    "Own product strategy, cross-product initiatives and roadmaps across pre-deal, and deal & relationship management lifecycle; building clear…",
+    "Driving transformation alongside product builds — programme & project management, process re-design, new ways of working, driving adoption…",
+    "Arbitrate competing demand & objectives across business lines & stakeholder groups; creation of decision frameworks, optimization criteria…",
+    "Deep-dive selectively: take direct, hands-on product ownership of a capability when it requires a ramp-up, or when other strategic…"
+   ],
+   "criteria": [
+    "You are a product leader with a strong record of delivery on high-impact initiatives.",
+    "Your experience dealing with senior stakeholders guides a strong sense of commercial acumen, analytical rigour, and technical depth to guide the deployment of…",
+    "This profile requires building credibility with investment professionals and the engineering organization across the globe.",
+    "You’ll also be equally adept managing communications, handling competing agendas, diving hands-on wherever tight deadlines demand it.",
+    "Above all, you’re naturally curious on where technology can truly create value in private markets, with an underlying drive & collaborative mindset to make it…"
+   ],
+   "nice_to_have": [],
+   "seniority": "lead",
+   "years_experience": "",
+   "languages": [],
+   "education": "",
+   "skills_matched": [
+    "partnerships",
+    "strategy",
+    "optimization"
+   ],
+   "personal_matched": [
+    "leadership",
+    "coaching",
+    "strategic thinking",
+    "entrepreneurial"
+   ],
+   "score": 92,
+   "reasons": [
+    "Title matches “investment”",
+    "Seniority: lead ✓",
+    "Professional skills 3/49: partnerships, strategy, optimization",
+    "Personal skills 4/10: leadership, coaching, strategic thinking, entrepreneurial",
+    "CV text similarity 24%",
+    "Keywords: AI",
+    "Location: London, England, United Kingdom",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-10",
+   "is_new": true,
+   "key": "greenhouse:EQT Infrastructure:4962404101"
+  },
+  {
+   "company": "atNorth",
+   "ats": "teamtailor",
+   "job_id": "8559116",
+   "title": "Commercial Manager",
+   "url": "https://careers.atnorth.com/jobs/8559116-commercial-manager",
+   "location": "Kista, Sweden",
+   "department": "Development",
+   "posted": "2026-10-16",
+   "workplace": "onsite",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "data_centers",
+   "segments_secondary": [
+    "portfolio",
+    "energy_intensive"
+   ],
+   "summary": "With sustainability at our core, our data centers run on renewable energy and are designed according to circular economy principles. Through innovative design, power efficiency, and intelligent operations, we deliver reliable, secure, and high-performance infrastructure.",
+   "responsibilities": [
+    "Lead the commercial and financial management of data center infrastructure projects, including budgeting, cash flow forecasting, financial…",
+    "Drive cost control and commercial performance by monitoring project costs, supplier agreements, payment applications, and financial risks.",
+    "Manage contract negotiations and commercial administration throughout the project lifecycle, including claims, variations, change orders…",
+    "Provide commercial input to investment cases and key project decisions, ensuring financial and commercial implications are clearly…"
+   ],
+   "criteria": [
+    "Master’s or Bachelor’s degree in Finance, Engineering, Business, or a related field.",
+    "5+ years of experience in commercial management, preferably in construction or infrastructure.",
+    "Strong expertise in budget preparation, cost control, and procurement processes.",
+    "Proven track record in managing complex contracts, claims, and variations.",
+    "Analytical and meticulous mindset with an independent approach to problem-solving.",
+    "Excellent communication and negotiation skills with a proactive, diplomatic style."
+   ],
+   "nice_to_have": [],
+   "seniority": "senior",
+   "years_experience": "5+ years",
+   "languages": [],
+   "education": "Master's",
+   "skills_matched": [
+    "renewable energy",
+    "data center",
+    "strategy"
+   ],
+   "personal_matched": [
+    "leadership",
+    "communication"
+   ],
+   "score": 88,
+   "reasons": [
+    "Title matches “commercial”",
+    "Seniority: senior ✓",
+    "Professional skills 3/49: renewable energy, data center, strategy",
+    "Personal skills 2/10: leadership, communication",
+    "CV text similarity 26%",
+    "Keywords: international, data center",
+    "Location: Kista, Sweden",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-10",
+   "is_new": true,
+   "key": "teamtailor:atNorth:8559116"
   },
   {
    "company": "Statkraft",
@@ -1490,7 +1627,7 @@
    "reasons": [
     "Title matches “trading”",
     "Seniority: lead ✓",
-    "Professional skills 4/48: strategy, market intelligence, power markets, German",
+    "Professional skills 4/49: strategy, market intelligence, power markets, German",
     "Personal skills 1/10: communication",
     "CV text similarity 24%",
     "Keywords: P&L",
@@ -1545,16 +1682,17 @@
     "renewable energy",
     "data center",
     "partnerships",
-    "stakeholder management"
+    "stakeholder management",
+    "english"
    ],
    "personal_matched": [
     "communication"
    ],
-   "score": 80,
+   "score": 84,
    "reasons": [
     "Title matches “procurement”",
     "Seniority: senior ✓",
-    "Professional skills 4/48: renewable energy, data center, partnerships, stakeholder management",
+    "Professional skills 5/49: renewable energy, data center, partnerships, stakeholder management, english",
     "Personal skills 1/10: communication",
     "CV text similarity 19%",
     "Keywords: international, data center",
@@ -1565,6 +1703,68 @@
    "first_seen": "2026-11-02",
    "is_new": false,
    "key": "teamtailor:atNorth:8640831"
+  },
+  {
+   "company": "atNorth",
+   "ats": "teamtailor",
+   "job_id": "8485560",
+   "title": "Project Procurement Manager",
+   "url": "https://careers.atnorth.com/jobs/8485560-project-procurement-manager",
+   "location": "Oslo, Norway",
+   "department": "Finance",
+   "posted": "2026-10-01",
+   "workplace": "hybrid",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "data_centers",
+   "segments_secondary": [
+    "portfolio",
+    "energy_intensive"
+   ],
+   "summary": "We design mission-critical ecosystems powered by 100% renewable energy and circular economy principles, staying ahead through a relentless focus on reliability, security, and performance.",
+   "responsibilities": [
+    "Lead multiple end-to-end RFQ/RFP processes for construction packages.",
+    "Prepare and issue documentation, manage clarifications, and evaluate bids.",
+    "Conduct contract negotiations with General Contractors and key suppliers.",
+    "Ensure compliance with local law, company polices, procedures etc. throughout the procurement process."
+   ],
+   "criteria": [
+    "You are a seasoned procurement professional with deep experience in the data center, construction, infrastructure, or technology sectors.",
+    "Combining analytical sharpness with a service-oriented mindset, you excel at complex negotiations and stakeholder management.",
+    "You are equally comfortable driving day-to-day operations and contributing to long-term strategic planning."
+   ],
+   "nice_to_have": [],
+   "seniority": "senior",
+   "years_experience": "7+ years",
+   "languages": [],
+   "education": "",
+   "skills_matched": [
+    "renewable energy",
+    "data center",
+    "partnerships",
+    "stakeholder management",
+    "english"
+   ],
+   "personal_matched": [
+    "communication"
+   ],
+   "score": 83,
+   "reasons": [
+    "Title matches “procurement”",
+    "Seniority: senior ✓",
+    "Professional skills 5/49: renewable energy, data center, partnerships, stakeholder management, english",
+    "Personal skills 1/10: communication",
+    "CV text similarity 18%",
+    "Keywords: international, data center",
+    "Location: Oslo, Norway",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-02",
+   "is_new": false,
+   "key": "teamtailor:atNorth:8485560"
   },
   {
    "company": "atNorth",
@@ -1614,16 +1814,17 @@
     "renewable energy",
     "data center",
     "partnerships",
-    "stakeholder management"
+    "stakeholder management",
+    "english"
    ],
    "personal_matched": [
     "communication"
    ],
-   "score": 79,
+   "score": 82,
    "reasons": [
     "Title matches “procurement”",
     "Seniority: senior ✓",
-    "Professional skills 4/48: renewable energy, data center, partnerships, stakeholder management",
+    "Professional skills 5/49: renewable energy, data center, partnerships, stakeholder management, english",
     "Personal skills 1/10: communication",
     "CV text similarity 18%",
     "Keywords: international, data center",
@@ -1636,129 +1837,71 @@
    "key": "teamtailor:atNorth:8485629"
   },
   {
-   "company": "atNorth",
-   "ats": "teamtailor",
-   "job_id": "8485560",
-   "title": "Project Procurement Manager",
-   "url": "https://careers.atnorth.com/jobs/8485560-project-procurement-manager",
-   "location": "Oslo, Norway",
-   "department": "Finance",
-   "posted": "2026-10-01",
-   "workplace": "hybrid",
+   "company": "Fortum",
+   "ats": "successfactors",
+   "job_id": "1376041255",
+   "title": "Senior Manager, Sustainability Communications",
+   "url": "https://jobs.fortum.com/Fortum/job/Espoo-Senior-Manager%2C-Sustainability-Communications/1376041255/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS",
+   "location": "Espoo, FI",
+   "department": "",
+   "posted": "2026-11-06",
+   "workplace": "",
    "employment_type": "",
    "salary": "",
    "deadline": "",
    "rating": "A",
-   "segment": "data_centers",
+   "segment": "utilities",
    "segments_secondary": [
-    "portfolio",
-    "energy_intensive"
+    "trading"
    ],
-   "summary": "We design mission-critical ecosystems powered by 100% renewable energy and circular economy principles, staying ahead through a relentless focus on reliability, security, and performance.",
+   "summary": "You will join a highly engaged sustainability team based across Finland and Sweden. Working closely with our businesses, we turn sustainability ambitions into action and deliver concrete results towards our shared goals.",
    "responsibilities": [
-    "Lead multiple end-to-end RFQ/RFP processes for construction packages.",
-    "Prepare and issue documentation, manage clarifications, and evaluate bids.",
-    "Conduct contract negotiations with General Contractors and key suppliers.",
-    "Ensure compliance with local law, company polices, procedures etc. throughout the procurement process."
+    "Leading the development of Fortum’s sustainability narrative and ensuring consistent use across relevant channels and touchpoints.",
+    "Bringing our sustainability strategy to life through communications, campaigns and engaging content for channels including web and social…",
+    "Working closely with Corporate Relations and business teams across Finland, Sweden and Norway to strengthen the impact of our…",
+    "Developing and coordinating sustainability-related stakeholder relations in cooperation with our countries and businesses."
    ],
    "criteria": [
-    "You are a seasoned procurement professional with deep experience in the data center, construction, infrastructure, or technology sectors.",
-    "Combining analytical sharpness with a service-oriented mindset, you excel at complex negotiations and stakeholder management.",
-    "You are equally comfortable driving day-to-day operations and contributing to long-term strategic planning."
+    "Combining strong communication and storytelling skills with sustainability expertise, you will turn complex topics into clear and compelling narratives that…",
+    "You ideally combine a strong understanding of sustainability with the ability to communicate complex topics in a clear, credible and engaging way.",
+    "A relevant university degree, for example in communications, sustainability, business, or another relevant field.",
+    "At least five years of relevant professional experience in sustainability communications, corporate communications, stakeholder engagement or a similar field…",
+    "Excellent storytelling and content creation skills, ideally combined with knowledge of sustainability topics.",
+    "Excellent written and verbal communication skills in English and Finnish. Swedish is considered an advantage."
    ],
    "nice_to_have": [],
    "seniority": "senior",
-   "years_experience": "7+ years",
-   "languages": [],
-   "education": "",
+   "years_experience": "5+ years",
+   "languages": [
+    "English",
+    "Finnish (plus)",
+    "Swedish (plus)"
+   ],
+   "education": "Degree",
    "skills_matched": [
-    "renewable energy",
-    "data center",
-    "partnerships",
-    "stakeholder management"
+    "strategy",
+    "stakeholder engagement",
+    "english"
    ],
    "personal_matched": [
+    "coaching",
     "communication"
    ],
    "score": 79,
    "reasons": [
-    "Title matches “procurement”",
+    "Title matches “sustainability”",
     "Seniority: senior ✓",
-    "Professional skills 4/48: renewable energy, data center, partnerships, stakeholder management",
-    "Personal skills 1/10: communication",
-    "CV text similarity 18%",
-    "Keywords: international, data center",
-    "Location: Oslo, Norway",
+    "Professional skills 3/49: strategy, stakeholder engagement, english",
+    "Personal skills 2/10: coaching, communication",
+    "CV text similarity 16%",
+    "Keywords: AI, international",
+    "Location: Espoo, FI",
     "Company rated A: +6"
    ],
    "deadline_source": "",
-   "first_seen": "2026-11-02",
-   "is_new": false,
-   "key": "teamtailor:atNorth:8485560"
-  },
-  {
-   "company": "Ingrid Capacity",
-   "ats": "teamtailor",
-   "job_id": "8053205",
-   "title": "Power Trader",
-   "url": "https://careers.ingridcapacity.com/jobs/8053205-power-trader",
-   "location": "Stockholm, Sweden",
-   "department": "Tech",
-   "posted": "2026-07-10",
-   "workplace": "hybrid",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "",
-   "rating": "A",
-   "segment": "developers",
-   "segments_secondary": [
-    "trading"
-   ],
-   "summary": "We’re growing our BESS and renewable trading team and looking for a power trader to take operational ownership of our trading algorithms across day-ahead auctions, Nordic ancillary capacity auctions, and the continuous intraday market. This is a hands-on, market-facing role: you’ll be the person monitoring the…",
-   "responsibilities": [
-    "Monitor and operate BESS trading algorithms in real time across day-ahead, ancillary, and intraday markets — adjusting parameters and…",
-    "Validate that bids generated by the optimization engine are correctly submitted to day-ahead auctions and Nordic ancillary capacity…",
-    "Reconcile and validate trade results against expected outcomes, flagging and investigating discrepancies.",
-    "Track and report on algorithm performance across all traded markets, identifying where live performance deviates from…"
-   ],
-   "criteria": [
-    "2–5 years of hands-on operational experience in a similar trading, dispatch, balancing, or portfolio operations role within the European power industry is…",
-    "Solid understanding of wholesale power markets (day-ahead, intraday, balancing) and how Nordic ancillary service markets function (FCR, aFRR, mFRR).",
-    "Understanding of BESS revenue streams and how they interact across markets.",
-    "Good knowledge of the energy regulatory landscape, including REMIT, BRP obligations, settlement and imbalance processes, TSO market pre-qualification…",
-    "Comfortable working with algorithmic and automated trading setups.",
-    "Strong attention to detail, with the ability to work independently and make real-time decisions under pressure."
-   ],
-   "nice_to_have": [],
-   "seniority": "mid",
-   "years_experience": "2–5 years",
-   "languages": [],
-   "education": "Master's (or equivalent)",
-   "skills_matched": [
-    "energy transition",
-    "renewable energy",
-    "BESS",
-    "power markets",
-    "optimization"
-   ],
-   "personal_matched": [
-    "communication"
-   ],
-   "score": 76,
-   "reasons": [
-    "Title matches “trader”",
-    "Seniority: mid (close to your target)",
-    "Professional skills 5/48: energy transition, renewable energy, BESS, power markets, optimization",
-    "Personal skills 1/10: communication",
-    "CV text similarity 27%",
-    "Keywords: BESS",
-    "Location: Stockholm, Sweden",
-    "Company rated A: +6"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-02",
-   "is_new": false,
-   "key": "teamtailor:Ingrid Capacity:8053205"
+   "first_seen": "2026-11-10",
+   "is_new": true,
+   "key": "successfactors:Fortum:1376041255"
   },
   {
    "company": "Statkraft",
@@ -1804,16 +1947,17 @@
    "skills_matched": [
     "market analysis",
     "power markets",
-    "German"
+    "German",
+    "english"
    ],
    "personal_matched": [
     "communication"
    ],
-   "score": 75,
+   "score": 79,
    "reasons": [
     "Title matches “trading”",
     "Seniority: senior ✓",
-    "Professional skills 3/48: market analysis, power markets, German",
+    "Professional skills 4/49: market analysis, power markets, German, english",
     "Personal skills 1/10: communication",
     "CV text similarity 20%",
     "Keywords: flexibility",
@@ -1870,14 +2014,15 @@
    "skills_matched": [
     "renewable energy",
     "data center",
-    "risk management"
+    "risk management",
+    "english"
    ],
    "personal_matched": [],
-   "score": 73,
+   "score": 77,
    "reasons": [
     "Title matches “commercial”",
     "Seniority: lead ✓",
-    "Professional skills 3/48: renewable energy, data center, risk management",
+    "Professional skills 4/49: renewable energy, data center, risk management, english",
     "Personal skills 0/10",
     "CV text similarity 23%",
     "Keywords: international, data center",
@@ -1888,6 +2033,70 @@
    "first_seen": "2026-11-02",
    "is_new": false,
    "key": "teamtailor:atNorth:8232744"
+  },
+  {
+   "company": "Ingrid Capacity",
+   "ats": "teamtailor",
+   "job_id": "8053205",
+   "title": "Power Trader",
+   "url": "https://careers.ingridcapacity.com/jobs/8053205-power-trader",
+   "location": "Stockholm, Sweden",
+   "department": "Tech",
+   "posted": "2026-07-10",
+   "workplace": "hybrid",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "developers",
+   "segments_secondary": [
+    "trading"
+   ],
+   "summary": "We’re growing our BESS and renewable trading team and looking for a power trader to take operational ownership of our trading algorithms across day-ahead auctions, Nordic ancillary capacity auctions, and the continuous intraday market. This is a hands-on, market-facing role: you’ll be the person monitoring the…",
+   "responsibilities": [
+    "Monitor and operate BESS trading algorithms in real time across day-ahead, ancillary, and intraday markets — adjusting parameters and…",
+    "Validate that bids generated by the optimization engine are correctly submitted to day-ahead auctions and Nordic ancillary capacity…",
+    "Reconcile and validate trade results against expected outcomes, flagging and investigating discrepancies.",
+    "Track and report on algorithm performance across all traded markets, identifying where live performance deviates from…"
+   ],
+   "criteria": [
+    "2–5 years of hands-on operational experience in a similar trading, dispatch, balancing, or portfolio operations role within the European power industry is…",
+    "Solid understanding of wholesale power markets (day-ahead, intraday, balancing) and how Nordic ancillary service markets function (FCR, aFRR, mFRR).",
+    "Understanding of BESS revenue streams and how they interact across markets.",
+    "Good knowledge of the energy regulatory landscape, including REMIT, BRP obligations, settlement and imbalance processes, TSO market pre-qualification…",
+    "Comfortable working with algorithmic and automated trading setups.",
+    "Strong attention to detail, with the ability to work independently and make real-time decisions under pressure."
+   ],
+   "nice_to_have": [],
+   "seniority": "mid",
+   "years_experience": "2–5 years",
+   "languages": [],
+   "education": "Master's (or equivalent)",
+   "skills_matched": [
+    "energy transition",
+    "renewable energy",
+    "BESS",
+    "power markets",
+    "optimization"
+   ],
+   "personal_matched": [
+    "communication"
+   ],
+   "score": 76,
+   "reasons": [
+    "Title matches “trader”",
+    "Seniority: mid (close to your target)",
+    "Professional skills 5/49: energy transition, renewable energy, BESS, power markets, optimization",
+    "Personal skills 1/10: communication",
+    "CV text similarity 27%",
+    "Keywords: BESS",
+    "Location: Stockholm, Sweden",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-02",
+   "is_new": false,
+   "key": "teamtailor:Ingrid Capacity:8053205"
   },
   {
    "company": "Statkraft",
@@ -1935,16 +2144,17 @@
     "renewables",
     "renewable energy",
     "market intelligence",
-    "German"
+    "German",
+    "english"
    ],
    "personal_matched": [
     "communication"
    ],
-   "score": 72,
+   "score": 76,
    "reasons": [
     "Title matches “origination”",
     "Seniority: mid (close to your target)",
-    "Professional skills 5/48: hydrogen, renewables, renewable energy, market intelligence, German",
+    "Professional skills 6/49: hydrogen, renewables, renewable energy, market intelligence, German, english",
     "Personal skills 1/10: communication",
     "CV text similarity 22%",
     "Location: Düsseldorf, North Rhine-Westphalia, Germany",
@@ -1998,16 +2208,17 @@
    "education": "Master's",
    "skills_matched": [
     "data center",
-    "partnerships"
+    "partnerships",
+    "english"
    ],
    "personal_matched": [
     "initiative"
    ],
-   "score": 69,
+   "score": 73,
    "reasons": [
     "Title matches “procurement”",
     "Seniority: senior ✓",
-    "Professional skills 2/48: data center, partnerships",
+    "Professional skills 3/49: data center, partnerships, english",
     "Personal skills 1/10: initiative",
     "CV text similarity 16%",
     "Keywords: international, data center",
@@ -2065,16 +2276,17 @@
    "skills_matched": [
     "energy transition",
     "renewable energy",
-    "M&A"
+    "M&A",
+    "english"
    ],
    "personal_matched": [
     "entrepreneurial"
    ],
-   "score": 60,
+   "score": 64,
    "reasons": [
     "Title matches “investment”",
     "Seniority: junior (outside your target)",
-    "Professional skills 3/48: energy transition, renewable energy, M&A",
+    "Professional skills 4/49: energy transition, renewable energy, M&A, english",
     "Personal skills 1/10: entrepreneurial",
     "CV text similarity 29%",
     "Keywords: international",
@@ -2085,6 +2297,71 @@
    "first_seen": "2026-11-02",
    "is_new": false,
    "key": "successfactors:OX2:1369104955"
+  },
+  {
+   "company": "EQT Infrastructure",
+   "ats": "greenhouse",
+   "job_id": "4981387101",
+   "title": "Business Line Controller - VP",
+   "url": "https://job-boards.eu.greenhouse.io/eqtpartners/jobs/4981387101",
+   "location": "Stockholm, Stockholm, Sweden",
+   "department": "PC EU & NA BLC (Cost Center)",
+   "posted": "2026-09-21",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "pe",
+   "segments_secondary": [
+    "portfolio"
+   ],
+   "summary": "EQT is looking for a Vice President Business Controller to join the Private Capital Europe & North America Business Controlling team in Stockholm. This is an important role supporting and strengthening a team of ten, based across Stockholm, Luxembourg, Amsterdam and Bengaluru, as EQT continues to expand its long-hold…",
+   "responsibilities": [
+    "Acting as sparring partner on strategic business controlling matters",
+    "Monitoring portfolio company performance, fund liquidity planning and cash movements to give an accurate, real-time view of fund performance",
+    "Lead valuation work on portfolio companies",
+    "Tracking and monitoring exit forecasts"
+   ],
+   "criteria": [
+    "University degree in a relevant field",
+    "Minimum 5 years' relevant experience in financial, business and/or cost controlling; international experience is a plus",
+    "Experience in financial services or Big 4 is a merit",
+    "Advanced Excel and BI skills",
+    "Strong analytical skills paired with practical, commercial judgment",
+    "Fluent written and spoken English"
+   ],
+   "nice_to_have": [],
+   "seniority": "executive",
+   "years_experience": "5+ years",
+   "languages": [
+    "English"
+   ],
+   "education": "Degree",
+   "skills_matched": [
+    "strategy",
+    "english"
+   ],
+   "personal_matched": [
+    "communication",
+    "entrepreneurial"
+   ],
+   "score": 58,
+   "reasons": [
+    "Title matches “VP”",
+    "Seniority: executive ✓",
+    "Professional skills 2/49: strategy, english",
+    "Personal skills 2/10: communication, entrepreneurial",
+    "CV text similarity 28%",
+    "Keywords: international",
+    "Location: Stockholm, Stockholm, Sweden",
+    "Lower-priority role (“controller”): −25",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-02",
+   "is_new": false,
+   "key": "greenhouse:EQT Infrastructure:4981387101"
   },
   {
    "company": "OMV",
@@ -2138,7 +2415,7 @@
    "reasons": [
     "Title matches “trading”",
     "Seniority: senior ✓",
-    "Professional skills 2/48: stakeholder management, energy trading",
+    "Professional skills 2/49: stakeholder management, energy trading",
     "Personal skills 2/10: leadership, communication",
     "CV text similarity 25%",
     "Keywords: international",
@@ -2150,70 +2427,6 @@
    "first_seen": "2026-11-09",
    "is_new": true,
    "key": "successfactors:OMV:1455071533"
-  },
-  {
-   "company": "EQT Infrastructure",
-   "ats": "greenhouse",
-   "job_id": "4981387101",
-   "title": "Business Line Controller - VP",
-   "url": "https://job-boards.eu.greenhouse.io/eqtpartners/jobs/4981387101",
-   "location": "Stockholm, Stockholm, Sweden",
-   "department": "PC EU & NA BLC (Cost Center)",
-   "posted": "2026-09-21",
-   "workplace": "",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "",
-   "rating": "A",
-   "segment": "pe",
-   "segments_secondary": [
-    "portfolio"
-   ],
-   "summary": "EQT is looking for a Vice President Business Controller to join the Private Capital Europe & North America Business Controlling team in Stockholm. This is an important role supporting and strengthening a team of ten, based across Stockholm, Luxembourg, Amsterdam and Bengaluru, as EQT continues to expand its long-hold…",
-   "responsibilities": [
-    "Acting as sparring partner on strategic business controlling matters",
-    "Monitoring portfolio company performance, fund liquidity planning and cash movements to give an accurate, real-time view of fund performance",
-    "Lead valuation work on portfolio companies",
-    "Tracking and monitoring exit forecasts"
-   ],
-   "criteria": [
-    "University degree in a relevant field",
-    "Minimum 5 years' relevant experience in financial, business and/or cost controlling; international experience is a plus",
-    "Experience in financial services or Big 4 is a merit",
-    "Advanced Excel and BI skills",
-    "Strong analytical skills paired with practical, commercial judgment",
-    "Fluent written and spoken English"
-   ],
-   "nice_to_have": [],
-   "seniority": "executive",
-   "years_experience": "5+ years",
-   "languages": [
-    "English"
-   ],
-   "education": "Degree",
-   "skills_matched": [
-    "strategy"
-   ],
-   "personal_matched": [
-    "communication",
-    "entrepreneurial"
-   ],
-   "score": 54,
-   "reasons": [
-    "Title matches “VP”",
-    "Seniority: executive ✓",
-    "Professional skills 1/48: strategy",
-    "Personal skills 2/10: communication, entrepreneurial",
-    "CV text similarity 28%",
-    "Keywords: international",
-    "Location: Stockholm, Stockholm, Sweden",
-    "Lower-priority role (“controller”): −25",
-    "Company rated A: +6"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-02",
-   "is_new": false,
-   "key": "greenhouse:EQT Infrastructure:4981387101"
   },
   {
    "company": "Fortum",
@@ -2253,15 +2466,17 @@
    "years_experience": "2+ years",
    "languages": [],
    "education": "Master's",
-   "skills_matched": [],
+   "skills_matched": [
+    "english"
+   ],
    "personal_matched": [
     "communication"
    ],
-   "score": 48,
+   "score": 52,
    "reasons": [
     "Title matches “procurement”",
     "Seniority: mid (close to your target)",
-    "Professional skills 0/48",
+    "Professional skills 1/49: english",
     "Personal skills 1/10: communication",
     "CV text similarity 16%",
     "Keywords: AI",
@@ -2272,6 +2487,66 @@
    "first_seen": "2026-11-09",
    "is_new": true,
    "key": "successfactors:Fortum:1375684555"
+  },
+  {
+   "company": "Statkraft",
+   "ats": "smartrecruiters",
+   "job_id": "744000157783379",
+   "title": "Commercial Contract Analyst - Global Environmental Markets",
+   "url": "https://jobs.smartrecruiters.com/Statkraft1/744000157783379-commercial-contract-analyst-global-environmental-markets",
+   "location": "Amsterdam, North Holland, Netherlands",
+   "department": "Other",
+   "posted": "2026-10-26",
+   "workplace": "hybrid",
+   "employment_type": "Full-time",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "utilities",
+   "segments_secondary": [
+    "trading"
+   ],
+   "summary": "Due to exciting growth and development, we are now searching for a Commercial Contract Analyst to join our Global Environmental Markets department, which is the centre of expertise for both environmental certificate markets across the Statkraft Group and for PPAs with renewable energy and battery assets in Poland.",
+   "responsibilities": [
+    "Manage the day-to-day commercial and contractual aspects of existing portfolio of renewable energy and battery agreements in Poland.",
+    "Monitor contract performance, support and optimise settlement processes, track key obligations and contractual milestones of existing…",
+    "Ensure compliance with contractual requirements, support risk mitigation activities and contribute to the successful long-term management…",
+    "Play a central role in interactions with counterparties of existing contracts."
+   ],
+   "criteria": [
+    "Master’s degree in business, accounting, engineering, or similar with relevant work experience (recent university graduates with relevant experience through…",
+    "Work experience in energy industry is an advantage, but not a must.",
+    "A proactive, problem-solving and collaborative mindset with clear eye on the goal: What is best for Statkraft?",
+    "Strong interpersonal skills and ability to communicate and collaborate across departments.",
+    "Fluency in English and Polish."
+   ],
+   "nice_to_have": [],
+   "seniority": "junior",
+   "years_experience": "",
+   "languages": [
+    "English",
+    "Polish"
+   ],
+   "education": "Master's (or equivalent)",
+   "skills_matched": [
+    "renewable energy",
+    "english"
+   ],
+   "personal_matched": [],
+   "score": 46,
+   "reasons": [
+    "Title matches “commercial”",
+    "Seniority: junior (outside your target)",
+    "Professional skills 2/49: renewable energy, english",
+    "Personal skills 0/10",
+    "CV text similarity 22%",
+    "Location: Amsterdam, North Holland, Netherlands",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-10",
+   "is_new": true,
+   "key": "smartrecruiters:Statkraft:744000157783379"
   },
   {
    "company": "Capalo AI",
@@ -2324,7 +2599,7 @@
    "reasons": [
     "Title matches “infrastructure”",
     "Seniority: senior ✓",
-    "Professional skills 3/48: energy transition, battery storage, optimization",
+    "Professional skills 3/49: energy transition, battery storage, optimization",
     "Personal skills 0/10",
     "CV text similarity 16%",
     "Keywords: AI",
