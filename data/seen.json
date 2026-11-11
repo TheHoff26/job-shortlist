@@ -1,13 +1,18 @@
 {
  "greenhouse:EQT Infrastructure:4962404101": "2026-11-10",
+ "greenhouse:EQT Infrastructure:4969731101": "2026-11-11",
+ "greenhouse:EQT Infrastructure:4969805101": "2026-11-11",
  "greenhouse:EQT Infrastructure:4981387101": "2026-11-02",
  "smartrecruiters:Statkraft:744000129203437": "2026-11-02",
  "smartrecruiters:Statkraft:744000153729979": "2026-11-02",
+ "smartrecruiters:Statkraft:744000154074871": "2026-11-11",
  "smartrecruiters:Statkraft:744000155280390": "2026-11-02",
  "smartrecruiters:Statkraft:744000157783379": "2026-11-10",
  "smartrecruiters:Statkraft:744000158266779": "2026-11-02",
+ "smartrecruiters:Statkraft:744000160857720": "2026-11-11",
  "successfactors:Fortum:1375684555": "2026-11-09",
  "successfactors:Fortum:1376041255": "2026-11-10",
+ "successfactors:Neste:1448841500": "2026-11-11",
  "successfactors:Nordea:1455882233": "2026-11-11",
  "successfactors:OX2:1369104955": "2026-11-02",
  "teamtailor:Alight:8610267": "2026-11-02",
@@ -15,10 +20,12 @@
  "teamtailor:Capalo AI:8111587": "2026-11-02",
  "teamtailor:Ingrid Capacity:8053205": "2026-11-02",
  "teamtailor:Ingrid Capacity:8053254": "2026-11-02",
+ "teamtailor:Ren-Gas:8581956": "2026-11-11",
  "teamtailor:atNorth:7778447": "2026-11-02",
  "teamtailor:atNorth:8232744": "2026-11-02",
  "teamtailor:atNorth:8485560": "2026-11-02",
  "teamtailor:atNorth:8485629": "2026-11-02",
  "teamtailor:atNorth:8559116": "2026-11-10",
- "teamtailor:atNorth:8640831": "2026-11-02"
+ "teamtailor:atNorth:8640831": "2026-11-02",
+ "teamtailor:atNorth:8670021": "2026-11-11"
 }

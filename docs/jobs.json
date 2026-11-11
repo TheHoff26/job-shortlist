@@ -1,14 +1,14 @@
 {
  "meta": {
-  "generated": "2026-11-11T17:31+00:00",
-  "total_matches": 22,
-  "new_matches": 7,
+  "generated": "2026-11-11T17:38+00:00",
+  "total_matches": 29,
+  "new_matches": 14,
   "companies": [
    {
     "company": "Fortum",
     "ats": "successfactors",
     "ok": true,
-    "count": 3,
+    "count": 4,
     "error": "",
     "source": "https://jobs.fortum.com",
     "careers_url": "https://www.fortum.com/careers",
@@ -20,8 +20,8 @@
     "company": "Neste",
     "ats": "successfactors",
     "ok": true,
-    "count": 0,
-    "error": "no matching open positions (or wrong id)",
+    "count": 1,
+    "error": "",
     "source": "https://jobs.neste.com",
     "careers_url": "https://www.neste.com/careers",
     "note": "",
@@ -68,8 +68,8 @@
     "company": "Stora Enso",
     "ats": "workday",
     "ok": true,
-    "count": 0,
-    "error": "no matching open positions (or wrong id)",
+    "count": 2,
+    "error": "",
     "source": "https://storaenso.wd502.myworkdayjobs.com/Stora_Enso_site_opportunities",
     "careers_url": "https://www.storaenso.com/en/careers",
     "note": "",
@@ -92,7 +92,7 @@
     "company": "Valmet",
     "ats": "workday",
     "ok": true,
-    "count": 7,
+    "count": 18,
     "error": "",
     "source": "https://valmet.wd103.myworkdayjobs.com/en-US/External",
     "careers_url": "https://valmet.com/careers",
@@ -104,8 +104,8 @@
     "company": "Metso",
     "ats": "successfactors",
     "ok": true,
-    "count": 0,
-    "error": "no matching open positions (or wrong id)",
+    "count": 1,
+    "error": "",
     "source": "https://careers.metso.com",
     "careers_url": "https://www.metso.com/careers",
     "note": "",
@@ -152,7 +152,7 @@
     "company": "RWE Supply & Trading",
     "ats": "successfactors",
     "ok": true,
-    "count": 2,
+    "count": 4,
     "error": "",
     "source": "https://jobs.rwe.com",
     "careers_url": "https://jobs.rwe.com",
@@ -236,7 +236,7 @@
     "company": "Statkraft",
     "ats": "smartrecruiters",
     "ok": true,
-    "count": 10,
+    "count": 14,
     "error": "",
     "source": "Statkraft1",
     "careers_url": "https://careers.smartrecruiters.com/Statkraft1",
@@ -260,7 +260,7 @@
     "company": "RWE",
     "ats": "successfactors",
     "ok": true,
-    "count": 2,
+    "count": 4,
     "error": "",
     "source": "https://jobs.rwe.com",
     "careers_url": "https://jobs.rwe.com",
@@ -404,8 +404,8 @@
     "company": "Kyon Energy",
     "ats": "personio",
     "ok": true,
-    "count": 0,
-    "error": "no matching open positions (or wrong id)",
+    "count": 1,
+    "error": "",
     "source": "kyon-energy-gmbh",
     "careers_url": "https://www.kyon-energy.de",
     "note": "",
@@ -428,7 +428,7 @@
     "company": "Capalo AI",
     "ats": "teamtailor",
     "ok": true,
-    "count": 2,
+    "count": 3,
     "error": "",
     "source": "https://capaloai.teamtailor.com",
     "careers_url": "https://www.capalo.ai",
@@ -512,7 +512,7 @@
     "company": "atNorth",
     "ats": "teamtailor",
     "ok": true,
-    "count": 6,
+    "count": 8,
     "error": "",
     "source": "https://careers.atnorth.com",
     "careers_url": "https://careers.atnorth.com/jobs",
@@ -644,7 +644,7 @@
     "company": "EQT Infrastructure",
     "ats": "greenhouse",
     "ok": true,
-    "count": 4,
+    "count": 6,
     "error": "",
     "source": "eqtpartners",
     "careers_url": "https://job-boards.eu.greenhouse.io/eqtpartners",
@@ -668,7 +668,7 @@
     "company": "Ardian",
     "ats": "workday",
     "ok": true,
-    "count": 11,
+    "count": 9,
     "error": "",
     "source": "https://ardian.wd103.myworkdayjobs.com/ArdianCareers",
     "careers_url": "https://www.ardian.com",
@@ -692,7 +692,7 @@
     "company": "Nordea",
     "ats": "successfactors",
     "ok": true,
-    "count": 2,
+    "count": 3,
     "error": "",
     "source": "https://careers.nordea.com",
     "careers_url": "https://careers.nordea.com",
@@ -800,8 +800,8 @@
     "company": "Ren-Gas",
     "ats": "teamtailor",
     "ok": true,
-    "count": 0,
-    "error": "no matching open positions (or wrong id)",
+    "count": 1,
+    "error": "",
     "source": "https://careers.ren-gas.com",
     "careers_url": "https://careers.ren-gas.com/",
     "note": "",
@@ -812,7 +812,7 @@
     "company": "OMV",
     "ats": "successfactors",
     "ok": true,
-    "count": 1,
+    "count": 2,
     "error": "",
     "source": "https://careers.omv.com",
     "careers_url": "https://careers.omv.com/",
@@ -1172,8 +1172,6 @@
     "commodity",
     "commodities",
     "origination",
-    "energy markets",
-    "power markets",
     "portfolio",
     "optimisation",
     "optimization",
@@ -1184,7 +1182,6 @@
     "partnerships",
     "innovation",
     "ventures",
-    "energy transition",
     "electrification",
     "decarbonisation",
     "decarbonization",
@@ -1196,13 +1193,10 @@
     "low-carbon",
     "CO2",
     "investment",
-    "investments",
     "infrastructure",
-    "asset management",
     "procurement",
     "power purchase",
     "PPA",
-    "energy management",
     "managing director",
     "general manager",
     "country manager",
@@ -1213,7 +1207,14 @@
     "director",
     "johtaja",
     "sustainability",
-    "Leader"
+    "Leader",
+    "energy",
+    "asset",
+    "transition",
+    "power",
+    "management",
+    "development",
+    "JV"
    ],
    "seniority": [
     "senior",
@@ -1392,6 +1393,74 @@
    "first_seen": "2026-11-02",
    "is_new": false,
    "key": "smartrecruiters:Statkraft:744000158266779"
+  },
+  {
+   "company": "Neste",
+   "ats": "successfactors",
+   "job_id": "1448841500",
+   "title": "Solution Development Manager",
+   "url": "https://jobs.neste.com/job/Porvoo-Solution-Development-Manager/1448841500/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS",
+   "location": "Porvoo, FI",
+   "department": "",
+   "posted": "2026-11-09",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "energy_intensive",
+   "segments_secondary": [
+    "developers"
+   ],
+   "summary": "Are you looking for a career in an inspiring, global environment where your expertise makes a difference? At Neste, you will be working for the world’s leading producer of renewable diesel and sustainable aviation fuel.",
+   "responsibilities": [
+    "Investment Proposal Evaluation & Resource Allocation: Review incoming business investment proposals, assess their scope, and define the…",
+    "Resource Forecasting & Analytics: Model and analyze future workload and resource demands (e.g., using Silverbucket) to ensure optimal…",
+    "Portfolio & Lifecycle Tracking: Monitor and forecast the investment portfolio regarding budgets, timelines, and alignment with operational…",
+    "Stakeholder Collaboration: Collaborate closely with project managers, development managers, operations, and maintenance teams throughout…"
+   ],
+   "criteria": [
+    "M.Sc. or B.Sc. in investment project controls or equivalent combination of education and experience.",
+    "Minimum 5 years industrial related project management experience in an international EPC/EPCM environment in manufacturing industry",
+    "Good knowledge of project management & control, engineering and the tools being used (e.g. Power BI, Silverbucket, SAP).",
+    "Investment project management or project delivery experience",
+    "Effective communication skills in English (mandatory) both verbally and in writing. Other language skills are an advantage.",
+    "Understanding of engineering, procurement and Construction Management disciplines and competences"
+   ],
+   "nice_to_have": [],
+   "seniority": "senior",
+   "years_experience": "5+ years",
+   "languages": [
+    "English"
+   ],
+   "education": "Master's (or equivalent)",
+   "skills_matched": [
+    "renewables",
+    "strategy",
+    "project portfolio",
+    "project development",
+    "stakeholder management",
+    "english"
+   ],
+   "personal_matched": [
+    "leadership",
+    "communication"
+   ],
+   "score": 95,
+   "reasons": [
+    "Title matches “development”",
+    "Seniority: senior ✓",
+    "Professional skills 6/54: renewables, strategy, project portfolio, project development, stakeholder management, english",
+    "Personal skills 2/10: leadership, communication",
+    "CV text similarity 24%",
+    "Keywords: international",
+    "Location: Porvoo, FI",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-11",
+   "is_new": true,
+   "key": "successfactors:Neste:1448841500"
   },
   {
    "company": "Ingrid Capacity",
@@ -1591,6 +1660,140 @@
    "first_seen": "2026-11-10",
    "is_new": true,
    "key": "teamtailor:atNorth:8559116"
+  },
+  {
+   "company": "EQT Infrastructure",
+   "ats": "greenhouse",
+   "job_id": "4969731101",
+   "title": "Team Lead – Evergreen Product Management, Private Capital",
+   "url": "https://job-boards.eu.greenhouse.io/eqtpartners/jobs/4969731101",
+   "location": "London, England, United Kingdom",
+   "department": "GWS Product Management (Cost Center)",
+   "posted": "2026-09-07",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "pe",
+   "segments_secondary": [
+    "portfolio"
+   ],
+   "summary": "As Team Lead for Private Capital Evergreen Product Management, you will set the strategic direction for a global team while remaining hands-on in shaping product narratives and fundraising deliverables that resonate with investors and distributors worldwide. You will be the senior point of accountability for private…",
+   "responsibilities": [
+    "Lead, mentor and develop the global Private Capital EPM team, establishing clear direction, quality standards and a culture of…",
+    "Own product positioning for EQT's private capital evergreen offerings, ensuring a differentiated, consistent narrative across regions and…",
+    "Oversee core fundraising assets and product lifecycle deliverables, ensuring all materials are accurate, compelling and ready for external…",
+    "Lead EPM's contribution to investor diligence, complex product-related RFI responses, distributor onboarding and selected client…"
+   ],
+   "criteria": [
+    "You are a thoughtful, commercially minded leader with deep private markets knowledge (ideally within private equity) and a genuine commitment to developing…",
+    "You bring both the strategic perspective to set direction and the hands-on rigour to deliver consistently at a high level.",
+    "Significant experience in private markets product management, with a strong understanding of private equitycapital products, fundraising processes and investor…",
+    "Proven experience in a senior product management role, with demonstrated ability to own complex deliverables end-to-end.",
+    "Experience leading and developing a team, with the ability to set clear priorities, foster collaboration and hold high standards.",
+    "Strong commercial judgement and the ability to translate complex information into clear, compelling product narratives for diverse audiences."
+   ],
+   "nice_to_have": [
+    "Familiarity with evergreen or semi-liquid fund structures and their specific fundraising and distribution dynamics.",
+    "Private wealth experience.",
+    "Experience working across multiple geographies or within a global organisation."
+   ],
+   "seniority": "lead",
+   "years_experience": "",
+   "languages": [],
+   "education": "",
+   "skills_matched": [
+    "partnerships",
+    "strategy",
+    "optimisation"
+   ],
+   "personal_matched": [
+    "leadership",
+    "communication",
+    "entrepreneurial"
+   ],
+   "score": 83,
+   "reasons": [
+    "Title matches “management”",
+    "Seniority: lead ✓",
+    "Professional skills 3/54: partnerships, strategy, optimisation",
+    "Personal skills 3/10: leadership, communication, entrepreneurial",
+    "CV text similarity 18%",
+    "Location: London, England, United Kingdom",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-11",
+   "is_new": true,
+   "key": "greenhouse:EQT Infrastructure:4969731101"
+  },
+  {
+   "company": "EQT Infrastructure",
+   "ats": "greenhouse",
+   "job_id": "4969805101",
+   "title": "Team Lead – Evergreen Product Management, Private Capital",
+   "url": "https://job-boards.eu.greenhouse.io/eqtpartners/jobs/4969805101",
+   "location": "Stockholm, Stockholm, Sweden",
+   "department": "GWS Product Management (Cost Center)",
+   "posted": "2026-09-07",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "pe",
+   "segments_secondary": [
+    "portfolio"
+   ],
+   "summary": "As Team Lead for Private Capital Evergreen Product Management, you will set the strategic direction for a global team while remaining hands-on in shaping product narratives and fundraising deliverables that resonate with investors and distributors worldwide. You will be the senior point of accountability for private…",
+   "responsibilities": [
+    "Lead, mentor and develop the global Private Capital EPM team, establishing clear direction, quality standards and a culture of…",
+    "Own product positioning for EQT's private capital evergreen offerings, ensuring a differentiated, consistent narrative across regions and…",
+    "Oversee core fundraising assets and product lifecycle deliverables, ensuring all materials are accurate, compelling and ready for external…",
+    "Lead EPM's contribution to investor diligence, complex product-related RFI responses, distributor onboarding and selected client…"
+   ],
+   "criteria": [
+    "You are a thoughtful, commercially minded leader with deep private markets knowledge (ideally within private equity) and a genuine commitment to developing…",
+    "You bring both the strategic perspective to set direction and the hands-on rigour to deliver consistently at a high level.",
+    "Significant experience in private markets product management, with a strong understanding of private equitycapital products, fundraising processes and investor…",
+    "Proven experience in a senior product management role, with demonstrated ability to own complex deliverables end-to-end.",
+    "Experience leading and developing a team, with the ability to set clear priorities, foster collaboration and hold high standards.",
+    "Strong commercial judgement and the ability to translate complex information into clear, compelling product narratives for diverse audiences."
+   ],
+   "nice_to_have": [
+    "Familiarity with evergreen or semi-liquid fund structures and their specific fundraising and distribution dynamics.",
+    "Private wealth experience.",
+    "Experience working across multiple geographies or within a global organisation."
+   ],
+   "seniority": "lead",
+   "years_experience": "",
+   "languages": [],
+   "education": "",
+   "skills_matched": [
+    "partnerships",
+    "strategy",
+    "optimisation"
+   ],
+   "personal_matched": [
+    "leadership",
+    "communication",
+    "entrepreneurial"
+   ],
+   "score": 83,
+   "reasons": [
+    "Title matches “management”",
+    "Seniority: lead ✓",
+    "Professional skills 3/54: partnerships, strategy, optimisation",
+    "Personal skills 3/10: leadership, communication, entrepreneurial",
+    "CV text similarity 18%",
+    "Location: Stockholm, Stockholm, Sweden",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-11",
+   "is_new": true,
+   "key": "greenhouse:EQT Infrastructure:4969805101"
   },
   {
    "company": "atNorth",
@@ -2054,6 +2257,75 @@
   {
    "company": "Statkraft",
    "ats": "smartrecruiters",
+   "job_id": "744000160857720",
+   "title": "Project Manager - Solar (Development)",
+   "url": "https://jobs.smartrecruiters.com/Statkraft1/744000160857720-project-manager-solar-development-",
+   "location": "London, England, United Kingdom",
+   "department": "Other",
+   "posted": "2026-11-10",
+   "workplace": "hybrid",
+   "employment_type": "Full-time",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "utilities",
+   "segments_secondary": [
+    "trading"
+   ],
+   "summary": "A career with Statkraft is a career filled with purpose – meaning that every employee is not just making a living, they are making a real difference to the planet, our communities, and the future. With us, you’ll shape a career that is truly forward-facing with many amazing opportunities and offerings to match.",
+   "responsibilities": [
+    "Be responsible for developing ~ 1- 2 projects.",
+    "Project management of our UK solar pipeline at all stages of project development from site identification through to pre-construction…",
+    "Responsibility for management of project budgets and schedules from early-stage development to point of construction.",
+    "Managing external service providers including Environmental Impact Assessment (EIA) and planning consultants, land agents, legal advisors…"
+   ],
+   "criteria": [
+    "Master or Bachelor degree (or equivalent) in relevant subject e.g. renewables, engineering, planning or environmental and sustainability studies.",
+    "Experience in the energy (or relevant) industry with a demonstrable track record of successfully achieving targets. Entry level will be determined by…",
+    "Independent self-starter, with attention to detail with the ability to manage a variable workload to key deadlines, often providing support to processes…",
+    "Excellent written, fluent English, with presentation and communication skills.",
+    "Highly proficient in MS Word, Excel and other MS applications.",
+    "Ability to manage several projects and relationships simultaneously including landowners, authorities, advisors and internal stakeholders."
+   ],
+   "nice_to_have": [],
+   "seniority": "mid",
+   "years_experience": "",
+   "languages": [
+    "English"
+   ],
+   "education": "Master's (or equivalent)",
+   "skills_matched": [
+    "hydrogen",
+    "renewables",
+    "renewable energy",
+    "solar",
+    "strategy",
+    "project development",
+    "stakeholder management",
+    "english",
+    "energy"
+   ],
+   "personal_matched": [
+    "communication"
+   ],
+   "score": 74,
+   "reasons": [
+    "Title matches “development”",
+    "Seniority: mid (close to your target)",
+    "Professional skills 9/54: hydrogen, renewables, renewable energy, solar, strategy, project development, stakeholder management, english",
+    "Personal skills 1/10: communication",
+    "CV text similarity 30%",
+    "Location: London, England, United Kingdom",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-11",
+   "is_new": true,
+   "key": "smartrecruiters:Statkraft:744000160857720"
+  },
+  {
+   "company": "Statkraft",
+   "ats": "smartrecruiters",
    "job_id": "744000129203437",
    "title": "Senior Intraday Trader (m/f/d) - Proprietary Short-Term Power Trading ",
    "url": "https://jobs.smartrecruiters.com/Statkraft1/744000129203437-senior-intraday-trader-m-f-d-proprietary-short-term-power-trading-",
@@ -2317,6 +2589,73 @@
    "key": "teamtailor:atNorth:7778447"
   },
   {
+   "company": "Statkraft",
+   "ats": "smartrecruiters",
+   "job_id": "744000154074871",
+   "title": "Senior Grid Engineer – Power Systems & Compliance",
+   "url": "https://jobs.smartrecruiters.com/Statkraft1/744000154074871-senior-grid-engineer-power-systems-compliance",
+   "location": "Glasgow, Scotland, United Kingdom",
+   "department": "Other",
+   "posted": "2026-10-07",
+   "workplace": "hybrid",
+   "employment_type": "Full-time",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "utilities",
+   "segments_secondary": [
+    "trading"
+   ],
+   "summary": "A career with Statkraft is a career filled with purpose – meaning that every employee is not just making a living, they are making a real difference to the planet, our communities, and the future. With us, you’ll shape a career that is truly forward-facing with many amazing opportunities and offerings to match.",
+   "responsibilities": [
+    "Lead and manage Grid Code and G99 compliance activities, translating connection and regulatory requirements into clear technical…",
+    "Manage projects through power system studies, modelling, technical submissions, commissioning, compliance testing and final compliance…",
+    "Define, coordinate and review power system study programmes, including load flow, fault level, reactive power, harmonics, power quality…",
+    "Review and challenge consultant and OEM study methodologies, assumptions, models and results, assessing their impact on plant design…"
+   ],
+   "criteria": [
+    "Degree in Electrical Engineering, Power Systems Engineering or a related discipline, or equivalent relevant industry experience.",
+    "Strong experience within transmission-connected generation, energy storage, grid support technologies or major distribution-connected projects, with experience…",
+    "Strong understanding of the GB Grid Code, with experience managing projects through power system studies, commissioning, compliance testing and final…",
+    "Demonstrable experience specifying, managing and reviewing power system studies and models, with the technical capability to challenge methodologies…",
+    "Strong knowledge of voltage and reactive power control, frequency response, fault ride-through, fault levels, system stability, harmonics and power quality.",
+    "Experience managing technical interfaces between consultants, OEMs, EPC contractors and network operators, alongside a good understanding of HV substations…"
+   ],
+   "nice_to_have": [],
+   "seniority": "senior",
+   "years_experience": "",
+   "languages": [],
+   "education": "Degree (or equivalent)",
+   "skills_matched": [
+    "renewable energy",
+    "wind",
+    "solar",
+    "BESS",
+    "stakeholder management",
+    "energy"
+   ],
+   "personal_matched": [
+    "leadership",
+    "communication"
+   ],
+   "score": 64,
+   "reasons": [
+    "Title matches “power”",
+    "Seniority: senior ✓",
+    "Professional skills 6/54: renewable energy, wind, solar, BESS, stakeholder management, energy",
+    "Personal skills 2/10: leadership, communication",
+    "CV text similarity 18%",
+    "Keywords: BESS",
+    "Location: Glasgow, Scotland, United Kingdom",
+    "Lower-priority role (“engineer”): −25",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-11",
+   "is_new": true,
+   "key": "smartrecruiters:Statkraft:744000154074871"
+  },
+  {
    "company": "OX2",
    "ats": "successfactors",
    "job_id": "1369104955",
@@ -2384,6 +2723,75 @@
    "first_seen": "2026-11-02",
    "is_new": false,
    "key": "successfactors:OX2:1369104955"
+  },
+  {
+   "company": "atNorth",
+   "ats": "teamtailor",
+   "job_id": "8670021",
+   "title": "Power Engineering Manager, Finland",
+   "url": "https://careers.atnorth.com/jobs/8670021-power-engineering-manager-finland",
+   "location": "Espoo, Finland",
+   "department": "Development",
+   "posted": "2026-11-05",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "data_centers",
+   "segments_secondary": [
+    "portfolio",
+    "energy_intensive"
+   ],
+   "summary": "With sustainability at our core, our data centers run on renewable energy and are designed according to circular economy principles. Through innovative design, power efficiency, and intelligent operations, we deliver reliable, secure, and high-performance infrastructure.",
+   "responsibilities": [
+    "Ensure a consistent and high-quality engineering standard for substations, grid connections, HV and MV systems, power lines and campus…",
+    "Lead and coordinate power infrastructure design activities, including requirements definition, concept design, detailed design, technical…",
+    "Manage external engineering consultants, architecture and engineering partners, grid-interface designers, OEMs and contractors.",
+    "Support power infrastructure projects throughout site selection, feasibility studies, grid connection development, design, procurement…"
+   ],
+   "criteria": [
+    "A bachelor’s or master’s degree in electrical engineering or a related field.",
+    "Approximately 5 to 7 years of experience in high-voltage infrastructure engineering.",
+    "Solid knowledge of HV substations, transformers, HV and MV switchgear, grid connections and high-voltage power lines.",
+    "Experience in engineering and construction projects, preferably covering design, build, testing and commissioning.",
+    "A strong understanding of the design, construction and commissioning of HV substations and power infrastructure.",
+    "Experience managing technical consultants, designers, suppliers or contractors."
+   ],
+   "nice_to_have": [],
+   "seniority": "senior",
+   "years_experience": "5–7 years",
+   "languages": [
+    "English",
+    "Finnish"
+   ],
+   "education": "Master's",
+   "skills_matched": [
+    "renewable energy",
+    "data center",
+    "data centre",
+    "english",
+    "energy"
+   ],
+   "personal_matched": [
+    "leadership"
+   ],
+   "score": 58,
+   "reasons": [
+    "Title matches “power”",
+    "Seniority: senior ✓",
+    "Professional skills 5/54: renewable energy, data center, data centre, english, energy",
+    "Personal skills 1/10: leadership",
+    "CV text similarity 23%",
+    "Keywords: international, data center",
+    "Location: Espoo, Finland",
+    "Lower-priority role (“engineering”): −25",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-11",
+   "is_new": true,
+   "key": "teamtailor:atNorth:8670021"
   },
   {
    "company": "Alight",
@@ -2703,6 +3111,70 @@
    "first_seen": "2026-11-02",
    "is_new": false,
    "key": "teamtailor:Capalo AI:8111587"
+  },
+  {
+   "company": "Ren-Gas",
+   "ats": "teamtailor",
+   "job_id": "8581956",
+   "title": "Project Development Manager",
+   "url": "https://careers.ren-gas.com/jobs/8581956-project-development-manager",
+   "location": "Espoo, Finland",
+   "department": "Hankekehitys",
+   "posted": "2026-10-21",
+   "workplace": "hybrid",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "2026-11-29",
+   "rating": "A",
+   "segment": "developers",
+   "segments_secondary": [
+    "portfolio"
+   ],
+   "summary": "Haemme hankekehityspäälliköitä (Project Development Manager) vakituisiin työsuhteisiin viemään e-metaanihankkeitamme kohti investointipäätöstä ja toteutusta. Pääset osaksi tiimiä, joka kehittää Euroopan johtavaa e-metaaniportfoliota.",
+   "responsibilities": [
+    "Erinomaisia vuorovaikutus- ja neuvottelutaitoja sekä kykyä innostaa eri osapuolet yhteiseen tavoitteeseen. Työskentelet sujuvasti myös…",
+    "Aloitteellisuutta ja määrätietoista otetta: halua oppia uutta, tarttua avoimiin kysymyksiin ja viedä sovitut asiat käytäntöön myös silloin…",
+    "Syvää kiinnostusta uusiutuvaan energiaan ja uuden liiketoiminnan kehittämiseen",
+    "Omaan tehtäväalueeseen soveltuvaa korkeakoulututkintoa, esim. KTM, DI tai OTM, sekä kykyä yhdistää oma osaaminen hankkeiden tekniseen ja…"
+   ],
+   "criteria": [
+    "Oma hankevastuusi ja tehtäväsi painotukset tarkentuvat osaamisesi, kiinnostuksesi ja hankkeiden tarpeiden pohjalta.",
+    "Kokemusta energia-alan hankkeiden kehittämisestä kohti investointipäätöstä tai niiden keskeisten kaupallisten, teknisten tai luvitukseen liittyvien…",
+    "Voit tuoda tiimiin vahvan hankekehitystaustan tai syvempää osaamista joltakin hankkeidemme kannalta keskeiseltä alueelta.",
+    "Saat tilaa tuoda omia ideoitasi käytäntöön ja syventää osaamistasi hankekehityksen, energiamarkkinoiden ja kaupallisen liiketoiminnan rajapinnassa.",
+    "Laitosportfoliomme kautta tavoittelemme myös omaa liiketoimintaamme suurempaa vaikutusta: uutta vientiteollisuutta, investointeja ja osaamista sekä kotimaista…",
+    "Kerro hakemuksessasi, millaista osaamista toisit tiimiimme ja minkälaisten kysymysten parissa haluaisit työskennellä."
+   ],
+   "nice_to_have": [
+    "Sähkömarkkinat ja sähkönhankinta",
+    "Kaasumarkkinat ja teollisuuskaasut",
+    "Uusiutuvat polttoaineet ja niiden sääntely"
+   ],
+   "seniority": "",
+   "years_experience": "",
+   "languages": [],
+   "education": "",
+   "skills_matched": [
+    "PPA",
+    "project development",
+    "gas"
+   ],
+   "personal_matched": [],
+   "score": 35,
+   "reasons": [
+    "Title matches “development”",
+    "Seniority: not stated",
+    "Professional skills 3/54: PPA, project development, gas",
+    "Personal skills 0/10",
+    "CV text similarity 4%",
+    "Keywords: PPA",
+    "Location: Espoo, Finland",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "text",
+   "first_seen": "2026-11-11",
+   "is_new": true,
+   "key": "teamtailor:Ren-Gas:8581956"
   }
  ]
 }
