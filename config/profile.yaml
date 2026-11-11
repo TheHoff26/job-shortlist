@@ -220,7 +220,7 @@ cv_file: ""
 # 5) LINKEDIN SEARCH LINKS
 linkedin:
   enabled: true
-  location: "Finland, Helsinki, Germany"
+  location: "Finland, Helsinki, Germany, Copenhagen, Oslo, Cologne, Köln, Hamburg, Munich, München"
   posted_within_days: 7
   titles:
     - "strategy"
@@ -246,7 +246,7 @@ rating_bonus:
 weights:
   title: 0
   seniority: 43
-  professional: 60
+  professional: 51
   personal: 51
   cv_text: 51
   keywords: 5
