@@ -24,7 +24,7 @@ LINK_REASONS = {
 }
 
 
-URL_BASED = {"workday", "successfactors", "teamtailor", "avature", "easycruit"}
+URL_BASED = {"workday", "successfactors", "teamtailor", "avature", "easycruit", "phenom"}
 ID_BASED = {"greenhouse", "lever", "ashby", "smartrecruiters", "personio", "recruitee"}
 
 

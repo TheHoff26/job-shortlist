@@ -271,7 +271,19 @@ const DATA = /*__JOB_DATA__*/null;
   };
 
   // filter options
-  [...new Set(jobs.map(j => j.company))].sort().forEach(c => $("#f-co").append(new Option(c, c)));
+  // every company in the register (with the number of jobs on the shortlist), not only those with jobs
+  const STATUS = Object.fromEntries((meta.companies || []).map(c => [c.company, c]));
+  const jobCount = {};
+  jobs.forEach(j => jobCount[j.company] = (jobCount[j.company] || 0) + 1);
+  const allCos = [...new Set([...Object.keys(STATUS), ...Object.keys(jobCount)])].sort((a, b) => a.localeCompare(b));
+  const gWith = el("optgroup"), gNone = el("optgroup");
+  gWith.label = "With jobs on the shortlist"; gNone.label = "No matching jobs right now";
+  allCos.forEach(c => {
+    const n = jobCount[c] || 0;
+    (n ? gWith : gNone).append(new Option(n ? `${c} (${n})` : c, c));
+  });
+  if (gWith.children.length) $("#f-co").append(gWith);
+  if (gNone.children.length) $("#f-co").append(gNone);
   const when = new Date(meta.generated);
   $("#updated").textContent = "Updated " + when.toLocaleString(undefined, {dateStyle:"medium", timeStyle:"short"});
 
@@ -442,9 +454,24 @@ const DATA = /*__JOB_DATA__*/null;
       const e = el("div", "empty");
       const msg = !jobs.length ? null : view === "keep" ? ["Nothing kept yet", "Press Keep on a job to collect it here."]
         : view === "hide" ? ["Nothing hidden", "Jobs you hide are listed here and can be restored."] : null;
-      e.append(el("b", null, msg ? msg[0] : jobs.length ? "No positions match these filters" : "No matching positions right now"));
-      e.append(document.createTextNode(msg ? msg[1] : jobs.length ? "Lower the minimum match or clear the search." :
-        "Widen the titles or locations in config/profile.yaml, or add companies in config/companies.yaml."));
+      const st = co && !msg ? STATUS[co] : null;
+      if (st && !jobCount[co]){
+        e.append(el("b", null, `No matching positions at ${co} right now`));
+        const why = st.ats === "linkedin" ? "This company's job system is not read automatically" + (st.note ? ` (${st.note.replace(/^\d{4}-\d{2}-\d{2},\s*/, "")})` : "") + "."
+          : !st.ok ? `Its job source (${st.ats}) could not be read on the last run: ${st.error || "unknown error"}.`
+          : st.count ? `Its job board was read on the last run: ${st.count} open position${st.count === 1 ? "" : "s"} with a matching title, but none passed your location, seniority or minimum-match settings.`
+          : "Its job board was read on the last run, but no open position has a title from your search profile.";
+        e.append(document.createTextNode(why));
+        const links = el("p", "small"); links.style.margin = "10px 0 0";
+        const li = (meta.linkedin || []).find(l => l.company === co);
+        if (st.careers_url){ const a = el("a", null, "Careers page"); a.href = st.careers_url; a.target = "_blank"; a.rel = "noopener"; links.append(a); }
+        if (li){ const a = el("a", null, "Search on LinkedIn"); a.href = li.url; a.target = "_blank"; a.rel = "noopener"; if (links.childNodes.length) links.append(" · "); links.append(a); }
+        if (links.childNodes.length) e.append(links);
+      } else {
+        e.append(el("b", null, msg ? msg[0] : jobs.length ? "No positions match these filters" : "No matching positions right now"));
+        e.append(document.createTextNode(msg ? msg[1] : jobs.length ? "Lower the minimum match or clear the search." :
+          "Widen the titles or locations in your search profile, or add companies in the company register."));
+      }
       list.append(e);
     } else rows.forEach(j => list.append(card(j)));
     $("#t-shown").textContent = rows.length;

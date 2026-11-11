@@ -15,7 +15,9 @@ keyless feeds that power the companies' own careers pages:
   teamtailor       GET  https://{career-site}/jobs.rss
   avature          GET  https://{site}/{locale}/{portal}/SearchJobs/feed/  (RSS; HTML list as fallback)
                         + job page (JSON-LD JobPosting) for matching titles
-  easycruit        GET  https://{id}.easycruit.com/export/xml/vacancy/list.xml
+  easycruit        GET  https://{id}.easycruit.com/export/xml/vacancy/list.xml  (vacancy list page as fallback)
+  phenom           GET  https://{site}/{country}/{lang}/search-results?from=N  (JSON embedded in the page)
+                        + job page for the description
 """
 
 from __future__ import annotations
@@ -602,11 +604,45 @@ def _avature_root(url: str) -> str:
     return m.group(1) if m else url.rstrip("/")
 
 
-def _avature_listing(session, root: str) -> list[tuple[str, str, str]]:
-    """(title, url, description) for every open position."""
-    feed = f"{root}/SearchJobs/feed/"
+_AV_DETAIL = re.compile(r"/(?:JobDetail|FolderDetail)/", re.I)
+
+
+def _avature_html_list(session, start: str) -> list[tuple[str, str, str]]:
+    """Read the job list pages of an Avature portal (JobDetail or FolderDetail links),
+    following the 'next' link (jobOffset or folderOffset paging)."""
+    from bs4 import BeautifulSoup
+    out, seen, url, pages = [], set(), start, 0
+    params = {"jobRecordsPerPage": 100, "folderRecordsPerPage": 100}
+    while url and pages < 80:
+        r = session.get(url, params=params if pages == 0 else None, timeout=TIMEOUT, headers={"Accept": "text/html"})
+        r.raise_for_status()
+        soup = BeautifulSoup(r.text, "html.parser")
+        new = 0
+        for a in soup.select("a[href]"):
+            href = requests.compat.urljoin(url, a["href"])
+            text = a.get_text(" ", strip=True)
+            if not _AV_DETAIL.search(href) or not text or len(text) < 4:
+                continue
+            key = re.sub(r"[?#].*$", "", href)
+            if key in seen:
+                continue
+            seen.add(key)
+            out.append((text, key, ""))
+            new += 1
+        pages += 1
+        nxt = soup.select_one("a.paginationNextLink, a[rel=next], a[aria-label*='Next' i], a[title*='Next' i]")
+        if not nxt:
+            nxt = next((a for a in soup.select("a[href]") if re.match(r"^\s*(next|weiter|nächste)\b", a.get_text(strip=True), re.I)
+                        and re.search(r"(job|folder)Offset=", a["href"])), None)
+        url = requests.compat.urljoin(url, nxt["href"]) if nxt and new else None
+    return out
+
+
+def _avature_listing(session, url: str) -> list[tuple[str, str, str]]:
+    """(title, url, description) for every open position of an Avature portal."""
+    root = _avature_root(url)
     try:
-        r = session.get(feed, params={"jobRecordsPerPage": 1000}, timeout=TIMEOUT,
+        r = session.get(f"{root}/SearchJobs/feed/", params={"jobRecordsPerPage": 1000}, timeout=TIMEOUT,
                         headers={"Accept": "application/rss+xml, application/xml, text/xml"})
         r.raise_for_status()
         items = list(ET.fromstring(r.content).iter("item"))
@@ -615,36 +651,26 @@ def _avature_listing(session, root: str) -> list[tuple[str, str, str]]:
                      html.unescape(it.findtext("description") or "")) for it in items]
     except (requests.RequestException, ET.ParseError) as e:
         log.info("avature feed not usable for %s (%s) – reading the job list pages", root, e)
-    from bs4 import BeautifulSoup
-    out, offset = [], 0
-    while offset < 2000:
-        r = session.get(f"{root}/SearchJobs", params={"jobRecordsPerPage": 50, "jobOffset": offset},
-                        timeout=TIMEOUT, headers={"Accept": "text/html"})
-        r.raise_for_status()
-        soup = BeautifulSoup(r.text, "html.parser")
-        links = soup.select("article.article--result h3 a, .article__header__text__title a") or \
-            [a for a in soup.select("a[href*='/JobDetail/']")]
-        page = []
-        for a in links:
-            href = requests.compat.urljoin(root + "/", a.get("href", ""))
-            if "/JobDetail/" in href and href not in {u for _, u, _ in out + page}:
-                page.append((a.get_text(" ", strip=True), href, ""))
-        out.extend(page)
-        if len(page) < 50 or not soup.select_one("a.paginationNextLink"):
-            break
-        offset += 50
-    if not out:
-        raise RuntimeError("Avature: no job list found (feed and list pages empty)")
-    return out
+    # list page: the configured URL if it is one (e.g. .../jobs/Jobs or .../SearchJobsGermany), else SearchJobs
+    starts = [url] if url.rstrip("/") != root else []
+    starts += [f"{root}/SearchJobs", f"{root}/Jobs"]
+    errors = []
+    for start in dict.fromkeys(starts):
+        try:
+            out = _avature_html_list(session, start)
+            if out:
+                return out
+        except requests.RequestException as e:
+            errors.append(f"{start}: {e}")
+    raise RuntimeError("Avature: no job list found – " + ("; ".join(errors)[:300] or "list pages had no job links"))
 
 
 def fetch_avature(session, company: dict, keep: TitleFilter) -> list[Job]:
-    root = _avature_root(company["url"])
     jobs = []
-    for title, link, desc in _avature_listing(session, root):
+    for title, link, desc in _avature_listing(session, company["url"]):
         if not title or not keep(title):
             continue
-        ids = re.findall(r"/JobDetail/[^/]+/(\d+)", link) or re.findall(r"(\d+)/?$", link)
+        ids = re.findall(r"/(?:JobDetail|FolderDetail)/[^/]+/(\d+)", link) or re.findall(r"(\d+)/?$", link)
         posting, page_desc = {}, ""
         try:
             pr = session.get(link, timeout=TIMEOUT, headers={"Accept": "text/html"})
@@ -661,6 +687,97 @@ def fetch_avature(session, company: dict, keep: TitleFilter) -> list[Job]:
             posted=_date(posting.get("datePosted") or ""),
             employment_type=str(posting.get("employmentType") or "").replace("_", " ").lower(),
             deadline=_date(posting.get("validThrough")) if posting.get("validThrough") else "",
+        ))
+    return jobs
+
+
+# --------------------------------------------------------------------------- #
+# Phenom career sites (e.g. careers.enbw.com/global/en) – the search page embeds
+# its results as JSON ("eagerLoadRefineSearch"); the job page embeds "jobDetail".
+# --------------------------------------------------------------------------- #
+def _embedded_json(text: str, marker: str):
+    i = text.find(f'"{marker}":')
+    if i < 0:
+        return None
+    import json as _json
+    try:
+        obj, _ = _json.JSONDecoder().raw_decode(text[i + len(marker) + 3:].lstrip())
+        return obj
+    except ValueError:
+        return None
+
+
+def _phenom_bases(url: str) -> list[str]:
+    u = urlparse(url)
+    path = re.sub(r"/(search-results|jobs)/?$", "", u.path.rstrip("/"))
+    host = f"{u.scheme}://{u.netloc}"
+    cands = [host + path] if path else []
+    cands += [host + "/global/en", host + "/us/en", host + "/en", host]
+    return list(dict.fromkeys(cands))
+
+
+def fetch_phenom(session, company: dict, keep: TitleFilter) -> list[Job]:
+    from urllib.parse import parse_qsl
+    url = company["url"]
+    extra = dict(parse_qsl(urlparse(url).query))          # e.g. keywords=... from the register
+    base, first, errors = None, None, []
+    for b in _phenom_bases(url.split("?")[0]):
+        try:
+            r = session.get(f"{b}/search-results", params={**extra, "from": 0, "s": 1}, timeout=TIMEOUT,
+                            headers={"Accept": "text/html"})
+            if r.status_code == 200:
+                data = _embedded_json(r.text, "eagerLoadRefineSearch")
+                if data and (data.get("data") or {}).get("jobs") is not None:
+                    base, first = b, data
+                    break
+            errors.append(f"{b}: HTTP {r.status_code}")
+        except requests.RequestException as e:
+            errors.append(f"{b}: {e}")
+    if not base:
+        raise RuntimeError("Phenom: no search results found – " + "; ".join(errors)[:300])
+    total = first.get("totalHits") or first.get("hits") or 0
+    listing, data, offset, seen = [], first, 0, set()
+    while True:
+        page = (data.get("data") or {}).get("jobs") or []
+        fresh = [j for j in page if (j.get("jobId") or j.get("jobSeqNo")) not in seen]
+        if not fresh:
+            break
+        for j in fresh:
+            seen.add(j.get("jobId") or j.get("jobSeqNo"))
+        listing.extend(fresh)
+        offset += len(page)
+        if (total and offset >= total) or offset >= 3000:
+            break
+        r = session.get(f"{base}/search-results", params={**extra, "from": offset, "s": 1}, timeout=TIMEOUT,
+                        headers={"Accept": "text/html"})
+        r.raise_for_status()
+        data = _embedded_json(r.text, "eagerLoadRefineSearch") or {}
+    jobs = []
+    for j in listing:
+        title = (j.get("title") or "").strip()
+        if not title or not keep(title):
+            continue
+        jid = str(j.get("jobId") or j.get("jobSeqNo") or "")
+        link = f"{base}/job/{jid}"
+        loc = j.get("location") or j.get("cityStateCountry") or ", ".join(x for x in (j.get("city"), j.get("country")) if x)
+        desc, deadline = j.get("descriptionTeaser") or "", ""
+        try:
+            pr = session.get(link, timeout=TIMEOUT, headers={"Accept": "text/html"})
+            if pr.status_code == 200:
+                det = ((_embedded_json(pr.text, "jobDetail") or {}).get("data") or {}).get("job") or {}
+                desc = det.get("description") or det.get("jobDescription") or desc
+                posting = _jsonld_posting(pr.text)
+                desc = desc or html.unescape(posting.get("description") or "")
+                if posting.get("validThrough"):
+                    deadline = _date(posting["validThrough"])
+        except requests.RequestException:
+            pass
+        jobs.append(Job(
+            company=company["name"], ats="phenom", job_id=jid or link, title=title, url=link,
+            location=loc if isinstance(loc, str) else ", ".join(map(str, loc)),
+            department=str(j.get("category") or ""), description_html=desc,
+            posted=_date(j.get("postedDate") or j.get("dateCreated") or ""),
+            employment_type=str(j.get("type") or "").lower(), deadline=deadline,
         ))
     return jobs
 
@@ -694,11 +811,55 @@ def _first(vals: dict, keys) -> str:
     return next((vals[k] for k in keys if vals.get(k)), "")
 
 
+def _easycruit_html(session, company: dict, keep: TitleFilter, base: str) -> list[Job]:
+    from bs4 import BeautifulSoup
+    found, errors = {}, []
+    for start in (f"{base}/?iso=gb", f"{base}/", f"{base}/index.html?iso=gb"):
+        try:
+            r = session.get(start, timeout=TIMEOUT, headers={"Accept": "text/html"})
+            if r.status_code != 200:
+                errors.append(f"{start}: HTTP {r.status_code}")
+                continue
+            soup = BeautifulSoup(r.text, "html.parser")
+            for a in soup.select("a[href*='/vacancy/']"):
+                href = requests.compat.urljoin(start, a["href"])
+                m = re.search(r"/vacancy/(\d+)", href)
+                t = a.get_text(" ", strip=True)
+                if m and t and m.group(1) not in found:
+                    found[m.group(1)] = (t, href if "iso=" in href else href + ("&" if "?" in href else "?") + "iso=gb")
+            if found:
+                break
+        except requests.RequestException as e:
+            errors.append(f"{start}: {e}")
+    if not found:
+        raise RuntimeError("EasyCruit: no vacancy list found – " + ("; ".join(errors)[:300] or "list page had no vacancy links"))
+    jobs = []
+    for vid, (title, link) in found.items():
+        if not keep(title):
+            continue
+        desc, loc, deadline = "", "", ""
+        try:
+            pr = session.get(link, timeout=TIMEOUT, headers={"Accept": "text/html"})
+            if pr.status_code == 200:
+                posting = _jsonld_posting(pr.text)
+                desc = html.unescape(posting.get("description") or "") or _page_description(pr.text)
+                loc = _posting_location(posting)
+                if posting.get("validThrough"):
+                    deadline = _date(posting["validThrough"])
+        except requests.RequestException:
+            pass
+        jobs.append(Job(company=company["name"], ats="easycruit", job_id=vid, title=title, url=link,
+                        location=loc, description_html=desc, deadline=deadline))
+    return jobs
+
+
 def fetch_easycruit(session, company: dict, keep: TitleFilter) -> list[Job]:
     ident = company.get("id") or urlparse(company.get("url", "")).netloc.split(".")[0]
     base = f"https://{ident}.easycruit.com"
     r = session.get(f"{base}/export/xml/vacancy/list.xml", timeout=TIMEOUT,
                     headers={"Accept": "application/xml, text/xml"})
+    if r.status_code in (403, 404):                      # XML export not enabled -> read the vacancy list page
+        return _easycruit_html(session, company, keep, base)
     r.raise_for_status()
     root = ET.fromstring(r.content)
     vacancies = [el for el in root.iter() if _local(el.tag) == "vacancy"]
@@ -738,6 +899,7 @@ FETCHERS: dict[str, Callable] = {
     "teamtailor": fetch_teamtailor,
     "avature": fetch_avature,
     "easycruit": fetch_easycruit,
+    "phenom": fetch_phenom,
 }
 
 
