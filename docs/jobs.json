@@ -1,6 +1,6 @@
 {
  "meta": {
-  "generated": "2026-11-11T08:19+00:00",
+  "generated": "2026-11-11T15:04+00:00",
   "total_matches": 22,
   "new_matches": 7,
   "companies": [
@@ -140,7 +140,7 @@
     "company": "Centrica Energy Trading",
     "ats": "workday",
     "ok": true,
-    "count": 7,
+    "count": 8,
     "error": "",
     "source": "https://centrica.wd3.myworkdayjobs.com/Centrica",
     "careers_url": "https://centricaenergy.com",
@@ -236,7 +236,7 @@
     "company": "Statkraft",
     "ats": "smartrecruiters",
     "ok": true,
-    "count": 11,
+    "count": 10,
     "error": "",
     "source": "Statkraft1",
     "careers_url": "https://careers.smartrecruiters.com/Statkraft1",
@@ -356,7 +356,7 @@
     "company": "Alight",
     "ats": "teamtailor",
     "ok": true,
-    "count": 1,
+    "count": 2,
     "error": "",
     "source": "https://careers.alight-energy.com",
     "careers_url": "https://careers.alight-energy.com",
@@ -867,6 +867,18 @@
     "note": "no supported job system found",
     "rating": "A",
     "segment": "oem"
+   },
+   {
+    "company": "MB Energy",
+    "ats": "workday",
+    "ok": false,
+    "count": 0,
+    "error": "KeyError: 'url'",
+    "source": "detect automatically",
+    "careers_url": "https://mabanaft.wd3.myworkdayjobs.com/en-US/Mabanaft/jobs",
+    "note": "",
+    "rating": "A",
+    "segment": "trading"
    }
   ],
   "repo": "TheHoff26/job-shortlist",
@@ -1295,7 +1307,7 @@
     "coaching",
     "entrepreneurial"
    ],
-   "score": 99,
+   "score": 98,
    "reasons": [
     "Title matches “head of”",
     "Seniority: executive ✓",
@@ -1365,7 +1377,7 @@
     "leadership",
     "communication"
    ],
-   "score": 99,
+   "score": 98,
    "reasons": [
     "Title matches “trading”",
     "Seniority: senior ✓",
@@ -1380,6 +1392,70 @@
    "first_seen": "2026-11-02",
    "is_new": false,
    "key": "smartrecruiters:Statkraft:744000158266779"
+  },
+  {
+   "company": "EQT Infrastructure",
+   "ats": "greenhouse",
+   "job_id": "4962404101",
+   "title": "Product Lead, Investment Value Stream",
+   "url": "https://job-boards.eu.greenhouse.io/eqtpartners/jobs/4962404101",
+   "location": "London, England, United Kingdom",
+   "department": "Investment Value Stream (Cost Center)",
+   "posted": "2026-08-27",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "pe",
+   "segments_secondary": [
+    "portfolio"
+   ],
+   "summary": "Senior product leadership in EQT's Investment Value Stream, covering pre-deal intelligence, diligence & deal execution alongside end-to-end deal and relationship management.",
+   "responsibilities": [
+    "Own product strategy, cross-product initiatives and roadmaps across pre-deal, and deal & relationship management lifecycle; building clear…",
+    "Driving transformation alongside product builds — programme & project management, process re-design, new ways of working, driving adoption…",
+    "Arbitrate competing demand & objectives across business lines & stakeholder groups; creation of decision frameworks, optimization criteria…",
+    "Deep-dive selectively: take direct, hands-on product ownership of a capability when it requires a ramp-up, or when other strategic…"
+   ],
+   "criteria": [
+    "You are a product leader with a strong record of delivery on high-impact initiatives.",
+    "Your experience dealing with senior stakeholders guides a strong sense of commercial acumen, analytical rigour, and technical depth to guide the deployment of…",
+    "This profile requires building credibility with investment professionals and the engineering organization across the globe.",
+    "You’ll also be equally adept managing communications, handling competing agendas, diving hands-on wherever tight deadlines demand it.",
+    "Above all, you’re naturally curious on where technology can truly create value in private markets, with an underlying drive & collaborative mindset to make it…"
+   ],
+   "nice_to_have": [],
+   "seniority": "lead",
+   "years_experience": "",
+   "languages": [],
+   "education": "",
+   "skills_matched": [
+    "partnerships",
+    "strategy",
+    "optimization"
+   ],
+   "personal_matched": [
+    "leadership",
+    "coaching",
+    "strategic thinking",
+    "entrepreneurial"
+   ],
+   "score": 91,
+   "reasons": [
+    "Title matches “investment”",
+    "Seniority: lead ✓",
+    "Professional skills 3/52: partnerships, strategy, optimization",
+    "Personal skills 4/10: leadership, coaching, strategic thinking, entrepreneurial",
+    "CV text similarity 24%",
+    "Keywords: AI",
+    "Location: London, England, United Kingdom",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-10",
+   "is_new": true,
+   "key": "greenhouse:EQT Infrastructure:4962404101"
   },
   {
    "company": "Ingrid Capacity",
@@ -1435,7 +1511,7 @@
     "communication",
     "initiative"
    ],
-   "score": 93,
+   "score": 91,
    "reasons": [
     "Title matches “trader”",
     "Seniority: mid (close to your target)",
@@ -1450,70 +1526,6 @@
    "first_seen": "2026-11-02",
    "is_new": false,
    "key": "teamtailor:Ingrid Capacity:8053254"
-  },
-  {
-   "company": "EQT Infrastructure",
-   "ats": "greenhouse",
-   "job_id": "4962404101",
-   "title": "Product Lead, Investment Value Stream",
-   "url": "https://job-boards.eu.greenhouse.io/eqtpartners/jobs/4962404101",
-   "location": "London, England, United Kingdom",
-   "department": "Investment Value Stream (Cost Center)",
-   "posted": "2026-08-27",
-   "workplace": "",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "",
-   "rating": "A",
-   "segment": "pe",
-   "segments_secondary": [
-    "portfolio"
-   ],
-   "summary": "Senior product leadership in EQT's Investment Value Stream, covering pre-deal intelligence, diligence & deal execution alongside end-to-end deal and relationship management.",
-   "responsibilities": [
-    "Own product strategy, cross-product initiatives and roadmaps across pre-deal, and deal & relationship management lifecycle; building clear…",
-    "Driving transformation alongside product builds — programme & project management, process re-design, new ways of working, driving adoption…",
-    "Arbitrate competing demand & objectives across business lines & stakeholder groups; creation of decision frameworks, optimization criteria…",
-    "Deep-dive selectively: take direct, hands-on product ownership of a capability when it requires a ramp-up, or when other strategic…"
-   ],
-   "criteria": [
-    "You are a product leader with a strong record of delivery on high-impact initiatives.",
-    "Your experience dealing with senior stakeholders guides a strong sense of commercial acumen, analytical rigour, and technical depth to guide the deployment of…",
-    "This profile requires building credibility with investment professionals and the engineering organization across the globe.",
-    "You’ll also be equally adept managing communications, handling competing agendas, diving hands-on wherever tight deadlines demand it.",
-    "Above all, you’re naturally curious on where technology can truly create value in private markets, with an underlying drive & collaborative mindset to make it…"
-   ],
-   "nice_to_have": [],
-   "seniority": "lead",
-   "years_experience": "",
-   "languages": [],
-   "education": "",
-   "skills_matched": [
-    "partnerships",
-    "strategy",
-    "optimization"
-   ],
-   "personal_matched": [
-    "leadership",
-    "coaching",
-    "strategic thinking",
-    "entrepreneurial"
-   ],
-   "score": 92,
-   "reasons": [
-    "Title matches “investment”",
-    "Seniority: lead ✓",
-    "Professional skills 3/52: partnerships, strategy, optimization",
-    "Personal skills 4/10: leadership, coaching, strategic thinking, entrepreneurial",
-    "CV text similarity 24%",
-    "Keywords: AI",
-    "Location: London, England, United Kingdom",
-    "Company rated A: +6"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-10",
-   "is_new": true,
-   "key": "greenhouse:EQT Infrastructure:4962404101"
   },
   {
    "company": "atNorth",
@@ -1564,7 +1576,7 @@
     "leadership",
     "communication"
    ],
-   "score": 92,
+   "score": 90,
    "reasons": [
     "Title matches “commercial”",
     "Seniority: senior ✓",
@@ -1579,69 +1591,6 @@
    "first_seen": "2026-11-10",
    "is_new": true,
    "key": "teamtailor:atNorth:8559116"
-  },
-  {
-   "company": "atNorth",
-   "ats": "teamtailor",
-   "job_id": "8485560",
-   "title": "Project Procurement Manager",
-   "url": "https://careers.atnorth.com/jobs/8485560-project-procurement-manager",
-   "location": "Oslo, Norway",
-   "department": "Finance",
-   "posted": "2026-10-01",
-   "workplace": "hybrid",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "",
-   "rating": "A",
-   "segment": "data_centers",
-   "segments_secondary": [
-    "portfolio",
-    "energy_intensive"
-   ],
-   "summary": "We design mission-critical ecosystems powered by 100% renewable energy and circular economy principles, staying ahead through a relentless focus on reliability, security, and performance.",
-   "responsibilities": [
-    "Lead multiple end-to-end RFQ/RFP processes for construction packages.",
-    "Prepare and issue documentation, manage clarifications, and evaluate bids.",
-    "Conduct contract negotiations with General Contractors and key suppliers.",
-    "Ensure compliance with local law, company polices, procedures etc. throughout the procurement process."
-   ],
-   "criteria": [
-    "You are a seasoned procurement professional with deep experience in the data center, construction, infrastructure, or technology sectors.",
-    "Combining analytical sharpness with a service-oriented mindset, you excel at complex negotiations and stakeholder management.",
-    "You are equally comfortable driving day-to-day operations and contributing to long-term strategic planning."
-   ],
-   "nice_to_have": [],
-   "seniority": "senior",
-   "years_experience": "7+ years",
-   "languages": [],
-   "education": "",
-   "skills_matched": [
-    "renewable energy",
-    "data center",
-    "partnerships",
-    "stakeholder management",
-    "english",
-    "energy"
-   ],
-   "personal_matched": [
-    "communication"
-   ],
-   "score": 87,
-   "reasons": [
-    "Title matches “procurement”",
-    "Seniority: senior ✓",
-    "Professional skills 6/52: renewable energy, data center, partnerships, stakeholder management, english, energy",
-    "Personal skills 1/10: communication",
-    "CV text similarity 18%",
-    "Keywords: international, data center",
-    "Location: Oslo, Norway",
-    "Company rated A: +6"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-02",
-   "is_new": false,
-   "key": "teamtailor:atNorth:8485560"
   },
   {
    "company": "atNorth",
@@ -1693,7 +1642,7 @@
    "personal_matched": [
     "communication"
    ],
-   "score": 87,
+   "score": 85,
    "reasons": [
     "Title matches “procurement”",
     "Seniority: senior ✓",
@@ -1764,7 +1713,7 @@
    "personal_matched": [
     "communication"
    ],
-   "score": 86,
+   "score": 84,
    "reasons": [
     "Title matches “procurement”",
     "Seniority: senior ✓",
@@ -1779,6 +1728,69 @@
    "first_seen": "2026-11-02",
    "is_new": false,
    "key": "teamtailor:atNorth:8485629"
+  },
+  {
+   "company": "atNorth",
+   "ats": "teamtailor",
+   "job_id": "8485560",
+   "title": "Project Procurement Manager",
+   "url": "https://careers.atnorth.com/jobs/8485560-project-procurement-manager",
+   "location": "Oslo, Norway",
+   "department": "Finance",
+   "posted": "2026-10-01",
+   "workplace": "hybrid",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "data_centers",
+   "segments_secondary": [
+    "portfolio",
+    "energy_intensive"
+   ],
+   "summary": "We design mission-critical ecosystems powered by 100% renewable energy and circular economy principles, staying ahead through a relentless focus on reliability, security, and performance.",
+   "responsibilities": [
+    "Lead multiple end-to-end RFQ/RFP processes for construction packages.",
+    "Prepare and issue documentation, manage clarifications, and evaluate bids.",
+    "Conduct contract negotiations with General Contractors and key suppliers.",
+    "Ensure compliance with local law, company polices, procedures etc. throughout the procurement process."
+   ],
+   "criteria": [
+    "You are a seasoned procurement professional with deep experience in the data center, construction, infrastructure, or technology sectors.",
+    "Combining analytical sharpness with a service-oriented mindset, you excel at complex negotiations and stakeholder management.",
+    "You are equally comfortable driving day-to-day operations and contributing to long-term strategic planning."
+   ],
+   "nice_to_have": [],
+   "seniority": "senior",
+   "years_experience": "7+ years",
+   "languages": [],
+   "education": "",
+   "skills_matched": [
+    "renewable energy",
+    "data center",
+    "partnerships",
+    "stakeholder management",
+    "english",
+    "energy"
+   ],
+   "personal_matched": [
+    "communication"
+   ],
+   "score": 84,
+   "reasons": [
+    "Title matches “procurement”",
+    "Seniority: senior ✓",
+    "Professional skills 6/52: renewable energy, data center, partnerships, stakeholder management, english, energy",
+    "Personal skills 1/10: communication",
+    "CV text similarity 18%",
+    "Keywords: international, data center",
+    "Location: Oslo, Norway",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-02",
+   "is_new": false,
+   "key": "teamtailor:atNorth:8485560"
   },
   {
    "company": "Statkraft",
@@ -1827,7 +1839,7 @@
    "personal_matched": [
     "communication"
    ],
-   "score": 84,
+   "score": 81,
    "reasons": [
     "Title matches “trading”",
     "Seniority: lead ✓",
@@ -1895,7 +1907,7 @@
     "coaching",
     "communication"
    ],
-   "score": 83,
+   "score": 80,
    "reasons": [
     "Title matches “sustainability”",
     "Seniority: senior ✓",
@@ -1958,7 +1970,7 @@
     "coaching",
     "communication"
    ],
-   "score": 83,
+   "score": 80,
    "reasons": [
     "Title matches “strategic”",
     "Seniority: senior ✓",
@@ -2024,7 +2036,7 @@
     "energy"
    ],
    "personal_matched": [],
-   "score": 81,
+   "score": 78,
    "reasons": [
     "Title matches “commercial”",
     "Seniority: lead ✓",
@@ -2089,7 +2101,7 @@
    "personal_matched": [
     "communication"
    ],
-   "score": 80,
+   "score": 77,
    "reasons": [
     "Title matches “trader”",
     "Seniority: mid (close to your target)",
@@ -2155,7 +2167,7 @@
    "personal_matched": [
     "communication"
    ],
-   "score": 79,
+   "score": 76,
    "reasons": [
     "Title matches “trading”",
     "Seniority: senior ✓",
@@ -2224,7 +2236,7 @@
    "personal_matched": [
     "communication"
    ],
-   "score": 76,
+   "score": 73,
    "reasons": [
     "Title matches “origination”",
     "Seniority: mid (close to your target)",
@@ -2288,7 +2300,7 @@
    "personal_matched": [
     "initiative"
    ],
-   "score": 73,
+   "score": 69,
    "reasons": [
     "Title matches “procurement”",
     "Seniority: senior ✓",
@@ -2357,7 +2369,7 @@
    "personal_matched": [
     "entrepreneurial"
    ],
-   "score": 68,
+   "score": 64,
    "reasons": [
     "Title matches “investment”",
     "Seniority: junior (outside your target)",
@@ -2372,6 +2384,72 @@
    "first_seen": "2026-11-02",
    "is_new": false,
    "key": "successfactors:OX2:1369104955"
+  },
+  {
+   "company": "Alight",
+   "ats": "teamtailor",
+   "job_id": "8702821",
+   "title": "Investment Analyst",
+   "url": "https://careers.alight-energy.com/jobs/8702821-investment-analyst",
+   "location": "Stockholm, Sweden; Helsinki, Finland; Malmö, Sweden; Denmark, Denmark; Oslo, Norway",
+   "department": "Investment",
+   "posted": "2026-11-11",
+   "workplace": "hybrid",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "developers",
+   "segments_secondary": [],
+   "summary": "Do you enjoy building financial models, evaluating investment opportunities, and supporting M&A transactions – and want to use those skills to accelerate the transition to renewable energy?",
+   "responsibilities": [
+    "Build, maintain, and improve financial models to evaluate solar PV and BESS investments, acquisitions, and development opportunities.",
+    "Perform valuation analyses, including DCF, comparable company, and transaction analyses.",
+    "Conduct scenario and sensitivity analyses to assess investment returns, key value drivers, and potential risks.",
+    "Analyse project economics, investment structures and expected returns, and prepare financial analyses to support investment decisions."
+   ],
+   "criteria": [
+    "Around 1–3 years of experience in investment banking, M&A, transaction advisory, corporate finance, investment analysis, or a related field.",
+    "Experience in financial modelling, valuation, and investment analysis, including the ability to build financial models from scratch.",
+    "Understanding of valuation methodologies, investment returns, and key financial metrics.",
+    "Exposure to M&A processes, due diligence, or transaction execution.",
+    "Strong analytical and quantitative skills, commercial awareness, and attention to detail.",
+    "Advanced Excel skills and proficiency in Microsoft Office."
+   ],
+   "nice_to_have": [],
+   "seniority": "junior",
+   "years_experience": "1–3 years",
+   "languages": [
+    "English"
+   ],
+   "education": "",
+   "skills_matched": [
+    "energy transition",
+    "renewable energy",
+    "solar",
+    "battery storage",
+    "BESS",
+    "partnerships",
+    "M&A",
+    "english",
+    "energy"
+   ],
+   "personal_matched": [],
+   "score": 57,
+   "reasons": [
+    "Title matches “investment”",
+    "Seniority: junior (outside your target)",
+    "Professional skills 9/52: energy transition, renewable energy, solar, battery storage, BESS, partnerships, M&A, english",
+    "Personal skills 0/10",
+    "CV text similarity 20%",
+    "Keywords: AI, BESS",
+    "Location: Stockholm, Sweden; Helsinki, Finland; Malmö, Sweden; Denmark, Denmark; Oslo, Norway",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-11",
+   "is_new": true,
+   "key": "teamtailor:Alight:8702821"
   },
   {
    "company": "EQT Infrastructure",
@@ -2421,7 +2499,7 @@
     "communication",
     "entrepreneurial"
    ],
-   "score": 58,
+   "score": 55,
    "reasons": [
     "Title matches “VP”",
     "Seniority: executive ✓",
@@ -2483,7 +2561,7 @@
    "personal_matched": [
     "communication"
    ],
-   "score": 56,
+   "score": 50,
    "reasons": [
     "Title matches “procurement”",
     "Seniority: mid (close to your target)",
@@ -2545,7 +2623,7 @@
     "energy"
    ],
    "personal_matched": [],
-   "score": 50,
+   "score": 43,
    "reasons": [
     "Title matches “commercial”",
     "Seniority: junior (outside your target)",
@@ -2609,7 +2687,7 @@
     "electricity"
    ],
    "personal_matched": [],
-   "score": 46,
+   "score": 42,
    "reasons": [
     "Title matches “infrastructure”",
     "Seniority: senior ✓",
@@ -2625,52 +2703,6 @@
    "first_seen": "2026-11-02",
    "is_new": false,
    "key": "teamtailor:Capalo AI:8111587"
-  },
-  {
-   "company": "Nordea",
-   "ats": "successfactors",
-   "job_id": "1455894933",
-   "title": "Head of Analysis, Requirement & Test",
-   "url": "https://careers.nordea.com/job/Stockholm-Head-of-Analysis%2C-Requirement-&-Test-111-56/1455894933/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS",
-   "location": "Stockholm, SE, 111 56",
-   "department": "",
-   "posted": "2026-11-10",
-   "workplace": "",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "2026-11-23",
-   "rating": "A",
-   "segment": "pe",
-   "segments_secondary": [],
-   "summary": "Vill du leda människor som skapar förutsättningarna för framtidens försäkringslösningar?",
-   "responsibilities": [
-    "Leda, coacha och utveckla medarbetare inom analys, krav och test.",
-    "Säkerställa rätt kompetens och kapacitet för framtida behov.",
-    "Bygga en kultur präglad av ansvarstagande, samarbete och kontinuerligt lärande.",
-    "Stötta medarbetare i komplexa verksamhets- och teknikrelaterade frågeställningar."
-   ],
-   "criteria": [],
-   "nice_to_have": [],
-   "seniority": "executive",
-   "years_experience": "",
-   "languages": [],
-   "education": "",
-   "skills_matched": [],
-   "personal_matched": [],
-   "score": 38,
-   "reasons": [
-    "Title matches “head of”",
-    "Seniority: executive ✓",
-    "Professional skills 0/52",
-    "Personal skills 0/10",
-    "CV text similarity 1%",
-    "Location: Stockholm, SE, 111 56",
-    "Company rated A: +6"
-   ],
-   "deadline_source": "text",
-   "first_seen": "2026-11-11",
-   "is_new": true,
-   "key": "successfactors:Nordea:1455894933"
   }
  ]
 }
