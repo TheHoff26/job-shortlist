@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-11T07:26:24.148Z",
+ "updated": "2026-11-11T17:22:54.923Z",
  "jobs": {
   "personio:terralayr:2594674": {
    "state": "hide",
@@ -190,6 +190,13 @@
    "title": "Head of Analysis, Requirement & Test",
    "company": "Nordea",
    "url": "https://careers.nordea.com/job/Stockholm-Head-of-Analysis%2C-Requirement-&-Test-111-56/1455894933/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS"
+  },
+  "teamtailor:Alight:8702821": {
+   "state": "hide",
+   "at": "2026-11-11T17:22:52.780Z",
+   "title": "Investment Analyst",
+   "company": "Alight",
+   "url": "https://careers.alight-energy.com/jobs/8702821-investment-analyst"
   }
  }
 }
