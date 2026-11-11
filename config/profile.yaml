@@ -180,6 +180,9 @@ cv_skills:
   - "optimization"
   - "German"
   - "english"
+  - "energy"
+  - "gas"
+  - "electricity"
 
 # Personal skills (scored separately, see weights)
 personal_skills:
