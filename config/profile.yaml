@@ -183,6 +183,8 @@ cv_skills:
   - "energy"
   - "gas"
   - "electricity"
+  - "biofuels"
+  - "HVO"
 
 # Personal skills (scored separately, see weights)
 personal_skills:
@@ -238,14 +240,14 @@ linkedin:
 rating_bonus:
   A: 6
   B: 3
-  C: 0
+  C: 1
 
 # 7) MATCH SCORE – weight of each part (rescaled to 0-100)
 weights:
   title: 0
   seniority: 43
-  professional: 50
-  personal: 39
+  professional: 60
+  personal: 51
   cv_text: 51
   keywords: 5
 
