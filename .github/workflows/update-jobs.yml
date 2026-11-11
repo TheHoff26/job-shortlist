@@ -20,6 +20,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
+        with:
+          ref: main                  # always start from the newest state (runs can queue)
 
       - uses: actions/setup-python@v6
         with:
@@ -41,8 +43,17 @@ jobs:
           git add docs data config
           if git diff --cached --quiet; then
             echo "No changes"
-          else
-            git commit -m "Update job shortlist $(date -u +%F)"
-            git pull --rebase origin main   # in case the company list changed meanwhile
-            git push
+            exit 0
           fi
+          git commit -m "Update job shortlist $(date -u +%F)"
+          # Another run or a page save may have pushed meanwhile. Rebase onto it;
+          # where both changed the generated files, keep this run's newer result.
+          for attempt in 1 2 3; do
+            if git pull --rebase -X theirs origin main && git push; then
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            sleep 10
+          done
+          echo "Could not publish after 3 attempts"
+          exit 1
