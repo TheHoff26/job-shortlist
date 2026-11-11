@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-11T07:25:59.578Z",
+ "updated": "2026-11-11T07:26:06.742Z",
  "jobs": {
   "personio:terralayr:2594674": {
    "state": "hide",
@@ -155,6 +155,13 @@
    "title": "Project Procurement Manager",
    "company": "atNorth",
    "url": "https://careers.atnorth.com/jobs/8485560-project-procurement-manager"
+  },
+  "successfactors:Fortum:1376041255": {
+   "state": "hide",
+   "at": "2026-11-11T07:26:05.001Z",
+   "title": "Senior Manager, Sustainability Communications",
+   "company": "Fortum",
+   "url": "https://jobs.fortum.com/Fortum/job/Espoo-Senior-Manager%2C-Sustainability-Communications/1376041255/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS"
   }
  }
 }
