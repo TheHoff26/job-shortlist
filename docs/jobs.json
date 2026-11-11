@@ -1,8 +1,8 @@
 {
  "meta": {
-  "generated": "2026-11-11T17:38+00:00",
-  "total_matches": 29,
-  "new_matches": 14,
+  "generated": "2026-11-11T18:28+00:00",
+  "total_matches": 42,
+  "new_matches": 27,
   "companies": [
    {
     "company": "Fortum",
@@ -36,19 +36,19 @@
     "error": "link only",
     "source": "",
     "careers_url": "https://st1.com/about-us/people-and-careers/open-positions",
-    "note": "2026-11-02, set manually",
+    "note": "recruits via Barona / Laura – not supported",
     "rating": "A",
     "segment": "developers"
    },
    {
     "company": "Copenhagen Infrastructure Partners",
-    "ats": "linkedin",
-    "ok": true,
+    "ats": "easycruit",
+    "ok": false,
     "count": 0,
-    "error": "link only",
-    "source": "",
-    "careers_url": "https://www.cip.com/careers",
-    "note": "2026-11-02, set manually",
+    "error": "HTTPError: 404 Client Error: Not Found for url: https://cip.easycruit.com/export/xml/vacancy/list.xml",
+    "source": "https://cip.easycruit.com",
+    "careers_url": "https://cip.easycruit.com",
+    "note": "",
     "rating": "A",
     "segment": "pe"
    },
@@ -120,19 +120,19 @@
     "error": "link only",
     "source": "",
     "careers_url": "https://www.kone.com/en/careers",
-    "note": "2026-11-02, set manually",
+    "note": "own career site (careers.kone.com) – not supported",
     "rating": "C",
     "segment": "oem"
    },
    {
     "company": "Danske Commodities",
-    "ats": "linkedin",
+    "ats": "teamtailor",
     "ok": true,
-    "count": 0,
-    "error": "link only",
-    "source": "",
+    "count": 2,
+    "error": "",
+    "source": "https://danskecommoditiesas.teamtailor.com",
     "careers_url": "https://danskecommodities.com/join-us/vacancies",
-    "note": "no supported job system found",
+    "note": "",
     "rating": "A",
     "segment": "trading"
    },
@@ -180,7 +180,7 @@
     "error": "link only",
     "source": "",
     "careers_url": "https://careers.uniper.energy/",
-    "note": "no supported job system found",
+    "note": "own career site (careers.uniper.energy) – not supported",
     "rating": "A",
     "segment": "trading"
    },
@@ -192,7 +192,7 @@
     "error": "link only",
     "source": "",
     "careers_url": "https://www.trianel.com",
-    "note": "no supported job system found",
+    "note": "own career pages (PDF job ads) – not supported",
     "rating": "B",
     "segment": "trading"
    },
@@ -210,13 +210,13 @@
    },
    {
     "company": "Nord Pool",
-    "ats": "linkedin",
+    "ats": "workday",
     "ok": true,
-    "count": 0,
-    "error": "link only",
-    "source": "",
-    "careers_url": "https://www.nordpoolgroup.com",
-    "note": "no supported job system found",
+    "count": 11,
+    "error": "",
+    "source": "https://hrhub.wd3.myworkdayjobs.com/Euronext_Career_Page",
+    "careers_url": "https://www.euronext.com/en/about/careers/nordpool",
+    "note": "",
     "rating": "C",
     "segment": "trading"
    },
@@ -228,7 +228,7 @@
     "error": "link only",
     "source": "",
     "careers_url": "https://careers.vattenfall.com",
-    "note": "own career site, not supported",
+    "note": "own career site (Phenom) – not supported",
     "rating": "A",
     "segment": "utilities"
    },
@@ -266,43 +266,43 @@
     "careers_url": "https://jobs.rwe.com",
     "note": "",
     "rating": "A",
-    "segment": "utilities"
+    "segment": "eu_utilities"
    },
    {
     "company": "Ørsted",
-    "ats": "linkedin",
+    "ats": "successfactors",
     "ok": true,
-    "count": 0,
-    "error": "link only",
-    "source": "",
-    "careers_url": "https://orsted.com/en/careers/",
-    "note": "no supported job system found",
+    "count": 3,
+    "error": "",
+    "source": "https://applyforjob.orsted.com",
+    "careers_url": "https://orsted.com/en/careers/vacancies-list",
+    "note": "",
     "rating": "B",
     "segment": "utilities"
    },
    {
     "company": "Hafslund",
-    "ats": "linkedin",
+    "ats": "teamtailor",
     "ok": true,
     "count": 0,
-    "error": "link only",
-    "source": "",
+    "error": "no matching open positions (or wrong id)",
+    "source": "https://karriere.hafslund.no",
     "careers_url": "https://www.hafslund.no",
-    "note": "no supported job system found",
+    "note": "",
     "rating": "B",
     "segment": "utilities"
    },
    {
     "company": "EnBW",
-    "ats": "linkedin",
-    "ok": true,
+    "ats": "avature",
+    "ok": false,
     "count": 0,
-    "error": "link only",
-    "source": "",
-    "careers_url": "https://careers.enbw.com/global/en/management",
-    "note": "no supported job system found",
+    "error": "RuntimeError: Avature: no job list found (feed and list pages empty)",
+    "source": "https://careers.enbw.com/en_US/careers",
+    "careers_url": "https://careers.enbw.com/en_US/careers",
+    "note": "",
     "rating": "B",
-    "segment": "utilities"
+    "segment": "eu_utilities"
    },
    {
     "company": "E.ON",
@@ -312,9 +312,9 @@
     "error": "link only",
     "source": "",
     "careers_url": "https://jobs.eon.com",
-    "note": "own career site, not supported",
+    "note": "own career site – not supported",
     "rating": "B",
-    "segment": "utilities"
+    "segment": "eu_utilities"
    },
    {
     "company": "MVV Energie",
@@ -326,7 +326,7 @@
     "careers_url": "https://www.mvv.de",
     "note": "no supported job system found",
     "rating": "C",
-    "segment": "utilities"
+    "segment": "eu_utilities"
    },
    {
     "company": "Ingrid Capacity",
@@ -342,13 +342,13 @@
    },
    {
     "company": "Flower",
-    "ats": "linkedin",
+    "ats": "teamtailor",
     "ok": true,
-    "count": 0,
-    "error": "link only",
-    "source": "",
+    "count": 6,
+    "error": "",
+    "source": "https://flower.teamtailor.com",
     "careers_url": "https://flower.se",
-    "note": "name guess rejected (unverified)",
+    "note": "",
     "rating": "C",
     "segment": "developers"
    },
@@ -438,13 +438,13 @@
    },
    {
     "company": "Enertrag",
-    "ats": "linkedin",
+    "ats": "smartrecruiters",
     "ok": true,
-    "count": 0,
-    "error": "link only",
-    "source": "",
+    "count": 8,
+    "error": "",
+    "source": "ENERTRAG",
     "careers_url": "https://enertrag.com",
-    "note": "name guess rejected (unverified)",
+    "note": "",
     "rating": "B",
     "segment": "developers"
    },
@@ -522,13 +522,13 @@
    },
    {
     "company": "Verne",
-    "ats": "ashby",
+    "ats": "linkedin",
     "ok": true,
-    "count": 1,
-    "error": "",
-    "source": "verne",
-    "careers_url": "https://verne.co",
-    "note": "",
+    "count": 0,
+    "error": "link only",
+    "source": "",
+    "careers_url": "https://verneglobal.com/vacancies",
+    "note": "Ashby guess belonged to another company (Verne, US hydrogen start-up); own vacancy page not supported",
     "rating": "A",
     "segment": "data_centers"
    },
@@ -708,7 +708,7 @@
     "error": "link only",
     "source": "",
     "careers_url": "https://sebgroup.com/career",
-    "note": "own career site, not supported",
+    "note": "own career site – not supported",
     "rating": "B",
     "segment": "pe"
    },
@@ -731,8 +731,8 @@
     "count": 0,
     "error": "link only",
     "source": "",
-    "careers_url": "https://careers.munichre.com/",
-    "note": "no supported job system found",
+    "careers_url": "https://karriere.meag.com",
+    "note": "career site on rexx (karriere.meag.com) – not supported",
     "rating": "B",
     "segment": "pe"
    },
@@ -828,7 +828,7 @@
     "error": "link only",
     "source": "",
     "careers_url": "https://jobs.verbund.com/de/jobportal",
-    "note": "no supported job system found",
+    "note": "jobs on onlyfy (verbund.onlyfy.jobs) – not supported",
     "rating": "A",
     "segment": "trading"
    },
@@ -846,35 +846,35 @@
    },
    {
     "company": "SkyNRG",
-    "ats": "ashby",
-    "ok": true,
-    "count": 2,
-    "error": "",
-    "source": "skynrg",
-    "careers_url": "",
+    "ats": "teamtailor",
+    "ok": false,
+    "count": 0,
+    "error": "ConnectionError: HTTPSConnectionPool(host='careers.skynrg.com', port=443): Max retries exceeded with url: /jobs.rss?per_page=100&offset=0 (Caused by NameResolutionError(\"HTTPSConnection(host='careers.",
+    "source": "https://careers.skynrg.com",
+    "careers_url": "https://careers.skynrg.com",
     "note": "",
     "rating": "A",
     "segment": "portfolio"
    },
    {
     "company": "Siemens Energy",
-    "ats": "linkedin",
-    "ok": true,
+    "ats": "avature",
+    "ok": false,
     "count": 0,
-    "error": "link only",
-    "source": "",
+    "error": "HTTPError: 404 Client Error: Not Found for url: https://jobs.siemens-energy.com/en_US/jobs/SearchJobs/?jobRecordsPerPage=50&jobOffset=0",
+    "source": "https://jobs.siemens-energy.com/en_US/jobs",
     "careers_url": "https://jobs.siemens-energy.com/",
-    "note": "no supported job system found",
+    "note": "",
     "rating": "A",
     "segment": "oem"
    },
    {
     "company": "MB Energy",
     "ats": "workday",
-    "ok": false,
-    "count": 0,
-    "error": "KeyError: 'url'",
-    "source": "detect automatically",
+    "ok": true,
+    "count": 1,
+    "error": "",
+    "source": "https://mabanaft.wd3.myworkdayjobs.com/en-US/Mabanaft",
     "careers_url": "https://mabanaft.wd3.myworkdayjobs.com/en-US/Mabanaft/jobs",
     "note": "",
     "rating": "A",
@@ -883,18 +883,6 @@
   ],
   "repo": "TheHoff26/job-shortlist",
   "linkedin": [
-   {
-    "company": "Copenhagen Infrastructure Partners",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Copenhagen+Infrastructure+Partners%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany%2C+Copenhagen%2C+Oslo%2C+Cologne%2C+K%C3%B6ln%2C+Hamburg%2C+Munich%2C+M%C3%BCnchen&f_E=4%2C5%2C6&f_TPR=r604800",
-    "rating": "A",
-    "reason": "2026-11-02, set manually"
-   },
-   {
-    "company": "Danske Commodities",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Danske+Commodities%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany%2C+Copenhagen%2C+Oslo%2C+Cologne%2C+K%C3%B6ln%2C+Hamburg%2C+Munich%2C+M%C3%BCnchen&f_E=4%2C5%2C6&f_TPR=r604800",
-    "rating": "A",
-    "reason": "no supported job system found"
-   },
    {
     "company": "Helen",
     "url": "https://www.linkedin.com/jobs/search/?keywords=%22Helen%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany%2C+Copenhagen%2C+Oslo%2C+Cologne%2C+K%C3%B6ln%2C+Hamburg%2C+Munich%2C+M%C3%BCnchen&f_E=4%2C5%2C6&f_TPR=r604800",
@@ -920,34 +908,34 @@
     "reason": "no supported job system found"
    },
    {
-    "company": "Siemens Energy",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Siemens+Energy%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany%2C+Copenhagen%2C+Oslo%2C+Cologne%2C+K%C3%B6ln%2C+Hamburg%2C+Munich%2C+M%C3%BCnchen&f_E=4%2C5%2C6&f_TPR=r604800",
-    "rating": "A",
-    "reason": "no supported job system found"
-   },
-   {
     "company": "St1",
     "url": "https://www.linkedin.com/jobs/search/?keywords=%22St1%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany%2C+Copenhagen%2C+Oslo%2C+Cologne%2C+K%C3%B6ln%2C+Hamburg%2C+Munich%2C+M%C3%BCnchen&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "A",
-    "reason": "2026-11-02, set manually"
+    "reason": "recruits via Barona / Laura – not supported"
    },
    {
     "company": "Uniper",
     "url": "https://www.linkedin.com/jobs/search/?keywords=%22Uniper%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany%2C+Copenhagen%2C+Oslo%2C+Cologne%2C+K%C3%B6ln%2C+Hamburg%2C+Munich%2C+M%C3%BCnchen&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "A",
-    "reason": "no supported job system found"
+    "reason": "own career site (careers.uniper.energy) – not supported"
    },
    {
     "company": "Vattenfall",
     "url": "https://www.linkedin.com/jobs/search/?keywords=%22Vattenfall%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany%2C+Copenhagen%2C+Oslo%2C+Cologne%2C+K%C3%B6ln%2C+Hamburg%2C+Munich%2C+M%C3%BCnchen&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "A",
-    "reason": "own career site, not supported"
+    "reason": "own career site (Phenom) – not supported"
    },
    {
     "company": "Verbund",
     "url": "https://www.linkedin.com/jobs/search/?keywords=%22Verbund%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany%2C+Copenhagen%2C+Oslo%2C+Cologne%2C+K%C3%B6ln%2C+Hamburg%2C+Munich%2C+M%C3%BCnchen&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "A",
-    "reason": "no supported job system found"
+    "reason": "jobs on onlyfy (verbund.onlyfy.jobs) – not supported"
+   },
+   {
+    "company": "Verne",
+    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Verne%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany%2C+Copenhagen%2C+Oslo%2C+Cologne%2C+K%C3%B6ln%2C+Hamburg%2C+Munich%2C+M%C3%BCnchen&f_E=4%2C5%2C6&f_TPR=r604800",
+    "rating": "A",
+    "reason": "Ashby guess belonged to another company (Verne, US hydrogen start-up); own vacancy page not supported"
    },
    {
     "company": "Cloudberry Clean Energy",
@@ -965,7 +953,7 @@
     "company": "E.ON",
     "url": "https://www.linkedin.com/jobs/search/?keywords=%22E.ON%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany%2C+Copenhagen%2C+Oslo%2C+Cologne%2C+K%C3%B6ln%2C+Hamburg%2C+Munich%2C+M%C3%BCnchen&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
-    "reason": "own career site, not supported"
+    "reason": "own career site – not supported"
    },
    {
     "company": "Elenia",
@@ -976,12 +964,6 @@
    {
     "company": "Ellevio",
     "url": "https://www.linkedin.com/jobs/search/?keywords=%22Ellevio%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany%2C+Copenhagen%2C+Oslo%2C+Cologne%2C+K%C3%B6ln%2C+Hamburg%2C+Munich%2C+M%C3%BCnchen&f_E=4%2C5%2C6&f_TPR=r604800",
-    "rating": "B",
-    "reason": "no supported job system found"
-   },
-   {
-    "company": "EnBW",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22EnBW%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany%2C+Copenhagen%2C+Oslo%2C+Cologne%2C+K%C3%B6ln%2C+Hamburg%2C+Munich%2C+M%C3%BCnchen&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
     "reason": "no supported job system found"
    },
@@ -998,20 +980,8 @@
     "reason": "no supported job system found"
    },
    {
-    "company": "Enertrag",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Enertrag%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany%2C+Copenhagen%2C+Oslo%2C+Cologne%2C+K%C3%B6ln%2C+Hamburg%2C+Munich%2C+M%C3%BCnchen&f_E=4%2C5%2C6&f_TPR=r604800",
-    "rating": "B",
-    "reason": "name guess rejected (unverified)"
-   },
-   {
     "company": "Green Mountain",
     "url": "https://www.linkedin.com/jobs/search/?keywords=%22Green+Mountain%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany%2C+Copenhagen%2C+Oslo%2C+Cologne%2C+K%C3%B6ln%2C+Hamburg%2C+Munich%2C+M%C3%BCnchen&f_E=4%2C5%2C6&f_TPR=r604800",
-    "rating": "B",
-    "reason": "no supported job system found"
-   },
-   {
-    "company": "Hafslund",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Hafslund%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany%2C+Copenhagen%2C+Oslo%2C+Cologne%2C+K%C3%B6ln%2C+Hamburg%2C+Munich%2C+M%C3%BCnchen&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
     "reason": "no supported job system found"
    },
@@ -1031,7 +1001,7 @@
     "company": "MEAG (Munich Re)",
     "url": "https://www.linkedin.com/jobs/search/?keywords=%22MEAG+%28Munich+Re%29%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany%2C+Copenhagen%2C+Oslo%2C+Cologne%2C+K%C3%B6ln%2C+Hamburg%2C+Munich%2C+M%C3%BCnchen&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
-    "reason": "no supported job system found"
+    "reason": "career site on rexx (karriere.meag.com) – not supported"
    },
    {
     "company": "Next Kraftwerke",
@@ -1049,19 +1019,13 @@
     "company": "SEB",
     "url": "https://www.linkedin.com/jobs/search/?keywords=%22SEB%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany%2C+Copenhagen%2C+Oslo%2C+Cologne%2C+K%C3%B6ln%2C+Hamburg%2C+Munich%2C+M%C3%BCnchen&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
-    "reason": "own career site, not supported"
+    "reason": "own career site – not supported"
    },
    {
     "company": "Trianel",
     "url": "https://www.linkedin.com/jobs/search/?keywords=%22Trianel%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany%2C+Copenhagen%2C+Oslo%2C+Cologne%2C+K%C3%B6ln%2C+Hamburg%2C+Munich%2C+M%C3%BCnchen&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
-    "reason": "no supported job system found"
-   },
-   {
-    "company": "Ørsted",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22%C3%98rsted%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany%2C+Copenhagen%2C+Oslo%2C+Cologne%2C+K%C3%B6ln%2C+Hamburg%2C+Munich%2C+M%C3%BCnchen&f_E=4%2C5%2C6&f_TPR=r604800",
-    "rating": "B",
-    "reason": "no supported job system found"
+    "reason": "own career pages (PDF job ads) – not supported"
    },
    {
     "company": "ATP",
@@ -1076,26 +1040,14 @@
     "reason": "no supported job system found"
    },
    {
-    "company": "Flower",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Flower%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany%2C+Copenhagen%2C+Oslo%2C+Cologne%2C+K%C3%B6ln%2C+Hamburg%2C+Munich%2C+M%C3%BCnchen&f_E=4%2C5%2C6&f_TPR=r604800",
-    "rating": "C",
-    "reason": "name guess rejected (unverified)"
-   },
-   {
     "company": "KONE",
     "url": "https://www.linkedin.com/jobs/search/?keywords=%22KONE%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany%2C+Copenhagen%2C+Oslo%2C+Cologne%2C+K%C3%B6ln%2C+Hamburg%2C+Munich%2C+M%C3%BCnchen&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "C",
-    "reason": "2026-11-02, set manually"
+    "reason": "own career site (careers.kone.com) – not supported"
    },
    {
     "company": "MVV Energie",
     "url": "https://www.linkedin.com/jobs/search/?keywords=%22MVV+Energie%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany%2C+Copenhagen%2C+Oslo%2C+Cologne%2C+K%C3%B6ln%2C+Hamburg%2C+Munich%2C+M%C3%BCnchen&f_E=4%2C5%2C6&f_TPR=r604800",
-    "rating": "C",
-    "reason": "no supported job system found"
-   },
-   {
-    "company": "Nord Pool",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Nord+Pool%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany%2C+Copenhagen%2C+Oslo%2C+Cologne%2C+K%C3%B6ln%2C+Hamburg%2C+Munich%2C+M%C3%BCnchen&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "C",
     "reason": "no supported job system found"
    },
@@ -1118,6 +1070,10 @@
    {
     "id": "utilities",
     "name": "Nordic utilities"
+   },
+   {
+    "id": "eu_utilities",
+    "name": "European utilities"
    },
    {
     "id": "energy_intensive",
@@ -1662,71 +1618,216 @@
    "key": "teamtailor:atNorth:8559116"
   },
   {
-   "company": "EQT Infrastructure",
-   "ats": "greenhouse",
-   "job_id": "4969731101",
-   "title": "Team Lead – Evergreen Product Management, Private Capital",
-   "url": "https://job-boards.eu.greenhouse.io/eqtpartners/jobs/4969731101",
-   "location": "London, England, United Kingdom",
-   "department": "GWS Product Management (Cost Center)",
-   "posted": "2026-09-07",
+   "company": "Flower",
+   "ats": "teamtailor",
+   "job_id": "7843452",
+   "title": "Asset Developer Germany",
+   "url": "https://flower.teamtailor.com/jobs/7843452-asset-developer-germany",
+   "location": "Stockholm, Sweden; Hamburg, Germany",
+   "department": "",
+   "posted": "2026-06-03",
    "workplace": "",
    "employment_type": "",
    "salary": "",
    "deadline": "",
-   "rating": "A",
-   "segment": "pe",
+   "rating": "C",
+   "segment": "developers",
    "segments_secondary": [
-    "portfolio"
+    "trading"
    ],
-   "summary": "As Team Lead for Private Capital Evergreen Product Management, you will set the strategic direction for a global team while remaining hands-on in shaping product narratives and fundraising deliverables that resonate with investors and distributors worldwide. You will be the senior point of accountability for private…",
+   "summary": "As an Asset Developer at Flower, you will lead the development of large-scale battery energy storage systems (BESS) and other flexible assets from lead origination all the way to Ready-to-Build. You will be responsible for securing land rights, grid connections, and permits, while collaborating closely with our EPC…",
    "responsibilities": [
-    "Lead, mentor and develop the global Private Capital EPM team, establishing clear direction, quality standards and a culture of…",
-    "Own product positioning for EQT's private capital evergreen offerings, ensuring a differentiated, consistent narrative across regions and…",
-    "Oversee core fundraising assets and product lifecycle deliverables, ensuring all materials are accurate, compelling and ready for external…",
-    "Lead EPM's contribution to investor diligence, complex product-related RFI responses, distributor onboarding and selected client…"
+    "Lead the development of projects in all stages, from Lead generation to Ready to Build, ensuring project success through efficient…",
+    "Conduct technical assessments, secure grid connections, and oversee permitting processes in collaboration with Flower's internal technical…",
+    "Negotiate with landowners, grid operators, and other stakeholders to optimize project timelines and resources.",
+    "Build and maintain strong relationships with external stakeholders, including landowners, industries, grid operators, authorities…"
    ],
    "criteria": [
-    "You are a thoughtful, commercially minded leader with deep private markets knowledge (ideally within private equity) and a genuine commitment to developing…",
-    "You bring both the strategic perspective to set direction and the hands-on rigour to deliver consistently at a high level.",
-    "Significant experience in private markets product management, with a strong understanding of private equitycapital products, fundraising processes and investor…",
-    "Proven experience in a senior product management role, with demonstrated ability to own complex deliverables end-to-end.",
-    "Experience leading and developing a team, with the ability to set clear priorities, foster collaboration and hold high standards.",
-    "Strong commercial judgement and the ability to translate complex information into clear, compelling product narratives for diverse audiences."
+    "Bachelor's or master's degree in Engineering, Renewable Energy, or a related field.",
+    "5+ years of experience in project development within the renewable energy sector.",
+    "Proven track record of successfully developing and delivering large-scale projects.",
+    "Strong technical background and expertise in the energy sector.",
+    "In-depth knowledge of the German energy market and regulatory environment.",
+    "Excellent communication and stakeholder management skills; experience with municipalities and the public sector is highly valued."
    ],
-   "nice_to_have": [
-    "Familiarity with evergreen or semi-liquid fund structures and their specific fundraising and distribution dynamics.",
-    "Private wealth experience.",
-    "Experience working across multiple geographies or within a global organisation."
+   "nice_to_have": [],
+   "seniority": "senior",
+   "years_experience": "5+ years",
+   "languages": [
+    "English",
+    "German"
    ],
-   "seniority": "lead",
-   "years_experience": "",
-   "languages": [],
-   "education": "",
+   "education": "Master's",
    "skills_matched": [
-    "partnerships",
-    "strategy",
-    "optimisation"
+    "renewable energy",
+    "wind",
+    "solar",
+    "BESS",
+    "project development",
+    "stakeholder management",
+    "optimization",
+    "German",
+    "english",
+    "energy"
    ],
    "personal_matched": [
-    "leadership",
-    "communication",
-    "entrepreneurial"
+    "communication"
    ],
-   "score": 83,
+   "score": 84,
    "reasons": [
-    "Title matches “management”",
-    "Seniority: lead ✓",
-    "Professional skills 3/54: partnerships, strategy, optimisation",
-    "Personal skills 3/10: leadership, communication, entrepreneurial",
-    "CV text similarity 18%",
-    "Location: London, England, United Kingdom",
-    "Company rated A: +6"
+    "Title matches “asset”",
+    "Seniority: senior ✓",
+    "Professional skills 10/54: renewable energy, wind, solar, BESS, project development, stakeholder management, optimization, German",
+    "Personal skills 1/10: communication",
+    "CV text similarity 32%",
+    "Keywords: AI, BESS",
+    "Location: Stockholm, Sweden; Hamburg, Germany",
+    "Company rated C: +1"
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
    "is_new": true,
-   "key": "greenhouse:EQT Infrastructure:4969731101"
+   "key": "teamtailor:Flower:7843452"
+  },
+  {
+   "company": "Flower",
+   "ats": "teamtailor",
+   "job_id": "8473841",
+   "title": "Portfolio Delivery Manager",
+   "url": "https://flower.teamtailor.com/jobs/8473841-portfolio-delivery-manager",
+   "location": "Stockholm, Sweden",
+   "department": "Asset Development",
+   "posted": "2026-09-29",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "C",
+   "segment": "developers",
+   "segments_secondary": [
+    "trading"
+   ],
+   "summary": "Through smart optimization and trading of energy assets like wind and solar farms, battery systems, and EV chargers, we make renewable energy reliable and predictable, leading the charge towards the energy system of tomorrow.",
+   "responsibilities": [
+    "Coordinate post-RtB project delivery across development, EPC-execution, grid, tolling/merchant and financing",
+    "Ensure all projects between RtB and COD are actively managed through the function, securing the best possible asset conditions at COD",
+    "Establish and maintain the processes and handoff points needed for smooth post-RtB delivery",
+    "Develop internal routines and reporting cadences that give Asset Development and Flower a clear quarterly view of portfolio-level delivery…"
+   ],
+   "criteria": [
+    "Educational background: Master's degree (e.g. MSc) or equivalent in business/finance or engineering",
+    "5+ years of experience in project or portfolio management, with proven ownership of fast-moving and complex projects with multi-stakeholder deliveries",
+    "Experienced from a scale-up or fast-growing organization",
+    "Proven in renewable energy, infrastructure or another capital-intensive industry",
+    "Knowledgeable about the commercial structures in energy asset lifecycles, from development through to commercial operations (RtB, EPC, grid, tolling/merchant…",
+    "A clear communicator who gets to the point and can present complex portfolio scenarios in an easy-to-digest way"
+   ],
+   "nice_to_have": [],
+   "seniority": "senior",
+   "years_experience": "5+ years",
+   "languages": [
+    "English",
+    "German",
+    "French",
+    "Dutch (plus)"
+   ],
+   "education": "Master's (or equivalent)",
+   "skills_matched": [
+    "renewable energy",
+    "wind",
+    "solar",
+    "BESS",
+    "stakeholder management",
+    "optimization",
+    "German",
+    "english",
+    "energy"
+   ],
+   "personal_matched": [
+    "communication"
+   ],
+   "score": 84,
+   "reasons": [
+    "Title matches “portfolio”",
+    "Seniority: senior ✓",
+    "Professional skills 9/54: renewable energy, wind, solar, BESS, stakeholder management, optimization, German, english",
+    "Personal skills 1/10: communication",
+    "CV text similarity 31%",
+    "Keywords: AI, BESS",
+    "Location: Stockholm, Sweden",
+    "Company rated C: +1"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-11",
+   "is_new": true,
+   "key": "teamtailor:Flower:8473841"
+  },
+  {
+   "company": "Flower",
+   "ats": "teamtailor",
+   "job_id": "8569556",
+   "title": "VP Project Delivery & Operations",
+   "url": "https://flower.teamtailor.com/jobs/8569556-vp-project-delivery-operations",
+   "location": "Stockholm, Sweden",
+   "department": "",
+   "posted": "2026-10-19",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "C",
+   "segment": "developers",
+   "segments_secondary": [
+    "trading"
+   ],
+   "summary": "Flower develops, builds and operates utility-scale BESS assets across Sweden, Germany, France, Belgium, the Netherlands and Austria. As our portfolio moves from development into construction and operation, we’re bringing EPC and Asset Management together in a new division, Project Delivery & Operations and we’re…",
+   "responsibilities": [
+    "Define and own the long-term strategy for Project Delivery & Operations",
+    "Lead through managers - Head of EPC & Head of Asset Management",
+    "Integrate EPC and Asset Management into one coherent growth platform, grounded in market and customer insight",
+    "Own the P&L for the division and Flower’s asset portfolio, providing clear financial reporting and forecasting to the management team and…"
+   ],
+   "criteria": [
+    "You have a proven track record in a senior commercial leadership role, ideally within renewable energy, BESS, energy infrastructure or other project-driven…",
+    "You’re an experienced people leader, used to leading through managers and bringing teams together across the organisation",
+    "Master’s degree in Engineering, Business or a related field",
+    "You have taken service offerings or business models to market, with a strong instinct for what customers value and how to package and price it",
+    "Experience of cost control in capital-intensive projects, supporting project financing, technical due diligence or investor processes",
+    "You’ve developed and executed divisional or business-unit strategy, and know how to turn market opportunity into a structured plan"
+   ],
+   "nice_to_have": [],
+   "seniority": "executive",
+   "years_experience": "",
+   "languages": [],
+   "education": "Master's",
+   "skills_matched": [
+    "renewable energy",
+    "wind",
+    "solar",
+    "BESS",
+    "strategy",
+    "optimization",
+    "english",
+    "energy"
+   ],
+   "personal_matched": [
+    "leadership"
+   ],
+   "score": 84,
+   "reasons": [
+    "Title matches “VP”",
+    "Seniority: executive ✓",
+    "Professional skills 8/54: renewable energy, wind, solar, BESS, strategy, optimization, english, energy",
+    "Personal skills 1/10: leadership",
+    "CV text similarity 33%",
+    "Keywords: P&L, AI, BESS",
+    "Location: Stockholm, Sweden",
+    "Company rated C: +1"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-11",
+   "is_new": true,
+   "key": "teamtailor:Flower:8569556"
   },
   {
    "company": "EQT Infrastructure",
@@ -1794,6 +1895,73 @@
    "first_seen": "2026-11-11",
    "is_new": true,
    "key": "greenhouse:EQT Infrastructure:4969805101"
+  },
+  {
+   "company": "EQT Infrastructure",
+   "ats": "greenhouse",
+   "job_id": "4969731101",
+   "title": "Team Lead – Evergreen Product Management, Private Capital",
+   "url": "https://job-boards.eu.greenhouse.io/eqtpartners/jobs/4969731101",
+   "location": "London, England, United Kingdom",
+   "department": "GWS Product Management (Cost Center)",
+   "posted": "2026-09-07",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "pe",
+   "segments_secondary": [
+    "portfolio"
+   ],
+   "summary": "As Team Lead for Private Capital Evergreen Product Management, you will set the strategic direction for a global team while remaining hands-on in shaping product narratives and fundraising deliverables that resonate with investors and distributors worldwide. You will be the senior point of accountability for private…",
+   "responsibilities": [
+    "Lead, mentor and develop the global Private Capital EPM team, establishing clear direction, quality standards and a culture of…",
+    "Own product positioning for EQT's private capital evergreen offerings, ensuring a differentiated, consistent narrative across regions and…",
+    "Oversee core fundraising assets and product lifecycle deliverables, ensuring all materials are accurate, compelling and ready for external…",
+    "Lead EPM's contribution to investor diligence, complex product-related RFI responses, distributor onboarding and selected client…"
+   ],
+   "criteria": [
+    "You are a thoughtful, commercially minded leader with deep private markets knowledge (ideally within private equity) and a genuine commitment to developing…",
+    "You bring both the strategic perspective to set direction and the hands-on rigour to deliver consistently at a high level.",
+    "Significant experience in private markets product management, with a strong understanding of private equitycapital products, fundraising processes and investor…",
+    "Proven experience in a senior product management role, with demonstrated ability to own complex deliverables end-to-end.",
+    "Experience leading and developing a team, with the ability to set clear priorities, foster collaboration and hold high standards.",
+    "Strong commercial judgement and the ability to translate complex information into clear, compelling product narratives for diverse audiences."
+   ],
+   "nice_to_have": [
+    "Familiarity with evergreen or semi-liquid fund structures and their specific fundraising and distribution dynamics.",
+    "Private wealth experience.",
+    "Experience working across multiple geographies or within a global organisation."
+   ],
+   "seniority": "lead",
+   "years_experience": "",
+   "languages": [],
+   "education": "",
+   "skills_matched": [
+    "partnerships",
+    "strategy",
+    "optimisation"
+   ],
+   "personal_matched": [
+    "leadership",
+    "communication",
+    "entrepreneurial"
+   ],
+   "score": 83,
+   "reasons": [
+    "Title matches “management”",
+    "Seniority: lead ✓",
+    "Professional skills 3/54: partnerships, strategy, optimisation",
+    "Personal skills 3/10: leadership, communication, entrepreneurial",
+    "CV text similarity 18%",
+    "Location: London, England, United Kingdom",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-11",
+   "is_new": true,
+   "key": "greenhouse:EQT Infrastructure:4969731101"
   },
   {
    "company": "atNorth",
@@ -1986,6 +2154,78 @@
    "first_seen": "2026-11-02",
    "is_new": false,
    "key": "teamtailor:atNorth:8485560"
+  },
+  {
+   "company": "Nord Pool",
+   "ats": "workday",
+   "job_id": "R28541",
+   "title": "Strategy Business Analyst (VIE)",
+   "url": "https://hrhub.wd3.myworkdayjobs.com/Euronext_Career_Page/job/Oslo/Strategy-Business-Analyst--VIE-_R28541",
+   "location": "Oslo",
+   "department": "",
+   "posted": "2026-09-08",
+   "workplace": "",
+   "employment_type": "Full time",
+   "salary": "",
+   "deadline": "",
+   "rating": "C",
+   "segment": "trading",
+   "segments_secondary": [
+    "others"
+   ],
+   "summary": "Are you ready to shape the future of capital markets? We are looking for a Strategy and Business Analyst (VIE) to join the Nord Pool Strategy and Products department.",
+   "responsibilities": [
+    "Undertaking market analysis to identify opportunities and customer needs, using desktop research, client meetings and attendance at…",
+    "Monitoring the competitive landscape of services and products, conducting screening analysis to identify business targets and ensuring…",
+    "Producing high-quality materials (spreadsheets, presentation slides) to communicate results, conclusions and suggested actions",
+    "Participating in regular meetings with other departments, partners and the Euronext group to ensure alignment"
+   ],
+   "criteria": [
+    "Bachelor’s degree in business, economics, computer science or a related field",
+    "At least one successful internship or work experience in the energy industry, strategy consulting or a fast-growing business",
+    "Experience in analysing data and creating reports and presentations",
+    "Fluent in English",
+    "Solid interest in energy economics, power markets and energy in general",
+    "Experience in project management"
+   ],
+   "nice_to_have": [],
+   "seniority": "",
+   "years_experience": "",
+   "languages": [
+    "English"
+   ],
+   "education": "Bachelor's",
+   "skills_matched": [
+    "energy transition",
+    "M&A",
+    "strategy",
+    "energy trading",
+    "commodities",
+    "market analysis",
+    "power markets",
+    "english",
+    "energy",
+    "electricity"
+   ],
+   "personal_matched": [
+    "communication",
+    "entrepreneurial"
+   ],
+   "score": 81,
+   "reasons": [
+    "Title matches “strategy”",
+    "Seniority: not stated",
+    "Professional skills 10/54: energy transition, M&A, strategy, energy trading, commodities, market analysis, power markets, english",
+    "Personal skills 2/10: communication, entrepreneurial",
+    "CV text similarity 33%",
+    "Keywords: international",
+    "Location: Oslo",
+    "Company rated C: +1"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-11",
+   "is_new": true,
+   "key": "workday:Nord Pool:R28541"
   },
   {
    "company": "atNorth",
@@ -2188,6 +2428,145 @@
    "first_seen": "2026-11-02",
    "is_new": false,
    "key": "smartrecruiters:Statkraft:744000155280390"
+  },
+  {
+   "company": "Flower",
+   "ats": "teamtailor",
+   "job_id": "8572381",
+   "title": "Energy Market Specialist",
+   "url": "https://flower.teamtailor.com/jobs/8572381-energy-market-specialist",
+   "location": "Stockholm, Sweden",
+   "department": "",
+   "posted": "2026-10-20",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "C",
+   "segment": "developers",
+   "segments_secondary": [
+    "trading"
+   ],
+   "summary": "Our beautiful office is located in the heart of Södermalm, just a short walk from Slussen subway station. We encourage in-office collaboration but support a hybrid work model.",
+   "responsibilities": [
+    "Own the asset P&L. Follow the performance and economics of each asset, and be the one who knows why it earned what it earned.",
+    "Find the root cause. When results deviate, dig into the data to understand what happened: a bidding decision, a forecast miss, downtime, an…",
+    "Get opportunity cost right. Analyse how we allocate capacity across energy and balancing markets, quantify what we leave on the table, and…",
+    "Help us trade BESS better. Turn your findings into quantified improvement proposals for other Asset Optimization teams, and follow up until…"
+   ],
+   "criteria": [
+    "5+ years of professional experience, with at least 3 years in power markets or the wider energy industry.",
+    "You follow the money all the way down. A lost euro is a lost euro, whether it came from a bad bid, a tripped inverter or an unexpected tariff, and you want to…",
+    "You think in opportunity cost. You know that what an asset didn't earn is as important as what it did.",
+    "You don't stop at the number. You ask why until you find the answer, and then you make sure something changes.",
+    "You understand how market rules turn into revenue. Day-ahead, intraday and balancing markets (FCR, aFRR, mFRR) are familiar ground, and you're curious about…",
+    "You make complex things simple. You can explain an attribution result to a commercial team and defend it to a model team, using the same numbers, and you're…"
+   ],
+   "nice_to_have": [],
+   "seniority": "senior",
+   "years_experience": "5+ years",
+   "languages": [
+    "English",
+    "Swedish",
+    "Finnish (plus)",
+    "German (plus)"
+   ],
+   "education": "",
+   "skills_matched": [
+    "renewable energy",
+    "wind",
+    "solar",
+    "BESS",
+    "market intelligence",
+    "power markets",
+    "optimization",
+    "German",
+    "english",
+    "energy"
+   ],
+   "personal_matched": [],
+   "score": 76,
+   "reasons": [
+    "Title matches “energy”",
+    "Seniority: senior ✓",
+    "Professional skills 10/54: renewable energy, wind, solar, BESS, market intelligence, power markets, optimization, German",
+    "Personal skills 0/10",
+    "CV text similarity 27%",
+    "Keywords: P&L, AI, BESS",
+    "Location: Stockholm, Sweden",
+    "Company rated C: +1"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-11",
+   "is_new": true,
+   "key": "teamtailor:Flower:8572381"
+  },
+  {
+   "company": "Nord Pool",
+   "ats": "workday",
+   "job_id": "R29163",
+   "title": "Head of Growth Marketing Nordics Interim",
+   "url": "https://hrhub.wd3.myworkdayjobs.com/Euronext_Career_Page/job/ADC---Oslo/Head-of-Growth-Marketing-Nordics-Interim_R29163",
+   "location": "ADC - Oslo",
+   "department": "",
+   "posted": "2026-10-23",
+   "workplace": "",
+   "employment_type": "Full time",
+   "salary": "",
+   "deadline": "2026-11-15",
+   "rating": "C",
+   "segment": "trading",
+   "segments_secondary": [
+    "others"
+   ],
+   "summary": "Are you ready to shape the future of capital markets? We are looking for a Head of Growth Marketing Nordics (Interim, 1 year) to join the Growth Marketing team within Euronext Corporate Solutions.",
+   "responsibilities": [
+    "Leading the Nordic marketing team, maintaining strategic momentum, team clarity and direction",
+    "Leading all Nordic marketing activities; Growth Marketing, Customer Marketing, Partnership Marketing and Go-To-Market execution, across the…",
+    "Leading the design and planning of the Go-To-Market strategy for the Admincontrol product suite across European markets",
+    "Owning the pipeline review with sales leadership, keeping campaigns, launches and full-funnel reporting on schedule and within agreed…"
+   ],
+   "criteria": [
+    "10 years of experience within marketing, including at least three years in a leadership position",
+    "Strong track record in pipeline management, campaign execution and go-to-market strategy, ideally within a SaaS or B2B environment",
+    "Excellent leadership and people management skills, with the ability to maintain team stability and direction through a leadership transition",
+    "Strong stakeholder management and cross-functional communication skills, able to represent marketing at a senior level",
+    "Fluent English communication skills, both written and spoken; Norwegian language skills are an advantage",
+    "Experience working across multiple countries in an international environment"
+   ],
+   "nice_to_have": [],
+   "seniority": "executive",
+   "years_experience": "10+ years",
+   "languages": [
+    "English",
+    "Norwegian (plus)"
+   ],
+   "education": "",
+   "skills_matched": [
+    "strategy",
+    "stakeholder management",
+    "commodities",
+    "english"
+   ],
+   "personal_matched": [
+    "leadership",
+    "communication"
+   ],
+   "score": 76,
+   "reasons": [
+    "Title matches “growth”",
+    "Seniority: executive ✓",
+    "Professional skills 4/54: strategy, stakeholder management, commodities, english",
+    "Personal skills 2/10: leadership, communication",
+    "CV text similarity 19%",
+    "Keywords: international",
+    "Location: ADC - Oslo",
+    "Company rated C: +1"
+   ],
+   "deadline_source": "board",
+   "first_seen": "2026-11-11",
+   "is_new": true,
+   "key": "workday:Nord Pool:R29163"
   },
   {
    "company": "Ingrid Capacity",
@@ -2456,6 +2835,82 @@
    "key": "teamtailor:atNorth:8232744"
   },
   {
+   "company": "Flower",
+   "ats": "teamtailor",
+   "job_id": "8532038",
+   "title": "Asset Manager - Energy Assets Germany",
+   "url": "https://flower.teamtailor.com/jobs/8532038-asset-manager-energy-assets-germany",
+   "location": "Hamburg, Germany",
+   "department": "",
+   "posted": "2026-10-12",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "C",
+   "segment": "developers",
+   "segments_secondary": [
+    "trading"
+   ],
+   "summary": "You will take full management ownership of a defined portfolio of Flower's Battery Energy Storage System (BESS) assets in Germany throughout their operational lifetime. As the accountable owner, you direct day-to-day management, oversee service providers and contractors and make the calls on operational and commercial…",
+   "responsibilities": [
+    "Own portfolio availability as a core KPI, track, report and drive corrective action on downtime",
+    "Hold O&M providers and subcontractors accountable to availability guarantees and SLAs, enforcing penalty or bonus clauses where needed",
+    "Own the portfolio's cost base end-to-end, build and manage budgets, forecast variances and identify concrete cost-reduction opportunities",
+    "Negotiate and renegotiate O&M, insurance and service contracts to secure the best combination of cost efficiency and availability"
+   ],
+   "criteria": [
+    "An experienced Asset manager with several years in renewable energy or energy storage, with a proven track record of improving availability and reducing…",
+    "Commercially strong, with hands-on experience in budgeting, cost control and financial reporting for energy assets",
+    "Experienced in managing and enforcing O&M and service contracts against availability guarantees and SLAs, including penalty/bonus mechanisms",
+    "Well-versed in German energy regulation and market frameworks (EEG, BImSchG, grid connection and metering requirements)",
+    "Technically strong in energy asset hardware and operations (BESS, solar and/or wind), enough to assess downtime root causes and their cost impact",
+    "Confident managing external stakeholders, landowners, grid operators, authorities and service providers, in a high-stakes, deadline-driven environment"
+   ],
+   "nice_to_have": [
+    "A technical or engineering degree, or equivalent, with a focus on energy systems or renewable energy",
+    "Experience with Asset management or SCADA/monitoring platforms (e.g. Bazefield or similar)",
+    "Familiarity with BESS revenue models, including ancillary services and capacity markets"
+   ],
+   "seniority": "",
+   "years_experience": "",
+   "languages": [
+    "German",
+    "English"
+   ],
+   "education": "",
+   "skills_matched": [
+    "renewable energy",
+    "wind",
+    "solar",
+    "BESS",
+    "strategy",
+    "FEED",
+    "optimization",
+    "German",
+    "english",
+    "energy"
+   ],
+   "personal_matched": [
+    "communication"
+   ],
+   "score": 73,
+   "reasons": [
+    "Title matches “energy”",
+    "Seniority: not stated",
+    "Professional skills 10/54: renewable energy, wind, solar, BESS, strategy, FEED, optimization, German",
+    "Personal skills 1/10: communication",
+    "CV text similarity 27%",
+    "Keywords: AI, BESS",
+    "Location: Hamburg, Germany",
+    "Company rated C: +1"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-11",
+   "is_new": true,
+   "key": "teamtailor:Flower:8532038"
+  },
+  {
    "company": "Statkraft",
    "ats": "smartrecruiters",
    "job_id": "744000153729979",
@@ -2589,6 +3044,148 @@
    "key": "teamtailor:atNorth:7778447"
   },
   {
+   "company": "Flower",
+   "ats": "teamtailor",
+   "job_id": "8704156",
+   "title": "Corporate PPA Originator",
+   "url": "https://flower.teamtailor.com/jobs/8704156-corporate-ppa-originator",
+   "location": "Stockholm, Sweden",
+   "department": "",
+   "posted": "2026-11-11",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "C",
+   "segment": "developers",
+   "segments_secondary": [
+    "trading"
+   ],
+   "summary": "As Corporate PPA Originator, you’ll build the relationships and find the opportunities that bring long-term electricity contracts to Flower. You’ll be our PPA specialist for large energy buyers, understanding their price, risk and sustainability needs and turning them into solutions that work for both the customer and…",
+   "responsibilities": [
+    "Build and own a pipeline of corporate PPA opportunities, from identifying new leads through to negotiation and signing",
+    "Develop relationships with customers’ procurement, energy, sustainability and finance teams, as well as advisors, brokers and other market…",
+    "Shape commercial offers around customers’ needs, working with internal specialists on pricing, risk and deal structure",
+    "Lead negotiations on price, volume, duration, delivery profile, credit support and key contract terms, coordinating internal approvals and…"
+   ],
+   "criteria": [
+    "You’re a relationship builder and opportunity hunter who knows how to turn conversations into long-term commercial partnerships.",
+    "You enjoy finding new ways into a market, take ownership of your targets and pipeline, and bring colleagues together to get a deal over the line.",
+    "Several years of experience in energy origination, energy sales or a related commercial role, for example at a utility, IPP, trader, aggregator or PPA advisory…",
+    "A proven track record of closing electricity PPAs with corporate buyers, ideally in Sweden",
+    "A strong, active network among corporate energy buyers, advisors and market participants in Sweden and the Nordics",
+    "Solid knowledge of Nordic and wider European power markets, strong negotiation and deal-structuring skills, and sound judgement when balancing customer needs…"
+   ],
+   "nice_to_have": [],
+   "seniority": "",
+   "years_experience": "",
+   "languages": [
+    "Swedish",
+    "English"
+   ],
+   "education": "Degree",
+   "skills_matched": [
+    "renewable energy",
+    "wind",
+    "solar",
+    "battery storage",
+    "BESS",
+    "PPA",
+    "partnerships",
+    "energy trading",
+    "power markets",
+    "optimization",
+    "english",
+    "energy",
+    "electricity"
+   ],
+   "personal_matched": [],
+   "score": 65,
+   "reasons": [
+    "Title matches “PPA”",
+    "Seniority: not stated",
+    "Professional skills 13/54: renewable energy, wind, solar, battery storage, BESS, PPA, partnerships, energy trading",
+    "Personal skills 0/10",
+    "CV text similarity 34%",
+    "Keywords: AI, energy-intensive, PPA, flexibility, BESS",
+    "Location: Stockholm, Sweden",
+    "Company rated C: +1"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-11",
+   "is_new": true,
+   "key": "teamtailor:Flower:8704156"
+  },
+  {
+   "company": "MB Energy",
+   "ats": "workday",
+   "job_id": "REQ5000309537",
+   "title": "Head of M&A (m/f/d)",
+   "url": "https://mabanaft.wd3.myworkdayjobs.com/Mabanaft/job/Hamburg---Am-Strandkai/Head-of-M-A--m-f-d-_REQ5000309537",
+   "location": "Hamburg - Am Strandkai",
+   "department": "",
+   "posted": "2026-10-26",
+   "workplace": "",
+   "employment_type": "Full time",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "trading",
+   "segments_secondary": [
+    "portfolio"
+   ],
+   "summary": "Gestalte die Zukunft von MB Energy aktiv mit! Als dynamische und kreative Persönlichkeit übernimmst du als Head of M&A eine Schlüsselposition.",
+   "responsibilities": [
+    "M&A-Strategie gestalten: Du identifizierst und bewertest Wachstums- und Investitionsmöglichkeiten und treibst die Weiterentwicklung unserer…",
+    "Transaktionen erfolgreich umsetzen: Du steuerst nationale und internationale M&A-Transaktionen entlang des gesamten Deal Lifecycles – von…",
+    "Fundierte Entscheidungen ermöglichen: Du erstellst Finanzanalysen, Unternehmensbewertungen und Entscheidungsvorlagen und bewertest Chancen…",
+    "Stakeholder und Projektteams führen: Du leitest interdisziplinäre Projektteams, koordinierst externe Berater und arbeitest eng mit dem…"
+   ],
+   "criteria": [
+    "Dein tiefgehendes Verständnis für M&A-Prozesse, finanztechnische Expertise und strategischer Weitblick ermöglichen dir, erfolgreich Deals zu entwickeln…",
+    "M&A-Kompetenzen weiterentwickeln: Du entwickelst Standards, Prozesse und Best Practices weiter und trägst zum nachhaltigen Ausbau der M&A-Expertise innerhalb…",
+    "Ausbildung: Abgeschlossenes Hochschulstudium mit relevanten fachlichen Schwerpunkten, beispielsweise in Betriebswirtschaft, Finance, Wirtschaftswissenschaften…",
+    "M&A-Expertise: Umfassende Erfahrung entlang des gesamten M&A-Prozesses sowie nachweisliche Erfolge bei der Leitung komplexer Transaktionen.",
+    "Due Diligence & Bewertung: Fundierte Kenntnisse in der operativen Due Diligence, der Bewertung operativer Potenziale sowie in der Analyse finanzieller…",
+    "Verhandlungserfahrung: Umfassende Erfahrung in der eigenständigen Führung und Steuerung von Verhandlungen mit Kauf- und Verkaufsparteien (Buy-Side und…"
+   ],
+   "nice_to_have": [
+    "Ausbildung: Abgeschlossenes Hochschulstudium mit relevanten fachlichen Schwerpunkten, beispielsweise in Betriebswirtschaft, Finance…",
+    "Berufserfahrung: Mindestens 8 bis 10 Jahre relevante Berufserfahrung im Corporate M&A, Investment Banking oder Private Equity. Idealerweise…",
+    "M&A-Expertise: Umfassende Erfahrung entlang des gesamten M&A-Prozesses sowie nachweisliche Erfolge bei der Leitung komplexer Transaktionen."
+   ],
+   "seniority": "executive",
+   "years_experience": "8–10 years",
+   "languages": [
+    "English (plus)",
+    "German (plus)"
+   ],
+   "education": "Degree (or equivalent)",
+   "skills_matched": [
+    "M&A",
+    "strategy",
+    "stakeholder management",
+    "energy"
+   ],
+   "personal_matched": [
+    "leadership"
+   ],
+   "score": 65,
+   "reasons": [
+    "Title matches “M&A”",
+    "Seniority: executive ✓",
+    "Professional skills 4/54: M&A, strategy, stakeholder management, energy",
+    "Personal skills 1/10: leadership",
+    "CV text similarity 12%",
+    "Location: Hamburg - Am Strandkai",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-11",
+   "is_new": true,
+   "key": "workday:MB Energy:REQ5000309537"
+  },
+  {
    "company": "Statkraft",
    "ats": "smartrecruiters",
    "job_id": "744000154074871",
@@ -2654,6 +3251,75 @@
    "first_seen": "2026-11-11",
    "is_new": true,
    "key": "smartrecruiters:Statkraft:744000154074871"
+  },
+  {
+   "company": "Nord Pool",
+   "ats": "workday",
+   "job_id": "R29288",
+   "title": "Product & Business Development Manager",
+   "url": "https://hrhub.wd3.myworkdayjobs.com/Euronext_Career_Page/job/Oslo/Product---Business-Development-Manager_R29288",
+   "location": "Oslo",
+   "department": "",
+   "posted": "2026-10-22",
+   "workplace": "",
+   "employment_type": "Full time",
+   "salary": "",
+   "deadline": "2026-11-15",
+   "rating": "C",
+   "segment": "trading",
+   "segments_secondary": [
+    "others"
+   ],
+   "summary": "Are you ready to shape the future of the European power market? We are looking for a Product and Business Development Manager/Senior Associate to join the Power Derivatives team at Nord Pool.",
+   "responsibilities": [
+    "Supporting the identification, prioritisation, design and implementation of strategic growth initiatives",
+    "Bringing commercial insight and customer perspectives into Nord Pool and Euronext product development to ensure solutions address genuine…",
+    "Conducting market analysis through desktop research, client and partner engagement and industry conferences to identify opportunities and…",
+    "Monitoring the competitive landscape and assessing potential business and partnership opportunities"
+   ],
+   "criteria": [
+    "At least three years of experience within energy trading, exchanges or related market infrastructure, with a solid understanding of European power and gas…",
+    "A proven ability to drive projects independently and translate business requirements into clear, actionable functional specifications",
+    "Strong analytical and problem-solving skills, with the ability to develop robust conclusions from both quantitative and qualitative information",
+    "Experience working across multiple countries and cultures in an international environment",
+    "Advanced proficiency in Excel and PowerPoint",
+    "Fluent English language skills, both written and spoken"
+   ],
+   "nice_to_have": [
+    "Scandinavian and/or other European language skills are considered an advantage"
+   ],
+   "seniority": "mid",
+   "years_experience": "3+ years",
+   "languages": [
+    "English"
+   ],
+   "education": "",
+   "skills_matched": [
+    "business development",
+    "energy trading",
+    "commodities",
+    "market analysis",
+    "market intelligence",
+    "english",
+    "energy",
+    "gas"
+   ],
+   "personal_matched": [],
+   "score": 62,
+   "reasons": [
+    "Title matches “business development”",
+    "Seniority: mid (close to your target)",
+    "Professional skills 8/54: business development, energy trading, commodities, market analysis, market intelligence, english, energy, gas",
+    "Personal skills 0/10",
+    "CV text similarity 39%",
+    "Keywords: international",
+    "Location: Oslo",
+    "Company rated C: +1"
+   ],
+   "deadline_source": "board",
+   "first_seen": "2026-11-11",
+   "is_new": true,
+   "key": "workday:Nord Pool:R29288"
   },
   {
    "company": "OX2",
@@ -2860,6 +3526,67 @@
    "key": "teamtailor:Alight:8702821"
   },
   {
+   "company": "Danske Commodities",
+   "ats": "teamtailor",
+   "job_id": "8594021",
+   "title": "Quantitative trader",
+   "url": "https://danskecommoditiesas.teamtailor.com/jobs/8594021-quantitative-trader",
+   "location": "Aarhus, Denmark",
+   "department": "Forward Trading & Asset Management",
+   "posted": "2026-10-23",
+   "workplace": "hybrid",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "trading",
+   "segments_secondary": [
+    "developers"
+   ],
+   "summary": "As a Quantitative Trader, you will find, build and run systematic strategies across the forward markets for gas and power. You decide what to trade and how to do it as long as you can back it with data and sound analysis.",
+   "responsibilities": [
+    "generating and testing new trading ideas across gas and power forwards, and identifying where the market is mispriced",
+    "developing signals and models using machine learning and advanced quantitative modelling, and taking the most promising ones into production",
+    "running your automated strategies in the market, including position sizing, execution set-up and ongoing performance monitoring",
+    "owning the PnL and risk of your strategies within your mandate, scaling what works and shutting down what does not"
+   ],
+   "criteria": [
+    "Quant traders succeed when combining sharp analytical skills with a strong sense of what moves the markets.",
+    "You will work alongside colleagues with strong quantitative and engineering backgrounds, who provide a solid technical foundation.",
+    "have experience with real PnL, for example from trading, a prop environment, a research desk or a serious personal project",
+    "bring 4+ years of relevant experience from trading, quantitative research or a similar environment. We are equally interested in demonstrated expertise, and we…",
+    "Please note that prior knowledge of the energy sector is not required for this role."
+   ],
+   "nice_to_have": [],
+   "seniority": "mid",
+   "years_experience": "4+ years",
+   "languages": [],
+   "education": "",
+   "skills_matched": [
+    "strategy",
+    "commodities",
+    "power markets",
+    "energy",
+    "gas"
+   ],
+   "personal_matched": [],
+   "score": 54,
+   "reasons": [
+    "Title matches “trader”",
+    "Seniority: mid (close to your target)",
+    "Professional skills 5/54: strategy, commodities, power markets, energy, gas",
+    "Personal skills 0/10",
+    "CV text similarity 17%",
+    "Keywords: international",
+    "Location: Aarhus, Denmark",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-11",
+   "is_new": true,
+   "key": "teamtailor:Danske Commodities:8594021"
+  },
+  {
    "company": "EQT Infrastructure",
    "ats": "greenhouse",
    "job_id": "4981387101",
@@ -2923,6 +3650,75 @@
    "first_seen": "2026-11-02",
    "is_new": false,
    "key": "greenhouse:EQT Infrastructure:4981387101"
+  },
+  {
+   "company": "Nord Pool",
+   "ats": "workday",
+   "job_id": "R29020",
+   "title": "Power Derivatives - Exchange Desk Analyst/ Associate",
+   "url": "https://hrhub.wd3.myworkdayjobs.com/Euronext_Career_Page/job/Oslo/Power-Derivatives---Exchange-Desk-Analyst--Associate_R29020",
+   "location": "Oslo",
+   "department": "",
+   "posted": "2026-10-05",
+   "workplace": "",
+   "employment_type": "Full time",
+   "salary": "",
+   "deadline": "",
+   "rating": "C",
+   "segment": "trading",
+   "segments_secondary": [
+    "others"
+   ],
+   "summary": "The Role plays a central role in Nord Pool / Euronext's Exchange Desk team at a pivotal moment for European power.",
+   "responsibilities": [
+    "Operate Exchange desk core tasks, such as order management, trade registration and assistance with trade cancellation.",
+    "Be in regular contact with market participants contributing to the liquidity of the Power derivative market and ensure awareness of the…",
+    "Build and maintain strong relationships with market participants, including trading members, Market Makers/Liquidity Providers…",
+    "Promote the Exchange Desk as first point of contact for Trading Members and other market participants in the Power derivative market."
+   ],
+   "criteria": [
+    "Bachelor's degree or higher in finance, energy, economics or a related field, or equivalent relevant experience.",
+    "2–5 years' experience at a trading desk, market operations or exchange / broker operations environment, ideally in energy markets.",
+    "Understanding of power derivatives markets",
+    "Clear, confident communicator able to manage complex member issues calmly under time pressure.",
+    "High attention to details and accuracy in a real-time, business-critical setting.",
+    "Proficiency with trading / order-management systems and standard analytical tools"
+   ],
+   "nice_to_have": [
+    "Direct experience of European power markets",
+    "Knowledge of matching-engine behaviour, order types and market microstructure.",
+    "Proficiency in written and spoken German would be an advantage."
+   ],
+   "seniority": "junior",
+   "years_experience": "2–5 years",
+   "languages": [
+    "English",
+    "German (plus)"
+   ],
+   "education": "Bachelor's (or equivalent)",
+   "skills_matched": [
+    "business development",
+    "risk management",
+    "power markets",
+    "German",
+    "english",
+    "energy"
+   ],
+   "personal_matched": [],
+   "score": 52,
+   "reasons": [
+    "Title matches “power”",
+    "Seniority: junior (outside your target)",
+    "Professional skills 6/54: business development, risk management, power markets, German, english, energy",
+    "Personal skills 0/10",
+    "CV text similarity 26%",
+    "Location: Oslo",
+    "Company rated C: +1"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-11",
+   "is_new": true,
+   "key": "workday:Nord Pool:R29020"
   },
   {
    "company": "Fortum",
@@ -3111,6 +3907,62 @@
    "first_seen": "2026-11-02",
    "is_new": false,
    "key": "teamtailor:Capalo AI:8111587"
+  },
+  {
+   "company": "Enertrag",
+   "ats": "smartrecruiters",
+   "job_id": "744000155729660",
+   "title": "Head of Netzanschlusskoordination (m/w/d)",
+   "url": "https://jobs.smartrecruiters.com/ENERTRAG/744000155729660-head-of-netzanschlusskoordination-m-w-d-",
+   "location": "Berlin, BE, Germany",
+   "department": "1D - Projekte Deutschland",
+   "posted": "2026-10-15",
+   "workplace": "hybrid",
+   "employment_type": "Full-time",
+   "salary": "",
+   "deadline": "",
+   "rating": "B",
+   "segment": "developers",
+   "segments_secondary": [],
+   "summary": "Urlaub: Nimm dir Zeit zum Abschalten - bei uns stehen dir 30 Tage Urlaub zur Verfügung.",
+   "responsibilities": [
+    "Du übernimmst die fachliche Verantwortung für Netzanschlussstrategien komplexer Wind-, PV-, Wasserstoff- und Batteriespeicherprojekte.",
+    "Der Netzanschlussprozess wird von der Voranalyse bis zum Abschluss des Netzanschlussvertrags gemäß interner Stage-Gate-Logik verantwortet…",
+    "Strategische und wirtschaftliche Bewertungen von Netzanschlussoptionen gehören zum Aufgabenbereich, einschließlich Projektbündelung…",
+    "Du führst eigenständig die Kommunikation und Verhandlung mit Übertragungs- und Verteilnetzbetreibern sowie Drittprojektierern zu…"
+   ],
+   "criteria": [
+    "Du hast ein abgeschlossenes Studium im Bereich Elektrotechnik, Wirtschaftsingenieurwesen, Energietechnik oder einer vergleichbaren Fachrichtung.",
+    "Ein Hochschulabschluss (Universität oder Fachhochschule) wird vorausgesetzt.",
+    "Du verfügst über 5–8 Jahre relevante Berufserfahrung bei einem Netzbetreiber oder in der Entwicklung von Erneuerbare-Energien-Projekten.",
+    "Fundierte Kenntnisse der Netzanschlussprozesse bringst du mit, insbesondere hinsichtlich der Anforderungen von Netzbetreibern, der Kriterien der…",
+    "Grundkenntnisse der Primär- und Sekundärtechnik von Netzanschlüssen in Höchst-, Hoch- und Mittelspannung sind vorhanden.",
+    "Ein tiefes Verständnis der Rollen und Schnittstellen zwischen Netzbetreibern, Behörden und Marktakteuren (z. B. BNetzA, ÜNBs, VNBs) ist gegeben, ergänzt durch…"
+   ],
+   "nice_to_have": [],
+   "seniority": "executive",
+   "years_experience": "5–8 years",
+   "languages": [],
+   "education": "Degree (or equivalent)",
+   "skills_matched": [
+    "PtX",
+    "wind"
+   ],
+   "personal_matched": [],
+   "score": 35,
+   "reasons": [
+    "Title matches “head of”",
+    "Seniority: executive ✓",
+    "Professional skills 2/54: PtX, wind",
+    "Personal skills 0/10",
+    "CV text similarity 2%",
+    "Location: Berlin, BE, Germany",
+    "Company rated B: +3"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-11",
+   "is_new": true,
+   "key": "smartrecruiters:Enertrag:744000155729660"
   },
   {
    "company": "Ren-Gas",

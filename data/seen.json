@@ -3,6 +3,7 @@
  "greenhouse:EQT Infrastructure:4969731101": "2026-11-11",
  "greenhouse:EQT Infrastructure:4969805101": "2026-11-11",
  "greenhouse:EQT Infrastructure:4981387101": "2026-11-02",
+ "smartrecruiters:Enertrag:744000155729660": "2026-11-11",
  "smartrecruiters:Statkraft:744000129203437": "2026-11-02",
  "smartrecruiters:Statkraft:744000153729979": "2026-11-02",
  "smartrecruiters:Statkraft:744000154074871": "2026-11-11",
@@ -18,6 +19,13 @@
  "teamtailor:Alight:8610267": "2026-11-02",
  "teamtailor:Alight:8702821": "2026-11-11",
  "teamtailor:Capalo AI:8111587": "2026-11-02",
+ "teamtailor:Danske Commodities:8594021": "2026-11-11",
+ "teamtailor:Flower:7843452": "2026-11-11",
+ "teamtailor:Flower:8473841": "2026-11-11",
+ "teamtailor:Flower:8532038": "2026-11-11",
+ "teamtailor:Flower:8569556": "2026-11-11",
+ "teamtailor:Flower:8572381": "2026-11-11",
+ "teamtailor:Flower:8704156": "2026-11-11",
  "teamtailor:Ingrid Capacity:8053205": "2026-11-02",
  "teamtailor:Ingrid Capacity:8053254": "2026-11-02",
  "teamtailor:Ren-Gas:8581956": "2026-11-11",
@@ -27,5 +35,10 @@
  "teamtailor:atNorth:8485629": "2026-11-02",
  "teamtailor:atNorth:8559116": "2026-11-10",
  "teamtailor:atNorth:8640831": "2026-11-02",
- "teamtailor:atNorth:8670021": "2026-11-11"
+ "teamtailor:atNorth:8670021": "2026-11-11",
+ "workday:MB Energy:REQ5000309537": "2026-11-11",
+ "workday:Nord Pool:R28541": "2026-11-11",
+ "workday:Nord Pool:R29020": "2026-11-11",
+ "workday:Nord Pool:R29163": "2026-11-11",
+ "workday:Nord Pool:R29288": "2026-11-11"
 }
