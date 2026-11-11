@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-09T11:27:07.768Z",
+ "updated": "2026-11-11T07:25:20.354Z",
  "jobs": {
   "personio:terralayr:2594674": {
    "state": "hide",
@@ -134,6 +134,13 @@
    "title": "Field Service / Commissioning Engineer - Ship Electrification Solutions (m/w/d)",
    "company": "Wärtsilä",
    "url": "https://careers.wartsila.com/job/Hamburg-Field-Service-Commissioning-Engineer-Ship-Electrification-Solutions-%28mwd%29/1445928133/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS"
+  },
+  "teamtailor:atNorth:8640831": {
+   "state": "hide",
+   "at": "2026-11-11T07:25:18.130Z",
+   "title": "Project Procurement Manager, Finland",
+   "company": "atNorth",
+   "url": "https://careers.atnorth.com/jobs/8640831-project-procurement-manager-finland"
   }
  }
 }
