@@ -1,8 +1,8 @@
 {
  "meta": {
-  "generated": "2026-11-10T05:36+00:00",
-  "total_matches": 21,
-  "new_matches": 6,
+  "generated": "2026-11-11T05:39+00:00",
+  "total_matches": 22,
+  "new_matches": 7,
   "companies": [
    {
     "company": "Fortum",
@@ -56,7 +56,7 @@
     "company": "Wärtsilä",
     "ats": "successfactors",
     "ok": true,
-    "count": 2,
+    "count": 1,
     "error": "",
     "source": "https://careers.wartsila.com",
     "careers_url": "https://www.wartsila.com/careers",
@@ -104,8 +104,8 @@
     "company": "Metso",
     "ats": "successfactors",
     "ok": true,
-    "count": 1,
-    "error": "",
+    "count": 0,
+    "error": "no matching open positions (or wrong id)",
     "source": "https://careers.metso.com",
     "careers_url": "https://www.metso.com/careers",
     "note": "",
@@ -152,8 +152,8 @@
     "company": "RWE Supply & Trading",
     "ats": "successfactors",
     "ok": true,
-    "count": 0,
-    "error": "no matching open positions (or wrong id)",
+    "count": 2,
+    "error": "",
     "source": "https://jobs.rwe.com",
     "careers_url": "https://jobs.rwe.com",
     "note": "",
@@ -260,8 +260,8 @@
     "company": "RWE",
     "ats": "successfactors",
     "ok": true,
-    "count": 0,
-    "error": "no matching open positions (or wrong id)",
+    "count": 2,
+    "error": "",
     "source": "https://jobs.rwe.com",
     "careers_url": "https://jobs.rwe.com",
     "note": "",
@@ -692,7 +692,7 @@
     "company": "Nordea",
     "ats": "successfactors",
     "ok": true,
-    "count": 1,
+    "count": 2,
     "error": "",
     "source": "https://careers.nordea.com",
     "careers_url": "https://careers.nordea.com",
@@ -812,7 +812,7 @@
     "company": "OMV",
     "ats": "successfactors",
     "ok": true,
-    "count": 3,
+    "count": 1,
     "error": "",
     "source": "https://careers.omv.com",
     "careers_url": "https://careers.omv.com/",
@@ -1705,6 +1705,69 @@
    "key": "teamtailor:atNorth:8640831"
   },
   {
+   "company": "Nordea",
+   "ats": "successfactors",
+   "job_id": "1455882233",
+   "title": "Executive Strategic Storyteller and Videographer",
+   "url": "https://careers.nordea.com/job/Helsinki-Executive-Strategic-Storyteller-and-Videographer-00500/1455882233/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS",
+   "location": "Helsinki, FI, 00500",
+   "department": "",
+   "posted": "2026-11-10",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "2026-11-24",
+   "rating": "A",
+   "segment": "pe",
+   "segments_secondary": [],
+   "summary": "We are looking for an experienced Executive Strategic Storyteller and Videographer for a permanent, full-time position at Nordea Group Creative, our in-house agency. In this role, you will help senior leaders turn complex business topics into clear, credible, and human communication through high-quality video and…",
+   "responsibilities": [
+    "Own the end-to-end creation of high-impact executive video production, collaborate with senior communicators and the strategy office to…",
+    "Ensure to deliver videos for Nordea Group Corporate Communications and strategic internal communications with Group Leadership Team…",
+    "Partner up with senior leaders and communication teams to turn strategy, financial performance and organisational priorities into…",
+    "Lead end-to-end production of executive communications, including annual and quarterly report announcements, thought leadership topics and…"
+   ],
+   "criteria": [
+    "This is the right role for you if you are a strategic storyteller and highly skilled filmmaker who is equally comfortable shaping a narrative together with…",
+    "You are a trusted storyteller with executive presence, journalistic instinct and commercial understanding, bringing exceptional craft, sound judgement and…",
+    "You build trust quickly, listen carefully and know when to challenge, simplify or reframe a message.",
+    "You are calm under pressure, comfortable with short deadlines and able to manage several productions while maintaining a consistently high creative standard.",
+    "You are proactive, collaborative and solution-oriented, and you care about creating communication that genuinely informs, engages and inspires.",
+    "7+ years of professional experience in video production preferably in television production and filmmaking, combining journalism and corporate storytelling…"
+   ],
+   "nice_to_have": [],
+   "seniority": "senior",
+   "years_experience": "7+ years",
+   "languages": [
+    "English"
+   ],
+   "education": "",
+   "skills_matched": [
+    "strategy",
+    "english"
+   ],
+   "personal_matched": [
+    "leadership",
+    "coaching",
+    "communication"
+   ],
+   "score": 83,
+   "reasons": [
+    "Title matches “strategic”",
+    "Seniority: senior ✓",
+    "Professional skills 2/49: strategy, english",
+    "Personal skills 3/10: leadership, coaching, communication",
+    "CV text similarity 19%",
+    "Keywords: AI",
+    "Location: Helsinki, FI, 00500",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "text",
+   "first_seen": "2026-11-11",
+   "is_new": true,
+   "key": "successfactors:Nordea:1455882233"
+  },
+  {
    "company": "atNorth",
    "ats": "teamtailor",
    "job_id": "8485560",
@@ -2364,71 +2427,6 @@
    "key": "greenhouse:EQT Infrastructure:4981387101"
   },
   {
-   "company": "OMV",
-   "ats": "successfactors",
-   "job_id": "1455071533",
-   "title": "Expert Data Engineer, Digital Trading Solutions (gn)",
-   "url": "https://careers.omv.com/job/Vienna-Expert-Data-Engineer%2C-Digital-Trading-Solutions-%28gn%29-Vien-1020/1455071533/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS",
-   "location": "Vienna, Vienna, AT, 1020",
-   "department": "",
-   "posted": "2026-11-06",
-   "workplace": "",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "",
-   "rating": "A",
-   "segment": "trading",
-   "segments_secondary": [
-    "portfolio"
-   ],
-   "summary": "At OMV Group, we drive the energy, mobility and lifestyles forward every day.",
-   "responsibilities": [
-    "Combine business analysis, hands-on data engineering, and solution delivery across the commodity trading lifecycle.",
-    "Collaborate with Trading, Risk, Operations, and Finance to understand processes and deliver trusted data products.",
-    "Translate business needs into user stories, functional specifications, data requirements, acceptance criteria, and solution designs.",
-    "Analyze data flows and define integrations between trading platforms and enterprise applications."
-   ],
-   "criteria": [
-    "Master’s degree/Diploma in IT and Data Analytics or a related field.",
-    "Minimum 5 years of relevant professional experience in commodity trading, energy trading, Oil & Gas, or another complex trading environment.",
-    "Understanding of front-to-back trading processes",
-    "Strong Business analysis and stakeholder management skills",
-    "Excellent communication skills and experience working across business and technology functions are essential.",
-    "The successful candidate demonstrates strong hands-on expertise in Azure Databricks, SQL, Python/PySpark, data modeling, ETL/ELT processes."
-   ],
-   "nice_to_have": [
-    "Experience with trading systems such as Endur or Orchestrade is considered an advantage."
-   ],
-   "seniority": "senior",
-   "years_experience": "5+ years",
-   "languages": [],
-   "education": "Master's",
-   "skills_matched": [
-    "stakeholder management",
-    "energy trading"
-   ],
-   "personal_matched": [
-    "leadership",
-    "communication"
-   ],
-   "score": 58,
-   "reasons": [
-    "Title matches “trading”",
-    "Seniority: senior ✓",
-    "Professional skills 2/49: stakeholder management, energy trading",
-    "Personal skills 2/10: leadership, communication",
-    "CV text similarity 25%",
-    "Keywords: international",
-    "Location: Vienna, Vienna, AT, 1020",
-    "Lower-priority role (“data”): −25",
-    "Company rated A: +6"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-09",
-   "is_new": true,
-   "key": "successfactors:OMV:1455071533"
-  },
-  {
    "company": "Fortum",
    "ats": "successfactors",
    "job_id": "1375684555",
@@ -2611,6 +2609,52 @@
    "first_seen": "2026-11-02",
    "is_new": false,
    "key": "teamtailor:Capalo AI:8111587"
+  },
+  {
+   "company": "Nordea",
+   "ats": "successfactors",
+   "job_id": "1455894933",
+   "title": "Head of Analysis, Requirement & Test",
+   "url": "https://careers.nordea.com/job/Stockholm-Head-of-Analysis%2C-Requirement-&-Test-111-56/1455894933/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS",
+   "location": "Stockholm, SE, 111 56",
+   "department": "",
+   "posted": "2026-11-10",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "2026-11-23",
+   "rating": "A",
+   "segment": "pe",
+   "segments_secondary": [],
+   "summary": "Vill du leda människor som skapar förutsättningarna för framtidens försäkringslösningar?",
+   "responsibilities": [
+    "Leda, coacha och utveckla medarbetare inom analys, krav och test.",
+    "Säkerställa rätt kompetens och kapacitet för framtida behov.",
+    "Bygga en kultur präglad av ansvarstagande, samarbete och kontinuerligt lärande.",
+    "Stötta medarbetare i komplexa verksamhets- och teknikrelaterade frågeställningar."
+   ],
+   "criteria": [],
+   "nice_to_have": [],
+   "seniority": "executive",
+   "years_experience": "",
+   "languages": [],
+   "education": "",
+   "skills_matched": [],
+   "personal_matched": [],
+   "score": 38,
+   "reasons": [
+    "Title matches “head of”",
+    "Seniority: executive ✓",
+    "Professional skills 0/49",
+    "Personal skills 0/10",
+    "CV text similarity 1%",
+    "Location: Stockholm, SE, 111 56",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "text",
+   "first_seen": "2026-11-11",
+   "is_new": true,
+   "key": "successfactors:Nordea:1455894933"
   }
  ]
 }
