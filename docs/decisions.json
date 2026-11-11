@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-11T07:26:08.933Z",
+ "updated": "2026-11-11T07:26:12.714Z",
  "jobs": {
   "personio:terralayr:2594674": {
    "state": "hide",
@@ -169,6 +169,13 @@
    "title": "Operations Commercial Manager, Kouvola",
    "company": "atNorth",
    "url": "https://careers.atnorth.com/jobs/8232744-operations-commercial-manager-kouvola"
+  },
+  "successfactors:Fortum:1375684555": {
+   "state": "hide",
+   "at": "2026-11-11T07:26:10.888Z",
+   "title": "Procurement Specialist",
+   "company": "Fortum",
+   "url": "https://jobs.fortum.com/Fortum/job/Espoo-Procurement-Specialist/1375684555/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS"
   }
  }
 }
