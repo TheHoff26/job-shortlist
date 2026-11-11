@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-11T07:26:18.005Z",
+ "updated": "2026-11-11T07:26:24.148Z",
  "jobs": {
   "personio:terralayr:2594674": {
    "state": "hide",
@@ -183,6 +183,13 @@
    "title": "Commercial Contract Analyst - Global Environmental Markets",
    "company": "Statkraft",
    "url": "https://jobs.smartrecruiters.com/Statkraft1/744000157783379-commercial-contract-analyst-global-environmental-markets"
+  },
+  "successfactors:Nordea:1455894933": {
+   "state": "hide",
+   "at": "2026-11-11T07:26:21.784Z",
+   "title": "Head of Analysis, Requirement & Test",
+   "company": "Nordea",
+   "url": "https://careers.nordea.com/job/Stockholm-Head-of-Analysis%2C-Requirement-&-Test-111-56/1455894933/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS"
   }
  }
 }
