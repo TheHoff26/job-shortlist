@@ -24,6 +24,10 @@ LINK_REASONS = {
 }
 
 
+URL_BASED = {"workday", "successfactors", "teamtailor", "avature", "easycruit"}
+ID_BASED = {"greenhouse", "lever", "ashby", "smartrecruiters", "personio", "recruitee"}
+
+
 def to_company(c: dict) -> dict:
     """Map a register record to the job tool's company format."""
     jobs = c.get("jobs") or {}
@@ -41,6 +45,14 @@ def to_company(c: dict) -> dict:
     }
     if jobs.get("url"):
         out["url"] = jobs["url"]
+    elif ats in URL_BASED and c.get("careers_url"):
+        out["url"] = c["careers_url"]          # job board URL entered as careers page only
+    if ats in URL_BASED and not out.get("url"):
+        out["ats"], out["link_reason"] = "linkedin", "job system set, but no job board URL in the register"
+        return out
+    if ats in ID_BASED and not jobs.get("id"):
+        out["ats"], out["link_reason"] = "linkedin", "job system set, but no board name (id) in the register"
+        return out
     if jobs.get("id"):
         out["id"] = jobs["id"]
     if ats == "linkedin":

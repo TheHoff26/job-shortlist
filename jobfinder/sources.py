@@ -12,6 +12,10 @@ keyless feeds that power the companies' own careers pages:
   workday          POST https://{host}/wday/cxs/{tenant}/{site}/jobs  (+ detail; unofficial)
   successfactors   GET  https://{career-site}/services/rss/job/?locale=en_US&keywords=(...)
                    (RSS feed of SAP SuccessFactors career sites; job page as fallback)
+  teamtailor       GET  https://{career-site}/jobs.rss
+  avature          GET  https://{site}/{locale}/{portal}/SearchJobs/feed/  (RSS; HTML list as fallback)
+                        + job page (JSON-LD JobPosting) for matching titles
+  easycruit        GET  https://{id}.easycruit.com/export/xml/vacancy/list.xml
 """
 
 from __future__ import annotations
@@ -62,6 +66,9 @@ def _date(value) -> str:
         if isinstance(value, (int, float)):
             return datetime.fromtimestamp(value / 1000, tz=timezone.utc).date().isoformat()
         text = str(value).strip().replace(" UTC", "+00:00").replace("Z", "+00:00")
+        m = re.match(r"^(\d{1,2})[./](\d{1,2})[./](\d{4})", text)       # 30.11.2026 / 30/11/2026
+        if m:
+            return f"{m.group(3)}-{int(m.group(2)):02d}-{int(m.group(1)):02d}"
         return datetime.fromisoformat(text).date().isoformat()
     except ValueError:
         return str(value)[:10]
@@ -534,6 +541,191 @@ def fetch_teamtailor(session, company: dict, keep: TitleFilter) -> list[Job]:
     return jobs
 
 
+# --------------------------------------------------------------------------- #
+# Shared: schema.org JobPosting (JSON-LD) on a job page
+# --------------------------------------------------------------------------- #
+def _jsonld_posting(page_html: str) -> dict:
+    import json as _json
+    for m in re.finditer(r'<script[^>]+application/ld\+json[^>]*>(.*?)</script>', page_html, re.S | re.I):
+        try:
+            data = _json.loads(m.group(1).strip())
+        except ValueError:
+            continue
+        stack = data if isinstance(data, list) else [data]
+        while stack:
+            d = stack.pop()
+            if isinstance(d, dict):
+                if str(d.get("@type", "")).lower() == "jobposting":
+                    return d
+                stack.extend(v for v in d.values() if isinstance(v, (list, dict)))
+            elif isinstance(d, list):
+                stack.extend(d)
+    return {}
+
+
+def _posting_location(p: dict) -> str:
+    locs = p.get("jobLocation") or []
+    locs = locs if isinstance(locs, list) else [locs]
+    out = []
+    for l in locs:
+        a = (l or {}).get("address") or {}
+        if isinstance(a, str):
+            out.append(a)
+            continue
+        country = a.get("addressCountry")
+        country = country.get("name") if isinstance(country, dict) else country
+        name = ", ".join(x for x in (a.get("addressLocality"), country) if x)
+        if name and name not in out:
+            out.append(name)
+    return " / ".join(out)
+
+
+def _page_description(page_html: str) -> str:
+    from bs4 import BeautifulSoup
+    soup = BeautifulSoup(page_html, "html.parser")
+    for sel in ("[itemprop=description]", ".article__content", ".job-description", ".jobDescription",
+                ".section__content", "article", "main"):
+        block = soup.select_one(sel)
+        if block and len(block.get_text(strip=True)) > 200:
+            return block.decode_contents()
+    return ""
+
+
+# --------------------------------------------------------------------------- #
+# Avature career sites (e.g. careers.enbw.com/en_US/careers, jobs.siemens-energy.com/en_US/jobs)
+# --------------------------------------------------------------------------- #
+_AV_ROOT = re.compile(r"^(https?://[^/]+/[a-z]{2}_[A-Z]{2}/[^/?#]+)")
+
+
+def _avature_root(url: str) -> str:
+    m = _AV_ROOT.match(url.strip())
+    return m.group(1) if m else url.rstrip("/")
+
+
+def _avature_listing(session, root: str) -> list[tuple[str, str, str]]:
+    """(title, url, description) for every open position."""
+    feed = f"{root}/SearchJobs/feed/"
+    try:
+        r = session.get(feed, params={"jobRecordsPerPage": 1000}, timeout=TIMEOUT,
+                        headers={"Accept": "application/rss+xml, application/xml, text/xml"})
+        r.raise_for_status()
+        items = list(ET.fromstring(r.content).iter("item"))
+        if items:
+            return [((it.findtext("title") or "").strip(), (it.findtext("link") or "").strip(),
+                     html.unescape(it.findtext("description") or "")) for it in items]
+    except (requests.RequestException, ET.ParseError) as e:
+        log.info("avature feed not usable for %s (%s) – reading the job list pages", root, e)
+    from bs4 import BeautifulSoup
+    out, offset = [], 0
+    while offset < 2000:
+        r = session.get(f"{root}/SearchJobs", params={"jobRecordsPerPage": 50, "jobOffset": offset},
+                        timeout=TIMEOUT, headers={"Accept": "text/html"})
+        r.raise_for_status()
+        soup = BeautifulSoup(r.text, "html.parser")
+        links = soup.select("article.article--result h3 a, .article__header__text__title a") or \
+            [a for a in soup.select("a[href*='/JobDetail/']")]
+        page = []
+        for a in links:
+            href = requests.compat.urljoin(root + "/", a.get("href", ""))
+            if "/JobDetail/" in href and href not in {u for _, u, _ in out + page}:
+                page.append((a.get_text(" ", strip=True), href, ""))
+        out.extend(page)
+        if len(page) < 50 or not soup.select_one("a.paginationNextLink"):
+            break
+        offset += 50
+    if not out:
+        raise RuntimeError("Avature: no job list found (feed and list pages empty)")
+    return out
+
+
+def fetch_avature(session, company: dict, keep: TitleFilter) -> list[Job]:
+    root = _avature_root(company["url"])
+    jobs = []
+    for title, link, desc in _avature_listing(session, root):
+        if not title or not keep(title):
+            continue
+        ids = re.findall(r"/JobDetail/[^/]+/(\d+)", link) or re.findall(r"(\d+)/?$", link)
+        posting, page_desc = {}, ""
+        try:
+            pr = session.get(link, timeout=TIMEOUT, headers={"Accept": "text/html"})
+            pr.raise_for_status()
+            posting = _jsonld_posting(pr.text)
+            if not posting.get("description") and len(desc) < 300:
+                page_desc = _page_description(pr.text)
+        except requests.RequestException:
+            pass
+        jobs.append(Job(
+            company=company["name"], ats="avature", job_id=ids[0] if ids else link, title=title, url=link,
+            location=_posting_location(posting),
+            description_html=html.unescape(posting.get("description") or "") or page_desc or desc,
+            posted=_date(posting.get("datePosted") or ""),
+            employment_type=str(posting.get("employmentType") or "").replace("_", " ").lower(),
+            deadline=_date(posting.get("validThrough")) if posting.get("validThrough") else "",
+        ))
+    return jobs
+
+
+# --------------------------------------------------------------------------- #
+# EasyCruit (Visma) – e.g. cip.easycruit.com
+# --------------------------------------------------------------------------- #
+_EC_TITLE = ("title", "name", "jobtitle", "vacancytitle", "positiontitle", "heading", "headline")
+_EC_URL = ("url", "link", "vacancyurl", "applicationurl", "applyurl", "href", "adurl")
+_EC_LOC = ("location", "city", "workplace", "municipality", "region", "place")
+_EC_DEADLINE = ("applicationdeadline", "deadline", "date_end", "enddate", "closingdate", "todate", "lastapplicationdate")
+_EC_POSTED = ("date_start", "startdate", "publishdate", "published", "fromdate", "date")
+_EC_DESC = ("description", "jobdescription", "adtext", "vacancytext", "text", "body", "content", "intro")
+
+
+def _ec_fields(el) -> dict:
+    """All child texts and attributes of a vacancy, by lower-case local name (first wins)."""
+    vals = {k.lower(): v for k, v in el.attrib.items()}
+    for sub in el.iter():
+        if sub is el:
+            continue
+        for k, v in sub.attrib.items():
+            vals.setdefault(f"{_local(sub.tag)}.{k.lower()}", v)
+        t = (sub.text or "").strip()
+        if t:
+            vals.setdefault(_local(sub.tag), t)
+    return vals
+
+
+def _first(vals: dict, keys) -> str:
+    return next((vals[k] for k in keys if vals.get(k)), "")
+
+
+def fetch_easycruit(session, company: dict, keep: TitleFilter) -> list[Job]:
+    ident = company.get("id") or urlparse(company.get("url", "")).netloc.split(".")[0]
+    base = f"https://{ident}.easycruit.com"
+    r = session.get(f"{base}/export/xml/vacancy/list.xml", timeout=TIMEOUT,
+                    headers={"Accept": "application/xml, text/xml"})
+    r.raise_for_status()
+    root = ET.fromstring(r.content)
+    vacancies = [el for el in root.iter() if _local(el.tag) == "vacancy"]
+    jobs = []
+    for v in vacancies:
+        f = _ec_fields(v)
+        title = _first(f, _EC_TITLE)
+        if not title or not keep(title):
+            continue
+        vid = f.get("id") or f.get("vacancyid") or ""
+        url = _first(f, _EC_URL)
+        if not url.startswith("http"):
+            dept = f.get("department.id") or ""
+            url = f"{base}/vacancy/{vid}/{dept}?iso=gb" if dept else f"{base}/vacancy/{vid}?iso=gb"
+        deadline = _first(f, _EC_DEADLINE)
+        jobs.append(Job(
+            company=company["name"], ats="easycruit", job_id=vid or url, title=title, url=url,
+            location=_first(f, _EC_LOC), department=f.get("department") or f.get("departmentname") or "",
+            description_html=html.unescape(_first(f, _EC_DESC)),
+            posted=_date(_first(f, _EC_POSTED)),
+            deadline=_date(deadline) if deadline else "",
+        ))
+    if not vacancies:
+        log.info("easycruit: feed for %s returned no <Vacancy> elements", ident)
+    return jobs
+
+
 FETCHERS: dict[str, Callable] = {
     "greenhouse": fetch_greenhouse,
     "lever": fetch_lever,
@@ -544,6 +736,8 @@ FETCHERS: dict[str, Callable] = {
     "workday": fetch_workday,
     "successfactors": fetch_successfactors,
     "teamtailor": fetch_teamtailor,
+    "avature": fetch_avature,
+    "easycruit": fetch_easycruit,
 }
 
 
