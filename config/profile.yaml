@@ -242,7 +242,7 @@ rating_bonus:
 
 # 7) MATCH SCORE – weight of each part (rescaled to 0-100)
 weights:
-  title: 23
+  title: 0
   seniority: 43
   professional: 50
   personal: 39
