@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-11T07:26:06.742Z",
+ "updated": "2026-11-11T07:26:08.933Z",
  "jobs": {
   "personio:terralayr:2594674": {
    "state": "hide",
@@ -162,6 +162,13 @@
    "title": "Senior Manager, Sustainability Communications",
    "company": "Fortum",
    "url": "https://jobs.fortum.com/Fortum/job/Espoo-Senior-Manager%2C-Sustainability-Communications/1376041255/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS"
+  },
+  "teamtailor:atNorth:8232744": {
+   "state": "hide",
+   "at": "2026-11-11T07:26:06.817Z",
+   "title": "Operations Commercial Manager, Kouvola",
+   "company": "atNorth",
+   "url": "https://careers.atnorth.com/jobs/8232744-operations-commercial-manager-kouvola"
   }
  }
 }
