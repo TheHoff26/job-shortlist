@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-11T07:26:12.714Z",
+ "updated": "2026-11-11T07:26:18.005Z",
  "jobs": {
   "personio:terralayr:2594674": {
    "state": "hide",
@@ -176,6 +176,13 @@
    "title": "Procurement Specialist",
    "company": "Fortum",
    "url": "https://jobs.fortum.com/Fortum/job/Espoo-Procurement-Specialist/1375684555/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS"
+  },
+  "smartrecruiters:Statkraft:744000157783379": {
+   "state": "hide",
+   "at": "2026-11-11T07:26:16.176Z",
+   "title": "Commercial Contract Analyst - Global Environmental Markets",
+   "company": "Statkraft",
+   "url": "https://jobs.smartrecruiters.com/Statkraft1/744000157783379-commercial-contract-analyst-global-environmental-markets"
   }
  }
 }
