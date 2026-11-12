@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-12T07:58:42.595Z",
+ "updated": "2026-11-12T07:59:15.336Z",
  "jobs": {
   "personio:terralayr:2594674": {
    "state": "hide",
@@ -246,6 +246,13 @@
    "title": "Head of Customs, AUS & NZ",
    "company": "Siemens Energy",
    "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Head-of-Customs-AUS-NZ/304601"
+  },
+  "avature:Siemens Energy:305337": {
+   "state": "hide",
+   "at": "2026-11-12T07:59:13.097Z",
+   "title": "Senior Portfolio Manager (f/m/d) Strategy & Growth",
+   "company": "Siemens Energy",
+   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Senior-Portfolio-Manager-f-m-d-Strategy-Growth/305337"
   }
  }
 }
