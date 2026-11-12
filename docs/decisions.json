@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-12T07:59:15.336Z",
+ "updated": "2026-11-12T07:59:49.466Z",
  "jobs": {
   "personio:terralayr:2594674": {
    "state": "hide",
@@ -253,6 +253,13 @@
    "title": "Senior Portfolio Manager (f/m/d) Strategy & Growth",
    "company": "Siemens Energy",
    "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Senior-Portfolio-Manager-f-m-d-Strategy-Growth/305337"
+  },
+  "avature:Siemens Energy:303584": {
+   "state": "hide",
+   "at": "2026-11-12T07:59:47.616Z",
+   "title": "Head of SCADA Development team (WPS and O&M Tools)",
+   "company": "Siemens Energy",
+   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Head-of-SCADA-Development-team-WPS-and-O-M-Tools/303584"
   }
  }
 }
