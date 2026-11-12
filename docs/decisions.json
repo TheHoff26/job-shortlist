@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-12T07:55:42.409Z",
+ "updated": "2026-11-12T07:56:02.537Z",
  "jobs": {
   "personio:terralayr:2594674": {
    "state": "hide",
@@ -225,6 +225,13 @@
    "title": "Head of Diagnostic Systems",
    "company": "Siemens Energy",
    "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Head-of-Diagnostic-Systems/304499"
+  },
+  "avature:Siemens Energy:302961": {
+   "state": "hide",
+   "at": "2026-11-12T07:56:00.680Z",
+   "title": "R2R FA Team Leader",
+   "company": "Siemens Energy",
+   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/R2R-FA-Team-Leader/302961"
   }
  }
 }
