@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-11T18:36:42.414Z",
+ "updated": "2026-11-12T07:54:21.780Z",
  "jobs": {
   "personio:terralayr:2594674": {
    "state": "hide",
@@ -197,6 +197,13 @@
    "title": "Investment Analyst",
    "company": "Alight",
    "url": "https://careers.alight-energy.com/jobs/8702821-investment-analyst"
+  },
+  "workday:Nord Pool:R28541": {
+   "state": "hide",
+   "at": "2026-11-12T07:54:19.984Z",
+   "title": "Strategy Business Analyst (VIE)",
+   "company": "Nord Pool",
+   "url": "https://hrhub.wd3.myworkdayjobs.com/Euronext_Career_Page/job/Oslo/Strategy-Business-Analyst--VIE-_R28541"
   }
  }
 }
