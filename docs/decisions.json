@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-12T07:56:59.459Z",
+ "updated": "2026-11-12T07:58:42.595Z",
  "jobs": {
   "personio:terralayr:2594674": {
    "state": "hide",
@@ -239,6 +239,13 @@
    "title": "Commercial Sales Manager",
    "company": "Siemens Energy",
    "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Commercial-Sales-Manager/305653"
+  },
+  "avature:Siemens Energy:304601": {
+   "state": "hide",
+   "at": "2026-11-12T07:58:40.784Z",
+   "title": "Head of Customs, AUS & NZ",
+   "company": "Siemens Energy",
+   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Head-of-Customs-AUS-NZ/304601"
   }
  }
 }
