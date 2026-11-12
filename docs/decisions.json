@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-12T07:59:49.466Z",
+ "updated": "2026-11-12T08:01:18.781Z",
  "jobs": {
   "personio:terralayr:2594674": {
    "state": "hide",
@@ -260,6 +260,13 @@
    "title": "Head of SCADA Development team (WPS and O&M Tools)",
    "company": "Siemens Energy",
    "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Head-of-SCADA-Development-team-WPS-and-O-M-Tools/303584"
+  },
+  "avature:Siemens Energy:303407": {
+   "state": "hide",
+   "at": "2026-11-12T08:01:16.744Z",
+   "title": "Integrated Program Management Expert (m/f/d) for S4E",
+   "company": "Siemens Energy",
+   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Integrated-Program-Management-Expert-m-f-d-for-S4E/303407"
   }
  }
 }
