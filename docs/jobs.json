@@ -1,14 +1,14 @@
 {
  "meta": {
-  "generated": "2026-11-11T19:15+00:00",
-  "total_matches": 221,
-  "new_matches": 206,
+  "generated": "2026-11-12T05:53+00:00",
+  "total_matches": 216,
+  "new_matches": 201,
   "companies": [
    {
     "company": "Fortum",
     "ats": "successfactors",
     "ok": true,
-    "count": 4,
+    "count": 5,
     "error": "",
     "source": "https://jobs.fortum.com",
     "careers_url": "https://www.fortum.com/careers",
@@ -56,7 +56,7 @@
     "company": "Wärtsilä",
     "ats": "successfactors",
     "ok": true,
-    "count": 1,
+    "count": 3,
     "error": "",
     "source": "https://careers.wartsila.com",
     "careers_url": "https://www.wartsila.com/careers",
@@ -104,8 +104,8 @@
     "company": "Metso",
     "ats": "successfactors",
     "ok": true,
-    "count": 1,
-    "error": "",
+    "count": 0,
+    "error": "no matching open positions (or wrong id)",
     "source": "https://careers.metso.com",
     "careers_url": "https://www.metso.com/careers",
     "note": "",
@@ -692,7 +692,7 @@
     "company": "Nordea",
     "ats": "successfactors",
     "ok": true,
-    "count": 3,
+    "count": 4,
     "error": "",
     "source": "https://careers.nordea.com",
     "careers_url": "https://careers.nordea.com",
@@ -812,7 +812,7 @@
     "company": "OMV",
     "ats": "successfactors",
     "ok": true,
-    "count": 2,
+    "count": 1,
     "error": "",
     "source": "https://careers.omv.com",
     "careers_url": "https://careers.omv.com/",
@@ -860,7 +860,7 @@
     "company": "Siemens Energy",
     "ats": "avature",
     "ok": true,
-    "count": 242,
+    "count": 240,
     "error": "",
     "source": "https://jobs.siemens-energy.com/en_US/jobs/Jobs",
     "careers_url": "https://jobs.siemens-energy.com/",
@@ -2651,71 +2651,6 @@
    "first_seen": "2026-11-11",
    "is_new": true,
    "key": "avature:Siemens Energy:304874"
-  },
-  {
-   "company": "Siemens Energy",
-   "ats": "avature",
-   "job_id": "299943",
-   "title": "Head of AGT Supplier Quality & Development",
-   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Head-of-AGT-Supplier-Quality-Development/299943",
-   "location": "",
-   "department": "",
-   "posted": "2026-08-13",
-   "workplace": "",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "",
-   "rating": "A",
-   "segment": "oem",
-   "segments_secondary": [
-    "others"
-   ],
-   "summary": "United Kingdom of Great Britain and Northern Ireland",
-   "responsibilities": [
-    "Lead and develop a high-performing global Supplier Quality & Development organization, fostering a culture of accountability…",
-    "Drive supplier quality excellence through robust qualification, industrialization, performance management, and proactive risk mitigation…",
-    "Elevate team performance and execution excellence to support AGT business ramp-up, ensuring predictable supplier quality, delivery…",
-    "Partner with Procurement, Engineering, Manufacturing, and Service teams to enable business growth, resolve critical supplier challenges…"
-   ],
-   "criteria": [
-    "Bachelor’s or Master’s degree in Engineering, Manufacturing, Supply Chain, Quality Management, or a related field.",
-    "Proven leadership experience building and developing high-performing teams in Supplier Quality, Engineering, Manufacturing, Operations, or Supply Chain related…",
-    "Ability to lead cross-functional initiatives, influence senior stakeholders, and drive execution excellence in a global organization.",
-    "Strategic, data-driven, and customer-focused leader with strong communication and problem-solving skills.",
-    "Up to 30% travel globally.",
-    "Preferred knowledge of rotor-machinery products and quality methods such as 5 Why, FMEA, 8D, and RCA."
-   ],
-   "nice_to_have": [],
-   "seniority": "executive",
-   "years_experience": "",
-   "languages": [],
-   "education": "Master's",
-   "skills_matched": [
-    "energy transition",
-    "decarbonization",
-    "strategy",
-    "energy",
-    "gas",
-    "electricity"
-   ],
-   "personal_matched": [
-    "leadership",
-    "communication"
-   ],
-   "score": 95,
-   "reasons": [
-    "Title matches “head of”",
-    "Seniority: executive ✓",
-    "Professional skills 6/54: energy transition, decarbonization, strategy, energy, gas, electricity",
-    "Personal skills 2/10: leadership, communication",
-    "CV text similarity 33%",
-    "Location: not stated",
-    "Company rated A: +6"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-11",
-   "is_new": true,
-   "key": "avature:Siemens Energy:299943"
   },
   {
    "company": "Siemens Energy",
@@ -4531,68 +4466,6 @@
   {
    "company": "Siemens Energy",
    "ats": "avature",
-   "job_id": "304745",
-   "title": "Global Project Procurement Manager",
-   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Global-Project-Procurement-Manager/304745",
-   "location": "",
-   "department": "",
-   "posted": "2026-10-07",
-   "workplace": "",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "",
-   "rating": "A",
-   "segment": "oem",
-   "segments_secondary": [
-    "others"
-   ],
-   "summary": "The Global Project Procurement Manager (PPM), as part of the Project Core Team starting from the project tender through until handover to warranty, coordinates the complete project procurement and identifies, drives, implements solutions for the project.",
-   "responsibilities": [
-    "Define and align procurement strategy with the Project Core Team and Procurement Community during the whole Project Lifecycle. Driver of…",
-    "Ensuring implementation of the Procurement Strategy and appropriate processes for Off- and Onshore scope of works by setting up the…",
-    "Lead all aspects of market situations and provide strategies for Risk Mitigation and opportunity realization. Controlling Procurement…",
-    "Analyzing whole supply and service scope, reviewing Customer Contracts on Procurement risks, performing Risk Analysis, preparing…"
-   ],
-   "criteria": [
-    "Bachelors in business administration, Supply Chain Management, Engineering, or related field. (Or combined equivalent of education and work experience.) 8+…",
-    "Problem solving mentality, regardless of how big or small the problem! Strong organizational skills and excellent communication.",
-    "PMP Certification or similar and SAP experience preferred but not required."
-   ],
-   "nice_to_have": [],
-   "seniority": "lead",
-   "years_experience": "8+ years",
-   "languages": [],
-   "education": "Bachelor's (or equivalent)",
-   "skills_matched": [
-    "energy transition",
-    "renewable energy",
-    "decarbonization",
-    "strategy",
-    "energy",
-    "gas",
-    "electricity"
-   ],
-   "personal_matched": [
-    "communication"
-   ],
-   "score": 87,
-   "reasons": [
-    "Title matches “procurement”",
-    "Seniority: lead ✓",
-    "Professional skills 7/54: energy transition, renewable energy, decarbonization, strategy, energy, gas, electricity",
-    "Personal skills 1/10: communication",
-    "CV text similarity 32%",
-    "Location: not stated",
-    "Company rated A: +6"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-11",
-   "is_new": true,
-   "key": "avature:Siemens Energy:304745"
-  },
-  {
-   "company": "Siemens Energy",
-   "ats": "avature",
    "job_id": "305848",
    "title": "Global Project Procurement Manager (f/m/d)",
    "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Global-Project-Procurement-Manager-f-m-d/305848",
@@ -5459,74 +5332,6 @@
   {
    "company": "Siemens Energy",
    "ats": "avature",
-   "job_id": "306469",
-   "title": "Vice President Project Management Latin America",
-   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Vice-President-Project-Management-Latin-America/306469",
-   "location": "",
-   "department": "",
-   "posted": "2026-11-04",
-   "workplace": "",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "",
-   "rating": "A",
-   "segment": "oem",
-   "segments_secondary": [
-    "others"
-   ],
-   "summary": "The Head of Project Management is responsible for the successful delivery of the GS LA project portfolio and the leadership of the regional Project Management organization. The role leads a team of Project Managers and is accountable for project execution performance across safety, quality, delivery, customer…",
-   "responsibilities": [
-    "Lead the PM Organization: Lead, develop and coach the regional team of Project Managers. Build a high-performance organization focused on…",
-    "Own Portfolio Performance: Accountable for successful execution of the GS LA project portfolio — delivered safely, on schedule, at required…",
-    "Drive PM Excellence: Establish and maintain a consistent project management framework across the region. Ensure effective application of…",
-    "Business Leadership: Serve as an active member of the GS LA Leadership Team. Contribute to regional business strategy and execution…"
-   ],
-   "criteria": [
-    "Experience Level",
-    "Customer & Stakeholder: Maintain strong relationships with key customers and stakeholders. Support resolution of major project escalations and customer…",
-    "Experience: Bachelor's degree in Engineering, Business or related discipline. Extensive experience in project management, project execution or service…",
-    "Leadership: Strong people leadership and talent development. Ability to build and lead high-performing teams. Ability to influence across functions and…",
-    "Business Acumen: Strong understanding of project profitability drivers. Experience with project governance, risk management and portfolio oversight. Strong…",
-    "What You Bring"
-   ],
-   "nice_to_have": [],
-   "seniority": "executive",
-   "years_experience": "",
-   "languages": [],
-   "education": "Bachelor's",
-   "skills_matched": [
-    "energy transition",
-    "decarbonization",
-    "strategy",
-    "project portfolio",
-    "stakeholder management",
-    "risk management",
-    "english",
-    "energy",
-    "gas",
-    "electricity"
-   ],
-   "personal_matched": [
-    "leadership"
-   ],
-   "score": 87,
-   "reasons": [
-    "Title matches “vice president”",
-    "Seniority: executive ✓",
-    "Professional skills 10/54: energy transition, decarbonization, strategy, project portfolio, stakeholder management, risk management, english, energy",
-    "Personal skills 1/10: leadership",
-    "CV text similarity 43%",
-    "Location: not stated",
-    "Company rated A: +6"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-11",
-   "is_new": true,
-   "key": "avature:Siemens Energy:306469"
-  },
-  {
-   "company": "Siemens Energy",
-   "ats": "avature",
    "job_id": "304803",
    "title": "Commodity Management Expediting (f/m/d)",
    "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Commodity-Management-Expediting-f-m-d/304803",
@@ -6073,73 +5878,6 @@
   {
    "company": "EQT Infrastructure",
    "ats": "greenhouse",
-   "job_id": "4969805101",
-   "title": "Team Lead – Evergreen Product Management, Private Capital",
-   "url": "https://job-boards.eu.greenhouse.io/eqtpartners/jobs/4969805101",
-   "location": "Stockholm, Stockholm, Sweden",
-   "department": "GWS Product Management (Cost Center)",
-   "posted": "2026-09-07",
-   "workplace": "",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "",
-   "rating": "A",
-   "segment": "pe",
-   "segments_secondary": [
-    "portfolio"
-   ],
-   "summary": "As Team Lead for Private Capital Evergreen Product Management, you will set the strategic direction for a global team while remaining hands-on in shaping product narratives and fundraising deliverables that resonate with investors and distributors worldwide. You will be the senior point of accountability for private…",
-   "responsibilities": [
-    "Lead, mentor and develop the global Private Capital EPM team, establishing clear direction, quality standards and a culture of…",
-    "Own product positioning for EQT's private capital evergreen offerings, ensuring a differentiated, consistent narrative across regions and…",
-    "Oversee core fundraising assets and product lifecycle deliverables, ensuring all materials are accurate, compelling and ready for external…",
-    "Lead EPM's contribution to investor diligence, complex product-related RFI responses, distributor onboarding and selected client…"
-   ],
-   "criteria": [
-    "You are a thoughtful, commercially minded leader with deep private markets knowledge (ideally within private equity) and a genuine commitment to developing…",
-    "You bring both the strategic perspective to set direction and the hands-on rigour to deliver consistently at a high level.",
-    "Significant experience in private markets product management, with a strong understanding of private equitycapital products, fundraising processes and investor…",
-    "Proven experience in a senior product management role, with demonstrated ability to own complex deliverables end-to-end.",
-    "Experience leading and developing a team, with the ability to set clear priorities, foster collaboration and hold high standards.",
-    "Strong commercial judgement and the ability to translate complex information into clear, compelling product narratives for diverse audiences."
-   ],
-   "nice_to_have": [
-    "Familiarity with evergreen or semi-liquid fund structures and their specific fundraising and distribution dynamics.",
-    "Private wealth experience.",
-    "Experience working across multiple geographies or within a global organisation."
-   ],
-   "seniority": "lead",
-   "years_experience": "",
-   "languages": [],
-   "education": "",
-   "skills_matched": [
-    "partnerships",
-    "strategy",
-    "optimisation"
-   ],
-   "personal_matched": [
-    "leadership",
-    "communication",
-    "entrepreneurial"
-   ],
-   "score": 83,
-   "reasons": [
-    "Title matches “management”",
-    "Seniority: lead ✓",
-    "Professional skills 3/54: partnerships, strategy, optimisation",
-    "Personal skills 3/10: leadership, communication, entrepreneurial",
-    "CV text similarity 18%",
-    "Location: Stockholm, Stockholm, Sweden",
-    "Company rated A: +6"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-11",
-   "is_new": true,
-   "key": "greenhouse:EQT Infrastructure:4969805101"
-  },
-  {
-   "company": "EQT Infrastructure",
-   "ats": "greenhouse",
    "job_id": "4969731101",
    "title": "Team Lead – Evergreen Product Management, Private Capital",
    "url": "https://job-boards.eu.greenhouse.io/eqtpartners/jobs/4969731101",
@@ -6203,6 +5941,73 @@
    "first_seen": "2026-11-11",
    "is_new": true,
    "key": "greenhouse:EQT Infrastructure:4969731101"
+  },
+  {
+   "company": "EQT Infrastructure",
+   "ats": "greenhouse",
+   "job_id": "4969805101",
+   "title": "Team Lead – Evergreen Product Management, Private Capital",
+   "url": "https://job-boards.eu.greenhouse.io/eqtpartners/jobs/4969805101",
+   "location": "Stockholm, Stockholm, Sweden",
+   "department": "GWS Product Management (Cost Center)",
+   "posted": "2026-09-07",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "pe",
+   "segments_secondary": [
+    "portfolio"
+   ],
+   "summary": "As Team Lead for Private Capital Evergreen Product Management, you will set the strategic direction for a global team while remaining hands-on in shaping product narratives and fundraising deliverables that resonate with investors and distributors worldwide. You will be the senior point of accountability for private…",
+   "responsibilities": [
+    "Lead, mentor and develop the global Private Capital EPM team, establishing clear direction, quality standards and a culture of…",
+    "Own product positioning for EQT's private capital evergreen offerings, ensuring a differentiated, consistent narrative across regions and…",
+    "Oversee core fundraising assets and product lifecycle deliverables, ensuring all materials are accurate, compelling and ready for external…",
+    "Lead EPM's contribution to investor diligence, complex product-related RFI responses, distributor onboarding and selected client…"
+   ],
+   "criteria": [
+    "You are a thoughtful, commercially minded leader with deep private markets knowledge (ideally within private equity) and a genuine commitment to developing…",
+    "You bring both the strategic perspective to set direction and the hands-on rigour to deliver consistently at a high level.",
+    "Significant experience in private markets product management, with a strong understanding of private equitycapital products, fundraising processes and investor…",
+    "Proven experience in a senior product management role, with demonstrated ability to own complex deliverables end-to-end.",
+    "Experience leading and developing a team, with the ability to set clear priorities, foster collaboration and hold high standards.",
+    "Strong commercial judgement and the ability to translate complex information into clear, compelling product narratives for diverse audiences."
+   ],
+   "nice_to_have": [
+    "Familiarity with evergreen or semi-liquid fund structures and their specific fundraising and distribution dynamics.",
+    "Private wealth experience.",
+    "Experience working across multiple geographies or within a global organisation."
+   ],
+   "seniority": "lead",
+   "years_experience": "",
+   "languages": [],
+   "education": "",
+   "skills_matched": [
+    "partnerships",
+    "strategy",
+    "optimisation"
+   ],
+   "personal_matched": [
+    "leadership",
+    "communication",
+    "entrepreneurial"
+   ],
+   "score": 83,
+   "reasons": [
+    "Title matches “management”",
+    "Seniority: lead ✓",
+    "Professional skills 3/54: partnerships, strategy, optimisation",
+    "Personal skills 3/10: leadership, communication, entrepreneurial",
+    "CV text similarity 18%",
+    "Location: Stockholm, Stockholm, Sweden",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-11",
+   "is_new": true,
+   "key": "greenhouse:EQT Infrastructure:4969805101"
   },
   {
    "company": "Siemens Energy",
@@ -7196,6 +7001,72 @@
   {
    "company": "Siemens Energy",
    "ats": "avature",
+   "job_id": "307199",
+   "title": "Tender Management Professional",
+   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Tender-Management-Professional/307199",
+   "location": "",
+   "department": "",
+   "posted": "2026-11-11",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "oem",
+   "segments_secondary": [
+    "others"
+   ],
+   "summary": "Siemens Energy – Grid Technologies Substations (USA) is searching for a highly professional Tender Management Professional to work with a passion for customer engagement and satisfaction. This is an outstanding opportunity to join a strong team selling the best Substations projects in the market.",
+   "responsibilities": [
+    "Country: Mexico",
+    "State/Province/County: Ciudad de Mexico",
+    "Support Senior Tender Managers and Tender Managers to develop sales proposals for Grid Technologies Substations projects to determine…",
+    "Support Senior Tender Managers and Tender Managers to develop, edit, and write original proposal responses and other sales-related…"
+   ],
+   "criteria": [
+    "3 or more years of experience in a related field.",
+    "Experience with setting up and executing self-perform work.",
+    "Record of building and delivery of large programs.",
+    "Technical and business type verbal and written communication and presentation skills.",
+    "Inherent ability to work effectively in a team environment and strong desire to win.",
+    "Organization and time management skills to succeed in a fast-paced environment."
+   ],
+   "nice_to_have": [
+    "Experience with Substations Utilities and Datacenter customers preferred."
+   ],
+   "seniority": "",
+   "years_experience": "",
+   "languages": [],
+   "education": "",
+   "skills_matched": [
+    "decarbonization",
+    "business development",
+    "energy",
+    "gas",
+    "electricity"
+   ],
+   "personal_matched": [
+    "communication",
+    "presentation skills"
+   ],
+   "score": 80,
+   "reasons": [
+    "Title matches “management”",
+    "Seniority: not stated",
+    "Professional skills 5/54: decarbonization, business development, energy, gas, electricity",
+    "Personal skills 2/10: communication, presentation skills",
+    "CV text similarity 35%",
+    "Location: not stated",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-12",
+   "is_new": true,
+   "key": "avature:Siemens Energy:307199"
+  },
+  {
+   "company": "Siemens Energy",
+   "ats": "avature",
    "job_id": "302471",
    "title": "Commercial Sales Manager",
    "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Commercial-Sales-Manager/302471",
@@ -7319,77 +7190,6 @@
    "first_seen": "2026-11-11",
    "is_new": true,
    "key": "avature:Siemens Energy:305933"
-  },
-  {
-   "company": "Siemens Energy",
-   "ats": "avature",
-   "job_id": "305769",
-   "title": "Global Account Manager Renewable Vertical",
-   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Global-Account-Manager-Renewable-Vertical/305769",
-   "location": "",
-   "department": "",
-   "posted": "2026-10-27",
-   "workplace": "",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "",
-   "rating": "A",
-   "segment": "oem",
-   "segments_secondary": [
-    "others"
-   ],
-   "summary": "To ensure a fair evaluation, please submit your CV in English, as applications in other languages cannot be reviewed.",
-   "responsibilities": [
-    "Country: SPAIN",
-    "State/Province/County: Madrid",
-    "City: Madrid",
-    "Country: POLAND"
-   ],
-   "criteria": [
-    "Bachelor’s degree in Engineering, Business Administration, or a related field; a Master’s degree or MBA is a plus.",
-    "5-8 years of professional experience in international sales, global account management, or business development within the energy, grid technologies, or…",
-    "Strong negotiation skills and financial acumen, with the ability to effectively manage bids and proposals.",
-    "Excellent stakeholder management and cross-functional collaboration skills, combined with strong intercultural awareness.",
-    "Willingness to travel as required for customer meetings and project-related activities.",
-    "Fluent English skills are required; additional languages like German or French are considered an advantage."
-   ],
-   "nice_to_have": [],
-   "seniority": "senior",
-   "years_experience": "5–8 years",
-   "languages": [
-    "English",
-    "German (plus)",
-    "French (plus)"
-   ],
-   "education": "Master's",
-   "skills_matched": [
-    "energy transition",
-    "renewables",
-    "renewable energy",
-    "decarbonization",
-    "business development",
-    "stakeholder management",
-    "German",
-    "english",
-    "energy",
-    "electricity"
-   ],
-   "personal_matched": [],
-   "score": 79,
-   "reasons": [
-    "Title matches “renewable”",
-    "Seniority: senior ✓",
-    "Professional skills 10/54: energy transition, renewables, renewable energy, decarbonization, business development, stakeholder management, German, english",
-    "Personal skills 0/10",
-    "CV text similarity 41%",
-    "Keywords: international",
-    "Location: not stated",
-    "Company rated A: +6"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-11",
-   "is_new": true,
-   "key": "avature:Siemens Energy:305769"
   },
   {
    "company": "Siemens Energy",
@@ -7589,6 +7389,72 @@
    "first_seen": "2026-11-11",
    "is_new": true,
    "key": "avature:Siemens Energy:300706"
+  },
+  {
+   "company": "Siemens Energy",
+   "ats": "avature",
+   "job_id": "299934",
+   "title": "STTJ Strategic Buyer",
+   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/STTJ-Strategic-Buyer/299934",
+   "location": "",
+   "department": "",
+   "posted": "2026-07-17",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "oem",
+   "segments_secondary": [
+    "others"
+   ],
+   "summary": "Siemens Energy Transformer (Jinan) Co., Ltd",
+   "responsibilities": [
+    "40% Strategic Sourcing & Supplier Management",
+    "Implement commodity strategies and define local/regional material field strategies for non-pooled commodities.",
+    "Analyze local and regional market trends to inform commodity strategy and identify sourcing opportunities.",
+    "Manage relationships with assigned suppliers, aligning with commodity management where applicable, and maintain supplier segmentation."
+   ],
+   "criteria": [
+    "Bachelor's degree or higher in Business, Supply Chain Management, Engineering, or a related field.",
+    "Approximately 3 years of professional experience in procurement, including strategic and operational roles.",
+    "Demonstrated experience in conducting advanced international negotiations and managing strategic sourcing processes.",
+    "Acquired Supply Chain Management, Commercial & Analytical Skills, Business Acumen capability",
+    "Advanced proficiency in English is required for communication with international suppliers and teams"
+   ],
+   "nice_to_have": [],
+   "seniority": "mid",
+   "years_experience": "3+ years",
+   "languages": [
+    "English"
+   ],
+   "education": "Bachelor's",
+   "skills_matched": [
+    "strategy",
+    "commodities",
+    "risk management",
+    "english",
+    "energy"
+   ],
+   "personal_matched": [
+    "leadership",
+    "communication"
+   ],
+   "score": 79,
+   "reasons": [
+    "Title matches “strategic”",
+    "Seniority: mid (close to your target)",
+    "Professional skills 5/54: strategy, commodities, risk management, english, energy",
+    "Personal skills 2/10: leadership, communication",
+    "CV text similarity 26%",
+    "Keywords: international",
+    "Location: not stated",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-12",
+   "is_new": true,
+   "key": "avature:Siemens Energy:299934"
   },
   {
    "company": "Siemens Energy",
@@ -10689,6 +10555,75 @@
   {
    "company": "Siemens Energy",
    "ats": "avature",
+   "job_id": "306878",
+   "title": "Commercial Sales and Controlling Professional",
+   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Commercial-Sales-and-Controlling-Professional/306878",
+   "location": "",
+   "department": "",
+   "posted": "2026-11-06",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "oem",
+   "segments_secondary": [
+    "others"
+   ],
+   "summary": "Ready to help power the world's energy future? Join the commercial sales team for Asia Pacific and work with customers on large-volume, long-term and transactional service projects for the Siemens Energy Generation Service business.",
+   "responsibilities": [
+    "Country: THAILAND",
+    "State/Province/County: Krung Thep Maha Nakhon",
+    "Country: INDONESIA",
+    "State/Province/County: Jakarta Raya"
+   ],
+   "criteria": [
+    "University degree in Business Administration, Management, Finance, Accounting, or equivalent professional experience",
+    "At least 5 years of experience in diverse finance roles, such as commercial project management, project controlling, or accounting—including project financing…",
+    "Minimum 3 years of hands-on experience in commercial bid or sales management for products, services, or solutions with external customers, including offer…",
+    "Strong analytical mindset with a results- and quality-oriented approach, sound professional judgment, and proven problem-solving skills",
+    "Advanced proficiency in SAP and MS Office (Excel, PowerPoint); experience with tools such as Alteryx or Power BI is a plus",
+    "Excellent communication skills in business-fluent English; additional language skills are an advantage"
+   ],
+   "nice_to_have": [],
+   "seniority": "senior",
+   "years_experience": "5+ years",
+   "languages": [
+    "English"
+   ],
+   "education": "Degree (or equivalent)",
+   "skills_matched": [
+    "decarbonization",
+    "hedging",
+    "english",
+    "energy",
+    "gas",
+    "electricity"
+   ],
+   "personal_matched": [
+    "leadership",
+    "communication"
+   ],
+   "score": 71,
+   "reasons": [
+    "Title matches “commercial”",
+    "Seniority: senior ✓",
+    "Professional skills 6/54: decarbonization, hedging, english, energy, gas, electricity",
+    "Personal skills 2/10: leadership, communication",
+    "CV text similarity 42%",
+    "Keywords: international",
+    "Location: not stated",
+    "Lower-priority role (“controlling”): −25",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-11",
+   "is_new": true,
+   "key": "avature:Siemens Energy:306878"
+  },
+  {
+   "company": "Siemens Energy",
+   "ats": "avature",
    "job_id": "306031",
    "title": "Head of Data",
    "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Head-of-Data/306031",
@@ -12096,73 +12031,6 @@
    "key": "avature:Siemens Energy:300292"
   },
   {
-   "company": "Siemens Energy",
-   "ats": "avature",
-   "job_id": "305908",
-   "title": "IT Partnering, Infrastructure Management and Onsite Support",
-   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/IT-Partnering-Infrastructure-Management-and-Onsite-Support/305908",
-   "location": "",
-   "department": "",
-   "posted": "2026-11-10",
-   "workplace": "",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "",
-   "rating": "A",
-   "segment": "oem",
-   "segments_secondary": [
-    "others"
-   ],
-   "summary": "As a Senior IT Business Partner, AI & Automation Engineer you will be working closely with the DC Infrastructure & Hub services team in Middle East & Africa (MEA) and will act as a trusted technology partner between Siemens Energy business stakeholders and Digital Core, combining strong business partnering with…",
-   "responsibilities": [
-    "Serve as a key interface between the business and Digital Core, connecting demand with the right services, solutions, experts and…",
-    "Proactively identify and shape digital, AI and automation opportunities, translating business pain points into prioritized use cases with…",
-    "Provide technology consulting and solution architecture, challenging requirements where appropriate and selecting the right approach across…",
-    "Design and deliver solutions using Microsoft Copilot Studio, Power Apps, Power Automate, Azure AI, Azure OpenAI, Python, APIs and LLMs…"
-   ],
-   "criteria": [
-    "Bachelor's or Master's degree in Computer Science, IT, Engineering, Artificial Intelligence, Data Science or a related discipline. 5+ years of relevant…",
-    "Microsoft Certifications are a plus: Agentic AI Business Solutions Architect Expert (AB-100) [Expert] or Power Platform Functional Consultant Associate…",
-    "Strong experience engaging with business stakeholders, understanding business processes and translating requirements into actionable technology solutions.",
-    "Strong consulting, requirements gathering, stakeholder management and communication skills, with the ability to operate across business, Digital Core and…",
-    "Practical expertise in Agentic AI, multi-agent architecture, Generative AI, LLMs, RAG and prompt engineering.",
-    "Hands-on knowledge of Azure AI, Azure OpenAI, Python, APIs and enterprise integrations."
-   ],
-   "nice_to_have": [],
-   "seniority": "senior",
-   "years_experience": "5+ years",
-   "languages": [],
-   "education": "Master's",
-   "skills_matched": [
-    "energy transition",
-    "decarbonization",
-    "stakeholder engagement",
-    "stakeholder management",
-    "optimization",
-    "energy",
-    "electricity"
-   ],
-   "personal_matched": [
-    "communication"
-   ],
-   "score": 64,
-   "reasons": [
-    "Title matches “infrastructure”",
-    "Seniority: senior ✓",
-    "Professional skills 7/54: energy transition, decarbonization, stakeholder engagement, stakeholder management, optimization, energy, electricity",
-    "Personal skills 1/10: communication",
-    "CV text similarity 42%",
-    "Keywords: AI, artificial intelligence",
-    "Location: not stated",
-    "Lower-priority role (“IT”): −25",
-    "Company rated A: +6"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-11",
-   "is_new": true,
-   "key": "avature:Siemens Energy:305908"
-  },
-  {
    "company": "Statkraft",
    "ats": "smartrecruiters",
    "job_id": "744000154074871",
@@ -12357,72 +12225,6 @@
    "first_seen": "2026-11-11",
    "is_new": true,
    "key": "avature:Siemens Energy:305053"
-  },
-  {
-   "company": "Siemens Energy",
-   "ats": "avature",
-   "job_id": "306878",
-   "title": "Commercial Sales and Controlling Professional",
-   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Commercial-Sales-and-Controlling-Professional/306878",
-   "location": "",
-   "department": "",
-   "posted": "2026-11-06",
-   "workplace": "",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "",
-   "rating": "A",
-   "segment": "oem",
-   "segments_secondary": [
-    "others"
-   ],
-   "summary": "Ready to help power the world's energy future? Join the commercial sales team for Asia Pacific and work with customers on large-volume, long-term and transactional service projects for the Siemens Energy Generation Service business.",
-   "responsibilities": [
-    "Country: THAILAND",
-    "State/Province/County: Krung Thep Maha Nakhon",
-    "Country: INDONESIA",
-    "State/Province/County: Jakarta Raya"
-   ],
-   "criteria": [
-    "Experience Level",
-    "Build and maintain strong relationships with external stakeholders such as customers and consortium partners",
-    "What You Bring",
-    "University degree in Business Administration, Management, Finance, Accounting, or equivalent professional experience",
-    "At least 5 years of experience in diverse finance roles, such as commercial project management, project controlling, or accounting—including project financing…",
-    "Minimum 3 years of hands-on experience in commercial bid or sales management for products, services, or solutions with external customers, including offer…"
-   ],
-   "nice_to_have": [],
-   "seniority": "senior",
-   "years_experience": "5+ years",
-   "languages": [],
-   "education": "Degree (or equivalent)",
-   "skills_matched": [
-    "decarbonization",
-    "hedging",
-    "english",
-    "energy",
-    "gas",
-    "electricity"
-   ],
-   "personal_matched": [
-    "communication"
-   ],
-   "score": 63,
-   "reasons": [
-    "Title matches “commercial”",
-    "Seniority: senior ✓",
-    "Professional skills 6/54: decarbonization, hedging, english, energy, gas, electricity",
-    "Personal skills 1/10: communication",
-    "CV text similarity 42%",
-    "Keywords: international",
-    "Location: not stated",
-    "Lower-priority role (“controlling”): −25",
-    "Company rated A: +6"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-11",
-   "is_new": true,
-   "key": "avature:Siemens Energy:306878"
   },
   {
    "company": "Siemens Energy",
@@ -13897,71 +13699,6 @@
   {
    "company": "Siemens Energy",
    "ats": "avature",
-   "job_id": "306342",
-   "title": "Development Electrical Engineer",
-   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Development-Electrical-Engineer/306342",
-   "location": "",
-   "department": "",
-   "posted": "2026-10-28",
-   "workplace": "",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "",
-   "rating": "A",
-   "segment": "oem",
-   "segments_secondary": [
-    "others"
-   ],
-   "summary": "Join Siemens Energy and immerse yourself in a dynamic role where you will play a pivotal part in the global energy transition. Imagine leading and coordinating engineering activities throughout the entire project lifecycle, from the initial concept to final implementation.",
-   "responsibilities": [
-    "Lead and coordinate engineering activities throughout the project lifecycle, ensuring seamless transitions from concept development to…",
-    "Develop new technical solutions and enhance existing products in collaboration with internal stakeholders and external suppliers.",
-    "Contribute to the design of electrical installations, low-voltage systems, and control equipment solutions.",
-    "Manage engineering activities to align with project cost, schedule, quality, and safety objectives."
-   ],
-   "criteria": [
-    "A strong electrical engineering background with extensive experience in industrial applications.",
-    "Excellent communication skills and stakeholder management abilities to foster collaboration within project teams.",
-    "A self-motivated and proactive approach, capable of working independently while thriving in a team-oriented environment.",
-    "Proven experience in planning, coordinating, and executing technical projects, with the ability to adapt to changing priorities.",
-    "Proficiency in engineering and business software, including Siemens Teamcenter, COMOS, NX, and Microsoft Office, along with a solid understanding of…"
-   ],
-   "nice_to_have": [],
-   "seniority": "",
-   "years_experience": "",
-   "languages": [],
-   "education": "",
-   "skills_matched": [
-    "energy transition",
-    "decarbonization",
-    "stakeholder management",
-    "energy",
-    "gas",
-    "electricity"
-   ],
-   "personal_matched": [
-    "communication"
-   ],
-   "score": 52,
-   "reasons": [
-    "Title matches “development”",
-    "Seniority: not stated",
-    "Professional skills 6/54: energy transition, decarbonization, stakeholder management, energy, gas, electricity",
-    "Personal skills 1/10: communication",
-    "CV text similarity 36%",
-    "Keywords: international",
-    "Location: not stated",
-    "Lower-priority role (“engineer”): −25",
-    "Company rated A: +6"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-11",
-   "is_new": true,
-   "key": "avature:Siemens Energy:306342"
-  },
-  {
-   "company": "Siemens Energy",
-   "ats": "avature",
    "job_id": "305603",
    "title": "Project Engineer (f/m/d) Auxiliary Power Supply",
    "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Project-Engineer-f-m-d-Auxiliary-Power-Supply/305603",
@@ -14835,69 +14572,6 @@
    "first_seen": "2026-11-10",
    "is_new": true,
    "key": "smartrecruiters:Statkraft:744000157783379"
-  },
-  {
-   "company": "Siemens Energy",
-   "ats": "avature",
-   "job_id": "306377",
-   "title": "Automation Engineer/ PLC-SCADA - Siemens Energy, Dammam KSA",
-   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Automation-Engineer-PLC-SCADA-Siemens-Energy-Dammam-KSA/306377",
-   "location": "",
-   "department": "",
-   "posted": "2026-10-28",
-   "workplace": "",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "",
-   "rating": "A",
-   "segment": "oem",
-   "segments_secondary": [
-    "others"
-   ],
-   "summary": "As an Automation Engineer specializing in PLC-SCADA, you will target candidates with a degree in Electrical or Automation Engineering and hands-on experience in Siemens automation software. You will work on meaningful projects that involve designing, implementing, and optimizing industrial automation systems for the…",
-   "responsibilities": [
-    "Develop, program, and commission PLC, HMI, and SCADA systems for the new switchgear manufacturing lines.",
-    "Integrate industrial networks and communication protocols to ensure seamless data flow across factory equipment.",
-    "Troubleshoot complex electrical, control, and automation system failures to minimize production downtime.",
-    "Implement preventive and corrective maintenance strategies for automated systems, ensuring high availability and reliability."
-   ],
-   "criteria": [
-    "Bachelor’s Degree in Electrical Engineering, Automation Engineering, Mechatronics, or a related discipline.",
-    "3 to 5 years of professional experience in industrial automation and PLC/SCADA programming, preferably in a manufacturing or switchgear factory environment.",
-    "Proficiency in PLC programming (Siemens TIA Portal, S7-1200/1500) and SCADA & HMI development (WinCC).",
-    "Strong knowledge of industrial network configuration (PROFINET, PROFIBUS, OPC UA) and troubleshooting methodologies.",
-    "Siemens Certified Automation Engineer (or equivalent) and/or Certified Automation Professional (CAP) certification.",
-    "Experience in factory commissioning, testing protocols, and developing technical documentation."
-   ],
-   "nice_to_have": [],
-   "seniority": "mid",
-   "years_experience": "3–5 years",
-   "languages": [],
-   "education": "Bachelor's (or equivalent)",
-   "skills_matched": [
-    "energy transition",
-    "decarbonization",
-    "energy",
-    "electricity"
-   ],
-   "personal_matched": [
-    "communication"
-   ],
-   "score": 40,
-   "reasons": [
-    "Title matches “energy”",
-    "Seniority: mid (close to your target)",
-    "Professional skills 4/54: energy transition, decarbonization, energy, electricity",
-    "Personal skills 1/10: communication",
-    "CV text similarity 26%",
-    "Location: not stated",
-    "Lower-priority role (“engineer”): −25",
-    "Company rated A: +6"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-11",
-   "is_new": true,
-   "key": "avature:Siemens Energy:306377"
   },
   {
    "company": "Siemens Energy",
