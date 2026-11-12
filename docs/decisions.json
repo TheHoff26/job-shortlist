@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-12T08:01:50.368Z",
+ "updated": "2026-11-12T08:01:53.128Z",
  "jobs": {
   "personio:terralayr:2594674": {
    "state": "hide",
@@ -281,6 +281,13 @@
    "title": "Quality Manager - Siemens Energy, Dammam KSA",
    "company": "Siemens Energy",
    "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Quality-Manager-Siemens-Energy-Dammam-KSA/302700"
+  },
+  "avature:Siemens Energy:301520": {
+   "state": "hide",
+   "at": "2026-11-12T08:01:51.412Z",
+   "title": "Tendering Team Leader (1-2 years fixed term)",
+   "company": "Siemens Energy",
+   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Tendering-Team-Leader-1-2-years-fixed-term/301520"
   }
  }
 }
