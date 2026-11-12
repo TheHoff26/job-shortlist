@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-12T08:01:30.773Z",
+ "updated": "2026-11-12T08:01:50.368Z",
  "jobs": {
   "personio:terralayr:2594674": {
    "state": "hide",
@@ -274,6 +274,13 @@
    "title": "Commercial Project Manager",
    "company": "Siemens Energy",
    "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Commercial-Project-Manager/305567"
+  },
+  "avature:Siemens Energy:302700": {
+   "state": "hide",
+   "at": "2026-11-12T08:01:48.637Z",
+   "title": "Quality Manager - Siemens Energy, Dammam KSA",
+   "company": "Siemens Energy",
+   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Quality-Manager-Siemens-Energy-Dammam-KSA/302700"
   }
  }
 }
