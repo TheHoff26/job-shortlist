@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-12T08:01:18.781Z",
+ "updated": "2026-11-12T08:01:30.773Z",
  "jobs": {
   "personio:terralayr:2594674": {
    "state": "hide",
@@ -267,6 +267,13 @@
    "title": "Integrated Program Management Expert (m/f/d) for S4E",
    "company": "Siemens Energy",
    "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Integrated-Program-Management-Expert-m-f-d-for-S4E/303407"
+  },
+  "avature:Siemens Energy:305567": {
+   "state": "hide",
+   "at": "2026-11-12T08:01:28.960Z",
+   "title": "Commercial Project Manager",
+   "company": "Siemens Energy",
+   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Commercial-Project-Manager/305567"
   }
  }
 }
