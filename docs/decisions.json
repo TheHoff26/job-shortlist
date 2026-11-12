@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-12T07:54:21.780Z",
+ "updated": "2026-11-12T07:54:42.514Z",
  "jobs": {
   "personio:terralayr:2594674": {
    "state": "hide",
@@ -204,6 +204,13 @@
    "title": "Strategy Business Analyst (VIE)",
    "company": "Nord Pool",
    "url": "https://hrhub.wd3.myworkdayjobs.com/Euronext_Career_Page/job/Oslo/Strategy-Business-Analyst--VIE-_R28541"
+  },
+  "workday:Nord Pool:R29163": {
+   "state": "hide",
+   "at": "2026-11-12T07:54:40.888Z",
+   "title": "Head of Growth Marketing Nordics Interim",
+   "company": "Nord Pool",
+   "url": "https://hrhub.wd3.myworkdayjobs.com/Euronext_Career_Page/job/ADC---Oslo/Head-of-Growth-Marketing-Nordics-Interim_R29163"
   }
  }
 }
