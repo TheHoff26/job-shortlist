@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-12T07:55:19.485Z",
+ "updated": "2026-11-12T07:55:42.409Z",
  "jobs": {
   "personio:terralayr:2594674": {
    "state": "hide",
@@ -218,6 +218,13 @@
    "title": "Power Derivatives - Exchange Desk Analyst/ Associate",
    "company": "Nord Pool",
    "url": "https://hrhub.wd3.myworkdayjobs.com/Euronext_Career_Page/job/Oslo/Power-Derivatives---Exchange-Desk-Analyst--Associate_R29020"
+  },
+  "avature:Siemens Energy:304499": {
+   "state": "hide",
+   "at": "2026-11-12T07:55:40.616Z",
+   "title": "Head of Diagnostic Systems",
+   "company": "Siemens Energy",
+   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Head-of-Diagnostic-Systems/304499"
   }
  }
 }
