@@ -1,6 +1,6 @@
 {
  "version": 1,
- "updated": "2026-11-12T07:56:02.537Z",
+ "updated": "2026-11-12T07:56:59.459Z",
  "jobs": {
   "personio:terralayr:2594674": {
    "state": "hide",
@@ -232,6 +232,13 @@
    "title": "R2R FA Team Leader",
    "company": "Siemens Energy",
    "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/R2R-FA-Team-Leader/302961"
+  },
+  "avature:Siemens Energy:305653": {
+   "state": "hide",
+   "at": "2026-11-12T07:56:57.584Z",
+   "title": "Commercial Sales Manager",
+   "company": "Siemens Energy",
+   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Commercial-Sales-Manager/305653"
   }
  }
 }
