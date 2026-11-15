@@ -1,8 +1,8 @@
 {
  "meta": {
-  "generated": "2026-11-14T05:44+00:00",
+  "generated": "2026-11-15T05:48+00:00",
   "total_matches": 216,
-  "new_matches": 197,
+  "new_matches": 25,
   "companies": [
    {
     "company": "Fortum",
@@ -19,9 +19,9 @@
    {
     "company": "Neste",
     "ats": "successfactors",
-    "ok": false,
-    "count": 0,
-    "error": "RuntimeError: SuccessFactors RSS feed not reachable: 404 Client Error: Not Found for url: https://jobs.neste.com/services/rss/job/?locale=da_DK&keywords=",
+    "ok": true,
+    "count": 2,
+    "error": "",
     "source": "https://jobs.neste.com",
     "careers_url": "https://www.neste.com/careers",
     "note": "",
@@ -92,7 +92,7 @@
     "company": "Valmet",
     "ats": "workday",
     "ok": true,
-    "count": 18,
+    "count": 17,
     "error": "",
     "source": "https://valmet.wd103.myworkdayjobs.com/en-US/External",
     "careers_url": "https://valmet.com/careers",
@@ -212,7 +212,7 @@
     "company": "Nord Pool",
     "ats": "workday",
     "ok": true,
-    "count": 11,
+    "count": 9,
     "error": "",
     "source": "https://hrhub.wd3.myworkdayjobs.com/Euronext_Career_Page",
     "careers_url": "https://www.euronext.com/en/about/careers/nordpool",
@@ -272,7 +272,7 @@
     "company": "Ørsted",
     "ats": "successfactors",
     "ok": true,
-    "count": 5,
+    "count": 4,
     "error": "",
     "source": "https://applyforjob.orsted.com",
     "careers_url": "https://orsted.com/en/careers/vacancies-list",
@@ -860,7 +860,7 @@
     "company": "Siemens Energy",
     "ats": "avature",
     "ok": true,
-    "count": 238,
+    "count": 236,
     "error": "",
     "source": "https://jobs.siemens-energy.com/en_US/jobs/Jobs",
     "careers_url": "https://jobs.siemens-energy.com/",
@@ -1351,7 +1351,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306123"
   },
   {
@@ -1418,7 +1418,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:304499"
   },
   {
@@ -1489,7 +1489,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:301945"
   },
   {
@@ -1558,7 +1558,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:302961"
   },
   {
@@ -1625,7 +1625,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306813"
   },
   {
@@ -1691,7 +1691,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:302181"
   },
   {
@@ -1759,7 +1759,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:302655"
   },
   {
@@ -1967,7 +1967,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305653"
   },
   {
@@ -2037,7 +2037,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306424"
   },
   {
@@ -2111,7 +2111,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:300966"
   },
   {
@@ -2249,7 +2249,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305916"
   },
   {
@@ -2315,7 +2315,7 @@
    ],
    "deadline_source": "text",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306541"
   },
   {
@@ -2379,7 +2379,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:304601"
   },
   {
@@ -2449,7 +2449,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:300740"
   },
   {
@@ -2517,7 +2517,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305337"
   },
   {
@@ -2729,6 +2729,74 @@
    "key": "teamtailor:Eolus:8297021"
   },
   {
+   "company": "Neste",
+   "ats": "successfactors",
+   "job_id": "1448841500",
+   "title": "Solution Development Manager",
+   "url": "https://jobs.neste.com/job/Porvoo-Solution-Development-Manager/1448841500/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS",
+   "location": "Porvoo, FI",
+   "department": "",
+   "posted": "2026-11-09",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "energy_intensive",
+   "segments_secondary": [
+    "developers"
+   ],
+   "summary": "Are you looking for a career in an inspiring, global environment where your expertise makes a difference? At Neste, you will be working for the world’s leading producer of renewable diesel and sustainable aviation fuel.",
+   "responsibilities": [
+    "Investment Proposal Evaluation & Resource Allocation: Review incoming business investment proposals, assess their scope, and define the…",
+    "Resource Forecasting & Analytics: Model and analyze future workload and resource demands (e.g., using Silverbucket) to ensure optimal…",
+    "Portfolio & Lifecycle Tracking: Monitor and forecast the investment portfolio regarding budgets, timelines, and alignment with operational…",
+    "Stakeholder Collaboration: Collaborate closely with project managers, development managers, operations, and maintenance teams throughout…"
+   ],
+   "criteria": [
+    "M.Sc. or B.Sc. in investment project controls or equivalent combination of education and experience.",
+    "Minimum 5 years industrial related project management experience in an international EPC/EPCM environment in manufacturing industry",
+    "Good knowledge of project management & control, engineering and the tools being used (e.g. Power BI, Silverbucket, SAP).",
+    "Investment project management or project delivery experience",
+    "Effective communication skills in English (mandatory) both verbally and in writing. Other language skills are an advantage.",
+    "Understanding of engineering, procurement and Construction Management disciplines and competences"
+   ],
+   "nice_to_have": [],
+   "seniority": "senior",
+   "years_experience": "5+ years",
+   "languages": [
+    "English"
+   ],
+   "education": "Master's (or equivalent)",
+   "skills_matched": [
+    "renewables",
+    "strategy",
+    "project portfolio",
+    "project development",
+    "stakeholder management",
+    "english"
+   ],
+   "personal_matched": [
+    "leadership",
+    "communication"
+   ],
+   "score": 95,
+   "reasons": [
+    "Title matches “development”",
+    "Seniority: senior ✓",
+    "Professional skills 6/54: renewables, strategy, project portfolio, project development, stakeholder management, english",
+    "Personal skills 2/10: leadership, communication",
+    "CV text similarity 24%",
+    "Keywords: international",
+    "Location: Porvoo, FI",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-15",
+   "is_new": true,
+   "key": "successfactors:Neste:1448841500"
+  },
+  {
    "company": "Siemens Energy",
    "ats": "avature",
    "job_id": "304874",
@@ -2793,7 +2861,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:304874"
   },
   {
@@ -2862,7 +2930,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:304407"
   },
   {
@@ -2930,7 +2998,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:303584"
   },
   {
@@ -2995,7 +3063,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305625"
   },
   {
@@ -3060,7 +3128,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:304227"
   },
   {
@@ -3125,7 +3193,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:302004"
   },
   {
@@ -3192,7 +3260,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:303597"
   },
   {
@@ -3263,7 +3331,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306699"
   },
   {
@@ -3330,7 +3398,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:302959"
   },
   {
@@ -3396,7 +3464,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:303407"
   },
   {
@@ -3532,7 +3600,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306188"
   },
   {
@@ -3667,7 +3735,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305567"
   },
   {
@@ -3732,7 +3800,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305311"
   },
   {
@@ -3799,7 +3867,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:302700"
   },
   {
@@ -3863,7 +3931,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:301520"
   },
   {
@@ -3930,7 +3998,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306462"
   },
   {
@@ -4000,7 +4068,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:301630"
   },
   {
@@ -4066,7 +4134,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:303079"
   },
   {
@@ -4131,7 +4199,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305142"
   },
   {
@@ -4264,7 +4332,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:303013"
   },
   {
@@ -4332,7 +4400,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:302465"
   },
   {
@@ -4400,7 +4468,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:301341"
   },
   {
@@ -4466,7 +4534,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:303048"
   },
   {
@@ -4536,7 +4604,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:304467"
   },
   {
@@ -4672,7 +4740,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305336"
   },
   {
@@ -4741,7 +4809,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305848"
   },
   {
@@ -4808,7 +4876,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306181"
   },
   {
@@ -4874,7 +4942,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:304515"
   },
   {
@@ -4938,7 +5006,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:304311"
   },
   {
@@ -5002,7 +5070,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:307046"
   },
   {
@@ -5135,7 +5203,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305384"
   },
   {
@@ -5203,7 +5271,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:307166"
   },
   {
@@ -5268,7 +5336,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:301655"
   },
   {
@@ -5341,7 +5409,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306023"
   },
   {
@@ -5405,7 +5473,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:302486"
   },
   {
@@ -5470,7 +5538,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:302885"
   },
   {
@@ -5612,7 +5680,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "teamtailor:Flower:7843452"
   },
   {
@@ -5685,7 +5753,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "teamtailor:Flower:8473841"
   },
   {
@@ -5752,7 +5820,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "teamtailor:Flower:8569556"
   },
   {
@@ -5818,7 +5886,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:303940"
   },
   {
@@ -5948,7 +6016,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:301507"
   },
   {
@@ -6016,75 +6084,8 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305957"
-  },
-  {
-   "company": "EQT Infrastructure",
-   "ats": "greenhouse",
-   "job_id": "4969731101",
-   "title": "Team Lead – Evergreen Product Management, Private Capital",
-   "url": "https://job-boards.eu.greenhouse.io/eqtpartners/jobs/4969731101",
-   "location": "London, England, United Kingdom",
-   "department": "GWS Product Management (Cost Center)",
-   "posted": "2026-09-07",
-   "workplace": "",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "",
-   "rating": "A",
-   "segment": "pe",
-   "segments_secondary": [
-    "portfolio"
-   ],
-   "summary": "As Team Lead for Private Capital Evergreen Product Management, you will set the strategic direction for a global team while remaining hands-on in shaping product narratives and fundraising deliverables that resonate with investors and distributors worldwide. You will be the senior point of accountability for private…",
-   "responsibilities": [
-    "Lead, mentor and develop the global Private Capital EPM team, establishing clear direction, quality standards and a culture of…",
-    "Own product positioning for EQT's private capital evergreen offerings, ensuring a differentiated, consistent narrative across regions and…",
-    "Oversee core fundraising assets and product lifecycle deliverables, ensuring all materials are accurate, compelling and ready for external…",
-    "Lead EPM's contribution to investor diligence, complex product-related RFI responses, distributor onboarding and selected client…"
-   ],
-   "criteria": [
-    "You are a thoughtful, commercially minded leader with deep private markets knowledge (ideally within private equity) and a genuine commitment to developing…",
-    "You bring both the strategic perspective to set direction and the hands-on rigour to deliver consistently at a high level.",
-    "Significant experience in private markets product management, with a strong understanding of private equitycapital products, fundraising processes and investor…",
-    "Proven experience in a senior product management role, with demonstrated ability to own complex deliverables end-to-end.",
-    "Experience leading and developing a team, with the ability to set clear priorities, foster collaboration and hold high standards.",
-    "Strong commercial judgement and the ability to translate complex information into clear, compelling product narratives for diverse audiences."
-   ],
-   "nice_to_have": [
-    "Familiarity with evergreen or semi-liquid fund structures and their specific fundraising and distribution dynamics.",
-    "Private wealth experience.",
-    "Experience working across multiple geographies or within a global organisation."
-   ],
-   "seniority": "lead",
-   "years_experience": "",
-   "languages": [],
-   "education": "",
-   "skills_matched": [
-    "partnerships",
-    "strategy",
-    "optimisation"
-   ],
-   "personal_matched": [
-    "leadership",
-    "communication",
-    "entrepreneurial"
-   ],
-   "score": 83,
-   "reasons": [
-    "Title matches “management”",
-    "Seniority: lead ✓",
-    "Professional skills 3/54: partnerships, strategy, optimisation",
-    "Personal skills 3/10: leadership, communication, entrepreneurial",
-    "CV text similarity 18%",
-    "Location: London, England, United Kingdom",
-    "Company rated A: +6"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-11",
-   "is_new": true,
-   "key": "greenhouse:EQT Infrastructure:4969731101"
   },
   {
    "company": "EQT Infrastructure",
@@ -6150,8 +6151,75 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "greenhouse:EQT Infrastructure:4969805101"
+  },
+  {
+   "company": "EQT Infrastructure",
+   "ats": "greenhouse",
+   "job_id": "4969731101",
+   "title": "Team Lead – Evergreen Product Management, Private Capital",
+   "url": "https://job-boards.eu.greenhouse.io/eqtpartners/jobs/4969731101",
+   "location": "London, England, United Kingdom",
+   "department": "GWS Product Management (Cost Center)",
+   "posted": "2026-09-07",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "pe",
+   "segments_secondary": [
+    "portfolio"
+   ],
+   "summary": "As Team Lead for Private Capital Evergreen Product Management, you will set the strategic direction for a global team while remaining hands-on in shaping product narratives and fundraising deliverables that resonate with investors and distributors worldwide. You will be the senior point of accountability for private…",
+   "responsibilities": [
+    "Lead, mentor and develop the global Private Capital EPM team, establishing clear direction, quality standards and a culture of…",
+    "Own product positioning for EQT's private capital evergreen offerings, ensuring a differentiated, consistent narrative across regions and…",
+    "Oversee core fundraising assets and product lifecycle deliverables, ensuring all materials are accurate, compelling and ready for external…",
+    "Lead EPM's contribution to investor diligence, complex product-related RFI responses, distributor onboarding and selected client…"
+   ],
+   "criteria": [
+    "You are a thoughtful, commercially minded leader with deep private markets knowledge (ideally within private equity) and a genuine commitment to developing…",
+    "You bring both the strategic perspective to set direction and the hands-on rigour to deliver consistently at a high level.",
+    "Significant experience in private markets product management, with a strong understanding of private equitycapital products, fundraising processes and investor…",
+    "Proven experience in a senior product management role, with demonstrated ability to own complex deliverables end-to-end.",
+    "Experience leading and developing a team, with the ability to set clear priorities, foster collaboration and hold high standards.",
+    "Strong commercial judgement and the ability to translate complex information into clear, compelling product narratives for diverse audiences."
+   ],
+   "nice_to_have": [
+    "Familiarity with evergreen or semi-liquid fund structures and their specific fundraising and distribution dynamics.",
+    "Private wealth experience.",
+    "Experience working across multiple geographies or within a global organisation."
+   ],
+   "seniority": "lead",
+   "years_experience": "",
+   "languages": [],
+   "education": "",
+   "skills_matched": [
+    "partnerships",
+    "strategy",
+    "optimisation"
+   ],
+   "personal_matched": [
+    "leadership",
+    "communication",
+    "entrepreneurial"
+   ],
+   "score": 83,
+   "reasons": [
+    "Title matches “management”",
+    "Seniority: lead ✓",
+    "Professional skills 3/54: partnerships, strategy, optimisation",
+    "Personal skills 3/10: leadership, communication, entrepreneurial",
+    "CV text similarity 18%",
+    "Location: London, England, United Kingdom",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-11",
+   "is_new": false,
+   "key": "greenhouse:EQT Infrastructure:4969731101"
   },
   {
    "company": "Siemens Energy",
@@ -6217,7 +6285,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:304446"
   },
   {
@@ -6283,7 +6351,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:301491"
   },
   {
@@ -6484,7 +6552,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:303060"
   },
   {
@@ -6547,7 +6615,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306277"
   },
   {
@@ -6612,7 +6680,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:303449"
   },
   {
@@ -6747,7 +6815,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "workday:Nord Pool:R28541"
   },
   {
@@ -6811,7 +6879,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306778"
   },
   {
@@ -6875,7 +6943,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305588"
   },
   {
@@ -6940,7 +7008,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305589"
   },
   {
@@ -7144,7 +7212,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:307087"
   },
   {
@@ -7338,7 +7406,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:302471"
   },
   {
@@ -7400,7 +7468,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305933"
   },
   {
@@ -7469,7 +7537,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306367"
   },
   {
@@ -7533,7 +7601,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306414"
   },
   {
@@ -7599,7 +7667,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:300706"
   },
   {
@@ -7733,7 +7801,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306745"
   },
   {
@@ -7800,7 +7868,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:301127"
   },
   {
@@ -7935,7 +8003,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305512"
   },
   {
@@ -7997,7 +8065,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305810"
   },
   {
@@ -8064,7 +8132,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:301628"
   },
   {
@@ -8132,7 +8200,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:303221"
   },
   {
@@ -8204,75 +8272,8 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "teamtailor:Flower:8572381"
-  },
-  {
-   "company": "Nord Pool",
-   "ats": "workday",
-   "job_id": "R29163",
-   "title": "Head of Growth Marketing Nordics Interim",
-   "url": "https://hrhub.wd3.myworkdayjobs.com/Euronext_Career_Page/job/ADC---Oslo/Head-of-Growth-Marketing-Nordics-Interim_R29163",
-   "location": "ADC - Oslo",
-   "department": "",
-   "posted": "2026-10-23",
-   "workplace": "",
-   "employment_type": "Full time",
-   "salary": "",
-   "deadline": "2026-11-15",
-   "rating": "C",
-   "segment": "trading",
-   "segments_secondary": [
-    "others"
-   ],
-   "summary": "Are you ready to shape the future of capital markets? We are looking for a Head of Growth Marketing Nordics (Interim, 1 year) to join the Growth Marketing team within Euronext Corporate Solutions.",
-   "responsibilities": [
-    "Leading the Nordic marketing team, maintaining strategic momentum, team clarity and direction",
-    "Leading all Nordic marketing activities; Growth Marketing, Customer Marketing, Partnership Marketing and Go-To-Market execution, across the…",
-    "Leading the design and planning of the Go-To-Market strategy for the Admincontrol product suite across European markets",
-    "Owning the pipeline review with sales leadership, keeping campaigns, launches and full-funnel reporting on schedule and within agreed…"
-   ],
-   "criteria": [
-    "10 years of experience within marketing, including at least three years in a leadership position",
-    "Strong track record in pipeline management, campaign execution and go-to-market strategy, ideally within a SaaS or B2B environment",
-    "Excellent leadership and people management skills, with the ability to maintain team stability and direction through a leadership transition",
-    "Strong stakeholder management and cross-functional communication skills, able to represent marketing at a senior level",
-    "Fluent English communication skills, both written and spoken; Norwegian language skills are an advantage",
-    "Experience working across multiple countries in an international environment"
-   ],
-   "nice_to_have": [],
-   "seniority": "executive",
-   "years_experience": "10+ years",
-   "languages": [
-    "English",
-    "Norwegian (plus)"
-   ],
-   "education": "",
-   "skills_matched": [
-    "strategy",
-    "stakeholder management",
-    "commodities",
-    "english"
-   ],
-   "personal_matched": [
-    "leadership",
-    "communication"
-   ],
-   "score": 76,
-   "reasons": [
-    "Title matches “growth”",
-    "Seniority: executive ✓",
-    "Professional skills 4/54: strategy, stakeholder management, commodities, english",
-    "Personal skills 2/10: leadership, communication",
-    "CV text similarity 19%",
-    "Keywords: international",
-    "Location: ADC - Oslo",
-    "Company rated C: +1"
-   ],
-   "deadline_source": "board",
-   "first_seen": "2026-11-11",
-   "is_new": true,
-   "key": "workday:Nord Pool:R29163"
   },
   {
    "company": "Siemens Energy",
@@ -8335,7 +8336,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:300084"
   },
   {
@@ -8405,7 +8406,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:303712"
   },
   {
@@ -8470,7 +8471,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305368"
   },
   {
@@ -8605,7 +8606,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:302855"
   },
   {
@@ -8679,7 +8680,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305787"
   },
   {
@@ -8741,7 +8742,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:304751"
   },
   {
@@ -8806,7 +8807,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306251"
   },
   {
@@ -8871,7 +8872,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:301112"
   },
   {
@@ -8935,7 +8936,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306428"
   },
   {
@@ -8997,7 +8998,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:304173"
   },
   {
@@ -9065,7 +9066,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:307119"
   },
   {
@@ -9134,7 +9135,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305568"
   },
   {
@@ -9203,7 +9204,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:302167"
   },
   {
@@ -9265,7 +9266,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306780"
   },
   {
@@ -9331,7 +9332,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305123"
   },
   {
@@ -9392,7 +9393,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:304532"
   },
   {
@@ -9456,7 +9457,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305866"
   },
   {
@@ -9518,7 +9519,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:304752"
   },
   {
@@ -9579,7 +9580,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306073"
   },
   {
@@ -9648,7 +9649,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "smartrecruiters:Statkraft:744000160857720"
   },
   {
@@ -9790,7 +9791,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "teamtailor:Flower:8532038"
   },
   {
@@ -9859,7 +9860,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:303367"
   },
   {
@@ -9925,7 +9926,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305973"
   },
   {
@@ -9997,8 +9998,69 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305253"
+  },
+  {
+   "company": "Neste",
+   "ats": "successfactors",
+   "job_id": "1450449500",
+   "title": "Development Manager, SCM Digitalization",
+   "url": "https://jobs.neste.com/job/Espoo-Development-Manager%2C-SCM-Digitalization/1450449500/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS",
+   "location": "Espoo, FI",
+   "department": "",
+   "posted": "2026-11-13",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "energy_intensive",
+   "segments_secondary": [
+    "developers"
+   ],
+   "summary": "Are you looking for a career in an inspiring, global environment where your expertise makes a difference? At Neste, you will be working for the world’s leading producer of renewable diesel and sustainable aviation fuel.",
+   "responsibilities": [
+    "Own the SCM digital development portfolio and lead the efficient implementation of digital initiatives together with key business and…",
+    "Act as a bridge between SCM business stakeholders and IT, data, and AI teams. Translate business requirements into well-defined user…",
+    "Identify critical gaps across our SCM digital landscape and deliver innovative, practical solutions to resolve them.",
+    "Maintain and develop SCM system integrations, business process automation, and applied AI solutions to improve process efficiency…"
+   ],
+   "criteria": [
+    "Are you looking for a career in an inspiring, global environment where your expertise makes a difference?",
+    "Together with your expertise, we can do meaningful work to drive Neste forward.",
+    "Minimum 5 years of relevant experience working with AI implementation, data visualization & integration development and business process digitalization",
+    "Solid experience in supply chain digital development, planning platforms, or SCM systems architecture",
+    "Strong background in data governance, data management, and business intelligence/data visualization",
+    "Proven track record of managing and implementing AI initiatives, system integrations and/or workflow automations"
+   ],
+   "nice_to_have": [],
+   "seniority": "senior",
+   "years_experience": "5+ years",
+   "languages": [],
+   "education": "",
+   "skills_matched": [
+    "renewables",
+    "strategy",
+    "optimization",
+    "english"
+   ],
+   "personal_matched": [],
+   "score": 72,
+   "reasons": [
+    "Title matches “development”",
+    "Seniority: senior ✓",
+    "Professional skills 4/54: renewables, strategy, optimization, english",
+    "Personal skills 0/10",
+    "CV text similarity 32%",
+    "Keywords: AI, international",
+    "Location: Espoo, FI",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-15",
+   "is_new": true,
+   "key": "successfactors:Neste:1450449500"
   },
   {
    "company": "Siemens Energy",
@@ -10060,7 +10122,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:302316"
   },
   {
@@ -10123,7 +10185,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:304769"
   },
   {
@@ -10184,7 +10246,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305361"
   },
   {
@@ -10247,7 +10309,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:303223"
   },
   {
@@ -10312,7 +10374,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:303556"
   },
   {
@@ -10448,7 +10510,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306878"
   },
   {
@@ -10517,7 +10579,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306031"
   },
   {
@@ -10585,7 +10647,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306349"
   },
   {
@@ -10658,7 +10720,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:300878"
   },
   {
@@ -10793,7 +10855,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:302881"
   },
   {
@@ -10860,7 +10922,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:303473"
   },
   {
@@ -10929,7 +10991,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:302051"
   },
   {
@@ -11055,7 +11117,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:304212"
   },
   {
@@ -11122,7 +11184,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:299229"
   },
   {
@@ -11195,7 +11257,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:301807"
   },
   {
@@ -11262,7 +11324,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:303319"
   },
   {
@@ -11328,7 +11390,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305338"
   },
   {
@@ -11395,7 +11457,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306200"
   },
   {
@@ -11459,7 +11521,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306197"
   },
   {
@@ -11592,7 +11654,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306420"
   },
   {
@@ -11665,7 +11727,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "teamtailor:Flower:8704156"
   },
   {
@@ -11734,7 +11796,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "workday:MB Energy:REQ5000309537"
   },
   {
@@ -11799,7 +11861,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306816"
   },
   {
@@ -11861,7 +11923,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:300292"
   },
   {
@@ -11988,7 +12050,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305675"
   },
   {
@@ -12057,7 +12119,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305053"
   },
   {
@@ -12263,77 +12325,8 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:300651"
-  },
-  {
-   "company": "Nord Pool",
-   "ats": "workday",
-   "job_id": "R29288",
-   "title": "Product & Business Development Manager",
-   "url": "https://hrhub.wd3.myworkdayjobs.com/Euronext_Career_Page/job/Oslo/Product---Business-Development-Manager_R29288",
-   "location": "Oslo",
-   "department": "",
-   "posted": "2026-10-22",
-   "workplace": "",
-   "employment_type": "Full time",
-   "salary": "",
-   "deadline": "2026-11-15",
-   "rating": "C",
-   "segment": "trading",
-   "segments_secondary": [
-    "others"
-   ],
-   "summary": "Are you ready to shape the future of the European power market? We are looking for a Product and Business Development Manager/Senior Associate to join the Power Derivatives team at Nord Pool.",
-   "responsibilities": [
-    "Supporting the identification, prioritisation, design and implementation of strategic growth initiatives",
-    "Bringing commercial insight and customer perspectives into Nord Pool and Euronext product development to ensure solutions address genuine…",
-    "Conducting market analysis through desktop research, client and partner engagement and industry conferences to identify opportunities and…",
-    "Monitoring the competitive landscape and assessing potential business and partnership opportunities"
-   ],
-   "criteria": [
-    "At least three years of experience within energy trading, exchanges or related market infrastructure, with a solid understanding of European power and gas…",
-    "A proven ability to drive projects independently and translate business requirements into clear, actionable functional specifications",
-    "Strong analytical and problem-solving skills, with the ability to develop robust conclusions from both quantitative and qualitative information",
-    "Experience working across multiple countries and cultures in an international environment",
-    "Advanced proficiency in Excel and PowerPoint",
-    "Fluent English language skills, both written and spoken"
-   ],
-   "nice_to_have": [
-    "Scandinavian and/or other European language skills are considered an advantage"
-   ],
-   "seniority": "mid",
-   "years_experience": "3+ years",
-   "languages": [
-    "English"
-   ],
-   "education": "",
-   "skills_matched": [
-    "business development",
-    "energy trading",
-    "commodities",
-    "market analysis",
-    "market intelligence",
-    "english",
-    "energy",
-    "gas"
-   ],
-   "personal_matched": [],
-   "score": 62,
-   "reasons": [
-    "Title matches “business development”",
-    "Seniority: mid (close to your target)",
-    "Professional skills 8/54: business development, energy trading, commodities, market analysis, market intelligence, english, energy, gas",
-    "Personal skills 0/10",
-    "CV text similarity 39%",
-    "Keywords: international",
-    "Location: Oslo",
-    "Company rated C: +1"
-   ],
-   "deadline_source": "board",
-   "first_seen": "2026-11-11",
-   "is_new": true,
-   "key": "workday:Nord Pool:R29288"
   },
   {
    "company": "OX2",
@@ -12475,7 +12468,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306334"
   },
   {
@@ -12545,7 +12538,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:302719"
   },
   {
@@ -12617,7 +12610,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306351"
   },
   {
@@ -12755,7 +12748,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305550"
   },
   {
@@ -12892,7 +12885,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:302549"
   },
   {
@@ -12958,7 +12951,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:304351"
   },
   {
@@ -13027,7 +13020,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "teamtailor:atNorth:8670021"
   },
   {
@@ -13091,7 +13084,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:303436"
   },
   {
@@ -13157,7 +13150,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "teamtailor:Alight:8702821"
   },
   {
@@ -13218,7 +13211,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "teamtailor:Danske Commodities:8594021"
   },
   {
@@ -13348,7 +13341,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:303919"
   },
   {
@@ -13412,7 +13405,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:299741"
   },
   {
@@ -13481,7 +13474,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "workday:Nord Pool:R29020"
   },
   {
@@ -13545,7 +13538,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:304683"
   },
   {
@@ -13611,7 +13604,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305374"
   },
   {
@@ -13752,7 +13745,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305603"
   },
   {
@@ -13825,7 +13818,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:303630"
   },
   {
@@ -13894,7 +13887,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:302880"
   },
   {
@@ -14017,7 +14010,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:304739"
   },
   {
@@ -14084,7 +14077,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:307016"
   },
   {
@@ -14144,7 +14137,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:303071"
   },
   {
@@ -14211,7 +14204,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306405"
   },
   {
@@ -14275,7 +14268,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:301794"
   },
   {
@@ -14340,7 +14333,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:304740"
   },
   {
@@ -14460,7 +14453,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305859"
   },
   {
@@ -14507,7 +14500,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305921"
   },
   {
@@ -14635,7 +14628,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:304301"
   },
   {
@@ -14701,7 +14694,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306155"
   },
   {
@@ -14762,7 +14755,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:303334"
   },
   {
@@ -14881,7 +14874,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:304049"
   },
   {
@@ -14935,7 +14928,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305459"
   },
   {
@@ -14983,7 +14976,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306918"
   },
   {
@@ -15039,7 +15032,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306205"
   },
   {
@@ -15154,7 +15147,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:304741"
   },
   {
@@ -15207,7 +15200,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:300592"
   },
   {
@@ -15261,7 +15254,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:302393"
   },
   {
@@ -15316,7 +15309,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:305832"
   },
   {
@@ -15373,7 +15366,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:302950"
   },
   {
@@ -15429,7 +15422,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "smartrecruiters:Enertrag:744000155729660"
   },
   {
@@ -15493,7 +15486,7 @@
    ],
    "deadline_source": "text",
    "first_seen": "2026-11-11",
-   "is_new": true,
+   "is_new": false,
    "key": "teamtailor:Ren-Gas:8581956"
   }
  ]

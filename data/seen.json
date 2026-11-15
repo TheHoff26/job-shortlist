@@ -183,6 +183,8 @@
  "smartrecruiters:Statkraft:744000161294685": "2026-11-13",
  "successfactors:Fortum:1375684555": "2026-11-09",
  "successfactors:Fortum:1376041255": "2026-11-10",
+ "successfactors:Neste:1448841500": "2026-11-15",
+ "successfactors:Neste:1450449500": "2026-11-15",
  "successfactors:Nordea:1456681233": "2026-11-13",
  "successfactors:Nordea:1456718333": "2026-11-13",
  "successfactors:OX2:1369104955": "2026-11-02",
@@ -212,7 +214,5 @@
  "teamtailor:atNorth:8670021": "2026-11-11",
  "workday:MB Energy:REQ5000309537": "2026-11-11",
  "workday:Nord Pool:R28541": "2026-11-11",
- "workday:Nord Pool:R29020": "2026-11-11",
- "workday:Nord Pool:R29163": "2026-11-11",
- "workday:Nord Pool:R29288": "2026-11-11"
+ "workday:Nord Pool:R29020": "2026-11-11"
 }
