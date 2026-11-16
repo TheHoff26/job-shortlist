@@ -1,8 +1,8 @@
 {
  "meta": {
-  "generated": "2026-11-15T05:48+00:00",
-  "total_matches": 216,
-  "new_matches": 25,
+  "generated": "2026-11-16T06:10+00:00",
+  "total_matches": 220,
+  "new_matches": 30,
   "companies": [
    {
     "company": "Fortum",
@@ -67,9 +67,9 @@
    {
     "company": "Stora Enso",
     "ats": "workday",
-    "ok": true,
-    "count": 2,
-    "error": "",
+    "ok": false,
+    "count": 0,
+    "error": "RetryError: HTTPSConnectionPool(host='storaenso.wd502.myworkdayjobs.com', port=443): Max retries exceeded with url: /wday/cxs/storaenso/Stora_Enso_site_opportunities/jobs (Caused by ResponseError('too",
     "source": "https://storaenso.wd502.myworkdayjobs.com/Stora_Enso_site_opportunities",
     "careers_url": "https://www.storaenso.com/en/careers",
     "note": "",
@@ -79,9 +79,9 @@
    {
     "company": "Metsä Group",
     "ats": "workday",
-    "ok": true,
-    "count": 2,
-    "error": "",
+    "ok": false,
+    "count": 0,
+    "error": "RetryError: HTTPSConnectionPool(host='metsagroup.wd103.myworkdayjobs.com', port=443): Max retries exceeded with url: /wday/cxs/metsagroup/MetsaGroup_Careers/jobs (Caused by ResponseError('too many 429",
     "source": "https://metsagroup.wd103.myworkdayjobs.com/en-US/MetsaGroup_Careers",
     "careers_url": "https://metsagroup.com/careers/work-with-us/open-jobs",
     "note": "",
@@ -91,9 +91,9 @@
    {
     "company": "Valmet",
     "ats": "workday",
-    "ok": true,
-    "count": 17,
-    "error": "",
+    "ok": false,
+    "count": 0,
+    "error": "RetryError: HTTPSConnectionPool(host='valmet.wd103.myworkdayjobs.com', port=443): Max retries exceeded with url: /wday/cxs/valmet/External/jobs (Caused by ResponseError('too many 429 error responses')",
     "source": "https://valmet.wd103.myworkdayjobs.com/en-US/External",
     "careers_url": "https://valmet.com/careers",
     "note": "",
@@ -367,9 +367,9 @@
    {
     "company": "European Energy",
     "ats": "workday",
-    "ok": true,
-    "count": 2,
-    "error": "",
+    "ok": false,
+    "count": 0,
+    "error": "RetryError: HTTPSConnectionPool(host='europeanenergy.wd103.myworkdayjobs.com', port=443): Max retries exceeded with url: /wday/cxs/europeanenergy/European_Energy/jobs (Caused by ResponseError('too man",
     "source": "https://europeanenergy.wd103.myworkdayjobs.com/European_Energy",
     "careers_url": "https://europeanenergy.com",
     "note": "",
@@ -558,13 +558,13 @@
    },
    {
     "company": "Green Mountain",
-    "ats": "linkedin",
+    "ats": "personio",
     "ok": true,
     "count": 0,
-    "error": "link only",
-    "source": "",
+    "error": "no matching open positions (or wrong id)",
+    "source": "green",
     "careers_url": "https://greenmountain.no",
-    "note": "no supported job system found",
+    "note": "",
     "rating": "B",
     "segment": "data_centers"
    },
@@ -667,9 +667,9 @@
    {
     "company": "Ardian",
     "ats": "workday",
-    "ok": true,
-    "count": 9,
-    "error": "",
+    "ok": false,
+    "count": 0,
+    "error": "RetryError: HTTPSConnectionPool(host='ardian.wd103.myworkdayjobs.com', port=443): Max retries exceeded with url: /wday/cxs/ardian/ArdianCareers/jobs (Caused by ResponseError('too many 429 error respon",
     "source": "https://ardian.wd103.myworkdayjobs.com/ArdianCareers",
     "careers_url": "https://www.ardian.com",
     "note": "",
@@ -860,7 +860,7 @@
     "company": "Siemens Energy",
     "ats": "avature",
     "ok": true,
-    "count": 236,
+    "count": 239,
     "error": "",
     "source": "https://jobs.siemens-energy.com/en_US/jobs/Jobs",
     "careers_url": "https://jobs.siemens-energy.com/",
@@ -976,12 +976,6 @@
    {
     "company": "Energiekontor",
     "url": "https://www.linkedin.com/jobs/search/?keywords=%22Energiekontor%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany%2C+Copenhagen%2C+Oslo%2C+Cologne%2C+K%C3%B6ln%2C+Hamburg%2C+Munich%2C+M%C3%BCnchen&f_E=4%2C5%2C6&f_TPR=r604800",
-    "rating": "B",
-    "reason": "no supported job system found"
-   },
-   {
-    "company": "Green Mountain",
-    "url": "https://www.linkedin.com/jobs/search/?keywords=%22Green+Mountain%22+%28%22strategy%22+OR+%22business+development%22+OR+%22trading%22+OR+%22origination%22+OR+%22energy+transition%22+OR+%22hydrogen%22+OR+%22decarbonisation%22+OR+%22Head+of%22+OR+%22Managing+Director%22+OR+%22Director%22+OR+%22Vice+President%22+OR+%22VP%22%29&location=Finland%2C+Helsinki%2C+Germany%2C+Copenhagen%2C+Oslo%2C+Cologne%2C+K%C3%B6ln%2C+Hamburg%2C+Munich%2C+M%C3%BCnchen&f_E=4%2C5%2C6&f_TPR=r604800",
     "rating": "B",
     "reason": "no supported job system found"
    },
@@ -5544,6 +5538,71 @@
   {
    "company": "Siemens Energy",
    "ats": "avature",
+   "job_id": "297225",
+   "title": "Head of Test Field of Power Transformers",
+   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Head-of-Test-Field-of-Power-Transformers/297225",
+   "location": "",
+   "department": "",
+   "posted": "2026-07-09",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "oem",
+   "segments_secondary": [
+    "others"
+   ],
+   "summary": "As the Head of Testing Field & High Voltage Laboratory, you will lead all testing activities associated with the manufacturing, final acceptance, and technical release of Large Power Transformers up to 400 kV and 1550 kV BIL. You will guide the operation of a modern high-voltage laboratory and test field, ensuring…",
+   "responsibilities": [
+    "Lead the test field and high-voltage laboratory organization, aligning testing priorities with factory objectives, EHS requirements…",
+    "Ensure the safe, accurate, and compliant execution of routine, type, special, and customer-specific tests for Large Power Transformers up…",
+    "Provide expert interpretation and technical release of transformer test results, including Partial Discharge measurements, Lightning /…",
+    "Act as a technical reference during customer meetings and FAT execution, explaining testing methodologies, results, deviations…"
+   ],
+   "criteria": [
+    "Bachelor's Degree in Electrical Engineering required.",
+    "Master's Degree preferred in a technical engineering discipline related to Power Systems, High Voltage Engineering, Transformer Design, Electrical Insulation…",
+    "Minimum of 10 years of technical experience in power transformer testing, preferably in a manufacturing test field or high-voltage laboratory environment.",
+    "Primarily technical experience, not only administrative, with demonstrated capability to interpret test results and make engineering judgments based on…",
+    "Proven experience with routine, type, special, and customer-specific tests for Large Power Transformers.",
+    "Experience interacting directly with customers, consultants, and third-party inspectors during Factory Acceptance Tests."
+   ],
+   "nice_to_have": [],
+   "seniority": "executive",
+   "years_experience": "10+ years",
+   "languages": [],
+   "education": "Master's",
+   "skills_matched": [
+    "energy transition",
+    "decarbonization",
+    "english",
+    "energy",
+    "electricity"
+   ],
+   "personal_matched": [
+    "leadership",
+    "communication"
+   ],
+   "score": 86,
+   "reasons": [
+    "Title matches “head of”",
+    "Seniority: executive ✓",
+    "Professional skills 5/54: energy transition, decarbonization, english, energy, electricity",
+    "Personal skills 2/10: leadership, communication",
+    "CV text similarity 19%",
+    "Keywords: international",
+    "Location: not stated",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-16",
+   "is_new": true,
+   "key": "avature:Siemens Energy:297225"
+  },
+  {
+   "company": "Siemens Energy",
+   "ats": "avature",
    "job_id": "299670",
    "title": "Installation Expert (f/m/d) HVDC and FACTS Portfolio",
    "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Installation-Expert-f-m-d-HVDC-and-FACTS-Portfolio/299670",
@@ -5826,12 +5885,12 @@
   {
    "company": "Siemens Energy",
    "ats": "avature",
-   "job_id": "303940",
-   "title": "Order Management Administrator",
-   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Order-Management-Administrator/303940",
+   "job_id": "298724",
+   "title": "Mechanical Software Development Professional",
+   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Mechanical-Software-Development-Professional/298724",
    "location": "",
    "department": "",
-   "posted": "2026-09-29",
+   "posted": "2026-07-13",
    "workplace": "",
    "employment_type": "",
    "salary": "",
@@ -5841,32 +5900,30 @@
    "segments_secondary": [
     "others"
    ],
-   "summary": "Siemens Energy Transformer (Guangzhou) Co., Ltd.",
+   "summary": "Siemens Energy Industrial Turbomachinery India Private Limited",
    "responsibilities": [
-    "Manage the full order lifecycle, including quotation, order entry, execution tracking, shipment, invoicing, and accounts receivable…",
-    "Lead order management activities for projects from initiation to execution, coordinating cross-functional teams to ensure successful…",
-    "Serve as the primary liaison between customers and internal stakeholders, collaborating with Sales, Production, Supply Chain, Logistics…",
-    "Monitor order progress, proactively identify and mitigate risks, and ensure timely delivery and data accuracy."
+    "Design, develop, and unit test applications in accordance with established standards and methodologies (SCRUM, Extreme Programming).",
+    "Guide team development efforts towards successful project delivery and coach others in best practices.",
+    "Lead and participate in peer-reviews of solution designs and related code.",
+    "Migrate legacy applications to the latest technologies and develop integrations between applications."
    ],
    "criteria": [
-    "Bachelor’s degree in business administration, Supply Chain Management, Electrical Engineering, or a related field. Electrical Engineering background is…",
-    "5-8 years of experience in Order Management, Sales Operations, Supply Chain, or related functions within a manufacturing environment.",
-    "Proven ability to independently manage complex projects, processes, and order activities with minimal supervision.",
-    "Strong communication and coordination skills, with the ability to effectively manage stakeholders and handle urgent situations.",
-    "Fluent English communication skills, both written and spoken, with the ability to use English as a working language.",
-    "Experience Level"
+    "Bachelor’s degree in mechanical engineering with at least 10+ years of experience as a Mechanical Engineer, similar role in engineering for Turbo Machinery…",
+    "5+ years of experience in automated tool development, Java preferred.",
+    "2+ years of experience in SQL Server database design and development.",
+    "2+ years of experience working with GIT.",
+    "Experience with Service Oriented Application (SOA) development.",
+    "Proven communication, presentation, and mentoring skills."
    ],
    "nice_to_have": [],
-   "seniority": "senior",
-   "years_experience": "5–8 years",
-   "languages": [
-    "English"
-   ],
+   "seniority": "lead",
+   "years_experience": "10+ years",
+   "languages": [],
    "education": "Bachelor's",
    "skills_matched": [
     "energy transition",
     "decarbonization",
-    "english",
+    "electrification",
     "energy",
     "electricity"
    ],
@@ -5875,19 +5932,19 @@
    ],
    "score": 84,
    "reasons": [
-    "Title matches “management”",
-    "Seniority: senior ✓",
-    "Professional skills 5/54: energy transition, decarbonization, english, energy, electricity",
+    "Title matches “development”",
+    "Seniority: lead ✓",
+    "Professional skills 5/54: energy transition, decarbonization, electrification, energy, electricity",
     "Personal skills 1/10: communication",
     "CV text similarity 34%",
-    "Keywords: international",
+    "Keywords: electrification",
     "Location: not stated",
     "Company rated A: +6"
    ],
    "deadline_source": "",
-   "first_seen": "2026-11-11",
-   "is_new": false,
-   "key": "avature:Siemens Energy:303940"
+   "first_seen": "2026-11-16",
+   "is_new": true,
+   "key": "avature:Siemens Energy:298724"
   },
   {
    "company": "Siemens Energy",
@@ -6621,6 +6678,68 @@
   {
    "company": "Siemens Energy",
    "ats": "avature",
+   "job_id": "299103",
+   "title": "Head of Quality Management (f/m/d)",
+   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Head-of-Quality-Management-f-m-d/299103",
+   "location": "",
+   "department": "",
+   "posted": "2026-07-10",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "oem",
+   "segments_secondary": [
+    "others"
+   ],
+   "summary": "Siemens Gamesa Renewable Energy Deutschland GmbH",
+   "responsibilities": [
+    "Lead, mentor, and develop the Quality Management department, fostering a culture of quality and accountability among team members.",
+    "Manage the departmental budget and resources effectively, reporting on quality performance and strategic initiatives to executive…",
+    "Serve as the primary contact for all quality-related matters, influencing stakeholders to adopt best practices.",
+    "Oversee the QMS maintenance and compliance with ISO 9000 and other relevant standards, directing audit programs to identify and address…"
+   ],
+   "criteria": [
+    "A Bachelor’s or Master’s degree in Engineering (Mechanical, Industrial, or Electrical), Quality Management, or a related technical field.",
+    "Extensive experience in manufacturing quality management, with several years in a leadership role managing teams and departments.",
+    "Proven expertise in quality methodologies such as Six Sigma and ISO 9000, with relevant certifications like Six Sigma Black Belt and Certified Quality Engineer…",
+    "Strong leadership and influencing skills, with a commitment to accountability and change control.",
+    "Experience in the heavy manufacturing, automotive, or renewable energy sectors is highly advantageous."
+   ],
+   "nice_to_have": [],
+   "seniority": "executive",
+   "years_experience": "",
+   "languages": [],
+   "education": "Master's",
+   "skills_matched": [
+    "energy transition",
+    "renewable energy",
+    "wind",
+    "strategy",
+    "energy"
+   ],
+   "personal_matched": [
+    "leadership"
+   ],
+   "score": 82,
+   "reasons": [
+    "Title matches “head of”",
+    "Seniority: executive ✓",
+    "Professional skills 5/54: energy transition, renewable energy, wind, strategy, energy",
+    "Personal skills 1/10: leadership",
+    "CV text similarity 29%",
+    "Location: not stated",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-16",
+   "is_new": true,
+   "key": "avature:Siemens Energy:299103"
+  },
+  {
+   "company": "Siemens Energy",
+   "ats": "avature",
    "job_id": "303449",
    "title": "MRP/Order Management Specialist",
    "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/MRP-Order-Management-Specialist/303449",
@@ -7278,7 +7397,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-12",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:307199"
   },
   {
@@ -8071,6 +8190,73 @@
   {
    "company": "Siemens Energy",
    "ats": "avature",
+   "job_id": "307402",
+   "title": "Commercial Sales Manager",
+   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Commercial-Sales-Manager/307402",
+   "location": "",
+   "department": "",
+   "posted": "2026-11-16",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "oem",
+   "segments_secondary": [
+    "others"
+   ],
+   "summary": "In this role, you will negotiate supply contracts for Gas Turbines across the APAC region to help our customers achieve their objectives. You will need to be able to identify key market conditions, regulations, and risks to help evaluate potential and profitable opportunities.",
+   "responsibilities": [
+    "Take ownership and drive the commercial parts of the bid, incl. developing a strategy for terms and conditions, tax and currency concepts…",
+    "Identify and mitigate all commercial and legal risks based on the projects’ unique characteristics while ensuring full transparency and…",
+    "Clear understanding and optimization of any impacts to the P&L, Balance sheet, and cash flow due to changes related to the project…",
+    "Strategic and sales attitude that can be easily translated in the form of storytelling to persuade internal and external stakeholders of…"
+   ],
+   "criteria": [
+    "Advanced experience on reading, analyzing, and mitigating the commercial and legal exposure from customer contract drafts and Requests For Quotations (RFQs).",
+    "Substantial experience in negotiating contracts, consortium agreements, or supply agreements with EPC’s, suppliers, or customers.",
+    "Vast knowledge on tendering processes for power generation projects, such as bidding timelines, minimum requirements from developers or utilities, main hurdles…",
+    "A master of translating the risk exposure into financial, commercial, or legal mitigations throughout the bidding phase until the contract signature.",
+    "Diligence to ensure highest accuracy of all information and data in the internal review and approval processes and external negotiations and contractual…",
+    "Strong team player that quickly builds networks and knows how to motivate internal stakeholders to support bidding projects in time and quality."
+   ],
+   "nice_to_have": [],
+   "seniority": "",
+   "years_experience": "",
+   "languages": [],
+   "education": "Master's",
+   "skills_matched": [
+    "energy transition",
+    "decarbonization",
+    "strategy",
+    "stakeholder engagement",
+    "optimization",
+    "energy",
+    "gas",
+    "electricity"
+   ],
+   "personal_matched": [
+    "leadership"
+   ],
+   "score": 78,
+   "reasons": [
+    "Title matches “commercial”",
+    "Seniority: not stated",
+    "Professional skills 8/54: energy transition, decarbonization, strategy, stakeholder engagement, optimization, energy, gas, electricity",
+    "Personal skills 1/10: leadership",
+    "CV text similarity 33%",
+    "Keywords: P&L, international",
+    "Location: not stated",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-16",
+   "is_new": true,
+   "key": "avature:Siemens Energy:307402"
+  },
+  {
+   "company": "Siemens Energy",
+   "ats": "avature",
    "job_id": "301628",
    "title": "Strategic Buyer (f/m/d)",
    "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Strategic-Buyer-f-m-d/301628",
@@ -8134,74 +8320,6 @@
    "first_seen": "2026-11-11",
    "is_new": false,
    "key": "avature:Siemens Energy:301628"
-  },
-  {
-   "company": "Siemens Energy",
-   "ats": "avature",
-   "job_id": "303221",
-   "title": "Commercial Sales Manager - Offshore Service",
-   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Commercial-Sales-Manager-Offshore-Service/303221",
-   "location": "",
-   "department": "",
-   "posted": "2026-09-23",
-   "workplace": "",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "",
-   "rating": "A",
-   "segment": "oem",
-   "segments_secondary": [
-    "others"
-   ],
-   "summary": "Siemens Gamesa Renewable Energy Offshore Wind Limited",
-   "responsibilities": [
-    "Lead the commercial aspects of multiple high-value offshore service and maintenance contracts simultaneously.",
-    "Partner with the Sales Director and Sales Project Manager to develop and execute sales strategies.",
-    "Take ownership of commercial topics including:",
-    "Own commercial and financial documentation throughout the sales and bidding process."
-   ],
-   "criteria": [
-    "Graduated with Bachelor or above degree in business administration, finance, or law related.",
-    "Demonstrable commercial contract management skills, including in commercial negotiations, preferably within sales and/or the energy or construction sector.",
-    "A good knowledge of cost calculation approaches, finance methods, and commercial financial topics (bonds, escalation, currency, indemnities, liabilities, etc.)",
-    "An ability to communicate complicated topics concisely to high-level management and customers in a high-pressure environment.",
-    "Fluency in English, both orally and in writing, preferably fluent in both written and spoken Mandarin.",
-    "Good interpersonal skills with ability to work effectively in a team-oriented environment and the ability to multi-task to meet deadlines."
-   ],
-   "nice_to_have": [],
-   "seniority": "",
-   "years_experience": "",
-   "languages": [
-    "English",
-    "Mandarin"
-   ],
-   "education": "Bachelor's",
-   "skills_matched": [
-    "energy transition",
-    "renewable energy",
-    "wind",
-    "risk management",
-    "english",
-    "energy"
-   ],
-   "personal_matched": [
-    "communication"
-   ],
-   "score": 77,
-   "reasons": [
-    "Title matches “commercial”",
-    "Seniority: not stated",
-    "Professional skills 6/54: energy transition, renewable energy, wind, risk management, english, energy",
-    "Personal skills 1/10: communication",
-    "CV text similarity 33%",
-    "Keywords: international",
-    "Location: not stated",
-    "Company rated A: +6"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-11",
-   "is_new": false,
-   "key": "avature:Siemens Energy:303221"
   },
   {
    "company": "Flower",
@@ -11330,6 +11448,72 @@
   {
    "company": "Siemens Energy",
    "ats": "avature",
+   "job_id": "299756",
+   "title": "Commercial Project Manager",
+   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Commercial-Project-Manager/299756",
+   "location": "Netherlands",
+   "department": "",
+   "posted": "2026-07-14",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "oem",
+   "segments_secondary": [
+    "others"
+   ],
+   "summary": "As a Commercial Project Manager, you will be responsible for overseeing the financial and commercial performance of customer projects throughout their lifecycle. You will manage budgeting, forecasting, cash flow, invoicing, risk and opportunity assessments, and ensure compliance with financial regulations and internal…",
+   "responsibilities": [
+    "Handling financial and commercial activities during the project execution, such as contract analysis, cost and margin analysis, guarantees…",
+    "Supporting the Project Manager in identifying, evaluating, and assessing risks & opportunities, negotiating changes with customers or…",
+    "Taking ownership for forecasting your projects’ progress in revenue, profit margin, and cash flow on a monthly basis.",
+    "Ensuring compliance with IFRS15, reporting guidelines, and internal controls."
+   ],
+   "criteria": [
+    "Bachelor's or Master's degree in Finance, Business Administration, Economics, or a related field.",
+    "3-5 years of professional experience in project controlling, commercial project management, or financial planning & analysis within an international…",
+    "Demonstrated experience as a subject matter expert, capable of managing large or complex projects with a high degree of autonomy.",
+    "Strong capabilities in project financial planning and execution, including managing the commercial and financial aspects of customer projects, developing…",
+    "Capabilities in reporting, controlling, and forecasting, including the preparation of project status reports and financial forecasts, execution of project…",
+    "Experience in risk, opportunity, and compliance management, including commercial risk assessment, internal controls, and audit coordination to ensure…"
+   ],
+   "nice_to_have": [],
+   "seniority": "mid",
+   "years_experience": "3–5 years",
+   "languages": [
+    "English",
+    "Dutch"
+   ],
+   "education": "Master's",
+   "skills_matched": [
+    "energy transition",
+    "decarbonization",
+    "hedging",
+    "english",
+    "energy",
+    "electricity"
+   ],
+   "personal_matched": [],
+   "score": 67,
+   "reasons": [
+    "Title matches “commercial”",
+    "Seniority: mid (close to your target)",
+    "Professional skills 6/54: energy transition, decarbonization, hedging, english, energy, electricity",
+    "Personal skills 0/10",
+    "CV text similarity 35%",
+    "Keywords: international",
+    "Location: Netherlands",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-16",
+   "is_new": true,
+   "key": "avature:Siemens Energy:299756"
+  },
+  {
+   "company": "Siemens Energy",
+   "ats": "avature",
    "job_id": "305338",
    "title": "Commodity Manager",
    "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Commodity-Manager/305338",
@@ -13278,6 +13462,62 @@
    "first_seen": "2026-11-02",
    "is_new": false,
    "key": "greenhouse:EQT Infrastructure:4981387101"
+  },
+  {
+   "company": "Siemens Energy",
+   "ats": "avature",
+   "job_id": "299668",
+   "title": "Senior Sales Decarbonization - Control Solutions (m/w/d)",
+   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Senior-Sales-Decarbonization-Control-Solutions-m-w-d/299668",
+   "location": "Germany",
+   "department": "",
+   "posted": "2026-07-10",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "oem",
+   "segments_secondary": [
+    "others"
+   ],
+   "summary": "In dieser Rolle beraten und begleiten Sie unsere Kunden bei der Einführung moderner Control-, Automatisierungs- und digitaler Lösungen für erneuerbare und hybride Energiesysteme. Sie arbeiten an strategisch wichtigen Projekten wie Hybridkraftwerken, Microgrids, EMS Systemen (Energiemanagement) sowie Digital Trust…",
+   "responsibilities": [
+    "Verantwortung für den vollständigen Vertriebsprozess von Control, SCADA, EMS und digitalen Lösungen",
+    "Aufbau, Pflege und Weiterentwicklung strategischer Kundenbeziehungen bei Utilities, IPPs, Industrieunternehmen und Rechenzentrumsbetreibern",
+    "Durchführung technischer und kommerzieller Lösungsgespräche mit Engineering-, Operations- und C Level Stakeholdern",
+    "Analyse von Kundenspezifikationen sowie Erstellung maßgeschneiderter Angebote"
+   ],
+   "criteria": [
+    "Experience Level",
+    "Abgeschlossenes technisches Studium (z. B. Energie, Elektro, Automatisierung oder Informationstechnik) sowie umfangreiche Erfahrung in SCADA, Substation…",
+    "Fundierte Kenntnisse in SCADA, EMS (Energiemanagement), IEC 61850, Hybrid- und Microgrid Steuerungen sowie digitalen Energieprodukten und Digital Trust…"
+   ],
+   "nice_to_have": [],
+   "seniority": "senior",
+   "years_experience": "",
+   "languages": [],
+   "education": "Degree",
+   "skills_matched": [
+    "decarbonization",
+    "energy",
+    "gas"
+   ],
+   "personal_matched": [],
+   "score": 54,
+   "reasons": [
+    "Title matches “decarbonization”",
+    "Seniority: senior ✓",
+    "Professional skills 3/54: decarbonization, energy, gas",
+    "Personal skills 0/10",
+    "CV text similarity 14%",
+    "Location: Germany",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-16",
+   "is_new": true,
+   "key": "avature:Siemens Energy:299668"
   },
   {
    "company": "Siemens Energy",
