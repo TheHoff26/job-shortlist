@@ -1,14 +1,14 @@
 {
  "meta": {
-  "generated": "2026-11-21T05:49+00:00",
-  "total_matches": 240,
-  "new_matches": 53,
+  "generated": "2026-11-22T05:51+00:00",
+  "total_matches": 241,
+  "new_matches": 43,
   "companies": [
    {
     "company": "Fortum",
     "ats": "successfactors",
     "ok": true,
-    "count": 6,
+    "count": 5,
     "error": "",
     "source": "https://jobs.fortum.com",
     "careers_url": "https://www.fortum.com/careers",
@@ -91,9 +91,9 @@
    {
     "company": "Valmet",
     "ats": "workday",
-    "ok": true,
-    "count": 17,
-    "error": "",
+    "ok": false,
+    "count": 0,
+    "error": "RetryError: HTTPSConnectionPool(host='valmet.wd103.myworkdayjobs.com', port=443): Max retries exceeded with url: /wday/cxs/valmet/External/jobs (Caused by ResponseError('too many 429 error responses')",
     "source": "https://valmet.wd103.myworkdayjobs.com/en-US/External",
     "careers_url": "https://valmet.com/careers",
     "note": "",
@@ -104,7 +104,7 @@
     "company": "Metso",
     "ats": "successfactors",
     "ok": true,
-    "count": 3,
+    "count": 4,
     "error": "",
     "source": "https://careers.metso.com",
     "careers_url": "https://www.metso.com/careers",
@@ -152,8 +152,8 @@
     "company": "RWE Supply & Trading",
     "ats": "successfactors",
     "ok": true,
-    "count": 0,
-    "error": "no matching open positions (or wrong id)",
+    "count": 1,
+    "error": "",
     "source": "https://jobs.rwe.com",
     "careers_url": "https://jobs.rwe.com",
     "note": "",
@@ -211,9 +211,9 @@
    {
     "company": "Nord Pool",
     "ats": "workday",
-    "ok": false,
-    "count": 0,
-    "error": "RetryError: HTTPSConnectionPool(host='hrhub.wd3.myworkdayjobs.com', port=443): Max retries exceeded with url: /wday/cxs/hrhub/Euronext_Career_Page/jobs (Caused by ResponseError('too many 429 error res",
+    "ok": true,
+    "count": 12,
+    "error": "",
     "source": "https://hrhub.wd3.myworkdayjobs.com/Euronext_Career_Page",
     "careers_url": "https://www.euronext.com/en/about/careers/nordpool",
     "note": "",
@@ -260,8 +260,8 @@
     "company": "RWE",
     "ats": "successfactors",
     "ok": true,
-    "count": 0,
-    "error": "no matching open positions (or wrong id)",
+    "count": 1,
+    "error": "",
     "source": "https://jobs.rwe.com",
     "careers_url": "https://jobs.rwe.com",
     "note": "",
@@ -667,9 +667,9 @@
    {
     "company": "Ardian",
     "ats": "workday",
-    "ok": false,
-    "count": 0,
-    "error": "RetryError: HTTPSConnectionPool(host='ardian.wd103.myworkdayjobs.com', port=443): Max retries exceeded with url: /wday/cxs/ardian/ArdianCareers/jobs (Caused by ResponseError('too many 429 error respon",
+    "ok": true,
+    "count": 9,
+    "error": "",
     "source": "https://ardian.wd103.myworkdayjobs.com/ArdianCareers",
     "careers_url": "https://www.ardian.com",
     "note": "",
@@ -692,8 +692,8 @@
     "company": "Nordea",
     "ats": "successfactors",
     "ok": true,
-    "count": 1,
-    "error": "",
+    "count": 0,
+    "error": "no matching open positions (or wrong id)",
     "source": "https://careers.nordea.com",
     "careers_url": "https://careers.nordea.com",
     "note": "",
@@ -812,7 +812,7 @@
     "company": "OMV",
     "ats": "successfactors",
     "ok": true,
-    "count": 3,
+    "count": 2,
     "error": "",
     "source": "https://careers.omv.com",
     "careers_url": "https://careers.omv.com/",
@@ -860,7 +860,7 @@
     "company": "Siemens Energy",
     "ats": "avature",
     "ok": true,
-    "count": 252,
+    "count": 253,
     "error": "",
     "source": "https://jobs.siemens-energy.com/en_US/jobs/Jobs",
     "careers_url": "https://jobs.siemens-energy.com/",
@@ -1352,7 +1352,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-18",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:304171"
   },
   {
@@ -1766,7 +1766,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-18",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:307481"
   },
   {
@@ -2863,7 +2863,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-18",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:301911"
   },
   {
@@ -4274,7 +4274,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-18",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:307363"
   },
   {
@@ -5289,7 +5289,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-18",
-   "is_new": true,
+   "is_new": false,
    "key": "smartrecruiters:Statkraft:744000162052749"
   },
   {
@@ -6567,7 +6567,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-18",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:307444"
   },
   {
@@ -9196,7 +9196,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-18",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:303549"
   },
   {
@@ -10989,7 +10989,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-18",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306962"
   },
   {
@@ -12194,7 +12194,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-18",
-   "is_new": true,
+   "is_new": false,
    "key": "smartrecruiters:Statkraft:744000162071619"
   },
   {
@@ -12458,7 +12458,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-18",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306197"
   },
   {
@@ -13117,7 +13117,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-18",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:302941"
   },
   {
@@ -13457,6 +13457,75 @@
    "first_seen": "2026-11-14",
    "is_new": false,
    "key": "avature:Siemens Energy:306784"
+  },
+  {
+   "company": "Siemens Energy",
+   "ats": "avature",
+   "job_id": "300651",
+   "title": "Supplier Quality Engineer - Commodity Expert Rotating & Auxiliaries",
+   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Supplier-Quality-Engineer-Commodity-Expert-Rotating-Auxiliaries/300651",
+   "location": "",
+   "department": "",
+   "posted": "2026-08-04",
+   "workplace": "",
+   "employment_type": "",
+   "salary": "",
+   "deadline": "",
+   "rating": "A",
+   "segment": "oem",
+   "segments_secondary": [
+    "others"
+   ],
+   "summary": "Siemens Energy Industrial Turbomachinery India Private Limited",
+   "responsibilities": [
+    "Support commodity strategies by identifying, assessing, and developing suppliers for products such as valves, liquid & gas supply systems…",
+    "Lead supplier qualification, capability assessment audits, and Product & Process Qualification (PPQ) activities to ensure compliance with…",
+    "Drive supplier development initiatives, resolve critical technical issues, and promote the adoption of new technologies and best practices.",
+    "Lead and collaborate with a distributed team of Supply Quality Engineers, fostering knowledge sharing, training, and continuous improvement."
+   ],
+   "criteria": [
+    "Bachelor’s or Master’s degree in Electrical Engineering, Industrial Engineering, or a related discipline with 8+ years of relevant experience.",
+    "Experience in Supplier Quality Management, Procurement, and supplier development for industrial products and systems.",
+    "Proven experience in supplier qualification, product/process qualification, and technical supplier development.",
+    "Ability to lead projects and work effectively with global, cross-functional, and virtual teams.",
+    "Strong understanding of quality assurance, supplier auditing, and continuous improvement methodologies.",
+    "Excellent written and verbal communication skills in English."
+   ],
+   "nice_to_have": [],
+   "seniority": "lead",
+   "years_experience": "8+ years",
+   "languages": [
+    "English"
+   ],
+   "education": "Master's",
+   "skills_matched": [
+    "energy transition",
+    "decarbonization",
+    "strategy",
+    "english",
+    "energy",
+    "gas",
+    "electricity"
+   ],
+   "personal_matched": [
+    "communication"
+   ],
+   "score": 63,
+   "reasons": [
+    "Title matches “commodity”",
+    "Seniority: lead ✓",
+    "Professional skills 7/54: energy transition, decarbonization, strategy, english, energy, gas, electricity",
+    "Personal skills 1/10: communication",
+    "CV text similarity 31%",
+    "Keywords: international",
+    "Location: not stated",
+    "Lower-priority role (“engineer”): −25",
+    "Company rated A: +6"
+   ],
+   "deadline_source": "",
+   "first_seen": "2026-11-22",
+   "is_new": true,
+   "key": "avature:Siemens Energy:300651"
   },
   {
    "company": "OX2",
