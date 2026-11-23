@@ -1,14 +1,14 @@
 {
  "meta": {
-  "generated": "2026-11-22T05:51+00:00",
-  "total_matches": 241,
-  "new_matches": 43,
+  "generated": "2026-11-23T05:55+00:00",
+  "total_matches": 239,
+  "new_matches": 30,
   "companies": [
    {
     "company": "Fortum",
     "ats": "successfactors",
     "ok": true,
-    "count": 5,
+    "count": 4,
     "error": "",
     "source": "https://jobs.fortum.com",
     "careers_url": "https://www.fortum.com/careers",
@@ -56,7 +56,7 @@
     "company": "Wärtsilä",
     "ats": "successfactors",
     "ok": true,
-    "count": 1,
+    "count": 2,
     "error": "",
     "source": "https://careers.wartsila.com",
     "careers_url": "https://www.wartsila.com/careers",
@@ -67,9 +67,9 @@
    {
     "company": "Stora Enso",
     "ats": "workday",
-    "ok": true,
+    "ok": false,
     "count": 0,
-    "error": "no matching open positions (or wrong id)",
+    "error": "RetryError: HTTPSConnectionPool(host='storaenso.wd502.myworkdayjobs.com', port=443): Max retries exceeded with url: /wday/cxs/storaenso/Stora_Enso_site_opportunities/jobs (Caused by ResponseError('too",
     "source": "https://storaenso.wd502.myworkdayjobs.com/Stora_Enso_site_opportunities",
     "careers_url": "https://www.storaenso.com/en/careers",
     "note": "",
@@ -104,7 +104,7 @@
     "company": "Metso",
     "ats": "successfactors",
     "ok": true,
-    "count": 4,
+    "count": 2,
     "error": "",
     "source": "https://careers.metso.com",
     "careers_url": "https://www.metso.com/careers",
@@ -152,7 +152,7 @@
     "company": "RWE Supply & Trading",
     "ats": "successfactors",
     "ok": true,
-    "count": 1,
+    "count": 3,
     "error": "",
     "source": "https://jobs.rwe.com",
     "careers_url": "https://jobs.rwe.com",
@@ -211,9 +211,9 @@
    {
     "company": "Nord Pool",
     "ats": "workday",
-    "ok": true,
-    "count": 12,
-    "error": "",
+    "ok": false,
+    "count": 0,
+    "error": "RetryError: HTTPSConnectionPool(host='hrhub.wd3.myworkdayjobs.com', port=443): Max retries exceeded with url: /wday/cxs/hrhub/Euronext_Career_Page/jobs (Caused by ResponseError('too many 429 error res",
     "source": "https://hrhub.wd3.myworkdayjobs.com/Euronext_Career_Page",
     "careers_url": "https://www.euronext.com/en/about/careers/nordpool",
     "note": "",
@@ -260,7 +260,7 @@
     "company": "RWE",
     "ats": "successfactors",
     "ok": true,
-    "count": 1,
+    "count": 3,
     "error": "",
     "source": "https://jobs.rwe.com",
     "careers_url": "https://jobs.rwe.com",
@@ -667,9 +667,9 @@
    {
     "company": "Ardian",
     "ats": "workday",
-    "ok": true,
-    "count": 9,
-    "error": "",
+    "ok": false,
+    "count": 0,
+    "error": "RetryError: HTTPSConnectionPool(host='ardian.wd103.myworkdayjobs.com', port=443): Max retries exceeded with url: /wday/cxs/ardian/ArdianCareers/jobs (Caused by ResponseError('too many 429 error respon",
     "source": "https://ardian.wd103.myworkdayjobs.com/ArdianCareers",
     "careers_url": "https://www.ardian.com",
     "note": "",
@@ -692,8 +692,8 @@
     "company": "Nordea",
     "ats": "successfactors",
     "ok": true,
-    "count": 0,
-    "error": "no matching open positions (or wrong id)",
+    "count": 1,
+    "error": "",
     "source": "https://careers.nordea.com",
     "careers_url": "https://careers.nordea.com",
     "note": "",
@@ -2527,7 +2527,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-19",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306546"
   },
   {
@@ -3608,74 +3608,6 @@
    "first_seen": "2026-11-11",
    "is_new": false,
    "key": "avature:Siemens Energy:303597"
-  },
-  {
-   "company": "Metso",
-   "ats": "successfactors",
-   "job_id": "1377948857",
-   "title": "Director, Project Implementation",
-   "url": "https://careers.metso.com/job/Espoo-Director%2C-Project-Implementation/1377948857/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS",
-   "location": "Espoo, FI",
-   "department": "",
-   "posted": "2026-11-19",
-   "workplace": "",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "",
-   "rating": "C",
-   "segment": "oem",
-   "segments_secondary": [],
-   "summary": "You will lead the global Project Management team within Separation Delivery, comprising approximately 20 Project Managers responsible for successful Separation project execution. The team focuses on project portfolio performance, effective use of project management resources and continuous development of project…",
-   "responsibilities": [
-    "Lead, coach and develop the global team of Project Managers, building a performance culture focused on delivering projects on time, on…",
-    "Drive execution and overall performance of the Separation project portfolio, providing clear visibility of performance, risks and…",
-    "Ensure effective allocation and utilization of Project Management resources across the portfolio, including managing external Project…",
-    "Strengthen project governance, risk management and compliance, and participate in or facilitate project Steering Groups and portfolio…"
-   ],
-   "criteria": [
-    "Strong experience in project management and executing complex customer delivery projects in an international environment.",
-    "Proven people leadership experience, with the ability to lead, coach and develop project management professionals and build a strong performance culture.",
-    "Strong understanding of project financials, including margin, cost, cash flow and forecasting, together with experience in project portfolio, resource and…",
-    "Strong risk management and problem-solving capabilities, with the ability to identify deviations and drive corrective actions toward successful project…",
-    "Ability to collaborate effectively across Sales, Engineering, Procurement, Quality, Product Management and other functions, supported by strong communication…",
-    "A commercial and customer-oriented mindset with the ability to operate effectively in a global and multicultural organization."
-   ],
-   "nice_to_have": [],
-   "seniority": "executive",
-   "years_experience": "",
-   "languages": [
-    "English",
-    "Finnish"
-   ],
-   "education": "Degree (or equivalent)",
-   "skills_matched": [
-    "renewable energy",
-    "electrification",
-    "project portfolio",
-    "stakeholder management",
-    "risk management",
-    "english",
-    "energy"
-   ],
-   "personal_matched": [
-    "leadership",
-    "communication"
-   ],
-   "score": 93,
-   "reasons": [
-    "Title matches “director”",
-    "Seniority: executive ✓",
-    "Professional skills 7/54: renewable energy, electrification, project portfolio, stakeholder management, risk management, english, energy",
-    "Personal skills 2/10: leadership, communication",
-    "CV text similarity 25%",
-    "Keywords: international, electrification, flexibility",
-    "Location: Espoo, FI",
-    "Company rated C: +1"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-20",
-   "is_new": true,
-   "key": "successfactors:Metso:1377948857"
   },
   {
    "company": "Siemens Energy",
@@ -6499,7 +6431,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-19",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:307552"
   },
   {
@@ -8084,7 +8016,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-19",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:307430"
   },
   {
@@ -8932,7 +8864,7 @@
    ],
    "deadline_source": "text",
    "first_seen": "2026-11-19",
-   "is_new": true,
+   "is_new": false,
    "key": "smartrecruiters:Statkraft:744000162296579"
   },
   {
@@ -9922,7 +9854,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-19",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:307480"
   },
   {
@@ -10129,8 +10061,8 @@
    "company": "Siemens Energy",
    "ats": "avature",
    "job_id": "305123",
-   "title": "Commercial Officer",
-   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Commercial-Officer/305123",
+   "title": "Commercial Project Manager",
+   "url": "https://jobs.siemens-energy.com/en_US/jobs/FolderDetail/Commercial-Project-Manager/305123",
    "location": "",
    "department": "",
    "posted": "2026-10-12",
@@ -11442,7 +11374,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-19",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306973"
   },
   {
@@ -13861,7 +13793,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-19",
-   "is_new": true,
+   "is_new": false,
    "key": "smartrecruiters:Statkraft:744000162296454"
   },
   {
@@ -14130,7 +14062,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-19",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:306363"
   },
   {
@@ -14800,7 +14732,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-19",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:303647"
   },
   {
@@ -15144,67 +15076,6 @@
    "key": "smartrecruiters:Statkraft:744000162502094"
   },
   {
-   "company": "Fortum",
-   "ats": "successfactors",
-   "job_id": "1375684555",
-   "title": "Procurement Specialist",
-   "url": "https://jobs.fortum.com/Fortum/job/Espoo-Procurement-Specialist/1375684555/?feedId=null&utm_source=J2WRSS&utm_medium=rss&utm_campaign=J2W_RSS",
-   "location": "Espoo, FI",
-   "department": "",
-   "posted": "2026-11-04",
-   "workplace": "",
-   "employment_type": "",
-   "salary": "",
-   "deadline": "",
-   "rating": "A",
-   "segment": "utilities",
-   "segments_secondary": [
-    "trading"
-   ],
-   "summary": "Here you will play an important role in building the collaboration and ways of working towards the procurement community and our business teams. In your role your primary responsibilities will for example be:",
-   "responsibilities": [
-    "Ensuring operational procurement services are provided in time and good quality with efficiency",
-    "Facilitating RfX events in alignment with strategic sourcing to obtain best value as well as ensuring an efficient and compliant RfX…",
-    "Support suppliers throughout RFx processes and help ensure effective supplier onboarding",
-    "Translate awarded contracts into operational purchasing solutions, ensuring contracts can be effectively utilized through appropriate…"
-   ],
-   "criteria": [
-    "This is an excellent opportunity for someone who enjoys combining hands-on procurement work, stakeholder and supplier collaboration, digital tools and…",
-    "A bachelor’s or master’s degree in a relevant field, such as supply chain management or procurement.",
-    "At least 2 years of experience in procurement.",
-    "Experience with Source-to-Pay and RFx processes.",
-    "Experience with SAP Ariba or a similar procurement platform is considered a strong advantage.",
-    "You are a proactive and solution-oriented team player with a positive, open-minded and strong “can-do” attitude."
-   ],
-   "nice_to_have": [],
-   "seniority": "mid",
-   "years_experience": "2+ years",
-   "languages": [],
-   "education": "Master's",
-   "skills_matched": [
-    "english",
-    "energy"
-   ],
-   "personal_matched": [
-    "communication"
-   ],
-   "score": 49,
-   "reasons": [
-    "Title matches “procurement”",
-    "Seniority: mid (close to your target)",
-    "Professional skills 2/54: english, energy",
-    "Personal skills 1/10: communication",
-    "CV text similarity 16%",
-    "Keywords: AI",
-    "Location: Espoo, FI",
-    "Company rated A: +6"
-   ],
-   "deadline_source": "",
-   "first_seen": "2026-11-09",
-   "is_new": false,
-   "key": "successfactors:Fortum:1375684555"
-  },
-  {
    "company": "Siemens Energy",
    "ats": "avature",
    "job_id": "304739",
@@ -15456,7 +15327,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-19",
-   "is_new": true,
+   "is_new": false,
    "key": "smartrecruiters:Statkraft:744000162279819"
   },
   {
@@ -15890,7 +15761,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-19",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:307247"
   },
   {
@@ -16247,7 +16118,7 @@
    ],
    "deadline_source": "",
    "first_seen": "2026-11-19",
-   "is_new": true,
+   "is_new": false,
    "key": "avature:Siemens Energy:304777"
   },
   {
